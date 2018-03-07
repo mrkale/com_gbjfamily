@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2017 Libor Gabaj. All rights reserved.
+@license    GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
+@since      3.7
+-->
+<form>
+    <fieldset name="gridfields">
+
+        <field
+            name="title"
+            label="COM_GBJFAMILY_FIELD_EVENT_TITLE_LABEL"
+        />
+
+        <field
+            name="date_on"
+            type="date"
+            label="COM_GBJFAMILY_FIELD_EVENT_DATEON_LABEL"
+            format="LIB_GBJ_FORMAT_DATE_LONG"
+        />
+
+        <field
+            name="duration"
+            type="number"
+            label="COM_GBJFAMILY_FIELD_EVENT_DURATION_LABEL"
+            suffix="COM_GBJFAMILY_SUFFIX_HOURS"
+        />
+
+        <field
+            name="id_domain_title"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
+            tooltip="id_domain_alias"
+        >
+        </field>
+
+        <field
+            name="id_activity_title"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_ACTIVITY_LABEL"
+            tooltip="id_activity_alias"
+        >
+        </field>
+
+        <field
+            name="id_stage_title"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_STAGE_LABEL"
+            tooltip="id_stage_alias"
+        >
+        </field>
+
+        <field
+            name="update_site"
+            type="subform"
+        />
+
+    </fieldset>
+</form>

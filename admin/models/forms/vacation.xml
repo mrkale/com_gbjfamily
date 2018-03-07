@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2017 Libor Gabaj. All rights reserved.
+@license    GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
+@since      3.7
+-->
+<form>
+    <fieldset name="recordfields">
+
+        <field
+            name="title"
+            type="text"
+            class="input-xxlarge input-large-text"
+            label="COM_GBJFAMILY_FIELD_VACATION_TITLE_LABEL"
+            description="COM_GBJFAMILY_FIELD_VACATION_TITLE_DESC"
+            required="true"
+        />
+
+        <field
+            name="date_on"
+            type="calendar"
+            class="input-xxlarge input-large-text span5"
+            label="COM_GBJFAMILY_FIELD_VACATION_DATEON_LABEL"
+            description="COM_GBJFAMILY_FIELD_VACATION_DATEON_DESC"
+            format="%d.%m.%Y"
+            translateformat="false"
+            showtime="false"
+            todaybutton="true"
+            filter="none"
+            required="true"
+        />
+
+        <field
+            name="date_off"
+            type="calendar"
+            class="input-xxlarge input-large-text span5"
+            label="COM_GBJFAMILY_FIELD_VACATION_DATEOFF_LABEL"
+            description="COM_GBJFAMILY_FIELD_VACATION_DATEOFF_DESC"
+            format="%d.%m.%Y"
+            translateformat="false"
+            showtime="false"
+            todaybutton="true"
+            filter="none"
+            required="true"
+        />
+
+        <field
+            name="id_stay"
+            type="Stay"
+            class="inputbox span4"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_STAY_LABEL"
+            description="COM_GBJFAMILY_FIELD_CODEBOOK_STAY_DESC"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="id_staff"
+            type="Staff"
+            class="inputbox span4"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_STAFF_LABEL"
+            description="COM_GBJFAMILY_FIELD_CODEBOOK_STAFF_DESC"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="update_admin"
+            type="subform"
+        />
+
+    </fieldset>
+</form>

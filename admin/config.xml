@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2017 Libor Gabaj. All rights reserved.
+@license    GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
+@since      3.7
+-->
+<config>
+    <fieldset name="component"
+              label="COM_GBJFAMILY_COMPONENT_LABEL"
+              description="COM_GBJFAMILY_COMPONENT_DESC"
+    >
+
+        <field name="target"
+               type="list"
+               default="0"
+               label="LIB_GBJ_COMPONENT_OPTION_TARGET_LABEL"
+               description="LIB_GBJ_COMPONENT_OPTION_TARGET_DESC"
+        >
+            <option value="0">JBROWSERTARGET_PARENT</option>
+            <option value="1">JBROWSERTARGET_NEW</option>
+            <option value="2">JBROWSERTARGET_POPUP</option>
+            <option value="3">JBROWSERTARGET_MODAL</option>
+        </field>
+
+        <field name="target_width"
+               type="number"
+               class="inputbox"
+               min="100"
+               max="1920"
+               step="10"
+               default="640"
+               label="LIB_GBJ_COMPONENT_OPTION_TARGET_WIDTH_LABEL"
+               description="LIB_GBJ_COMPONENT_OPTION_TARGET_WIDTH_DESC"
+        />
+
+        <field name="target_height"
+               type="number"
+               class="inputbox"
+               min="100"
+               max="1080"
+               step="10"
+               default="480"
+               label="LIB_GBJ_COMPONENT_OPTION_TARGET_HEIGHT_LABEL"
+               description="LIB_GBJ_COMPONENT_OPTION_TARGET_HEIGHT_DESC"
+        />
+
+        <field
+            name="show_filter_stats"
+            type="list"
+            default="1"
+            label="LIB_GBJ_COMPONENT_OPTION_FILTER_STATS_LABEL"
+            description="LIB_GBJ_COMPONENT_OPTION_FILTER_STATS_DESC"
+        >
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+
+        <field
+            name="featured_row_class"
+            type="list"
+            default="success"
+            label="LIB_GBJ_COMPONENT_OPTION_FEATURED_CLASS_LABEL"
+            description="LIB_GBJ_COMPONENT_OPTION_FEATURED_CLASS_DESC"
+        >
+            <option value="null">none</option>
+            <option value="active">active</option>
+            <option value="success">success</option>
+            <option value="info">info</option>
+            <option value="warning">warning</option>
+            <option value="danger">danger</option>
+        </field>
+
+        <field
+            name="future_row_class"
+            type="list"
+            default="danger"
+            label="LIB_GBJ_COMPONENT_OPTION_FUTURE_CLASS_LABEL"
+            description="LIB_GBJ_COMPONENT_OPTION_FUTURE_CLASS_DESC"
+        >
+            <option value="null">none</option>
+            <option value="active">active</option>
+            <option value="success">success</option>
+            <option value="info">info</option>
+            <option value="warning">warning</option>
+            <option value="danger">danger</option>
+        </field>
+
+    </fieldset>
+
+    <fieldset name="permissions"
+              description="JCONFIG_PERMISSIONS_DESC"
+              label="JCONFIG_PERMISSIONS_LABEL"
+    >
+
+        <field name="rules"
+               type="rules"
+               component="com_gbjfamily"
+               filter="rules"
+               validate="rules"
+               label="JCONFIG_PERMISSIONS_LABEL"
+               section="component" />
+    </fieldset>
+</config>

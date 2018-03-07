@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2017 Libor Gabaj. All rights reserved.
+@license    GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
+@since      3.7
+-->
+<form>
+
+    <fields name="filter">
+
+        <field
+            name="search"
+            type="text"
+            label="JSEARCH_FILTER_LABEL"
+            description="LIB_GBJ_SEARCH_VALUE_DESC"
+            hint="JSEARCH_FILTER"
+            class="js-stools-search-string"
+            noresults="JGLOBAL_NO_MATCHING_RESULTS"
+        />
+
+        <field
+            name="state"
+            type="status"
+            onchange="this.form.submit();"
+        >
+            <option value="">JOPTION_SELECT_PUBLISHED</option>
+        </field>
+
+        <field
+            name="featured"
+            type="list"
+            onchange="this.form.submit();"
+        >
+            <option value="">LIB_GBJ_SELECT_FEATURED</option>
+            <option value="1">LIB_GBJ_FEATURED</option>
+            <option value="0">LIB_GBJ_UNFEATURED</option>
+        </field>
+
+        <field
+            name="year"
+            type="Year"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_YEAR</option>
+        </field>
+
+        <field
+            name="month"
+            type="Month"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_MONTH</option>
+        </field>
+
+        <field
+            name="id_stay_alias"
+            type="Stay"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_STAY</option>
+        </field>
+
+        <field
+            name="id_staff_alias"
+            type="Staff"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_STAFF</option>
+        </field>
+
+    </fields>
+
+    <fields name="list">
+
+        <field
+            name="fullordering"
+            type="list"
+            label="JGLOBAL_SORT_BY"
+            statuses="*,0,1,2,-2"
+            description="JGLOBAL_SORT_BY"
+            onchange="this.form.submit();"
+            default="date_on DESC"
+        >
+            <option value="">JGLOBAL_SORT_BY</option>
+            <option value="state ASC">JSTATUS_ASC</option>
+            <option value="state DESC">JSTATUS_DESC</option>
+            <option value="featured ASC">JFEATURED_ASC</option>
+            <option value="featured DESC">JFEATURED_DESC</option>
+            <option value="modified ASC">COM_GBJFAMILY_HEADING_MODIFIED_ASC</option>
+            <option value="modified DESC">COM_GBJFAMILY_HEADING_MODIFIED_DESC</option>
+            <option value="title ASC">JGLOBAL_TITLE_ASC</option>
+            <option value="title DESC">JGLOBAL_TITLE_DESC</option>
+            <option value="date_on ASC">COM_GBJFAMILY_HEADING_VACATION_DATEON_ASC</option>
+            <option value="date_on DESC">COM_GBJFAMILY_HEADING_VACATION_DATEON_DESC</option>
+            <option value="date_off ASC">COM_GBJFAMILY_HEADING_VACATION_DATEOFF_ASC</option>
+            <option value="date_off DESC">COM_GBJFAMILY_HEADING_VACATION_DATEOFF_DESC</option>
+            <option value="id_stay_alias ASC">COM_GBJFAMILY_HEADING_CODEBOOK_STAY_ASC</option>
+            <option value="id_stay_alias DESC">COM_GBJFAMILY_HEADING_CODEBOOK_STAY_DESC</option>
+            <option value="id_staff_alias ASC">COM_GBJFAMILY_HEADING_CODEBOOK_STAFF_ASC</option>
+            <option value="id_staff_alias DESC">COM_GBJFAMILY_HEADING_CODEBOOK_STAFF_DESC</option>
+        </field>
+
+        <field
+            name="limit"
+            type="limitbox"
+            class="input-mini"
+            default="20"
+            label="JFIELD_PLG_SEARCH_SEARCHLIMIT_LABEL"
+            description="JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC"
+            onchange="this.form.submit();"
+        />
+
+    </fields>
+
+</form>

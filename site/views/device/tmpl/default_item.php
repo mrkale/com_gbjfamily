@@ -1,0 +1,30 @@
+<?php
+/**
+ * @package    Joomla.Component
+ * @copyright  (c) 2017 Libor Gabaj. All rights reserved.
+ * @license    GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
+ * @since      3.7
+ */
+
+// No direct access
+defined('_JEXEC') or die;
+
+$layoutBasePath = Helper::getLayoutBase();
+$tparams = $this->params;
+$pageclass_sfx = htmlspecialchars($tparams->get('pageclass_sfx'));
+$class = strtolower(Helper::getClassPrefix()). '_dl' . $pageclass_sfx;
+?>
+<dl class="<?php echo $class; ?>">
+	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'alias')); ?>
+	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'brandname')); ?>
+	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'serial')); ?>
+	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'eth_mac')); ?>
+	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'eth_ip4')); ?>
+	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'eth_ifc')); ?>
+	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'wifi_mac')); ?>
+	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'wifi_ip4')); ?>
+	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'wifi_ifc')); ?>
+	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'id_device_title')); ?>
+	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'id_vendor_title')); ?>
+	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'id_location_title')); ?>
+</dl>

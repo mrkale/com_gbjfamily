@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2017 Libor Gabaj. All rights reserved.
+@license    GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
+@since      3.7
+-->
+<form>
+    <fieldset name="gridfields">
+
+        <!-- The first field here is considered as a default search field. -->
+        <!-- Default type for searching is string. -->
+        <field
+            name="title"
+            type="string"
+            label="COM_GBJFAMILY_FIELD_DEVICE_TITLE_LABEL"
+            labelclass="title"
+            class="has-context"
+        />
+
+        <field
+            name="alias"
+            type="string"
+            label="COM_GBJFAMILY_FIELD_DEVICE_ALIAS_LABEL"
+            width="10%"
+        />
+
+        <field
+            name="brandname"
+            type="string"
+            label="COM_GBJFAMILY_FIELD_DEVICE_BRANDNAME_LABEL"
+        />
+
+        <field
+            name="serial"
+            type="string"
+            label="COM_GBJFAMILY_FIELD_DEVICE_SERIAL_LABEL"
+        />
+
+        <field
+            name="type"
+            type="string"
+            label="COM_GBJFAMILY_FIELD_DEVICE_TYPE_LABEL"
+        />
+
+        <field
+            name="eth_mac"
+            type="string"
+            label="COM_GBJFAMILY_FIELD_DEVICE_ETHMAC_LABEL"
+        />
+
+        <field
+            name="eth_ip4"
+            type="string"
+            label="COM_GBJFAMILY_FIELD_DEVICE_ETHIP4_LABEL"
+        />
+
+        <field
+            name="eth_ifc"
+            type="string"
+            label="COM_GBJFAMILY_FIELD_DEVICE_ETHIFC_LABEL"
+        />
+
+        <field
+            name="wifi_mac"
+            type="string"
+            label="COM_GBJFAMILY_FIELD_DEVICE_WIFIMAC_LABEL"
+        />
+
+        <field
+            name="wifi_ip4"
+            type="string"
+            label="COM_GBJFAMILY_FIELD_DEVICE_WIFIIP4_LABEL"
+        />
+
+        <field
+            name="wifi_ifc"
+            type="string"
+            label="COM_GBJFAMILY_FIELD_DEVICE_WIFIIFC_LABEL"
+        />
+
+        <field
+            name="id_network_alias"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_NETWORK_LABEL"
+            width="6%"
+            tooltip="id_network_title"
+            defaulted="false"
+        >
+        </field>
+
+        <field
+            name="id_port_alias"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_PORT_LABEL"
+            width="6%"
+            tooltip="id_port_title"
+            defaulted="false"
+        >
+        </field>
+
+        <field
+            name="id_device_alias"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_DEVICE_LABEL"
+            width="6%"
+            tooltip="id_device_title"
+            defaulted="false"
+        >
+        </field>
+
+        <field
+            name="id_vendor_alias"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_VENDOR_LABEL"
+            width="6%"
+            tooltip="id_vendor_title"
+            defaulted="false"
+        >
+        </field>
+
+        <field
+            name="id_location_alias"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_LOCATION_LABEL"
+            width="6%"
+            tooltip="id_location_title"
+            defaulted="false"
+        >
+        </field>
+
+        <field
+            name="grid_admin"
+            type="subform"
+        />
+
+    </fieldset>
+</form>

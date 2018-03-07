@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2017 Libor Gabaj. All rights reserved.
+@license    GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
+@since      3.7
+-->
+
+<metadata>
+    <layout title="COM_GBJFAMILY_DEVICES_VIEW_DEFAULT_TITLE" option="COM_GBJFAMILY_DEVICES_VIEW_DEFAULT_OPTION">
+        <message>
+			<![CDATA[COM_GBJFAMILY_DEVICES_VIEW_DEFAULT_DESC]]>
+        </message>
+    </layout>
+
+    <!-- Add fields to the parameters object for the layout. -->
+    <fields name="params">
+
+        <fieldset name="basic">
+
+            <field
+                name="pagedescription_data"
+                type="textarea"
+                label="LIB_GBJ_MENU_PAGEDESCRIPTION_DATA_LABEL"
+                description="LIB_GBJ_MENU_PAGEDESCRIPTION_DATA_DESC"
+                class="inputbox"
+                rows="3"
+                cols="30"
+                filter="safehtml"
+            />
+
+            <field
+                name="show_pagedescription"
+                type="list"
+                default="1"
+                label="LIB_GBJ_MENU_PAGEDESCRIPTION_SHOW_LABEL"
+                description="LIB_GBJ_MENU_PAGEDESCRIPTION_SHOW_DESC"
+            >
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+
+            <field
+                name="pageicon_class"
+                type="text"
+                default="fa fa-book"
+                label="LIB_GBJ_MENU_PAGEICON_CLASS_LABEL"
+                description="LIB_GBJ_MENU_PAGEICON_CLASS_DESC"
+                class="inputbox"
+                filter="safehtml"
+            />
+
+            <field
+                name="show_pageicon"
+                type="list"
+                default="1"
+                label="LIB_GBJ_MENU_PAGEICON_SHOW_LABEL"
+                description="LIB_GBJ_MENU_PAGEICON_SHOW_DESC"
+            >
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+
+            <field
+                name="show_itemdescription"
+                type="list"
+                default="1"
+                label="LIB_GBJ_MENU_ITEMDESCRIPTION_SHOW_LABEL"
+                description="LIB_GBJ_MENU_ITEMDESCRIPTION_SHOW_DESC"
+            >
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+
+            <field
+                name="show_filter_bar"
+                type="list"
+                default="1"
+                label="LIB_GBJ_MENU_FILTER_FIELD_LABEL"
+                description="LIB_GBJ_MENU_FILTER_FIELD_DESC"
+            >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+
+
+            <field
+                name="show_filter_stats"
+                type="list"
+                default="1"
+                label="LIB_GBJ_MENU_FILTER_STATS_LABEL"
+                description="LIB_GBJ_MENU_FILTER_STATS_DESC"
+            >
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+
+
+            <field
+                name="show_agenda_stats"
+                type="list"
+                default="1"
+                label="LIB_GBJ_MENU_AGENDA_STATS_LABEL"
+                description="LIB_GBJ_MENU_AGENDA_STATS_DESC"
+            >
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+
+        </fieldset>
+
+    </fields>
+</metadata>

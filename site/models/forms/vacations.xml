@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2017 Libor Gabaj. All rights reserved.
+@license    GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
+@since      3.7
+-->
+<form>
+    <fieldset name="gridfields">
+
+        <!-- The first field here is considered as a default search field. -->
+        <!-- Defaul type for searching is string. -->
+        <field
+            name="title"
+            label="COM_GBJFAMILY_FIELD_VACATION_TITLE_LABEL"
+            labelclass="title"
+            class="title"
+        />
+
+        <field
+            name="date_on"
+            type="date"
+            label="COM_GBJFAMILY_FIELD_VACATION_DATEON_LABEL"
+            width="15%"
+            format="LIB_GBJ_FORMAT_DATE_LONG"
+        />
+
+        <field
+            name="date_off"
+            type="date"
+            label="COM_GBJFAMILY_FIELD_VACATION_DATEOFF_LABEL"
+            width="15%"
+            format="LIB_GBJ_FORMAT_DATE_LONG"
+        />
+
+        <field
+            name="id_stay_alias"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_STAY_LABEL"
+            width="6%"
+            tooltip="id_stay_title"
+            defaulted="false"
+        >
+        </field>
+
+        <field
+            name="id_staff_alias"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_STAFF_LABEL"
+            width="6%"
+            tooltip="id_staff_title"
+            defaulted="false"
+        >
+        </field>
+
+        <field
+            name="grid_site"
+            type="subform"
+        />
+
+    </fieldset>
+</form>

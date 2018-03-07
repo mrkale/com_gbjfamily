@@ -1,0 +1,65 @@
+/*
+@package    Joomla.Component
+@copyright  (c) 2017 Libor Gabaj. All rights reserved.
+@license    GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
+@since      3.7
+*/
+
+
+.gbjfamily {
+	padding-bottom: 20px;
+	/*float: left;*/
+	padding-right: 20px;
+}
+
+.gbjfamily_table caption {
+	/*text-align: center;*/
+	font-weight: bold;
+}
+
+.gbjfamily_table thead tr {
+	background-color: beige;
+}
+
+.accordion {
+	margin-bottom: 18px;
+}
+.accordion-group {
+	margin-bottom: 2px;
+	border: 1px solid #e5e5e5;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+.accordion-heading {
+	color: #333;
+	background-color: #f5f5f5;
+	border-bottom: 0;
+}
+.accordion-heading .accordion-toggle {
+	display: block;
+	padding: 8px 15px;
+}
+.accordion-toggle {
+	cursor: pointer;
+}
+.accordion-inner {
+	padding: 9px 15px;
+	border-top: 1px solid #e5e5e5;
+}
+
+.gbjfamily_dl dt {
+	padding-top: 0.5em;
+}
+
+/*.gbjfamily_dl dt:after {
+    content: ":";
+  }*/
+
+.gbjfamily_dl dd {
+	padding-left: 2em;
+}
+
+.js-stools .btn-wrapper {
+	display: inline-flex !important;
+}

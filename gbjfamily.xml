@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+@package     Joomla.Component
+@copyright   (c) 2017 Libor Gabaj. All rights reserved.
+@license     GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
+@since       3.7
+-->
+<extension version="3.7" type="component" method="upgrade">
+    <name>COM_GBJFAMILY</name>
+    <libraryname>COM_GBJFAMILY</libraryname>
+    <version>2.0.0</version>
+    <creationDate>June 2017</creationDate>
+    <description>COM_GBJFAMILY_XML_DESC</description>
+    <author>Libor Gabaj</author>
+    <authorEmail>libor.gabaj@gmail.com</authorEmail>
+    <authorUrl>n/a</authorUrl>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <copyright>(c) 2017, Libor Gabaj. All rights reserved.</copyright>
+
+    <scriptfile>script.php</scriptfile>
+
+    <install>
+        <sql>
+            <file charset="utf8" driver="mysql">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+
+    <uninstall>
+        <sql>
+            <file charset="utf8" driver="mysql">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <update folder="admin">
+        <schemas>
+            <schemapath type="mysql">sql/update</schemapath>
+        </schemas>
+    </update>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>gbjfamily.php</filename>
+        <filename>controller.php</filename>
+        <folder>controllers</folder>
+        <folder>language</folder>
+        <folder>models</folder>
+        <folder>views</folder>
+    </files>
+
+    <media destination="com_gbjfamily" folder="media">
+        <filename>index.html</filename>
+        <folder>css</folder>
+    </media>
+
+    <administration>
+
+        <menu img="class:categories">COM_GBJFAMILY_MENU</menu>
+        <submenu>
+            <!--
+            Note that all & must be escaped to &amp; for the file
+            to be valid XML and be parsed by the installer.
+            -->
+            <menu
+                link="option=com_gbjfamily&amp;view=events"
+                view="events"
+                img="class:generic"
+                alt="GbjFamily/Events"
+            >
+                COM_GBJFAMILY_SUBMENU_EVENTS
+            </menu>
+            <menu
+                link="option=com_gbjfamily&amp;view=vacations"
+                view="vacations"
+                img="class:generic"
+                alt="GbjFamily/Vacations"
+            >
+                COM_GBJFAMILY_SUBMENU_VACATIONS
+            </menu>
+            <menu
+                link="option=com_gbjfamily&amp;view=devices"
+                view="devices"
+                img="class:generic"
+                alt="GbjFamily/Devicess"
+            >
+                COM_GBJFAMILY_SUBMENU_DEVICES
+            </menu>
+        </submenu>
+
+        <files folder="admin">
+            <filename>index.html</filename>
+            <filename>gbjfamily.php</filename>
+            <filename>controller.php</filename>
+            <filename>config.xml</filename>
+            <filename>access.xml</filename>
+            <folder>controllers</folder>
+            <folder>helpers</folder>
+            <folder>language</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+
+    </administration>
+</extension>

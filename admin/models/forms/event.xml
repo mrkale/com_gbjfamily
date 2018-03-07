@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2017 Libor Gabaj. All rights reserved.
+@license    GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
+@since      3.7
+-->
+<form>
+    <fieldset name="recordfields">
+
+        <field
+            name="title"
+            type="text"
+            class="input-xxlarge input-large-text"
+            label="COM_GBJFAMILY_FIELD_EVENT_TITLE_LABEL"
+            description="COM_GBJFAMILY_FIELD_EVENT_TITLE_DESC"
+            required="true"
+        />
+
+        <field
+            name="date_on"
+            type="calendar"
+            class="input-xxlarge input-large-text span5"
+            label="COM_GBJFAMILY_FIELD_EVENT_DATEON_LABEL"
+            description="COM_GBJFAMILY_FIELD_EVENT_DATEON_DESC"
+            format="%d.%m.%Y"
+            translateformat="false"
+            showtime="false"
+            todaybutton="true"
+            filter="none"
+            required="true"
+        />
+
+        <field
+            name="duration"
+            type="number"
+            class="inputbox span1"
+            label="COM_GBJFAMILY_FIELD_EVENT_DURATION_LABEL"
+            description="COM_GBJFAMILY_FIELD_EVENT_DURATION_DESC"
+            min="0.25"
+            max="24.00"
+            step="0.25"
+            hint="JNONE"
+        />
+
+        <field
+            name="id_domain"
+            type="Domain"
+            class="inputbox span4"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
+            description="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_DESC"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="id_activity"
+            type="Activity"
+            class="inputbox span4"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_ACTIVITY_LABEL"
+            description="COM_GBJFAMILY_FIELD_CODEBOOK_ACTIVITY_DESC"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="id_stage"
+            type="Stage"
+            class="inputbox span4"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_STAGE_LABEL"
+            description="COM_GBJFAMILY_FIELD_CODEBOOK_STAGE_DESC"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="update_admin"
+            type="subform"
+        />
+
+    </fieldset>
+</form>

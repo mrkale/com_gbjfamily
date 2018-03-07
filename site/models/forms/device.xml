@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2017 Libor Gabaj. All rights reserved.
+@license    GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
+@since      3.7
+-->
+<form>
+    <fieldset name="gridfields">
+
+        <field
+            name="title"
+            description="COM_GBJFAMILY_FIELD_DEVICE_TITLE_DESC"
+        />
+
+        <field
+            name="alias"
+            label="COM_GBJFAMILY_FIELD_DEVICE_ALIAS_LABEL"
+        />
+
+        <field
+            name="brandname"
+            label="COM_GBJFAMILY_FIELD_DEVICE_BRANDNAME_LABEL"
+        />
+
+        <field
+            name="serial"
+            label="COM_GBJFAMILY_FIELD_DEVICE_SERIAL_LABEL"
+        />
+
+        <field
+            name="eth_mac"
+            label="COM_GBJFAMILY_FIELD_DEVICE_ETHMAC_LABEL"
+        />
+
+        <field
+            name="eth_ip4"
+            label="COM_GBJFAMILY_FIELD_DEVICE_ETHIP4_LABEL"
+        />
+
+        <field
+            name="eth_ifc"
+            label="COM_GBJFAMILY_FIELD_DEVICE_ETHIFC_LABEL"
+        />
+
+        <field
+            name="wifi_mac"
+            label="COM_GBJFAMILY_FIELD_DEVICE_WIFIMAC_LABEL"
+        />
+
+        <field
+            name="wifi_ip4"
+            label="COM_GBJFAMILY_FIELD_DEVICE_WIFIIP4_LABEL"
+        />
+
+        <field
+            name="wifi_ifc"
+            label="COM_GBJFAMILY_FIELD_DEVICE_WIFIIFC_LABEL"
+        />
+
+        <field
+            name="id_device_title"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_DEVICE_LABEL"
+            tooltip="id_device_alias"
+        >
+        </field>
+
+        <field
+            name="id_vendor_title"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_VENDOR_LABEL"
+            tooltip="id_vendor_alias"
+        >
+        </field>
+
+        <field
+            name="id_location_title"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_LOCATION_LABEL"
+            tooltip="id_location_alias"
+        >
+        </field>
+
+        <field
+            name="update_site"
+            type="subform"
+        />
+
+    </fieldset>
+</form>

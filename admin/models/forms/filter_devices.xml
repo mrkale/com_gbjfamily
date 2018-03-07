@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2017 Libor Gabaj. All rights reserved.
+@license    GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
+@since      3.7
+-->
+<form>
+
+    <fields name="filter">
+
+        <field
+            name="search"
+            type="text"
+            label="JSEARCH_FILTER_LABEL"
+            description="LIB_GBJ_SEARCH_VALUE_DESC"
+            hint="JSEARCH_FILTER"
+            class="js-stools-search-string"
+            noresults="JGLOBAL_NO_MATCHING_RESULTS"
+        />
+
+        <field
+            name="state"
+            type="status"
+            onchange="this.form.submit();"
+        >
+            <option value="">JOPTION_SELECT_PUBLISHED</option>
+        </field>
+
+        <field
+            name="featured"
+            type="list"
+            onchange="this.form.submit();"
+        >
+            <option value="">LIB_GBJ_SELECT_FEATURED</option>
+            <option value="1">LIB_GBJ_FEATURED</option>
+            <option value="0">LIB_GBJ_UNFEATURED</option>
+        </field>
+
+        <field
+            name="id_network_alias"
+            type="Network"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_NETWORK</option>
+        </field>
+
+        <field
+            name="id_port_alias"
+            type="Port"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_PORT</option>
+        </field>
+
+        <field
+            name="id_device_alias"
+            type="Device"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_DEVICE</option>
+        </field>
+
+        <field
+            name="id_vendor_alias"
+            type="Vendor"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_VENDOR</option>
+        </field>
+
+        <field
+            name="id_location_alias"
+            type="Location"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_LOCATION</option>
+        </field>
+
+    </fields>
+
+    <fields name="list">
+
+        <field
+            name="fullordering"
+            type="list"
+            label="JGLOBAL_SORT_BY"
+            statuses="*,0,1,2,-2"
+            description="JGLOBAL_SORT_BY"
+            onchange="this.form.submit();"
+            default="title ASC"
+        >
+            <option value="">JGLOBAL_SORT_BY</option>
+            <option value="state ASC">JSTATUS_ASC</option>
+            <option value="state DESC">JSTATUS_DESC</option>
+            <option value="featured ASC">JFEATURED_ASC</option>
+            <option value="featured DESC">JFEATURED_DESC</option>
+            <option value="modified ASC">COM_GBJFAMILY_HEADING_MODIFIED_ASC</option>
+            <option value="modified DESC">COM_GBJFAMILY_HEADING_MODIFIED_DESC</option>
+            <option value="title ASC">COM_GBJFAMILY_HEADING_DEVICE_TITLE_ASC</option>
+            <option value="title DESC">COM_GBJFAMILY_HEADING_DEVICE_TITLE_DESC</option>
+            <option value="alias ASC">COM_GBJFAMILY_HEADING_DEVICE_ALIAS_ASC</option>
+            <option value="alias DESC">COM_GBJFAMILY_HEADING_DEVICE_ALIAS_DESC</option>
+            <option value="brandname ASC">COM_GBJFAMILY_HEADING_DEVICE_BRANDNAME_ASC</option>
+            <option value="brandname DESC">COM_GBJFAMILY_HEADING_DEVICE_BRANDNAME_DESC</option>
+            <option value="serial ASC">COM_GBJFAMILY_HEADING_DEVICE_SERIAL_ASC</option>
+            <option value="serial DESC">COM_GBJFAMILY_HEADING_DEVICE_SERIAL_DESC</option>
+            <option value="type ASC">COM_GBJFAMILY_HEADING_DEVICE_TYPE_ASC</option>
+            <option value="type DESC">COM_GBJFAMILY_HEADING_DEVICE_TYPE_DESC</option>
+            <option value="eth_mac ASC">COM_GBJFAMILY_HEADING_DEVICE_ETHMAC_ASC</option>
+            <option value="eth_mac DESC">COM_GBJFAMILY_HEADING_DEVICE_ETHMAC_DESC</option>
+            <option value="eth_ip4 ASC">COM_GBJFAMILY_HEADING_DEVICE_ETHIP4_ASC</option>
+            <option value="eth_ip4 DESC">COM_GBJFAMILY_HEADING_DEVICE_ETHIP4_DESC</option>
+            <option value="eth_ifc ASC">COM_GBJFAMILY_HEADING_DEVICE_ETHIFC_ASC</option>
+            <option value="eth_ifc DESC">COM_GBJFAMILY_HEADING_DEVICE_ETHIFC_DESC</option>
+            <option value="wifi_mac ASC">COM_GBJFAMILY_HEADING_DEVICE_WIFIMAC_ASC</option>
+            <option value="wifi_mac DESC">COM_GBJFAMILY_HEADING_DEVICE_WIFIMAC_DESC</option>
+            <option value="wifi_ip4 ASC">COM_GBJFAMILY_HEADING_DEVICE_WIFIIP4_ASC</option>
+            <option value="wifi_ip4 DESC">COM_GBJFAMILY_HEADING_DEVICE_WIFIIP4_DESC</option>
+            <option value="wifi_ifc ASC">COM_GBJFAMILY_HEADING_DEVICE_WIFIIFC_ASC</option>
+            <option value="wifi_ifc DESC">COM_GBJFAMILY_HEADING_DEVICE_WIFIIFC_DESC</option>
+            <option value="id_network_alias ASC">COM_GBJFAMILY_HEADING_CODEBOOK_NETWORK_ASC</option>
+            <option value="id_network_alias DESC">COM_GBJFAMILY_HEADING_CODEBOOK_NETWORK_DESC</option>
+            <option value="id_port_alias ASC">COM_GBJFAMILY_HEADING_CODEBOOK_PORT_ASC</option>
+            <option value="id_port_alias DESC">COM_GBJFAMILY_HEADING_CODEBOOK_PORT_DESC</option>
+            <option value="id_device_alias ASC">COM_GBJFAMILY_HEADING_CODEBOOK_DEVICE_ASC</option>
+            <option value="id_device_alias DESC">COM_GBJFAMILY_HEADING_CODEBOOK_DEVICE_DESC</option>
+            <option value="id_vendor_alias ASC">COM_GBJFAMILY_HEADING_CODEBOOK_VENDOR_ASC</option>
+            <option value="id_vendor_alias DESC">COM_GBJFAMILY_HEADING_CODEBOOK_VENDOR_DESC</option>
+            <option value="id_location_alias ASC">COM_GBJFAMILY_HEADING_CODEBOOK_LOCATION_ASC</option>
+            <option value="id_location_alias DESC">COM_GBJFAMILY_HEADING_CODEBOOK_LOCATION_DESC</option>
+        </field>
+
+        <field
+            name="limit"
+            type="limitbox"
+            class="input-mini"
+            default="20"
+            label="JFIELD_PLG_SEARCH_SEARCHLIMIT_LABEL"
+            description="JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC"
+            onchange="this.form.submit();"
+        />
+
+    </fields>
+
+</form>
