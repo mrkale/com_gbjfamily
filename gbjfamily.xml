@@ -38,7 +38,6 @@
     </update>
 
     <files folder="site">
-        <filename>index.html</filename>
         <filename>gbjfamily.php</filename>
         <filename>controller.php</filename>
         <folder>controllers</folder>
@@ -87,7 +86,6 @@
         </submenu>
 
         <files folder="admin">
-            <filename>index.html</filename>
             <filename>gbjfamily.php</filename>
             <filename>controller.php</filename>
             <filename>config.xml</filename>
