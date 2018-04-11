@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--
 @package     Joomla.Component
-@copyright   (c) 2017 Libor Gabaj. All rights reserved.
-@license     GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
-@since       3.7
+@copyright   (c) 2017 Libor Gabaj
+@license     GNU General Public License version 2 or later; see LICENSE.txt
+@since       3.8
 -->
-<extension version="3.7" type="component" method="upgrade">
+<extension version="3.8" type="component" method="upgrade">
     <name>COM_GBJFAMILY</name>
     <libraryname>COM_GBJFAMILY</libraryname>
     <version>2.0.0</version>
@@ -15,7 +15,7 @@
     <authorEmail>libor.gabaj@gmail.com</authorEmail>
     <authorUrl>n/a</authorUrl>
     <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-    <copyright>(c) 2017, Libor Gabaj. All rights reserved.</copyright>
+    <copyright>(c) 2017, Libor Gabaj</copyright>
 
     <scriptfile>script.php</scriptfile>
 
