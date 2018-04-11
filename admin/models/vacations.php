@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    Joomla.Component
- * @copyright  (c) 2017 Libor Gabaj
+ * @copyright  (c) 2017-2018 Libor Gabaj
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  * @since      3.8
  */
@@ -56,21 +56,9 @@ class GbjfamilyModelVacations extends GbjSeedModelList
 		$db = $this->getDbo();
 		$query = parent::getListQuery();
 
-		// Filter by year
-		$year = $this->getState('filter.year');
-
-		if (is_numeric($year))
-		{
-			$query->where('(YEAR(' . $db->quoteName('date_on') . ') = ' . (int) $year . ')');
-		}
-
-		// Filter by month
-		$month = $this->getState('filter.month');
-
-		if (is_numeric($month))
-		{
-			$query->where('(MONTH(' . $db->quoteName('date_on') . ') = ' . (int) $month . ')');
-		}
+		// Filter by year and month
+		$this->setFilterQueryYear('year', $query, 'date_on');
+		$this->setFilterQueryMonth('month', $query, 'date_on');
 
 		return $query;
 	}

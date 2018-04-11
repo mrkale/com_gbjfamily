@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 @package    Joomla.Component
-@copyright  (c) 2017 Libor Gabaj
+@copyright  (c) 2017-2018 Libor Gabaj
 @license    GNU General Public License version 2 or later; see LICENSE.txt
 @since      3.8
 -->
@@ -40,42 +40,42 @@
         <field
             name="id_network_alias"
             type="Network"
+            multiple="true"
+            class="multipleNetworks"
             onchange="this.form.submit();"
-        >
-            <option value="">COM_GBJFAMILY_SELECT_NETWORK</option>
-        </field>
+        />
 
         <field
             name="id_port_alias"
             type="Port"
+            multiple="true"
+            class="multiplePorts"
             onchange="this.form.submit();"
-        >
-            <option value="">COM_GBJFAMILY_SELECT_PORT</option>
-        </field>
+        />
 
         <field
             name="id_device_alias"
             type="Device"
+            multiple="true"
+            class="multipleDevices"
             onchange="this.form.submit();"
-        >
-            <option value="">COM_GBJFAMILY_SELECT_DEVICE</option>
-        </field>
+        />
 
         <field
             name="id_vendor_alias"
             type="Vendor"
+            multiple="true"
+            class="multipleVendors"
             onchange="this.form.submit();"
-        >
-            <option value="">COM_GBJFAMILY_SELECT_VENDOR</option>
-        </field>
+        />
 
         <field
             name="id_location_alias"
             type="Location"
+            multiple="true"
+            class="multipleLocations"
             onchange="this.form.submit();"
-        >
-            <option value="">COM_GBJFAMILY_SELECT_LOCATION</option>
-        </field>
+        />
 
     </fields>
 

@@ -40,34 +40,34 @@
         <field
             name="year"
             type="Year"
+            multiple="true"
+            class="multipleYears"
             onchange="this.form.submit();"
-        >
-            <option value="">COM_GBJFAMILY_SELECT_YEAR</option>
-        </field>
+        />
 
         <field
             name="month"
             type="Month"
+            multiple="true"
+            class="multipleMonths"
             onchange="this.form.submit();"
-        >
-            <option value="">COM_GBJFAMILY_SELECT_MONTH</option>
-        </field>
+        />
 
         <field
             name="id_stay_alias"
             type="Stay"
+            multiple="true"
+            class="multipleStays"
             onchange="this.form.submit();"
-        >
-            <option value="">COM_GBJFAMILY_SELECT_STAY</option>
-        </field>
+        />
 
         <field
             name="id_staff_alias"
             type="Staff"
+            multiple="true"
+            class="multipleStaffs"
             onchange="this.form.submit();"
-        >
-            <option value="">COM_GBJFAMILY_SELECT_STAFF</option>
-        </field>
+        />
 
     </fields>
 
