@@ -95,8 +95,8 @@
             <option value="state DESC">JSTATUS_DESC</option>
             <option value="featured ASC">JFEATURED_ASC</option>
             <option value="featured DESC">JFEATURED_DESC</option>
-            <option value="modified ASC">COM_GBJFAMILY_HEADING_MODIFIED_ASC</option>
-            <option value="modified DESC">COM_GBJFAMILY_HEADING_MODIFIED_DESC</option>
+            <option value="modified ASC">LIB_GBJ_HEADING_MODIFIED_ASC</option>
+            <option value="modified DESC">LIB_GBJ_HEADING_MODIFIED_DESC</option>
             <option value="title ASC">COM_GBJFAMILY_HEADING_DEVICE_TITLE_ASC</option>
             <option value="title DESC">COM_GBJFAMILY_HEADING_DEVICE_TITLE_DESC</option>
             <option value="alias ASC">COM_GBJFAMILY_HEADING_DEVICE_ALIAS_ASC</option>
