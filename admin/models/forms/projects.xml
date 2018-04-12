@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2018 Libor Gabaj
+@license    GNU General Public License version 2 or later; see LICENSE.txt
+@since      3.8
+-->
+<form>
+    <fieldset name="gridfields">
+
+        <!-- The first field here is considered as a default search field. -->
+        <!-- Default type for searching is string. -->
+        <field
+            name="title"
+            type="string"
+            label="LIB_GBJ_FIELD_TITLE_LABEL"
+            labelclass="title"
+            class="has-context"
+        />
+
+        <field
+            name="alias"
+            type="string"
+            label="LIB_GBJ_FIELD_ALIAS_LABEL"
+            width="10%"
+        />
+
+        <field
+            name="id_domain_alias"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
+            width="6%"
+            tooltip="id_domain_title"
+            defaulted="false"
+        >
+        </field>
+
+        <field
+            name="events"
+            type="number"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_EVENTS_LABEL"
+            labelclass="center"
+            class="center"
+            default="JNONE"
+        />
+
+        <field
+            name="grid_admin"
+            type="subform"
+        />
+
+    </fieldset>
+</form>
