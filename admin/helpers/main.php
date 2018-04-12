@@ -31,5 +31,6 @@ class Helper extends GbjHelpersCommon
 		'events',
 		'vacations',
 		'devices',
+		'projects',
 	);
 }

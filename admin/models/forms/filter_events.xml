@@ -78,6 +78,14 @@
         />
 
         <field
+            name="project"
+            type="Project"
+            multiple="true"
+            class="multipleProjects"
+            onchange="this.form.submit();"
+        />
+
+        <field
             name="duration_state"
             type="list"
             onchange="this.form.submit();"
@@ -119,6 +127,8 @@
             <option value="id_activity_alias DESC">COM_GBJFAMILY_HEADING_CODEBOOK_ACTIVITY_DESC</option>
             <option value="id_stage_alias ASC">COM_GBJFAMILY_HEADING_CODEBOOK_STAGE_ASC</option>
             <option value="id_stage_alias DESC">COM_GBJFAMILY_HEADING_CODEBOOK_STAGE_DESC</option>
+            <option value="id_project_alias ASC">COM_GBJFAMILY_HEADING_CODEBOOK_PROJECT_ASC</option>
+            <option value="id_project_alias DESC">COM_GBJFAMILY_HEADING_CODEBOOK_PROJECT_DESC</option>
         </field>
 
         <field

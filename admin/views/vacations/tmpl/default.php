@@ -68,10 +68,7 @@ $cparams = JComponentHelper::getParams($componentName);
 			<tr class="row<?php echo $this->item->sequence % 2; ?>">
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'sequence')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'state, featured')); ?>
-				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'date_on',
-					'url'=>Helper::getUrl(array('task' => $viewEdit . '.' . Helper::COMMON_LAYOUT_EDIT,
-												'id' => $this->item->id))));
-				?>
+				<?php echo JLayoutHelper::render('grid.items_edit', $this, $layoutBasePath, array('fields'=>'date_on')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'date_off')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'title')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'id_stay_alias')); ?>

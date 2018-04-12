@@ -26,6 +26,7 @@ class GbjfamilyModelEvents extends GbjSeedModelList
 		$config['filter_fields'][] = 'duration_state';
 		$config['filter_fields'][] = 'year';
 		$config['filter_fields'][] = 'month';
+		$config['filter_fields'][] = 'project';
 
 		parent::__construct($config);
 	}
@@ -43,9 +44,10 @@ class GbjfamilyModelEvents extends GbjSeedModelList
 		$this->setFilterState('duration_state', 'float');
 		$this->setFilterState('year', 'uint');
 		$this->setFilterState('month', 'uint');
-
+		$this->setFilterState('project', 'uint');
+		
 		parent::populateState($ordering, $direction);
-	}
+		}
 
 	/**
 	 * Retrieve list of records from database.
@@ -76,9 +78,10 @@ class GbjfamilyModelEvents extends GbjSeedModelList
 			}
 		}
 
-		// Filter by year and month
+		// Othe filters
 		$this->setFilterQueryYear('year', $query, 'date_on');
 		$this->setFilterQueryMonth('month', $query, 'date_on');
+		$this->setFilterQueryNumeric('project', $query, 'id_project');
 
 		return $query;
 	}

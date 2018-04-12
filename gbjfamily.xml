@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--
 @package     Joomla.Component
-@copyright   (c) 2017 Libor Gabaj
+@copyright   (c) 2017-2018 Libor Gabaj
 @license     GNU General Public License version 2 or later; see LICENSE.txt
 @since       3.8
 -->
@@ -15,7 +15,7 @@
     <authorEmail>libor.gabaj@gmail.com</authorEmail>
     <authorUrl>n/a</authorUrl>
     <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-    <copyright>(c) 2017, Libor Gabaj</copyright>
+    <copyright>(c) 2017-2018 Libor Gabaj</copyright>
 
     <scriptfile>script.php</scriptfile>
 
@@ -31,9 +31,9 @@
         </sql>
     </uninstall>
 
-    <update folder="admin">
+    <update>
         <schemas>
-            <schemapath type="mysql">sql/update</schemapath>
+            <schemapath type="mysql">sql/updates/mysql</schemapath>
         </schemas>
     </update>
 
@@ -79,9 +79,17 @@
                 link="option=com_gbjfamily&amp;view=devices"
                 view="devices"
                 img="class:generic"
-                alt="GbjFamily/Devicess"
+                alt="GbjFamily/Devices"
             >
                 COM_GBJFAMILY_SUBMENU_DEVICES
+            </menu>
+            <menu
+                link="option=com_gbjfamily&amp;view=projects"
+                view="projects"
+                img="class:generic"
+                alt="GbjFamily/Projects"
+            >
+                COM_GBJFAMILY_SUBMENU_PROJECTS
             </menu>
         </submenu>
 

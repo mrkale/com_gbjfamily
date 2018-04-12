@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--
 @package    Joomla.Component
-@copyright  (c) 2017 Libor Gabaj
+@copyright  (c) 2017-2018 Libor Gabaj
 @license    GNU General Public License version 2 or later; see LICENSE.txt
 @since      3.8
 -->
@@ -57,6 +57,15 @@
             label="COM_GBJFAMILY_FIELD_CODEBOOK_STAGE_LABEL"
             width="6%"
             tooltip="id_stage_title"
+            defaulted="false"
+        >
+        </field>
+
+        <field
+            name="id_project_alias"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_LABEL"
+            width="6%"
+            tooltip="id_project_title"
             defaulted="false"
         >
         </field>

@@ -10,7 +10,7 @@
 defined('_JEXEC') or die;
 
 /**
- * Methods handling the record of an vacation.
+ * Methods handling the record of the agenda.
  *
  * @since  3.8
  */

@@ -10,7 +10,7 @@
 defined('_JEXEC') or die;
 
 /**
- * Table definition for event
+ * Table definition for agenda
  *
  * @since  3.8
  */

@@ -10,7 +10,7 @@
 defined('_JEXEC') or die;
 
 /**
- * Table definition for vacation
+ * Table definition for agenda
  *
  * @since  3.8
  */
@@ -39,7 +39,7 @@ class GbjfamilyTableVacation extends GbjSeedTable
 	protected function checkDate($fieldName)
 	{
 		parent::checkDate($fieldName);
-		
+
 		// End date is sooner than start date
 		if ($this->date_off < $this->date_on)
 		{
