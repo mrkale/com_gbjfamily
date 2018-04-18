@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 @package    Joomla.Component
-@copyright  (c) 2017 Libor Gabaj. All rights reserved.
-@license    GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
-@since      3.7
+@copyright  (c) 2017-2018 Libor Gabaj
+@license    GNU General Public License version 2 or later; see LICENSE.txt
+@since      3.8
 -->
 
 <metadata>
@@ -91,18 +91,6 @@
                 default="1"
                 label="LIB_GBJ_MENU_FILTER_STATS_LABEL"
                 description="LIB_GBJ_MENU_FILTER_STATS_DESC"
-            >
-                <option value="0">JHIDE</option>
-                <option value="1">JSHOW</option>
-            </field>
-
-
-            <field
-                name="show_agenda_stats"
-                type="list"
-                default="1"
-                label="LIB_GBJ_MENU_AGENDA_STATS_LABEL"
-                description="LIB_GBJ_MENU_AGENDA_STATS_DESC"
             >
                 <option value="0">JHIDE</option>
                 <option value="1">JSHOW</option>

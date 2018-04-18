@@ -78,7 +78,7 @@
         />
 
         <field
-            name="project"
+            name="id_project_alias"
             type="Project"
             multiple="true"
             class="multipleProjects"

@@ -26,7 +26,7 @@ class GbjfamilyModelEvents extends GbjSeedModelList
 		$config['filter_fields'][] = 'duration_state';
 		$config['filter_fields'][] = 'year';
 		$config['filter_fields'][] = 'month';
-		$config['filter_fields'][] = 'project';
+//		$config['filter_fields'][] = 'project';
 
 		parent::__construct($config);
 	}
@@ -44,8 +44,7 @@ class GbjfamilyModelEvents extends GbjSeedModelList
 		$this->setFilterState('duration_state', 'float');
 		$this->setFilterState('year', 'uint');
 		$this->setFilterState('month', 'uint');
-		$this->setFilterState('project', 'uint');
-		
+
 		parent::populateState($ordering, $direction);
 		}
 
@@ -78,11 +77,37 @@ class GbjfamilyModelEvents extends GbjSeedModelList
 			}
 		}
 
-		// Othe filters
+		// Other filters
 		$this->setFilterQueryYear('year', $query, 'date_on');
 		$this->setFilterQueryMonth('month', $query, 'date_on');
-		$this->setFilterQueryNumeric('project', $query, 'id_project');
 
 		return $query;
+	}
+
+	public function getStatistics()
+	{
+		$statistics['duration']['cnt'] = 0;
+		$statistics['duration']['sum'] = 0;
+		$statistics['duration']['avg'] = 0;
+		$statistics['duration']['max'] = 0;
+		$statistics['duration']['min'] = null;
+
+		foreach ($this->getItems() as $recordObject)
+		{
+			if (isset($recordObject->duration))
+			{
+				$statistics['duration']['cnt'] += 1;
+				$statistics['duration']['sum'] += $recordObject->duration;
+				$statistics['duration']['max'] = max($recordObject->duration, $statistics['duration']['max']);
+				$statistics['duration']['min'] = min($recordObject->duration, $statistics['duration']['min'] ?? $statistics['duration']['max']);
+			}
+		}
+
+		if ($statistics['duration']['cnt'] <> 0)
+		{
+			$statistics['duration']['avg'] = $statistics['duration']['sum'] / $statistics['duration']['cnt'];
+		}
+
+		return $statistics;
 	}
 }
