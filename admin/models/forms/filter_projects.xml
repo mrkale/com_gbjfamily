@@ -45,6 +45,16 @@
             onchange="this.form.submit();"
         />
 
+        <field
+            name="events"
+            type="list"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_EVENTS</option>
+            <option value="0">LIB_GBJ_SELECT_NONE</option>
+            <option value="1">LIB_GBJ_SELECT_SOME</option>
+        </field>
+
     </fields>
 
     <fields name="list">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 @package    Joomla.Component
-@copyright  (c) 2017 Libor Gabaj
+@copyright  (c) 2017-2018 Libor Gabaj
 @license    GNU General Public License version 2 or later; see LICENSE.txt
 @since      3.8
 -->
@@ -51,7 +51,7 @@
         </field>
 
         <field
-            name="id_domain"
+            name="id_domain_alias"
             type="Domain"
             onchange="this.form.submit();"
         >
@@ -59,7 +59,7 @@
         </field>
 
         <field
-            name="id_activity"
+            name="id_activity_alias"
             type="Activity"
             onchange="this.form.submit();"
         >
@@ -67,11 +67,19 @@
         </field>
 
         <field
-            name="id_stage"
+            name="id_stage_alias"
             type="Stage"
             onchange="this.form.submit();"
         >
             <option value="">COM_GBJFAMILY_SELECT_STAGE</option>
+        </field>
+
+        <field
+            name="id_project_alias"
+            type="Project"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_PROJECT</option>
         </field>
 
         <field

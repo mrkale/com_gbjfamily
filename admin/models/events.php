@@ -84,6 +84,11 @@ class GbjfamilyModelEvents extends GbjSeedModelList
 		return $query;
 	}
 
+	/**
+	 * Calculates statistcs from filtered records.
+	 *
+	 * @return  array  The list of statistics variables and values.
+	 */
 	public function getStatistics()
 	{
 		$statistics['duration']['cnt'] = 0;

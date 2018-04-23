@@ -48,7 +48,7 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 		$db = $this->getDbo();
 		$query = parent::getListQuery();
 
-		// Filter by Events
+		// Filter by child agendas
 		$this->setFilterQuerySome('events', $query);
 
 		return $query;
@@ -122,5 +122,33 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 			->union($queryTotals);
 
 		return $this->statQueryEvents;
+	}
+
+	/**
+	 * Calculates statistcs from filtered records.
+	 *
+	 * @return  array  The list of statistics variables and values.
+	 */
+	public function getStatistics()
+	{
+		$statistics['events']['cnt'] = 0;
+		$statistics['events']['sum'] = 0;
+		$statistics['events']['avg'] = 0;
+
+		foreach ($this->getItems() as $recordObject)
+		{
+			if (intval($recordObject->events))
+			{
+				$statistics['events']['cnt'] += 1;
+				$statistics['events']['sum'] += intval($recordObject->events);
+			}
+		}
+
+		if ($statistics['events']['cnt'] <> 0)
+		{
+			$statistics['events']['avg'] = $statistics['events']['sum'] / $statistics['events']['cnt'];
+		}
+
+		return $statistics;
 	}
 }

@@ -20,4 +20,5 @@ $class = strtolower(Helper::getClassPrefix()). '_dl' . $pageclass_sfx;
 	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'id_domain_title')); ?>
 	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'id_activity_title')); ?>
 	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'id_stage_title')); ?>
+	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'id_project_title')); ?>
 </dl>
