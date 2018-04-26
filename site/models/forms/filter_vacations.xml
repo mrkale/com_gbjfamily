@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 @package    Joomla.Component
-@copyright  (c) 2017 Libor Gabaj
+@copyright  (c) 2017-2018 Libor Gabaj
 @license    GNU General Public License version 2 or later; see LICENSE.txt
 @since      3.8
 -->
@@ -31,12 +31,8 @@
 
         <field
             name="year"
-            type="sql"
-            sql_select="DISTINCT YEAR(date_on) as year"
-            sql_from="#__gbjfamily_events"
-            sql_order="date_on DESC"
-            key_field="year"
-            value_field="year"
+            type="Year"
+            datafield="date_on"
             onchange="this.form.submit();"
         >
             <option value="">COM_GBJFAMILY_SELECT_YEAR</option>
@@ -45,6 +41,7 @@
         <field
             name="month"
             type="Month"
+            datafield="date_on"
             onchange="this.form.submit();"
         >
             <option value="">COM_GBJFAMILY_SELECT_MONTH</option>

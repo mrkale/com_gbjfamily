@@ -15,6 +15,8 @@ $pageclass_sfx = htmlspecialchars($tparams->get('pageclass_sfx'));
 ?>
 <dl class="gbjfamily_dl<?php echo $pageclass_sfx; ?>">
 	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'events')); ?>
+	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'events_start')); ?>
+	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'events_stop')); ?>
 </dl>
 
 <?php echo JHtml::_('bootstrap.startAccordion', 'slide-statistics', array('toggle' => true)); ?>

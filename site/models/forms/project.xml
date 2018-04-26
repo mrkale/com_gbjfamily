@@ -9,18 +9,14 @@
     <fieldset name="gridfields">
 
         <field
-            name="title"
-            label="COM_GBJFAMILY_FIELD_PROJECT_TITLE_LABEL"
-        />
-
-        <field
             name="alias"
             label="LIB_GBJ_FIELD_ALIAS_LABEL"
         />
 
         <field
-            name="id_domain_title"
+            name="id_domain"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
+            datafield="id_domain_title"
             tooltip="id_domain_alias"
         >
         </field>
@@ -28,6 +24,20 @@
         <field
             name="events"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_EVENTS_LABEL"
+        />
+
+        <field
+            name="events_start"
+            type="date"
+            label="LIB_GBJ_FIELD_DATEON_LABEL"
+            format="LIB_GBJ_FORMAT_DATE_LONG"
+        />
+
+        <field
+            name="events_stop"
+            type="date"
+            label="LIB_GBJ_FIELD_DATEOFF_LABEL"
+            format="LIB_GBJ_FORMAT_DATE_LONG"
         />
 
         <field

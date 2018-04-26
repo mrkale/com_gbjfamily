@@ -16,5 +16,5 @@ $class = strtolower(Helper::getClassPrefix()). '_dl' . $pageclass_sfx;
 ?>
 <dl class="<?php echo $class; ?>">
 	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'alias')); ?>
-	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'id_domain_title')); ?>
+	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'id_domain')); ?>
 </dl>

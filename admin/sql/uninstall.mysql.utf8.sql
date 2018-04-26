@@ -12,3 +12,4 @@ DROP TABLE IF EXISTS `#__gbjfamily_events`;
 DROP TABLE IF EXISTS `#__gbjfamily_devices`;
 DROP TABLE IF EXISTS `#__gbjfamily_vacations`;
 DROP TABLE IF EXISTS `#__gbjfamily_projects`;
+DROP TABLE IF EXISTS `#__gbjfamily_incomes`;

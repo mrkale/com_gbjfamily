@@ -47,7 +47,6 @@
     </files>
 
     <media destination="com_gbjfamily" folder="media">
-        <filename>index.html</filename>
         <folder>css</folder>
     </media>
 

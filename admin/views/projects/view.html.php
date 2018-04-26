@@ -34,10 +34,21 @@ class GbjfamilyViewProjects extends GbjSeedViewList
 	public function htmlStatistics()
 	{
 		$htmlString = parent::htmlStatistics();
-		$htmlString .= JText::_('LIB_GBJ_STAT_DELIM_VARIABLE') .  JText::_('COM_GBJFAMILY_FIELD_CODEBOOK_EVENTS_LABEL') . JText::_('LIB_GBJ_STAT_DELIM_LABEL');
-		$htmlString .= JText::sprintf('%d (%d)', $this->statistics['events']['sum'], $this->statistics['events']['cnt']);
-		$htmlString .= JText::_('LIB_GBJ_STAT_DELIM_VALUE') . JText::_('LIB_GBJ_STAT_AVG');
-		$htmlString .= JText::sprintf('%8.1f', $this->statistics['events']['avg']);
+
+		// Events
+		foreach ($this->statistics['events'] as $key => $value)
+		{
+			$value = number_format($value,
+				JText::_('COM_GBJFAMILY_FORMAT_NUMBER_DECIMALS'),
+				JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_DECIMALS'),
+				JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_THOUSANDS')
+			);
+			$this->statistics['events'][$key] = $value;
+		}
+
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE'), JText::_('COM_GBJFAMILY_FIELD_CODEBOOK_EVENTS_LABEL'));
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_SUM'), $this->statistics['events']['sum']);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'), $this->statistics['events']['avg']);
 
 		return $htmlString;
 	}

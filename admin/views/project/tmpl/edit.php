@@ -31,7 +31,7 @@ $tabNameActive = $tabNameDetails;
 		<?php echo JHtml::_('bootstrap.startTabSet', $tabSetName, array('active' => $tabNameActive)); ?>
 
 		<?php echo JHtml::_('bootstrap.addTab', $tabSetName, $tabNameDetails,
-			empty($this->item->id) ? JText::_('COM_GBJFAMILY_RECORD_PROJECT_NEW') : JText::sprintf('COM_GBJFAMILY_RECORD_PROJECT_EDIT', $this->item->id)
+			empty($this->item->id) ? JText::_('LIB_GBJ_NEW_RECORD') : JText::sprintf('LIB_GBJ_OLD_RECORD', $this->item->id)
 			);
 		?>
 		<div class="row-fluid form-horizontal-desktop">

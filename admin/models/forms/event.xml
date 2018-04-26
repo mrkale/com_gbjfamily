@@ -12,8 +12,8 @@
             name="title"
             type="text"
             class="input-xxlarge input-large-text"
-            label="COM_GBJFAMILY_FIELD_EVENT_TITLE_LABEL"
-            description="COM_GBJFAMILY_FIELD_EVENT_TITLE_DESC"
+            label="LIB_GBJ_FIELD_TITLE_LABEL"
+            description="LIB_GBJ_FIELD_TITLE_DESC"
             required="true"
         />
 
@@ -21,8 +21,8 @@
             name="date_on"
             type="calendar"
             class="input-xxlarge input-large-text span5"
-            label="COM_GBJFAMILY_FIELD_EVENT_DATEON_LABEL"
-            description="COM_GBJFAMILY_FIELD_EVENT_DATEON_DESC"
+            label="LIB_GBJ_FIELD_DATE_LABEL"
+            description="LIB_GBJ_FIELD_DATE_DESC"
             format="%d.%m.%Y"
             translateformat="false"
             showtime="false"

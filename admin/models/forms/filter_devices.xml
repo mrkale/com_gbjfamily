@@ -38,7 +38,7 @@
         </field>
 
         <field
-            name="id_network_alias"
+            name="id_network"
             type="Network"
             multiple="true"
             class="multipleNetworks"
@@ -46,7 +46,7 @@
         />
 
         <field
-            name="id_port_alias"
+            name="id_port"
             type="Port"
             multiple="true"
             class="multiplePorts"
@@ -54,7 +54,7 @@
         />
 
         <field
-            name="id_device_alias"
+            name="id_device"
             type="Device"
             multiple="true"
             class="multipleDevices"
@@ -62,7 +62,7 @@
         />
 
         <field
-            name="id_vendor_alias"
+            name="id_vendor"
             type="Vendor"
             multiple="true"
             class="multipleVendors"
@@ -70,7 +70,7 @@
         />
 
         <field
-            name="id_location_alias"
+            name="id_location"
             type="Location"
             multiple="true"
             class="multipleLocations"
@@ -119,16 +119,16 @@
             <option value="wifi_ip4 DESC">COM_GBJFAMILY_HEADING_DEVICE_WIFIIP4_DESC</option>
             <option value="wifi_ifc ASC">COM_GBJFAMILY_HEADING_DEVICE_WIFIIFC_ASC</option>
             <option value="wifi_ifc DESC">COM_GBJFAMILY_HEADING_DEVICE_WIFIIFC_DESC</option>
-            <option value="id_network_alias ASC">COM_GBJFAMILY_HEADING_CODEBOOK_NETWORK_ASC</option>
-            <option value="id_network_alias DESC">COM_GBJFAMILY_HEADING_CODEBOOK_NETWORK_DESC</option>
-            <option value="id_port_alias ASC">COM_GBJFAMILY_HEADING_CODEBOOK_PORT_ASC</option>
-            <option value="id_port_alias DESC">COM_GBJFAMILY_HEADING_CODEBOOK_PORT_DESC</option>
-            <option value="id_device_alias ASC">COM_GBJFAMILY_HEADING_CODEBOOK_DEVICE_ASC</option>
-            <option value="id_device_alias DESC">COM_GBJFAMILY_HEADING_CODEBOOK_DEVICE_DESC</option>
-            <option value="id_vendor_alias ASC">COM_GBJFAMILY_HEADING_CODEBOOK_VENDOR_ASC</option>
-            <option value="id_vendor_alias DESC">COM_GBJFAMILY_HEADING_CODEBOOK_VENDOR_DESC</option>
-            <option value="id_location_alias ASC">COM_GBJFAMILY_HEADING_CODEBOOK_LOCATION_ASC</option>
-            <option value="id_location_alias DESC">COM_GBJFAMILY_HEADING_CODEBOOK_LOCATION_DESC</option>
+            <option value="id_network ASC">COM_GBJFAMILY_HEADING_CODEBOOK_NETWORK_ASC</option>
+            <option value="id_network DESC">COM_GBJFAMILY_HEADING_CODEBOOK_NETWORK_DESC</option>
+            <option value="id_port ASC">COM_GBJFAMILY_HEADING_CODEBOOK_PORT_ASC</option>
+            <option value="id_port DESC">COM_GBJFAMILY_HEADING_CODEBOOK_PORT_DESC</option>
+            <option value="id_device ASC">COM_GBJFAMILY_HEADING_CODEBOOK_DEVICE_ASC</option>
+            <option value="id_device DESC">COM_GBJFAMILY_HEADING_CODEBOOK_DEVICE_DESC</option>
+            <option value="id_vendor ASC">COM_GBJFAMILY_HEADING_CODEBOOK_VENDOR_ASC</option>
+            <option value="id_vendor DESC">COM_GBJFAMILY_HEADING_CODEBOOK_VENDOR_DESC</option>
+            <option value="id_location ASC">COM_GBJFAMILY_HEADING_CODEBOOK_LOCATION_ASC</option>
+            <option value="id_location DESC">COM_GBJFAMILY_HEADING_CODEBOOK_LOCATION_DESC</option>
         </field>
 
         <field

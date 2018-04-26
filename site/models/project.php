@@ -19,7 +19,7 @@ require_once JPATH_COMPONENT_ADMINISTRATOR . '/models/projects.php';
 class GbjfamilyModelProject extends GbjfamilyModelProjects
 {
 	/**
-	 * Calculates statistcs from filtered records.
+	 * Calculates statistics from filtered records.
 	 *
 	 * @return  array  The list of statistics variables and values.
 	 */
@@ -31,7 +31,7 @@ class GbjfamilyModelProject extends GbjfamilyModelProjects
 	}
 
 	/**
-	 * Calculates statistcs from events for current record.
+	 * Calculates statistics from events for current record.
 	 *
 	 * @return  array  The list of statistics variables and values.
 	 */

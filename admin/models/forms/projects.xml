@@ -26,9 +26,10 @@
         />
 
         <field
-            name="id_domain_alias"
+            name="id_domain"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
             width="6%"
+            datafield="id_domain_alias"
             tooltip="id_domain_title"
             defaulted="false"
         >
@@ -38,9 +39,24 @@
             name="events"
             type="number"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_EVENTS_LABEL"
-            labelclass="center"
-            class="center"
             default="JNONE"
+            width="10%"
+        />
+
+        <field
+            name="events_start"
+            type="date"
+            label="LIB_GBJ_FIELD_DATEON_LABEL"
+            format="LIB_GBJ_FORMAT_DATE_SHORT_DAY"
+            defaulted="false"
+        />
+
+        <field
+            name="events_stop"
+            type="date"
+            label="LIB_GBJ_FIELD_DATEOFF_LABEL"
+            format="LIB_GBJ_FORMAT_DATE_SHORT_DAY"
+            defaulted="false"
         />
 
         <field

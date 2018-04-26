@@ -24,37 +24,6 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 	protected $statQueryEvents;
 
 	/**
-	 * Method to set the default sorting parameters
-	 *
-	 * @param   string  $ordering   An optional ordering field.
-	 * @param   string  $direction  An optional direction (asc|desc).
-	 *
-	 * @return  void
-	 */
-	protected function populateState($ordering = null, $direction = null)
-	{
-		$this->setFilterState('events', 'uint');
-		parent::populateState($ordering, $direction);
-	}
-
-	/**
-	 * Retrieve list of records from database.
-	 *
-	 * @return  object  The query for systems.
-	 */
-	protected function getListQuery()
-	{
-		$app = JFactory::getApplication();
-		$db = $this->getDbo();
-		$query = parent::getListQuery();
-
-		// Filter by child agendas
-		$this->setFilterQuerySome('events', $query);
-
-		return $query;
-	}
-
-	/**
 	 * Extend and amend input query with sub queries, etc.
 	 *
 	 * @param   object  $query       Query to be extended inserted by reference.
@@ -73,17 +42,17 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 		{
 			// Add published events
 			$query
-				->select('COALESCE(se.events, 0) AS events')
+				->select('COALESCE(se.events, 0) AS events, se.events_start, se.events_stop')
 				->leftJoin('(' . $this->statQueryEvents . ') se ON se.id = a.id AND se.state = ' . Helper::COMMON_STATE_PUBLISHED);
 
 			// Add total events. Allow null value for not existing code table.
 			$query
-				->select('te.events AS events_total')
+				->select('te.events AS events_total, te.events_start AS events_total_start, te.events_stop AS events_total_stop')
 				->leftJoin('(' . $this->statQueryEvents . ') te ON te.id = a.id AND te.state = ' . Helper::COMMON_STATE_TOTAL);
 		}
 		else
 		{
-			$query->select('null AS events, null AS events_total');
+			$query->select('null AS events, null AS events_start, null AS events_stop, null AS events_total, null AS events_total_start, null AS events_total_stop');
 		}
 
 		return parent::extendQuery($query, $codeFields);
@@ -107,7 +76,7 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 		$queryTotals = $db->getQuery(true)
 			->select($db->quoteName('id_project', 'id'))
 			->select(Helper::COMMON_STATE_TOTAL . ' AS state')
-			->select('COUNT(*) AS events')
+			->select('COUNT(*) AS events, MIN(date_on) AS events_start, MAX(date_on) AS events_stop')
 			->from($db->quoteName(Helper::getTableName('events')))
 			->group($db->quoteName('id_project'));
 
@@ -115,7 +84,7 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 		$this->statQueryEvents = $db->getQuery(true)
 			->select($db->quoteName('id_project', 'id'))
 			->select($db->quoteName('state'))
-			->select('COUNT(*) AS events')
+			->select('COUNT(*) AS events, MIN(date_on) AS events_start, MAX(date_on) AS events_stop')
 			->from($db->quoteName(Helper::getTableName('events')))
 			->group($db->quoteName('id_project'))
 			->group($db->quoteName('state'))
@@ -125,28 +94,41 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 	}
 
 	/**
-	 * Calculates statistcs from filtered records.
+	 * Calculates statistics from filtered records.
 	 *
 	 * @return  array  The list of statistics variables and values.
 	 */
 	public function getStatistics()
 	{
-		$statistics['events']['cnt'] = 0;
-		$statistics['events']['sum'] = 0;
-		$statistics['events']['avg'] = 0;
+		$statistics['events'] = $this->getStatisticsEvents();
+
+		return $statistics;
+	}
+
+	/**
+	 * Calculates statistics from events for current record.
+	 *
+	 * @return  array  The list of statistics variables and values.
+	 */
+	public function getStatisticsEvents()
+	{
+		$statistics = array();
+		$statistics['cnt'] = 0;
+		$statistics['sum'] = 0;
+		$statistics['avg'] = 0;
 
 		foreach ($this->getItems() as $recordObject)
 		{
 			if (intval($recordObject->events))
 			{
-				$statistics['events']['cnt'] += 1;
-				$statistics['events']['sum'] += intval($recordObject->events);
+				$statistics['cnt'] += 1;
+				$statistics['sum'] += intval($recordObject->events);
 			}
 		}
 
-		if ($statistics['events']['cnt'] <> 0)
+		if ($statistics['cnt'] <> 0)
 		{
-			$statistics['events']['avg'] = $statistics['events']['sum'] / $statistics['events']['cnt'];
+			$statistics['avg'] = $statistics['sum'] / $statistics['cnt'];
 		}
 
 		return $statistics;

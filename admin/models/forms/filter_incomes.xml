@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2018 Libor Gabaj
+@license    GNU General Public License version 2 or later; see LICENSE.txt
+@since      3.8
+-->
+<form>
+
+    <fields name="filter">
+
+        <field
+            name="search"
+            type="text"
+            label="JSEARCH_FILTER_LABEL"
+            description="LIB_GBJ_SEARCH_VALUE_DESC"
+            hint="JSEARCH_FILTER"
+            class="js-stools-search-string"
+            noresults="JGLOBAL_NO_MATCHING_RESULTS"
+        />
+
+        <field
+            name="state"
+            type="status"
+            onchange="this.form.submit();"
+        >
+            <option value="">JOPTION_SELECT_PUBLISHED</option>
+        </field>
+
+        <field
+            name="featured"
+            type="list"
+            onchange="this.form.submit();"
+        >
+            <option value="">LIB_GBJ_SELECT_FEATURED</option>
+            <option value="1">LIB_GBJ_FEATURED</option>
+            <option value="0">LIB_GBJ_UNFEATURED</option>
+        </field>
+
+        <field
+            name="year"
+            type="Year"
+            datafield="date_on"
+            multiple="true"
+            class="multipleYears"
+            onchange="this.form.submit();"
+        />
+
+        <field
+            name="month"
+            type="Month"
+            datafield="date_on"
+            multiple="true"
+            class="multipleMonths"
+            onchange="this.form.submit();"
+        />
+
+        <field
+            name="id_domain"
+            type="Domain"
+            multiple="true"
+            class="multipleDomains"
+            onchange="this.form.submit();"
+        />
+
+        <field
+            name="id_currency"
+            type="Currency"
+            multiple="true"
+            class="multipleCurrencies"
+            onchange="this.form.submit();"
+        />
+
+        <field
+            name="id_asset"
+            type="Asset"
+            multiple="true"
+            class="multipleAssets"
+            onchange="this.form.submit();"
+        />
+
+            
+    </fields>
+
+    <fields name="list">
+
+        <field
+            name="fullordering"
+            type="list"
+            label="JGLOBAL_SORT_BY"
+            statuses="*,0,1,2,-2"
+            description="JGLOBAL_SORT_BY"
+            onchange="this.form.submit();"
+            default="date_on DESC"
+        >
+            <option value="">JGLOBAL_SORT_BY</option>
+            <option value="state ASC">JSTATUS_ASC</option>
+            <option value="state DESC">JSTATUS_DESC</option>
+            <option value="featured ASC">JFEATURED_ASC</option>
+            <option value="featured DESC">JFEATURED_DESC</option>
+            <option value="modified ASC">LIB_GBJ_HEADING_MODIFIED_ASC</option>
+            <option value="modified DESC">LIB_GBJ_HEADING_MODIFIED_DESC</option>
+            <option value="title ASC">JGLOBAL_TITLE_ASC</option>
+            <option value="title DESC">JGLOBAL_TITLE_DESC</option>
+            <option value="date_on ASC">LIB_GBJ_HEADING_DATE_ASC</option>
+            <option value="date_on DESC">LIB_GBJ_HEADING_DATE_DESC</option>
+            <option value="price ASC">LIB_GBJ_HEADING_PRICE_ASC</option>
+            <option value="price DESC">LIB_GBJ_HEADING_PRICE_DESC</option>
+            <option value="id_domain ASC">COM_GBJFAMILY_HEADING_CODEBOOK_DOMAIN_ASC</option>
+            <option value="id_domain DESC">COM_GBJFAMILY_HEADING_CODEBOOK_DOMAIN_DESC</option>
+            <option value="id_currency ASC">COM_GBJFAMILY_HEADING_CODEBOOK_CURRENCY_ASC</option>
+            <option value="id_currency DESC">COM_GBJFAMILY_HEADING_CODEBOOK_CURRENCY_DESC</option>
+            <option value="id_asset ASC">COM_GBJFAMILY_HEADING_CODEBOOK_ASSET_ASC</option>
+            <option value="id_asset DESC">COM_GBJFAMILY_HEADING_CODEBOOK_ASSET_DESC</option>
+        </field>
+
+        <field
+            name="limit"
+            type="limitbox"
+            class="input-mini"
+            default="20"
+            label="JFIELD_PLG_SEARCH_SEARCHLIMIT_LABEL"
+            description="JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC"
+            onchange="this.form.submit();"
+        />
+
+    </fields>
+
+</form>

@@ -40,6 +40,7 @@
         <field
             name="year"
             type="Year"
+            datafield="date_on"
             multiple="true"
             class="multipleYears"
             onchange="this.form.submit();"
@@ -48,13 +49,14 @@
         <field
             name="month"
             type="Month"
+            datafield="date_on"
             multiple="true"
             class="multipleMonths"
             onchange="this.form.submit();"
         />
 
         <field
-            name="id_stay_alias"
+            name="id_stay"
             type="Stay"
             multiple="true"
             class="multipleStays"
@@ -62,7 +64,7 @@
         />
 
         <field
-            name="id_staff_alias"
+            name="id_staff"
             type="Staff"
             multiple="true"
             class="multipleStaffs"
@@ -95,10 +97,10 @@
             <option value="date_on DESC">COM_GBJFAMILY_HEADING_VACATION_DATEON_DESC</option>
             <option value="date_off ASC">COM_GBJFAMILY_HEADING_VACATION_DATEOFF_ASC</option>
             <option value="date_off DESC">COM_GBJFAMILY_HEADING_VACATION_DATEOFF_DESC</option>
-            <option value="id_stay_alias ASC">COM_GBJFAMILY_HEADING_CODEBOOK_STAY_ASC</option>
-            <option value="id_stay_alias DESC">COM_GBJFAMILY_HEADING_CODEBOOK_STAY_DESC</option>
-            <option value="id_staff_alias ASC">COM_GBJFAMILY_HEADING_CODEBOOK_STAFF_ASC</option>
-            <option value="id_staff_alias DESC">COM_GBJFAMILY_HEADING_CODEBOOK_STAFF_DESC</option>
+            <option value="id_stay ASC">COM_GBJFAMILY_HEADING_CODEBOOK_STAY_ASC</option>
+            <option value="id_stay DESC">COM_GBJFAMILY_HEADING_CODEBOOK_STAY_DESC</option>
+            <option value="id_staff ASC">COM_GBJFAMILY_HEADING_CODEBOOK_STAFF_ASC</option>
+            <option value="id_staff DESC">COM_GBJFAMILY_HEADING_CODEBOOK_STAFF_DESC</option>
         </field>
 
         <field

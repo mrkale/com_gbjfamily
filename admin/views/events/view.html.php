@@ -24,10 +24,22 @@ class GbjfamilyViewEvents extends GbjSeedViewList
 	public function htmlStatistics()
 	{
 		$htmlString = parent::htmlStatistics();
-		$htmlString .= JText::_('LIB_GBJ_STAT_DELIM_VARIABLE') .  JText::_('COM_GBJFAMILY_FIELD_EVENT_DURATION_LABEL') . JText::_('LIB_GBJ_STAT_DELIM_LABEL');
-		$htmlString .= JText::sprintf('%8.2f %s (%d)', $this->statistics['duration']['sum'], JText::_('COM_GBJFAMILY_UNIT_HOURS'), $this->statistics['duration']['cnt']);
-		$htmlString .= JText::_('LIB_GBJ_STAT_DELIM_VALUE') . JText::_('LIB_GBJ_STAT_AVG');
-		$htmlString .= JText::sprintf('%8.2f %s', $this->statistics['duration']['avg'], JText::_('COM_GBJFAMILY_UNIT_HOURS'));
+
+		// Duration
+		foreach ($this->statistics['duration'] as $key => $value)
+		{
+			$value = number_format($value,
+				JText::_('COM_GBJFAMILY_FORMAT_NUMBER_DECIMALS'),
+				JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_DECIMALS'),
+				JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_THOUSANDS')
+			);
+			$this->statistics['duration'][$key] = $value;
+		}
+
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE_UNIT'), JText::_('COM_GBJFAMILY_FIELD_EVENT_DURATION_LABEL'), JText::_('COM_GBJFAMILY_UNIT_HOURS'));
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_SUM'), $this->statistics['duration']['sum']);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'), $this->statistics['duration']['avg']);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_RANGE'), JText::_('LIB_GBJ_STAT_RNG'), $this->statistics['duration']['min'], $this->statistics['duration']['max']);
 
 		return $htmlString;
 	}

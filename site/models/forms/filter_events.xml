@@ -31,12 +31,8 @@
 
         <field
             name="year"
-            type="sql"
-            sql_select="DISTINCT YEAR(date_on) as year"
-            sql_from="#__gbjfamily_events"
-            sql_order="date_on DESC"
-            key_field="year"
-            value_field="year"
+            type="Year"
+            datafield="date_on"
             onchange="this.form.submit();"
         >
             <option value="">COM_GBJFAMILY_SELECT_YEAR</option>
@@ -45,13 +41,14 @@
         <field
             name="month"
             type="Month"
+            datafield="date_on"
             onchange="this.form.submit();"
         >
             <option value="">COM_GBJFAMILY_SELECT_MONTH</option>
         </field>
 
         <field
-            name="id_domain_alias"
+            name="id_domain"
             type="Domain"
             onchange="this.form.submit();"
         >
@@ -59,7 +56,7 @@
         </field>
 
         <field
-            name="id_activity_alias"
+            name="id_activity"
             type="Activity"
             onchange="this.form.submit();"
         >
@@ -67,7 +64,7 @@
         </field>
 
         <field
-            name="id_stage_alias"
+            name="id_stage"
             type="Stage"
             onchange="this.form.submit();"
         >
@@ -75,7 +72,7 @@
         </field>
 
         <field
-            name="id_project_alias"
+            name="id_project"
             type="Project"
             onchange="this.form.submit();"
         >
@@ -83,8 +80,9 @@
         </field>
 
         <field
-            name="duration_state"
+            name="duration"
             type="list"
+            datamode="binary"
             onchange="this.form.submit();"
         >
             <option value="">COM_GBJFAMILY_SELECT_DURATION</option>

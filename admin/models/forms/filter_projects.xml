@@ -38,7 +38,7 @@
         </field>
 
         <field
-            name="id_domain_alias"
+            name="id_domain"
             type="Domain"
             multiple="true"
             class="multipleDomains"
@@ -48,6 +48,7 @@
         <field
             name="events"
             type="list"
+            datamode="binary"
             onchange="this.form.submit();"
         >
             <option value="">COM_GBJFAMILY_SELECT_EVENTS</option>
@@ -79,8 +80,8 @@
             <option value="title DESC">LIB_GBJ_HEADING_TITLE_DESC</option>
             <option value="alias ASC">LIB_GBJ_HEADING_ALIAS_ASC</option>
             <option value="alias DESC">LIB_GBJ_HEADING_ALIAS_DESC</option>
-            <option value="id_domain_alias ASC">COM_GBJFAMILY_HEADING_CODEBOOK_DOMAIN_ASC</option>
-            <option value="id_domain_alias DESC">COM_GBJFAMILY_HEADING_CODEBOOK_DOMAIN_DESC</option>
+            <option value="id_domain ASC">COM_GBJFAMILY_HEADING_CODEBOOK_DOMAIN_ASC</option>
+            <option value="id_domain DESC">COM_GBJFAMILY_HEADING_CODEBOOK_DOMAIN_DESC</option>
             <option value="events ASC">COM_GBJFAMILY_HEADING_CODEBOOK_EVENTS_ASC</option>
             <option value="events DESC">COM_GBJFAMILY_HEADING_CODEBOOK_EVENTS_DESC</option>
         </field>

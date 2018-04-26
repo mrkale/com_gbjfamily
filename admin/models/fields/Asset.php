@@ -10,7 +10,7 @@
 defined('_JEXEC') or die;
 
 /**
- * Class for custom field Activity
+ * Class for custom field Asset
  *
  * @since  3.8
  */

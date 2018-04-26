@@ -12,6 +12,10 @@
 	padding-right: 20px;
 }
 
+.gbjfamily div h4 {
+	color: blue;
+}
+
 .gbjfamily_table caption {
 	/*text-align: center;*/
 	font-weight: bold;

@@ -30,7 +30,7 @@
         </field>
 
         <field
-            name="id_domain_alias"
+            name="id_domain"
             type="Domain"
             onchange="this.form.submit();"
         >
@@ -40,6 +40,7 @@
         <field
             name="events"
             type="list"
+            datamode="binary"
             onchange="this.form.submit();"
         >
             <option value="">COM_GBJFAMILY_SELECT_EVENTS</option>

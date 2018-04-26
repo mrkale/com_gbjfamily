@@ -9,14 +9,9 @@
     <fieldset name="gridfields">
 
         <field
-            name="title"
-            label="COM_GBJFAMILY_FIELD_EVENT_TITLE_LABEL"
-        />
-
-        <field
             name="date_on"
             type="date"
-            label="COM_GBJFAMILY_FIELD_EVENT_DATEON_LABEL"
+            label="LIB_GBJ_FIELD_DATE_LABEL"
             format="LIB_GBJ_FORMAT_DATE_LONG"
         />
 
@@ -24,33 +19,37 @@
             name="duration"
             type="number"
             label="COM_GBJFAMILY_FIELD_EVENT_DURATION_LABEL"
-            suffix="COM_GBJFAMILY_SUFFIX_HOURS"
+            suffix="COM_GBJFAMILY_UNIT_HOURS"
         />
 
         <field
-            name="id_domain_title"
+            name="id_domain"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
+            datafield="id_domain_title"
             tooltip="id_domain_alias"
         >
         </field>
 
         <field
-            name="id_activity_title"
+            name="id_activity"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_ACTIVITY_LABEL"
+            datafield="id_activity_title"
             tooltip="id_activity_alias"
         >
         </field>
 
         <field
-            name="id_stage_title"
+            name="id_stage"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_STAGE_LABEL"
+            datafield="id_stage_title"
             tooltip="id_stage_alias"
         >
         </field>
 
         <field
-            name="id_project_title"
+            name="id_project"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_LABEL"
+            datafield="id_project_title"
             tooltip="id_project_alias"
         >
         </field>

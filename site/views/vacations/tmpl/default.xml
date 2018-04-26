@@ -13,6 +13,16 @@
         </message>
     </layout>
 
+    <fields name="request">
+        <fieldset name="request">
+            <field
+                name="parentdel"
+                type="hidden"
+                default="vacation"
+            />
+        </fieldset>
+    </fields>
+
     <!-- Add fields to the parameters object for the layout. -->
     <fields name="params">
 
@@ -43,7 +53,7 @@
             <field
                 name="pageicon_class"
                 type="text"
-                default="fa fa-book"
+                default="fa fa-bed"
                 label="LIB_GBJ_MENU_PAGEICON_CLASS_LABEL"
                 description="LIB_GBJ_MENU_PAGEICON_CLASS_DESC"
                 class="inputbox"
