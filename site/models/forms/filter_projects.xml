@@ -43,7 +43,7 @@
             datamode="binary"
             onchange="this.form.submit();"
         >
-            <option value="">COM_GBJFAMILY_SELECT_EVENTS</option>
+            <option value="">COM_GBJFAMILY_EVENTS_SELECT</option>
             <option value="0">LIB_GBJ_SELECT_NONE</option>
             <option value="1">LIB_GBJ_SELECT_SOME</option>
         </field>

@@ -34,7 +34,7 @@
         <field
             name="events"
             type="number"
-            label="COM_GBJFAMILY_FIELD_CODEBOOK_EVENTS_LABEL"
+            label="COM_GBJFAMILY_EVENTS_STATS_LABEL"
             default="JNONE"
         />
 

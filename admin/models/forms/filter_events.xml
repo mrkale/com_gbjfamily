@@ -123,16 +123,16 @@
             <option value="title DESC">JGLOBAL_TITLE_DESC</option>
             <option value="date_on ASC">LIB_GBJ_HEADING_DATE_ASC</option>
             <option value="date_on DESC">LIB_GBJ_HEADING_DATE_DESC</option>
-            <option value="duration ASC">COM_GBJFAMILY_HEADING_EVENT_DURATION_ASC</option>
-            <option value="duration DESC">COM_GBJFAMILY_HEADING_EVENT_DURATION_DESC</option>
+            <option value="duration ASC">COM_GBJFAMILY_EVENT_DURATION_ASC</option>
+            <option value="duration DESC">COM_GBJFAMILY_EVENT_DURATION_DSC</option>
             <option value="id_domain ASC">COM_GBJFAMILY_HEADING_CODEBOOK_DOMAIN_ASC</option>
-            <option value="id_domain DESC">COM_GBJFAMILY_HEADING_CODEBOOK_DOMAIN_DESC</option>
+            <option value="id_domain DESC">COM_GBJFAMILY_HEADING_CODEBOOK_DOMAIN_DSC</option>
             <option value="id_activity ASC">COM_GBJFAMILY_HEADING_CODEBOOK_ACTIVITY_ASC</option>
-            <option value="id_activity DESC">COM_GBJFAMILY_HEADING_CODEBOOK_ACTIVITY_DESC</option>
+            <option value="id_activity DESC">COM_GBJFAMILY_HEADING_CODEBOOK_ACTIVITY_DSC</option>
             <option value="id_stage ASC">COM_GBJFAMILY_HEADING_CODEBOOK_STAGE_ASC</option>
-            <option value="id_stage DESC">COM_GBJFAMILY_HEADING_CODEBOOK_STAGE_DESC</option>
+            <option value="id_stage DESC">COM_GBJFAMILY_HEADING_CODEBOOK_STAGE_DSC</option>
             <option value="id_project ASC">COM_GBJFAMILY_HEADING_CODEBOOK_PROJECT_ASC</option>
-            <option value="id_project DESC">COM_GBJFAMILY_HEADING_CODEBOOK_PROJECT_DESC</option>
+            <option value="id_project DESC">COM_GBJFAMILY_HEADING_CODEBOOK_PROJECT_DSC</option>
         </field>
 
         <field
