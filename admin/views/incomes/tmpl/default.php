@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    Joomla.Component
- * @copyright  (c) 2018 Libor Gabaj
+ * @copyright  (c) 2018-2019 Libor Gabaj
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  * @since      3.8
  */
@@ -16,6 +16,7 @@ JHtml::_('formbehavior.chosen', '.multipleMonths', null, array('placeholder_text
 JHtml::_('formbehavior.chosen', '.multipleDomains', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_DOMAIN')));
 JHtml::_('formbehavior.chosen', '.multipleCurrencies', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_CURENCY')));
 JHtml::_('formbehavior.chosen', '.multipleAssets', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_ASSET')));
+JHtml::_('formbehavior.chosen', '.multipleProjects', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_PROJECT')));
 JHtml::_('formbehavior.chosen', 'select');
 
 $viewName = $this->getName();
@@ -49,8 +50,9 @@ $cparams = JComponentHelper::getParams($componentName);
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'date_on')); ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'title')); ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'price')); ?>
-				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'id_domain')); ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'id_asset')); ?>
+				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'id_domain')); ?>
+				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'id_project')); ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'modified')); ?>
 			</tr>
 		</thead>
@@ -70,7 +72,7 @@ $cparams = JComponentHelper::getParams($componentName);
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'sequence')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'state, featured')); ?>
 				<?php echo JLayoutHelper::render('grid.items_edit', $this, $layoutBasePath, array('fields'=>'date_on')); ?>
-				<?php echo JLayoutHelper::render('grid.items_edit', $this, $layoutBasePath, array('fields'=>'title')); ?>
+				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'title')); ?>
 				<?php
 					$this->item->price = number_format($this->item->price,
 						JText::_('COM_GBJFAMILY_FORMAT_NUMBER_DECIMALS'),
@@ -88,8 +90,9 @@ $cparams = JComponentHelper::getParams($componentName);
 					}
 				?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'price, price_orig')); ?>
-				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'id_domain')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'id_asset')); ?>
+				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'id_domain')); ?>
+				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'id_project')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'modified')); ?>
 			</tr>
 		<?php endforeach; ?>

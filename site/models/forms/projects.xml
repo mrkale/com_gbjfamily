@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--
 @package    Joomla.Component
-@copyright  (c) 2018 Libor Gabaj
+@copyright  (c) 2018-2019 Libor Gabaj
 @license    GNU General Public License version 2 or later; see LICENSE.txt
 @since      3.8
 -->
@@ -35,7 +35,7 @@
             name="events"
             type="number"
             label="COM_GBJFAMILY_EVENTS_STATS_LABEL"
-            default="JNONE"
+            default="LIB_GBJ_SELECT_NONE"
         />
 
         <field
@@ -51,6 +51,20 @@
             type="date"
             label="LIB_GBJ_FIELD_DATEOFF_LABEL"
             format="LIB_GBJ_FORMAT_DATE_SHORT_DAY"
+            defaulted="false"
+        />
+
+        <field
+            name="incomes"
+            type="number"
+            label="COM_GBJFAMILY_INCOMES_STATS_LABEL"
+            default="LIB_GBJ_SELECT_NONE"
+        />
+
+        <field
+            name="incomes_price"
+            type="number"
+            label="LIB_GBJ_FIELD_PRICE_LABEL"
             defaulted="false"
         />
 

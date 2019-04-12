@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 @package    Joomla.Component
-@copyright  (c) 2018 Libor Gabaj
+@copyright  (c) 2018-2019 Libor Gabaj
 @license    GNU General Public License version 2 or later; see LICENSE.txt
 @since      3.8
 -->
@@ -56,6 +56,17 @@
             <option value="1">LIB_GBJ_SELECT_SOME</option>
         </field>
 
+        <field
+            name="incomes"
+            type="list"
+            datamode="binary"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_INCOMES_SELECT</option>
+            <option value="0">LIB_GBJ_SELECT_NONE</option>
+            <option value="1">LIB_GBJ_SELECT_SOME</option>
+        </field>
+
     </fields>
 
     <fields name="list">
@@ -75,15 +86,17 @@
             <option value="featured ASC">JFEATURED_ASC</option>
             <option value="featured DESC">JFEATURED_DESC</option>
             <option value="modified ASC">LIB_GBJ_HEADING_MODIFIED_ASC</option>
-            <option value="modified DESC">LIB_GBJ_HEADING_MODIFIED_DESC</option>
+            <option value="modified DESC">LIB_GBJ_HEADING_MODIFIED_DSC</option>
             <option value="title ASC">LIB_GBJ_HEADING_TITLE_ASC</option>
-            <option value="title DESC">LIB_GBJ_HEADING_TITLE_DESC</option>
+            <option value="title DESC">LIB_GBJ_HEADING_TITLE_DSC</option>
             <option value="alias ASC">LIB_GBJ_HEADING_ALIAS_ASC</option>
-            <option value="alias DESC">LIB_GBJ_HEADING_ALIAS_DESC</option>
+            <option value="alias DESC">LIB_GBJ_HEADING_ALIAS_DSC</option>
             <option value="id_domain ASC">COM_GBJFAMILY_HEADING_CODEBOOK_DOMAIN_ASC</option>
             <option value="id_domain DESC">COM_GBJFAMILY_HEADING_CODEBOOK_DOMAIN_DSC</option>
-            <option value="events ASC">COM_GBJFAMILY_EVENTS_STATS_ASC</option>
-            <option value="events DESC">COM_GBJFAMILY_EVENTS_STATS_DSC</option>
+            <option value="events ASC">COM_GBJFAMILY_HEADING_EVENTS_STATS_ASC</option>
+            <option value="events DESC">COM_GBJFAMILY_HEADING_EVENTS_STATS_DSC</option>
+            <option value="incomes ASC">COM_GBJFAMILY_HEADING_INCOMES_STATS_ASC</option>
+            <option value="incomes DESC">COM_GBJFAMILY_HEADING_INCOMES_STATS_DSC</option>
         </field>
 
         <field

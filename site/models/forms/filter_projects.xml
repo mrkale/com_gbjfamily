@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 @package    Joomla.Component
-@copyright  (c) 2018 Libor Gabaj
+@copyright  (c) 2018-2019 Libor Gabaj
 @license    GNU General Public License version 2 or later; see LICENSE.txt
 @since      3.8
 -->
@@ -44,6 +44,17 @@
             onchange="this.form.submit();"
         >
             <option value="">COM_GBJFAMILY_EVENTS_SELECT</option>
+            <option value="0">LIB_GBJ_SELECT_NONE</option>
+            <option value="1">LIB_GBJ_SELECT_SOME</option>
+        </field>
+
+        <field
+            name="incomes"
+            type="list"
+            datamode="binary"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_INCOMES_SELECT</option>
             <option value="0">LIB_GBJ_SELECT_NONE</option>
             <option value="1">LIB_GBJ_SELECT_SOME</option>
         </field>

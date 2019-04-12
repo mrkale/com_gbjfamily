@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 @package    Joomla.Component
-@copyright  (c) 2017-2018 Libor Gabaj
+@copyright  (c) 2017-2019 Libor Gabaj
 @license    GNU General Public License version 2 or later; see LICENSE.txt
 @since      3.8
 -->
@@ -118,13 +118,13 @@
             <option value="featured ASC">JFEATURED_ASC</option>
             <option value="featured DESC">JFEATURED_DESC</option>
             <option value="modified ASC">LIB_GBJ_HEADING_MODIFIED_ASC</option>
-            <option value="modified DESC">LIB_GBJ_HEADING_MODIFIED_DESC</option>
+            <option value="modified DESC">LIB_GBJ_HEADING_MODIFIED_DSC</option>
             <option value="title ASC">JGLOBAL_TITLE_ASC</option>
             <option value="title DESC">JGLOBAL_TITLE_DESC</option>
             <option value="date_on ASC">LIB_GBJ_HEADING_DATE_ASC</option>
-            <option value="date_on DESC">LIB_GBJ_HEADING_DATE_DESC</option>
-            <option value="duration ASC">COM_GBJFAMILY_EVENT_DURATION_ASC</option>
-            <option value="duration DESC">COM_GBJFAMILY_EVENT_DURATION_DSC</option>
+            <option value="date_on DESC">LIB_GBJ_HEADING_DATE_DSC</option>
+            <option value="duration ASC">COM_GBJFAMILY_HEADING_EVENT_DURATION_ASC</option>
+            <option value="duration DESC">COM_GBJFAMILY_HEADING_EVENT_DURATION_DSC</option>
             <option value="id_domain ASC">COM_GBJFAMILY_HEADING_CODEBOOK_DOMAIN_ASC</option>
             <option value="id_domain DESC">COM_GBJFAMILY_HEADING_CODEBOOK_DOMAIN_DSC</option>
             <option value="id_activity ASC">COM_GBJFAMILY_HEADING_CODEBOOK_ACTIVITY_ASC</option>

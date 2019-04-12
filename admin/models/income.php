@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    Joomla.Component
- * @copyright  (c) 2018 Libor Gabaj
+ * @copyright  (c) 2018-2019 Libor Gabaj
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  * @since      3.8
  */
@@ -59,7 +59,21 @@ class GbjfamilyModelIncome extends GbjSeedModelAdmin
 	}
 
 	/**
-	 * Prepare and sanitise the table data prior to saving.
+	 * Batch setting project to a list of items
+	 *
+	 * @param   string  $value     The id of the new value
+	 * @param   array   $pks       An array of row IDs
+	 * @param   array   $contexts  An array of item contexts
+	 *
+	 * @return  boolean Flag about table existence
+	 */
+	protected function batchProject($value, $pks, $contexts)
+	{
+		return $this->processBatch(__METHOD__, $value, $pks, $contexts);
+	}
+
+	/**
+	 * Prepare and sanitize the table data prior to saving.
 	 *
 	 * @param   \JTable  $table  A reference to a \JTable object.
 	 *

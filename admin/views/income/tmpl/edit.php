@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    Joomla.Component
- * @copyright  (c) 2018 Libor Gabaj
+ * @copyright  (c) 2018-2019 Libor Gabaj
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  * @since      3.8
  */
@@ -42,6 +42,7 @@ $tabNameActive = $tabNameDetails;
 			<?php echo $this->form->renderField('id_currency'); ?>
 			<?php echo $this->form->renderField('id_asset'); ?>
 			<?php echo $this->form->renderField('id_domain'); ?>
+			<?php echo JLayoutHelper::render('record.field_parent', $this, Helper::getLayoutBase(), array('field'=>'id_project')); ?>
 			<?php echo $this->form->renderField('description'); ?>
 			</div>
 			<div class="span3">

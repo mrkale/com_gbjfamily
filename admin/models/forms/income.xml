@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--
 @package    Joomla.Component
-@copyright  (c) 2018 Libor Gabaj
+@copyright  (c) 2018-2019 Libor Gabaj
 @license    GNU General Public License version 2 or later; see LICENSE.txt
 @since      3.8
 -->
@@ -51,6 +51,16 @@
         />
 
         <field
+            name="id_domain"
+            type="Domain"
+            class="inputbox span4"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
+            description="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_DESC"
+            default="0"
+        >
+        </field>
+
+        <field
             name="id_currency"
             type="Currency"
             class="inputbox span4"
@@ -71,11 +81,11 @@
         </field>
 
         <field
-            name="id_domain"
-            type="Domain"
+            name="id_project"
+            type="Project"
             class="inputbox span4"
-            label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
-            description="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_DESC"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_LABEL"
+            description="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_DESC"
             default="0"
         >
         </field>

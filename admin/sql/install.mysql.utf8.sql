@@ -1,6 +1,6 @@
 /**
  * @package    Joomla.Component
- * @copyright  (c) 2017-2018 Libor Gabaj
+ * @copyright  (c) 2017-2019 Libor Gabaj
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  * @since      3.8
  */
@@ -140,9 +140,10 @@ CREATE TABLE IF NOT EXISTS `#__gbjfamily_incomes` (
   `date_on` date NOT NULL DEFAULT '0000-00-00',
   `price` decimal(10,2) NOT NULL DEFAULT '0.00',
   `price_orig` decimal(10,2) NULL,
-  `id_currency` int(11) NOT NULL DEFAULT '0',
   `id_domain` int(11) NOT NULL DEFAULT '0',
+  `id_currency` int(11) NOT NULL DEFAULT '0',
   `id_asset` int(11) NOT NULL DEFAULT '0',
+  `id_project` int(11) NOT NULL DEFAULT '0',
   `state` tinyint(1) NOT NULL DEFAULT '0',
   `checked_out` int(10) unsigned NOT NULL DEFAULT '0',
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',

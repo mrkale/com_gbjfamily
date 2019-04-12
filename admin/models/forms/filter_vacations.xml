@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 @package    Joomla.Component
-@copyright  (c) 2017-2018 Libor Gabaj
+@copyright  (c) 2017-2019 Libor Gabaj
 @license    GNU General Public License version 2 or later; see LICENSE.txt
 @since      3.8
 -->
@@ -90,17 +90,17 @@
             <option value="featured ASC">JFEATURED_ASC</option>
             <option value="featured DESC">JFEATURED_DESC</option>
             <option value="modified ASC">LIB_GBJ_HEADING_MODIFIED_ASC</option>
-            <option value="modified DESC">LIB_GBJ_HEADING_MODIFIED_DESC</option>
+            <option value="modified DESC">LIB_GBJ_HEADING_MODIFIED_DSC</option>
             <option value="title ASC">JGLOBAL_TITLE_ASC</option>
             <option value="title DESC">JGLOBAL_TITLE_DESC</option>
-            <option value="date_on ASC">COM_GBJFAMILY_HEADING_VACATION_DATEON_ASC</option>
-            <option value="date_on DESC">COM_GBJFAMILY_HEADING_VACATION_DATEON_DESC</option>
-            <option value="date_off ASC">COM_GBJFAMILY_HEADING_VACATION_DATEOFF_ASC</option>
-            <option value="date_off DESC">COM_GBJFAMILY_HEADING_VACATION_DATEOFF_DESC</option>
+            <option value="date_on ASC">LIB_GBJ_HEADING_DATEON_ASC</option>
+            <option value="date_on DESC">LIB_GBJ_HEADING_DATEON_DSC</option>
+            <option value="date_off ASC">LIB_GBJ_HEADING_DATEOFF_ASC</option>
+            <option value="date_off DESC">LIB_GBJ_HEADING_DATEOFF_DSC</option>
             <option value="id_stay ASC">COM_GBJFAMILY_HEADING_CODEBOOK_STAY_ASC</option>
-            <option value="id_stay DESC">COM_GBJFAMILY_HEADING_CODEBOOK_STAY_DESC</option>
+            <option value="id_stay DESC">COM_GBJFAMILY_HEADING_CODEBOOK_STAY_DSC</option>
             <option value="id_staff ASC">COM_GBJFAMILY_HEADING_CODEBOOK_STAFF_ASC</option>
-            <option value="id_staff DESC">COM_GBJFAMILY_HEADING_CODEBOOK_STAFF_DESC</option>
+            <option value="id_staff DESC">COM_GBJFAMILY_HEADING_CODEBOOK_STAFF_DSC</option>
         </field>
 
         <field

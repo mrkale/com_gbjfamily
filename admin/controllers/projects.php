@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    Joomla.Component
- * @copyright  (c) 2018 Libor Gabaj
+ * @copyright  (c) 2018-2019 Libor Gabaj
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  * @since      3.8
  */
@@ -22,6 +22,16 @@ class GbjfamilyControllerProjects extends GbjSeedControllerAdmin
 	 * @return  void
 	 */
 	public function enterEvents()
+	{
+		$this->enterAgendaChild(__FUNCTION__);
+	}
+
+	/**
+	 * Method to enter the events agenda.
+	 *
+	 * @return  void
+	 */
+	public function enterIncomes()
 	{
 		$this->enterAgendaChild(__FUNCTION__);
 	}
