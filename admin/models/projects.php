@@ -59,7 +59,9 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 		}
 		else
 		{
-			$query->select('null AS events, null AS events_start, null AS events_stop, null AS events_total, null AS events_start_total, null AS events_stop_total');
+			$query->select('null AS events, null AS events_start, null AS events_stop,'
+				. 'null AS events_total, null AS events_start_total, null AS events_stop_total'
+			);
 		}
 
 		// Extend query with statistics of incomes
@@ -181,12 +183,20 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 		$statistics['sum'] = 0;
 		$statistics['avg'] = 0;
 
+		// Calculation fields
+		$fieldEvents = 'events';
+
+		if (JFactory::getApplication()->isClient('administrator'))
+		{
+			$fieldEvents .= '_total';
+		}
+
 		foreach ($this->getItems() as $recordObject)
 		{
-			if (intval($recordObject->events))
+			if (intval($recordObject->$fieldEvents))
 			{
 				$statistics['recs'] += 1;
-				$statistics['cnt'] += intval($recordObject->events);
+				$statistics['cnt'] += intval($recordObject->$fieldEvents);
 			}
 		}
 
@@ -211,13 +221,23 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 		$statistics['sum'] = 0;
 		$statistics['avg'] = 0;
 
+		// Calculation fields
+		$fieldIncomes = 'incomes';
+		$fieldPrice = $fieldIncomes . '_price';
+
+		if (JFactory::getApplication()->isClient('administrator'))
+		{
+			$fieldIncomes .= '_total';
+			$fieldPrice .= '_total';
+		}
+
 		foreach ($this->getItems() as $recordObject)
 		{
-			if (intval($recordObject->incomes))
+			if (intval($recordObject->$fieldIncomes))
 			{
 				$statistics['recs'] += 1;
-				$statistics['cnt'] += intval($recordObject->incomes);
-				$statistics['sum'] += intval($recordObject->incomes_price);
+				$statistics['cnt'] += intval($recordObject->$fieldIncomes);
+				$statistics['sum'] += intval($recordObject->$fieldPrice);
 			}
 		}
 

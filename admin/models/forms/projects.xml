@@ -50,6 +50,7 @@
             label="LIB_GBJ_FIELD_DATEON_LABEL"
             format="LIB_GBJ_FORMAT_DATE_SHORT"
             defaulted="false"
+            variants="_total"
         />
 
         <field
@@ -58,6 +59,7 @@
             label="LIB_GBJ_FIELD_DATEOFF_LABEL"
             format="LIB_GBJ_FORMAT_DATE_SHORT"
             defaulted="false"
+            variants="_total"
         />
 
         <field
@@ -74,6 +76,7 @@
             type="number"
             label="LIB_GBJ_FIELD_PRICE_LABEL"
             defaulted="false"
+            variants="_total"
         />
 
         <field
