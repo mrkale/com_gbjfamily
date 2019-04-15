@@ -200,7 +200,7 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 			{
 				$statistics['recs'] += 1;
 				$statistics['cnt'] += intval($recordObject->$fieldEvents);
-				$statistics['sum'] += intval($recordObject->$fieldDuration);
+				$statistics['sum'] += floatval($recordObject->$fieldDuration);
 			}
 		}
 
@@ -241,7 +241,7 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 			{
 				$statistics['recs'] += 1;
 				$statistics['cnt'] += intval($recordObject->$fieldIncomes);
-				$statistics['sum'] += intval($recordObject->$fieldPrice);
+				$statistics['sum'] += floatval($recordObject->$fieldPrice);
 			}
 		}
 
