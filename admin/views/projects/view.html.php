@@ -60,11 +60,14 @@ class GbjfamilyViewProjects extends GbjSeedViewList
 
 		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE'), JText::_('COM_GBJFAMILY_EVENTS_STATS_LABEL'));
 		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_CNT'), $this->statistics['events']['cnt']);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE_UNIT'), JText::_('LIB_GBJ_STAT_SUM'), $this->statistics['events']['sum'],
+			JText::_('LIB_GBJ_UNIT_HOURS'));
 		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'), $this->statistics['events']['avg']);
 
 		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE'), JText::_('COM_GBJFAMILY_INCOMES_STATS_LABEL'));
 		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_CNT'), $this->statistics['incomes']['cnt']);
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_SUM'), $this->statistics['incomes']['sum']);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE_UNIT'), JText::_('LIB_GBJ_STAT_SUM'), $this->statistics['incomes']['sum'],
+			JText::_('LIB_GBJ_UNIT_EUR'));
 		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'), $this->statistics['incomes']['avg']);
 
 		return $htmlString;

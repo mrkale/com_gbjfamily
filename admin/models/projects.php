@@ -49,18 +49,17 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 		{
 			// Add published events
 			$query
-				->select('COALESCE(se.events, 0) AS events, se.events_start, se.events_stop')
+				->select('COALESCE(se.events, 0) AS events, se.events_duration')
 				->leftJoin('(' . $this->statQueryEvents . ') se ON se.id = a.id AND se.state = ' . Helper::COMMON_STATE_PUBLISHED);
 
 			// Add total events. Allow null value for not existing code table.
 			$query
-				->select('te.events AS events_total, te.events_start AS events_start_total, te.events_stop AS events_stop_total')
+				->select('te.events AS events_total, te.events_duration AS events_duration_total')
 				->leftJoin('(' . $this->statQueryEvents . ') te ON te.id = a.id AND te.state = ' . Helper::COMMON_STATE_TOTAL);
 		}
 		else
 		{
-			$query->select('null AS events, null AS events_start, null AS events_stop,'
-				. 'null AS events_total, null AS events_start_total, null AS events_stop_total'
+			$query->select('null AS events, null AS events_duration, null AS events_total, null AS events_duration_total'
 			);
 		}
 
@@ -105,7 +104,8 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 		$queryTotals = $db->getQuery(true)
 			->select($db->quoteName('id_project', 'id'))
 			->select(Helper::COMMON_STATE_TOTAL . ' AS state')
-			->select('COUNT(*) AS events, MIN(date_on) AS events_start, MAX(date_on) AS events_stop')
+			->select('COUNT(*) AS events, SUM(duration) AS events_duration'
+			)
 			->from($db->quoteName(Helper::getTableName('events')))
 			->group($db->quoteName('id_project'));
 
@@ -113,7 +113,8 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 		$this->statQueryEvents = $db->getQuery(true)
 			->select($db->quoteName('id_project', 'id'))
 			->select($db->quoteName('state'))
-			->select('COUNT(*) AS events, MIN(date_on) AS events_start, MAX(date_on) AS events_stop')
+			->select('COUNT(*) AS events, SUM(duration) AS events_duration'
+			)
 			->from($db->quoteName(Helper::getTableName('events')))
 			->group($db->quoteName('id_project'))
 			->group($db->quoteName('state'))
@@ -185,10 +186,12 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 
 		// Calculation fields
 		$fieldEvents = 'events';
+		$fieldDuration = $fieldEvents . '_duration';
 
 		if (JFactory::getApplication()->isClient('administrator'))
 		{
 			$fieldEvents .= '_total';
+			$fieldDuration .= '_total';
 		}
 
 		foreach ($this->getItems() as $recordObject)
@@ -197,12 +200,13 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 			{
 				$statistics['recs'] += 1;
 				$statistics['cnt'] += intval($recordObject->$fieldEvents);
+				$statistics['sum'] += intval($recordObject->$fieldDuration);
 			}
 		}
 
 		if ($statistics['recs'] <> 0)
 		{
-			$statistics['avg'] = $statistics['cnt'] / $statistics['recs'];
+			$statistics['avg'] = $statistics['sum'] / $statistics['recs'];
 		}
 
 		return $statistics;

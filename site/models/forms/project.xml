@@ -23,7 +23,7 @@
 
         <field
             name="events"
-            label="COM_GBJFAMILY_FIELD_CODEBOOK_EVENTS_LABEL"
+            label="COM_GBJFAMILY_EVENTS_STATS_LABEL"
         />
 
         <field

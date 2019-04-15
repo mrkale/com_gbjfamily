@@ -45,21 +45,11 @@
         />
 
         <field
-            name="events_start"
-            type="date"
-            label="LIB_GBJ_FIELD_DATEON_LABEL"
-            format="LIB_GBJ_FORMAT_DATE_SHORT"
+            name="events_duration"
+            type="number"
+            label="COM_GBJFAMILY_EVENT_DURATION_LABEL"
             defaulted="false"
-            variants="_total"
-        />
-
-        <field
-            name="events_stop"
-            type="date"
-            label="LIB_GBJ_FIELD_DATEOFF_LABEL"
-            format="LIB_GBJ_FORMAT_DATE_SHORT"
-            defaulted="false"
-            variants="_total"
+            variants="#,_total"
         />
 
         <field
@@ -76,7 +66,7 @@
             type="number"
             label="LIB_GBJ_FIELD_PRICE_LABEL"
             defaulted="false"
-            variants="_total"
+            variants="#,_total"
         />
 
         <field
