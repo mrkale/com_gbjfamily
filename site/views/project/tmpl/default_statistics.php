@@ -14,14 +14,14 @@ $tparams = $this->params;
 $pageclass_sfx = htmlspecialchars($tparams->get('pageclass_sfx'));
 ?>
 
-<?php echo JHtml::_('bootstrap.startAccordion', 'slide-statistics', array('toggle' => true)); ?>
+<?php echo JHtml::_('bootstrap.startTabSet', 'tab-statistics', array('toggle' => true, 'active' => 'events')); ?>
 
-<?php echo JHtml::_('bootstrap.addSlide', 'slide-statistics', JText::_('COM_GBJFAMILY_EVENTS'),	'events'); ?>
+<?php echo JHtml::_('bootstrap.addTab', 'tab-statistics', 'events' , JText::_('COM_GBJFAMILY_EVENTS')); ?>
 <?php echo $this->loadTemplate('statistics_events'); ?>
-<?php echo JHtml::_('bootstrap.endSlide'); ?>
+<?php echo JHtml::_('bootstrap.endTab'); ?>
 
-<?php echo JHtml::_('bootstrap.addSlide', 'slide-statistics', JText::_('COM_GBJFAMILY_INCOMES'),	'incomes'); ?>
+<?php echo JHtml::_('bootstrap.addTab', 'tab-statistics', 'incomes', JText::_('COM_GBJFAMILY_INCOMES')); ?>
 <?php echo $this->loadTemplate('statistics_incomes'); ?>
-<?php echo JHtml::_('bootstrap.endSlide'); ?>
+<?php echo JHtml::_('bootstrap.endTab'); ?>
 
-<?php echo JHtml::_('bootstrap.endAccordion'); ?>
+<?php echo JHtml::_('bootstrap.endTabSet'); ?>
