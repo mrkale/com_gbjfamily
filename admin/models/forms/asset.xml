@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2019 Libor Gabaj
+@license    GNU General Public License version 2 or later; see LICENSE.txt
+@since      3.8
+-->
+<form>
+    <fieldset name="recordfields">
+
+        <field
+            name="title"
+            type="text"
+            class="input-xxlarge input-large-text"
+            label="LIB_GBJ_FIELD_TITLE_LABEL"
+            description="LIB_GBJ_FIELD_TITLE_DESC"
+            required="true"
+        />
+
+        <field
+            name="date_on"
+            type="calendar"
+            class="input-xxlarge input-large-text span5"
+            label="LIB_GBJ_FIELD_DATE_LABEL"
+            description="LIB_GBJ_FIELD_DATE_DESC"
+            format="%d.%m.%Y"
+            translateformat="false"
+            showtime="false"
+            todaybutton="true"
+            filter="none"
+            required="true"
+        />
+
+        <field
+            name="value"
+            type="text"
+            class="inputbox span2"
+            label="COM_GBJFAMILY_FIELD_ASSET_VALUE_LABEL"
+            description="COM_GBJFAMILY_FIELD_ASSET_VALUE_DESC"
+            filter="float"
+        />
+
+        <field
+            name="price"
+            type="text"
+            class="inputbox span2"
+            label="LIB_GBJ_FIELD_PRICE_LABEL"
+            description="LIB_GBJ_FIELD_PRICE_DESC"
+            filter="float"
+        />
+
+        <field
+            name="price_orig"
+            type="text"
+            class="inputbox span2"
+            label="COM_GBJFAMILY_FIELD_INCOME_PRICEORIG_LABEL"
+            description="COM_GBJFAMILY_FIELD_INCOME_PRICEORIG_DESC"
+            filter="float"
+            hint="JNONE"
+        />
+
+        <field
+            name="id_domain"
+            type="Domain"
+            class="inputbox span4"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
+            description="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_DESC"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="id_currency"
+            type="Currency"
+            class="inputbox span4"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_CURRENCY_LABEL"
+            description="COM_GBJFAMILY_FIELD_CODEBOOK_CURRENCY_DESC"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="id_asset"
+            type="Asset"
+            class="inputbox span4"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_ASSET_LABEL"
+            description="COM_GBJFAMILY_FIELD_CODEBOOK_ASSET_DESC"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="update_admin"
+            type="subform"
+        />
+
+    </fieldset>
+</form>

@@ -8,11 +8,12 @@
 /**
  * Update agenda tables
  */
-CREATE TABLE IF NOT EXISTS `#__gbjfamily_incomes` (
+CREATE TABLE IF NOT EXISTS `#__gbjfamily_assets` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL DEFAULT '',
   `description` text,
   `date_on` date NOT NULL DEFAULT '0000-00-00',
+  `value` decimal(10,2) NOT NULL DEFAULT '0.00',
   `price` decimal(10,2) NOT NULL DEFAULT '0.00',
   `price_orig` decimal(10,2) NULL,
   `id_currency` int(11) NOT NULL DEFAULT '0',

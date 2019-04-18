@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2019 Libor Gabaj
+@license    GNU General Public License version 2 or later; see LICENSE.txt
+@since      3.8
+-->
+<form>
+    <fieldset name="gridfields">
+
+        <!-- The first field here is considered as a default search field. -->
+        <!-- Default type for searching is string. -->
+        <field
+            name="title"
+            type="string"
+            label="LIB_GBJ_FIELD_TITLE_LABEL"
+            labelclass="title"
+            class="has-context"
+        />
+
+        <field
+            name="date_on"
+            type="date"
+            label="LIB_GBJ_FIELD_DATE_LABEL"
+            width="10%"
+            format="LIB_GBJ_FORMAT_DATE_LONG"
+        />
+
+        <field
+            name="value"
+            type="number"
+            label="COM_GBJFAMILY_FIELD_ASSET_VALUE_LABEL"
+            width="10%"
+            defaulted="false"
+        />
+
+        <field
+            name="price"
+            type="number"
+            label="LIB_GBJ_FIELD_PRICE_LABEL"
+            width="10%"
+            defaulted="false"
+        />
+
+        <field
+            name="price_orig"
+            type="number"
+            label="COM_GBJFAMILY_FIELD_INCOME_PRICEORIG_LABEL"
+            defaulted="false"
+            suffix="id_currency_alias"
+        />
+
+        <field
+            name="id_asset"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_ASSET_LABEL"
+            width="6%"
+            datafield="id_asset_alias"
+            tooltip="id_asset_title"
+            defaulted="false"
+        >
+        </field>
+
+        <field
+            name="id_domain"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
+            width="6%"
+            datafield="id_domain_alias"
+            tooltip="id_domain_title"
+            defaulted="false"
+        >
+        </field>
+
+        <field
+            name="grid_admin"
+            type="subform"
+        />
+
+        <field
+            name="id_currency"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_CURRENCY_LABEL"
+            width="6%"
+            datafield="id_currency_alias"
+            tooltip="id_currency_title"
+            defaulted="false"
+        >
+        </field>
+
+    </fieldset>
+</form>
