@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--
 @package    Joomla.Component
-@copyright  (c) 2018-2019 Libor Gabaj
+@copyright  (c) 2019 Libor Gabaj
 @license    GNU General Public License version 2 or later; see LICENSE.txt
 @since      3.8
 -->
@@ -26,6 +26,14 @@
         />
 
         <field
+            name="value"
+            type="number"
+            label="COM_GBJFAMILY_FIELD_ASSET_VALUE_LABEL"
+            width="15%"
+            suffix="LIB_GBJ_UNIT_EUR"
+        />
+
+        <field
             name="price"
             type="number"
             label="LIB_GBJ_FIELD_PRICE_LABEL"
@@ -36,7 +44,7 @@
         <field
             name="price_orig"
             type="number"
-            label="COM_GBJFAMILY_FIELD_INCOME_PRICEORIG_LABEL"
+            label="COM_GBJFAMILY_FIELD_ASSET_PRICEORIG_LABEL"
             defaulted="false"
             suffix="id_currency_alias"
         />
@@ -65,15 +73,6 @@
             label="COM_GBJFAMILY_FIELD_CODEBOOK_ASSET_LABEL"
             datafield="id_asset_alias"
             tooltip="id_asset_title"
-        >
-        </field>
-
-        <field
-            name="id_project"
-            label="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_LABEL"
-            datafield="id_project_alias"
-            tooltip="id_project_title"
-            defaulted="false"
         >
         </field>
 

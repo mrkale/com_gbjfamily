@@ -53,8 +53,8 @@
             name="price_orig"
             type="text"
             class="inputbox span2"
-            label="COM_GBJFAMILY_FIELD_INCOME_PRICEORIG_LABEL"
-            description="COM_GBJFAMILY_FIELD_INCOME_PRICEORIG_DESC"
+            label="COM_GBJFAMILY_FIELD_ASSET_PRICEORIG_LABEL"
+            description="COM_GBJFAMILY_FIELD_ASSET_PRICEORIG_DESC"
             filter="float"
             hint="JNONE"
         />

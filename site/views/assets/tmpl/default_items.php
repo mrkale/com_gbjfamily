@@ -9,53 +9,52 @@
 // No direct access
 defined('_JEXEC') or die;
 
-JHtml::_('bootstrap.tooltip');
-JHtml::_('behavior.multiselect');
-JHtml::_('formbehavior.chosen', '.multipleYears', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_YEAR')));
-JHtml::_('formbehavior.chosen', '.multipleMonths', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_MONTH')));
-JHtml::_('formbehavior.chosen', '.multipleCurrencies', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_CURRENCY')));
-JHtml::_('formbehavior.chosen', '.multipleDomains', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_DOMAIN')));
-JHtml::_('formbehavior.chosen', '.multipleAssets', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_ASSET')));
-JHtml::_('formbehavior.chosen', 'select');
+JHtml::_('behavior.core');
+JHtml::_('behavior.keepalive');
 
-$viewName = $this->getName();
-$viewEdit = Helper::singular($this->getName());
-$user = JFactory::getUser();
 $layoutBasePath = Helper::getLayoutBase();
 
 // Component parameters
-$componentName = Helper::getName();
-$cparams = JComponentHelper::getParams($componentName);
+$cparams = JComponentHelper::getParams(Helper::getName());
+$featuredClass = $cparams->get('featured_row_class');
+
+// Asset parameters
+$tparams = $this->params;
+$pageclass_sfx = htmlspecialchars($tparams->get('pageclass_sfx'));
+$showDesc = $tparams->get('show_itemdescription');
 ?>
-<form action="<?php echo JRoute::_(Helper::getUrlView($viewName)); ?>" method="post" name="adminForm" id="adminForm">
-<?php if (!empty($this->sidebar)) : ?>
-	<div id="j-sidebar-container" class="span2">
-		<?php echo $this->sidebar; ?>
-	</div>
-	<div id="j-main-container" class="span10">
-<?php else : ?>
-	<div id="j-main-container">
-<?php endif; ?>
+
+<form action="<?php echo htmlspecialchars(JUri::getInstance()->toString()); ?>" method="post" name="adminForm" id="adminForm">
+
+<?php if ($tparams->get('show_filter_bar')) : ?>
 	<?php echo JLayoutHelper::render('joomla.searchtools.default', array('view' => $this)); ?>
+<?php endif; ?>
 <?php if ($this->total > 0) : ?>
-	<table class="table table-striped" id="recordList">
-		<?php if ($cparams->get('show_filter_stats')) : ?>
-			<caption style="text-align: left"><?php echo $this->htmlStatistics(); ?></caption>
+		<input type="hidden" name="filter_order" value="" />
+		<input type="hidden" name="filter_order_Dir" value="" />
+		<input type="hidden" name="limitstart" value="" />
+		<input type="hidden" name="task" value="" />
+
+	<div class="table-responsive">
+	<table class="table table-hover gbjfamily_table<?php echo $pageclass_sfx; ?>" id="recordList">
+		<?php if ($tparams->get('show_filter_stats')) : ?>
+			<caption><?php echo $this->htmlStatistics(); ?></caption>
 		<?php endif; ?>
 		<thead>
 			<tr>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'sequence')); ?>
-				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'state, featured', 'onlyone'=>true)); ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'date_on')); ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'title')); ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'value')); ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'price')); ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'id_asset')); ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'id_domain')); ?>
-				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'modified')); ?>
+			<?php if ($showDesc) : ?>
+				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'description')); ?>
+			<?php endif; ?>
+
 			</tr>
 		</thead>
-	<?php if ($this->pagination->pagesTotal > 1) : ?>
 		<tfoot>
 			<tr>
 				<td <?php echo $this->htmlAttribute('colspan', $this->columns); ?>
@@ -64,13 +63,11 @@ $cparams = JComponentHelper::getParams($componentName);
 				</td>
 			</tr>
 		</tfoot>
-	<?php endif; ?>
 		<tbody>
-		<?php foreach ($this->items as $this->item->sequence => $this->item): ?>
-			<tr class="row<?php echo $this->item->sequence % 2; ?>">
+		<?php foreach ($this->items as $this->item->sequence => $this->item) : ?>
+			<tr <?php echo ($this->item->featured ? $this->htmlAttribute('class', $featuredClass) : ''); ?>>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'sequence')); ?>
-				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'state, featured')); ?>
-				<?php echo JLayoutHelper::render('grid.items_edit', $this, $layoutBasePath, array('fields'=>'date_on')); ?>
+				<?php echo JLayoutHelper::render('grid.items_detail', $this, $layoutBasePath, array('fields'=>'date_on')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'title')); ?>
 				<?php
 					$this->item->value = number_format($this->item->value,
@@ -98,15 +95,13 @@ $cparams = JComponentHelper::getParams($componentName);
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'price, price_orig')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'id_asset')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'id_domain')); ?>
-				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'modified')); ?>
+			<?php if ($showDesc) : ?>
+				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'description')); ?>
+			<?php endif; ?>
 			</tr>
 		<?php endforeach; ?>
 		</tbody>
 	</table>
-	<?php echo $this->getBatchForm(); ?>
-<?php endif; ?>
-		<input type="hidden" name="task" value="" />
-		<input type="hidden" name="boxchecked" value="0" />
-		<?php echo JHtml::_('form.token'); ?>
 	</div>
+<?php endif; ?>
 </form>

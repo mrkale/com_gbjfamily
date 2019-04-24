@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2019 Libor Gabaj
+@license    GNU General Public License version 2 or later; see LICENSE.txt
+@since      3.8
+-->
+<form>
+    <fieldset name="gridfields">
+
+        <field
+            name="date_on"
+            type="date"
+            label="LIB_GBJ_FIELD_DATE_LABEL"
+            format="LIB_GBJ_FORMAT_DATE_LONG"
+        />
+
+        <field
+            name="value"
+            type="number"
+            label="COM_GBJFAMILY_FIELD_ASSET_VALUE_LABEL"
+            suffix="LIB_GBJ_UNIT_EUR"
+        />
+
+        <field
+            name="price"
+            type="number"
+            label="LIB_GBJ_FIELD_PRICE_LABEL"
+            suffix="LIB_GBJ_UNIT_EUR"
+        />
+
+        <field
+            name="price_orig"
+            type="number"
+            label="COM_GBJFAMILY_FIELD_INCOME_PRICEORIG_LABEL"
+            suffix="id_currency_alias"
+        />
+
+        <field
+            name="id_domain"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
+            datafield="id_domain_title"
+            tooltip="id_domain_alias"
+        >
+        </field>
+
+        <field
+            name="id_currency"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_CURRENCY_LABEL"
+            datafield="id_currency_title"
+            tooltip="id_currency_alias"
+        >
+        </field>
+
+        <field
+            name="id_asset"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_ASSET_LABEL"
+            datafield="id_asset_title"
+            tooltip="id_asset_alias"
+        >
+        </field>
+
+        <field
+            name="update_site"
+            type="subform"
+        />
+
+    </fieldset>
+</form>
