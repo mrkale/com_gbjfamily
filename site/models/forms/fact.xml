@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2019 Libor Gabaj
+@license    GNU General Public License version 2 or later; see LICENSE.txt
+@since      3.8
+-->
+<form>
+    <fieldset name="gridfields">
+
+        <field
+            name="title"
+            label="LIB_GBJ_FIELD_TITLE_LABEL"
+        />
+
+        <field
+            name="alias"
+            label="COM_GBJFAMILY_FIELD_FACT_ALIAS_LABEL"
+        />
+
+        <field
+            name="date_on"
+            type="date"
+            label="COM_GBJFAMILY_FIELD_DATEON_LABEL"
+            format="LIB_GBJ_FORMAT_DATE_LONG"
+        />
+
+        <field
+            name="date_off"
+            type="date"
+            label="COM_GBJFAMILY_FIELD_DATEOFF_LABEL"
+            format="LIB_GBJ_FORMAT_DATE_LONG"
+        />
+
+        <field
+            name="id_domain"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
+            datafield="id_domain_title"
+            tooltip="id_domain_alias"
+        >
+        </field>
+
+        <field
+            name="update_site"
+            type="subform"
+        />
+
+    </fieldset>
+</form>

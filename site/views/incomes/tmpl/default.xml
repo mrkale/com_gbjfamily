@@ -53,7 +53,7 @@
             <field
                 name="pageicon_class"
                 type="text"
-                default="fa fa-money-bill"
+                default="fa fa-tint"
                 label="LIB_GBJ_MENU_PAGEICON_CLASS_LABEL"
                 description="LIB_GBJ_MENU_PAGEICON_CLASS_DESC"
                 class="inputbox"

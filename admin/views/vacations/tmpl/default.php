@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    Joomla.Component
- * @copyright  (c) 2017-2018 Libor Gabaj
+ * @copyright  (c) 2017-2019 Libor Gabaj
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  * @since      3.8
  */
@@ -13,6 +13,8 @@ JHtml::_('bootstrap.tooltip');
 JHtml::_('behavior.multiselect');
 JHtml::_('formbehavior.chosen', '.multipleYears', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_YEAR')));
 JHtml::_('formbehavior.chosen', '.multipleMonths', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_MONTH')));
+JHtml::_('formbehavior.chosen', '.multipleYearoffs', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_YEAROFF')));
+JHtml::_('formbehavior.chosen', '.multipleMonthoffs', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_MONTHOFF')));
 JHtml::_('formbehavior.chosen', '.multipleStays', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_STAY')));
 JHtml::_('formbehavior.chosen', '.multipleStaffs', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_STAFF')));
 JHtml::_('formbehavior.chosen', 'select');

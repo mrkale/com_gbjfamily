@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 @package    Joomla.Component
-@copyright  (c) 2017-2019 Libor Gabaj
+@copyright  (c) 2019 Libor Gabaj
 @license    GNU General Public License version 2 or later; see LICENSE.txt
 @since      3.8
 -->
@@ -66,19 +66,11 @@
         </field>
 
         <field
-            name="id_stay"
-            type="Stay"
+            name="id_domain"
+            type="Domain"
             onchange="this.form.submit();"
         >
-            <option value="">COM_GBJFAMILY_SELECT_STAY</option>
-        </field>
-
-        <field
-            name="id_staff"
-            type="Staff"
-            onchange="this.form.submit();"
-        >
-            <option value="">COM_GBJFAMILY_SELECT_STAFF</option>
+            <option value="">COM_GBJFAMILY_SELECT_DOMAIN</option>
         </field>
 
     </fields>
@@ -88,7 +80,7 @@
         <field
             name="fullordering"
             type="hidden"
-            default="date_on DESC"
+            default="title ASC"
         />
 
         <field

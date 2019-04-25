@@ -7,9 +7,9 @@
 -->
 
 <metadata>
-    <layout title="COM_GBJFAMILY_ASSETS_VIEW_DEFAULT_TITLE" option="COM_GBJFAMILY_ASSETS_VIEW_DEFAULT_OPTION">
+    <layout title="COM_GBJFAMILY_FACTS_VIEW_DEFAULT_TITLE" option="COM_GBJFAMILY_FACTS_VIEW_DEFAULT_OPTION">
         <message>
-            <![CDATA[COM_GBJFAMILY_ASSETS_VIEW_DEFAULT_DESC]]>
+            <![CDATA[COM_GBJFAMILY_FACTS_VIEW_DEFAULT_DESC]]>
         </message>
     </layout>
 
@@ -18,7 +18,7 @@
             <field
                 name="parentdel"
                 type="hidden"
-                default="asset"
+                default="fact"
             />
         </fieldset>
     </fields>
@@ -53,7 +53,7 @@
             <field
                 name="pageicon_class"
                 type="text"
-                default="fa fa-save"
+                default="fa fa-bullhorn"
                 label="LIB_GBJ_MENU_PAGEICON_CLASS_LABEL"
                 description="LIB_GBJ_MENU_PAGEICON_CLASS_DESC"
                 class="inputbox"

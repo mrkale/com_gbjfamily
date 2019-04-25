@@ -56,6 +56,24 @@
         />
 
         <field
+            name="yearoff"
+            type="Yearoff"
+            datafield="date_off"
+            multiple="true"
+            class="multipleYearoffs"
+            onchange="this.form.submit();"
+        />
+
+        <field
+            name="monthoff"
+            type="Monthoff"
+            datafield="date_off"
+            multiple="true"
+            class="multipleMonthoffs"
+            onchange="this.form.submit();"
+        />
+
+        <field
             name="id_stay"
             type="Stay"
             multiple="true"

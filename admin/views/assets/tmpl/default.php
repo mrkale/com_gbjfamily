@@ -13,6 +13,8 @@ JHtml::_('bootstrap.tooltip');
 JHtml::_('behavior.multiselect');
 JHtml::_('formbehavior.chosen', '.multipleYears', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_YEAR')));
 JHtml::_('formbehavior.chosen', '.multipleMonths', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_MONTH')));
+JHtml::_('formbehavior.chosen', '.multipleYearoffs', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_YEAROFF')));
+JHtml::_('formbehavior.chosen', '.multipleMonthoffs', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_MONTHOFF')));
 JHtml::_('formbehavior.chosen', '.multipleCurrencies', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_CURRENCY')));
 JHtml::_('formbehavior.chosen', '.multipleDomains', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_DOMAIN')));
 JHtml::_('formbehavior.chosen', '.multipleAssets', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_ASSET')));
