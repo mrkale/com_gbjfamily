@@ -10,10 +10,10 @@
 defined('_JEXEC') or die;
 
 /**
- * Class for custom field Monthoff
+ * Methods supporting editing of the detail record.
  *
  * @since  3.8
  */
-class JFormFieldMonthoff extends GbjSeedFieldList
+class GbjfamilyControllerExpense extends GbjSeedControllerForm
 {
 }

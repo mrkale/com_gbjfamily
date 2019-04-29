@@ -165,8 +165,50 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 	 */
 	public function getStatistics()
 	{
+		$statistics['expenses'] = $this->getStatisticsExpenses();
 		$statistics['events'] = $this->getStatisticsEvents();
 		$statistics['incomes'] = $this->getStatisticsIncomes();
+
+		return $statistics;
+	}
+
+	/**
+	 * Calculates statistics from incomes for current record.
+	 *
+	 * @return  array  The list of statistics variables and values.
+	 */
+	public function getStatisticsExpenses()
+	{
+		$statistics = array();
+		$statistics['recs'] = 0;
+		$statistics['cnt'] = 0;
+		$statistics['sum'] = 0;
+		$statistics['avg'] = 0;
+
+		// Calculation fields
+		$fieldIncomes = 'expenses';
+		$fieldPrice = $fieldIncomes . '_price';
+
+		if (JFactory::getApplication()->isClient('administrator'))
+		{
+			$fieldIncomes .= '_total';
+			$fieldPrice .= '_total';
+		}
+
+		foreach ($this->getItems() as $recordObject)
+		{
+			if (intval($recordObject->$fieldIncomes))
+			{
+				$statistics['recs'] += 1;
+				$statistics['cnt'] += intval($recordObject->$fieldIncomes);
+				$statistics['sum'] += floatval($recordObject->$fieldPrice);
+			}
+		}
+
+		if ($statistics['recs'] <> 0)
+		{
+			$statistics['avg'] = $statistics['sum'] / $statistics['recs'];
+		}
 
 		return $statistics;
 	}

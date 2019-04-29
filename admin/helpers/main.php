@@ -35,5 +35,6 @@ class Helper extends GbjHelpersCommon
 		'incomes',
 		'assets',
 		'facts',
+		'expenses',
 	);
 }

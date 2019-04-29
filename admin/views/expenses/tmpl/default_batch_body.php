@@ -9,11 +9,4 @@
 // No direct access
 defined('_JEXEC') or die;
 
-/**
- * Class for custom field Monthoff
- *
- * @since  3.8
- */
-class JFormFieldMonthoff extends GbjSeedFieldList
-{
-}
+$this->loadHelper('default_batch_body');

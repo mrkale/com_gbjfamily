@@ -15,3 +15,4 @@ DROP TABLE IF EXISTS `#__gbjfamily_projects`;
 DROP TABLE IF EXISTS `#__gbjfamily_incomes`;
 DROP TABLE IF EXISTS `#__gbjfamily_assets`;
 DROP TABLE IF EXISTS `#__gbjfamily_facts`;
+DROP TABLE IF EXISTS `#__gbjfamily_expenses`;

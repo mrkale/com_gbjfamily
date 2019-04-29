@@ -10,10 +10,10 @@
 defined('_JEXEC') or die;
 
 /**
- * Class for custom field Monthoff
+ * Class for custom field Period
  *
  * @since  3.8
  */
-class JFormFieldMonthoff extends GbjSeedFieldList
+class JFormFieldPeriod extends GbjSeedFieldList
 {
 }

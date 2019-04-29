@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--
 @package    Joomla.Component
-@copyright  (c) 2017-2018 Libor Gabaj
+@copyright  (c) 2017-2019 Libor Gabaj
 @license    GNU General Public License version 2 or later; see LICENSE.txt
 @since      3.8
 -->
@@ -83,6 +83,7 @@
             name="id_network"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_NETWORK_LABEL"
             width="6%"
+            datafield="id_network_alias"
             tooltip="id_network_title"
             defaulted="false"
         >
@@ -112,6 +113,7 @@
             name="id_vendor"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_VENDOR_LABEL"
             width="6%"
+            datafield="id_vendor_alias"
             tooltip="id_vendor_title"
             defaulted="false"
         >

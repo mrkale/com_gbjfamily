@@ -17,6 +17,16 @@ defined('_JEXEC') or die;
 class GbjfamilyControllerProjects extends GbjSeedControllerAdmin
 {
 	/**
+	 * Method to enter the expenses agenda.
+	 *
+	 * @return  void
+	 */
+	public function enterExpenses()
+	{
+		$this->enterAgendaChild(__FUNCTION__);
+	}
+
+	/**
 	 * Method to enter the events agenda.
 	 *
 	 * @return  void

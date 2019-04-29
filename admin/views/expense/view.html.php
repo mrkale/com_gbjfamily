@@ -10,10 +10,10 @@
 defined('_JEXEC') or die;
 
 /**
- * Class for custom field Monthoff
+ * View for handling one record of expense.
  *
  * @since  3.8
  */
-class JFormFieldMonthoff extends GbjSeedFieldList
+class GbjfamilyViewExpense extends GbjSeedViewForm
 {
 }

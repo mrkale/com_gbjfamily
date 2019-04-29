@@ -10,7 +10,7 @@
 defined('_JEXEC') or die;
 
 /**
- * Class for custom field Month
+ * Class for custom field Yearoff
  *
  * @since  3.8
  */
