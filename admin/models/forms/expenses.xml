@@ -31,6 +31,7 @@
             type="number"
             label="COM_GBJFAMILY_FIELD_EXPENSE_QUANTITY_LABEL"
             width="10%"
+            suffix="id_unit_alias"
         />
 
         <field
@@ -38,6 +39,13 @@
             type="number"
             label="LIB_GBJ_FIELD_PRICE_LABEL"
             width="10%"
+            defaulted="false"
+        />
+
+        <field
+            name="price_unit"
+            type="number"
+            prefix="LIB_GBJ_UNIT_PRICE"
             defaulted="false"
         />
 

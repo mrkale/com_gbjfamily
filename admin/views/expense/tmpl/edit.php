@@ -36,7 +36,17 @@ $tabNameActive = $tabNameDetails;
 		?>
 		<div class="row-fluid form-horizontal-desktop">
 			<div class="span9">
+			<?php echo $this->form->renderField('quantity'); ?>
+			<?php echo $this->form->renderField('id_unit'); ?>
+			<?php echo $this->form->renderField('price'); ?>
+			<?php echo $this->form->renderField('price_orig'); ?>
+			<?php echo $this->form->renderField('id_currency'); ?>
 			<?php echo $this->form->renderField('id_domain'); ?>
+			<?php echo $this->form->renderField('id_commodity'); ?>
+			<?php echo $this->form->renderField('id_type'); ?>
+			<?php echo $this->form->renderField('id_vendor'); ?>
+			<?php echo $this->form->renderField('id_location'); ?>
+			<?php echo $this->form->renderField('id_project'); ?>
 			<?php echo $this->form->renderField('description'); ?>
 			</div>
 			<div class="span3">
