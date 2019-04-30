@@ -30,7 +30,6 @@
             name="value"
             type="number"
             label="COM_GBJFAMILY_FIELD_ASSET_VALUE_LABEL"
-            width="10%"
             defaulted="false"
         />
 
@@ -38,8 +37,9 @@
             name="price"
             type="number"
             label="LIB_GBJ_FIELD_PRICE_LABEL"
-            width="10%"
             defaulted="false"
+            class="pull-right"
+            labelclass="pull-right"
         />
 
         <field
@@ -47,18 +47,9 @@
             type="number"
             label="COM_GBJFAMILY_FIELD_INCOME_PRICEORIG_LABEL"
             defaulted="false"
-            suffix="id_currency_alias"
+            prefix="id_currency_alias"
+            class="pull-right"
         />
-
-        <field
-            name="id_asset"
-            label="COM_GBJFAMILY_FIELD_CODEBOOK_ASSET_LABEL"
-            width="6%"
-            datafield="id_asset_alias"
-            tooltip="id_asset_title"
-            defaulted="false"
-        >
-        </field>
 
         <field
             name="id_domain"
@@ -71,11 +62,6 @@
         </field>
 
         <field
-            name="grid_admin"
-            type="subform"
-        />
-
-        <field
             name="id_currency"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_CURRENCY_LABEL"
             width="6%"
@@ -84,6 +70,21 @@
             defaulted="false"
         >
         </field>
+
+        <field
+            name="id_asset"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_ASSET_LABEL"
+            width="6%"
+            datafield="id_asset_alias"
+            tooltip="id_asset_title"
+            defaulted="false"
+        >
+        </field>
+
+        <field
+            name="grid_admin"
+            type="subform"
+        />
 
     </fieldset>
 </form>

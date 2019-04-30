@@ -33,13 +33,11 @@
 
         <field
             name="quantity"
-            type="number"
+            type="text"
             class="inputbox span2"
             label="COM_GBJFAMILY_FIELD_EXPENSE_QUANTITY_LABEL"
             description="COM_GBJFAMILY_FIELD_EXPENSE_QUANTITY_DESC"
             filter="float"
-            min="0"
-            step="1"
             default="1"
         />
 

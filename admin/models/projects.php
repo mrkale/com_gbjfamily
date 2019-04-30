@@ -17,6 +17,13 @@ defined('_JEXEC') or die;
 class GbjfamilyModelProjects extends GbjSeedModelList
 {
 	/**
+	 * The object with statistics query for expenses
+	 *
+	 * @var  object
+	 */
+	protected $statQueryExpenses;
+
+	/**
 	 * The object with statistics query for events
 	 *
 	 * @var  object
@@ -41,6 +48,26 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 	protected function extendQuery($query, $codeFields = array())
 	{
 		$db	= $this->getDbo();
+
+		// Extend query with statistics of expenses
+		$this->getStatQueryExpenses();
+
+		if (is_object($this->statQueryExpenses))
+		{
+			// Add published incomes
+			$query
+				->select('COALESCE(sx.expenses, 0) AS expenses, sx.expenses_price')
+				->leftJoin('(' . $this->statQueryExpenses . ') sx ON sx.id = a.id AND sx.state = ' . Helper::COMMON_STATE_PUBLISHED);
+
+			// Add total incomes. Allow null value for not existing code table.
+			$query
+				->select('tx.expenses AS expenses_total, tx.expenses_price AS expenses_price_total')
+				->leftJoin('(' . $this->statQueryExpenses . ') tx ON tx.id = a.id AND tx.state = ' . Helper::COMMON_STATE_TOTAL);
+		}
+		else
+		{
+			$query->select('null AS expenses, null AS expenses_price, null AS expenses_total, null AS expenses_price_total');
+		}
 
 		// Extend query with statistics of events
 		$this->getStatQueryEvents();
@@ -84,6 +111,41 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 		}
 
 		return parent::extendQuery($query, $codeFields);
+	}
+
+	/**
+	 * Retrieve statistics for expenses.
+	 *
+	 * @return  object  The query for statistics
+	 */
+	protected function getStatQueryExpenses()
+	{
+		if (is_object($this->statQueryExpenses))
+		{
+			return $this->statQueryExpenses;
+		}
+
+		$db	= $this->getDbo();
+
+		// Compose subquery for statistics of totals
+		$queryTotals = $db->getQuery(true)
+			->select($db->quoteName('id_project', 'id'))
+			->select(Helper::COMMON_STATE_TOTAL . ' AS state')
+			->select('COUNT(*) AS expenses, SUM(price) AS expenses_price')
+			->from($db->quoteName(Helper::getTableName('expenses')))
+			->group($db->quoteName('id_project'));
+
+		// Compose subquery for statistics of states distribution
+		$this->statQueryExpenses = $db->getQuery(true)
+			->select($db->quoteName('id_project', 'id'))
+			->select($db->quoteName('state'))
+			->select('COUNT(*) AS expenses, SUM(price) AS expenses_price')
+			->from($db->quoteName(Helper::getTableName('expenses')))
+			->group($db->quoteName('id_project'))
+			->group($db->quoteName('state'))
+			->union($queryTotals);
+
+		return $this->statQueryExpenses;
 	}
 
 	/**
@@ -186,21 +248,21 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 		$statistics['avg'] = 0;
 
 		// Calculation fields
-		$fieldIncomes = 'expenses';
-		$fieldPrice = $fieldIncomes . '_price';
+		$fieldExpenses = 'expenses';
+		$fieldPrice = $fieldExpenses . '_price';
 
 		if (JFactory::getApplication()->isClient('administrator'))
 		{
-			$fieldIncomes .= '_total';
+			$fieldExpenses .= '_total';
 			$fieldPrice .= '_total';
 		}
 
 		foreach ($this->getItems() as $recordObject)
 		{
-			if (intval($recordObject->$fieldIncomes))
+			if (intval($recordObject->$fieldExpenses))
 			{
 				$statistics['recs'] += 1;
-				$statistics['cnt'] += intval($recordObject->$fieldIncomes);
+				$statistics['cnt'] += intval($recordObject->$fieldExpenses);
 				$statistics['sum'] += floatval($recordObject->$fieldPrice);
 			}
 		}

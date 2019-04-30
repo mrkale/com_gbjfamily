@@ -16,8 +16,8 @@ JHtml::_('formbehavior.chosen', '.multipleMonths', null, array('placeholder_text
 JHtml::_('formbehavior.chosen', '.multipleDomains', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_DOMAIN')));
 JHtml::_('formbehavior.chosen', '.multipleCurrencies', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_CURRENCY')));
 JHtml::_('formbehavior.chosen', '.multipleUnits', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_UNIT')));
-JHtml::_('formbehavior.chosen', '.multipleCommodities', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_COMMODITIES')));
-JHtml::_('formbehavior.chosen', '.multipleTypes', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_TYPES')));
+JHtml::_('formbehavior.chosen', '.multipleCommodities', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_COMMODITY')));
+JHtml::_('formbehavior.chosen', '.multipleTypes', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_TYPE')));
 JHtml::_('formbehavior.chosen', '.multipleVendors', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_VENDOR')));
 JHtml::_('formbehavior.chosen', '.multipleLocations', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_LOCATION')));
 JHtml::_('formbehavior.chosen', '.multipleProjects', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_PROJECT')));

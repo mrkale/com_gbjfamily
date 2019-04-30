@@ -24,9 +24,11 @@ class GbjfamilyViewProjects extends GbjSeedViewList
 	protected function addToolbar()
 	{
 		parent::addToolbar();
+		$this->addButtonEnter('Expenses');
 		$this->addButtonEnter('Events');
 		$this->addButtonEnter('Incomes');
 	}
+
 	/**
 	 * Create HTML string for displaying statistics.
 	 *
@@ -35,6 +37,17 @@ class GbjfamilyViewProjects extends GbjSeedViewList
 	public function htmlStatistics()
 	{
 		$htmlString = parent::htmlStatistics();
+
+		// Expenses
+		foreach ($this->statistics['expenses'] as $key => $value)
+		{
+			$value = number_format($value,
+				JText::_('COM_GBJFAMILY_FORMAT_NUMBER_DECIMALS'),
+				JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_DECIMALS'),
+				JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_THOUSANDS')
+			);
+			$this->statistics['expenses'][$key] = $value;
+		}
 
 		// Events
 		foreach ($this->statistics['events'] as $key => $value)
@@ -57,6 +70,12 @@ class GbjfamilyViewProjects extends GbjSeedViewList
 			);
 			$this->statistics['incomes'][$key] = $value;
 		}
+
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE'), JText::_('COM_GBJFAMILY_EXPENSES_STATS_LABEL'));
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_CNT'), $this->statistics['expenses']['cnt']);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE_UNIT'), JText::_('LIB_GBJ_STAT_SUM'), $this->statistics['expenses']['sum'],
+			JText::_('LIB_GBJ_UNIT_EUR'));
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'), $this->statistics['expenses']['avg']);
 
 		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE'), JText::_('COM_GBJFAMILY_EVENTS_STATS_LABEL'));
 		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_CNT'), $this->statistics['events']['cnt']);

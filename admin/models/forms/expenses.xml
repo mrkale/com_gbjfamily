@@ -38,8 +38,9 @@
             name="price"
             type="number"
             label="LIB_GBJ_FIELD_PRICE_LABEL"
-            width="10%"
             defaulted="false"
+            class="pull-right"
+            labelclass="pull-right"
         />
 
         <field
@@ -47,6 +48,7 @@
             type="number"
             prefix="LIB_GBJ_UNIT_PRICE"
             defaulted="false"
+            class="pull-right"
         />
 
         <field
@@ -54,7 +56,8 @@
             type="number"
             label="COM_GBJFAMILY_FIELD_EXPENSE_PRICEORIG_LABEL"
             defaulted="false"
-            suffix="id_currency_alias"
+            prefix="id_currency_alias"
+            class="pull-right"
         />
 
         <field
@@ -100,7 +103,6 @@
         <field
             name="id_unit"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_UNIT_LABEL"
-            width="10%"
             datafield="id_unit_alias"
             tooltip="id_unit_title"
             defaulted="false"
