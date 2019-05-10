@@ -1,6 +1,6 @@
 /*
 @package    Joomla.Component
-@copyright  (c) 2017 Libor Gabaj. All rights reserved.
+@copyright  (c) 2017-2019 Libor Gabaj. All rights reserved.
 @license    GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
 @since      3.7
 */
@@ -23,6 +23,10 @@
 
 .gbjfamily_table thead tr {
 	background-color: beige;
+}
+
+.gbjfamily_table .label-right {
+    text-align: right;
 }
 
 .accordion {

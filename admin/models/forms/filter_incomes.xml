@@ -64,18 +64,18 @@
         />
 
         <field
-            name="id_asset"
-            type="Asset"
-            multiple="true"
-            class="multipleAssets"
-            onchange="this.form.submit();"
-        />
-
-        <field
             name="id_currency"
             type="Currency"
             multiple="true"
             class="multipleCurrencies"
+            onchange="this.form.submit();"
+        />
+
+        <field
+            name="id_asset"
+            type="Asset"
+            multiple="true"
+            class="multipleAssets"
             onchange="this.form.submit();"
         />
 

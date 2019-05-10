@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2019 Libor Gabaj
+@license    GNU General Public License version 2 or later; see LICENSE.txt
+@since      3.8
+-->
+<form>
+    <fieldset name="gridfields">
+
+        <!-- The first field here is considered as a default search field. -->
+        <!-- Defaul type for searching is string. -->
+        <field
+            name="title"
+            label="LIB_GBJ_FIELD_TITLE_LABEL"
+            labelclass="title"
+            class="title"
+        />
+
+        <field
+            name="date_on"
+            type="date"
+            label="LIB_GBJ_FIELD_DATE_LABEL"
+            width="15%"
+            format="LIB_GBJ_FORMAT_DATE_LONG"
+        />
+
+        <field
+            name="quantity"
+            type="number"
+            label="COM_GBJFAMILY_FIELD_EXPENSE_QUANTITY_LABEL"
+            suffix="id_unit_alias"
+        />
+
+        <field
+            name="price"
+            type="number"
+            label="LIB_GBJ_FIELD_PRICE_LABEL"
+            class="pull-right"
+            labelclass="label-right"
+        />
+
+        <field
+            name="price_unit"
+            type="number"
+            prefix="LIB_GBJ_UNIT_PRICE"
+            defaulted="false"
+            class="pull-right"
+        />
+
+        <field
+            name="price_orig"
+            type="number"
+            label="COM_GBJFAMILY_FIELD_EXPENSE_PRICEORIG_LABEL"
+            defaulted="false"
+            prefix="id_currency_alias"
+            class="pull-right"
+        />
+
+        <field
+            name="id_domain"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
+            datafield="id_domain_alias"
+            tooltip="id_domain_title"
+            defaulted="false"
+        >
+        </field>
+
+        <field
+            name="id_currency"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_CURRENCY_LABEL"
+            width="6%"
+            datafield="id_currency_alias"
+            tooltip="id_currency_title"
+            defaulted="false"
+        >
+        </field>
+
+        <field
+            name="id_commodity"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_COMMODITY_LABEL"
+            width="10%"
+            datafield="id_commodity_alias"
+            tooltip="id_commodity_title"
+            defaulted="false"
+        >
+        </field>
+
+        <field
+            name="id_type"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_TYPE_LABEL"
+            width="10%"
+            datafield="id_type_alias"
+            tooltip="id_type_title"
+            defaulted="false"
+        >
+        </field>
+
+        <field
+            name="id_unit"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_UNIT_LABEL"
+            datafield="id_unit_alias"
+            tooltip="id_unit_title"
+            defaulted="false"
+        >
+        </field>
+
+        <field
+            name="id_vendor"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_VENDOR_LABEL"
+            width="6%"
+            datafield="id_vendor_alias"
+            tooltip="id_vendor_title"
+            defaulted="false"
+        >
+        </field>
+
+        <field
+            name="id_location"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_LOCATION_LABEL"
+            width="6%"
+            datafield="id_location_alias"
+            tooltip="id_location_title"
+            defaulted="false"
+        >
+        </field>
+
+        <field
+            name="id_project"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_LABEL"
+            datafield="id_project_alias"
+            tooltip="id_project_title"
+            defaulted="false"
+        >
+        </field>
+
+        <field
+            name="grid_site"
+            type="subform"
+        />
+
+    </fieldset>
+</form>

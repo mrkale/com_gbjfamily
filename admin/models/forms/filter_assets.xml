@@ -56,18 +56,18 @@
         />
 
         <field
-            name="id_currency"
-            type="Currency"
-            multiple="true"
-            class="multipleCurrencies"
-            onchange="this.form.submit();"
-        />
-
-        <field
             name="id_domain"
             type="Domain"
             multiple="true"
             class="multipleDomains"
+            onchange="this.form.submit();"
+        />
+
+        <field
+            name="id_currency"
+            type="Currency"
+            multiple="true"
+            class="multipleCurrencies"
             onchange="this.form.submit();"
         />
 

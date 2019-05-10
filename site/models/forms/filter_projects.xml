@@ -38,6 +38,17 @@
         </field>
 
         <field
+            name="expenses"
+            type="list"
+            datamode="binary"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_EXPENSES_SELECT</option>
+            <option value="0">LIB_GBJ_SELECT_NONE</option>
+            <option value="1">LIB_GBJ_SELECT_SOME</option>
+        </field>
+
+        <field
             name="events"
             type="list"
             datamode="binary"

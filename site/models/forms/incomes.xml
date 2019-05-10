@@ -29,8 +29,8 @@
             name="price"
             type="number"
             label="LIB_GBJ_FIELD_PRICE_LABEL"
-            width="15%"
-            suffix="LIB_GBJ_UNIT_EUR"
+            class="pull-right"
+            labelclass="label-right"
         />
 
         <field
@@ -38,7 +38,8 @@
             type="number"
             label="COM_GBJFAMILY_FIELD_INCOME_PRICEORIG_LABEL"
             defaulted="false"
-            suffix="id_currency_alias"
+            prefix="id_currency_alias"
+            class="pull-right"
         />
 
         <field

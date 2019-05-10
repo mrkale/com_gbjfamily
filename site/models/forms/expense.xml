@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2019 Libor Gabaj
+@license    GNU General Public License version 2 or later; see LICENSE.txt
+@since      3.8
+-->
+<form>
+    <fieldset name="gridfields">
+
+        <field
+            name="date_on"
+            type="date"
+            label="LIB_GBJ_FIELD_DATE_LABEL"
+            format="LIB_GBJ_FORMAT_DATE_LONG"
+        />
+
+        <field
+            name="quantity"
+            type="number"
+            label="COM_GBJFAMILY_FIELD_EXPENSE_QUANTITY_LABEL"
+            suffix="id_unit_alias"
+        />
+
+        <field
+            name="price"
+            type="number"
+            label="LIB_GBJ_FIELD_PRICE_LABEL"
+            suffix="LIB_GBJ_UNIT_EUR"
+        />
+
+        <field
+            name="price_unit"
+            type="number"
+            label="COM_GBJFAMILY_FIELD_EXPENSE_PRICEUNIT_LABEL"
+            suffix="LIB_GBJ_UNIT_EUR"
+        />
+
+        <field
+            name="price_orig"
+            type="number"
+            label="COM_GBJFAMILY_FIELD_INCOME_PRICEORIG_LABEL"
+            suffix="id_currency_alias"
+        />
+
+        <field
+            name="id_domain"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
+            datafield="id_domain_title"
+            tooltip="id_domain_alias"
+        >
+        </field>
+
+        <field
+            name="id_currency"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_CURRENCY_LABEL"
+            datafield="id_currency_title"
+            tooltip="id_currency_alias"
+        >
+        </field>
+
+        <field
+            name="id_commodity"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_COMMODITY_LABEL"
+            datafield="id_commodity_title"
+            tooltip="id_commodity_alias"
+        >
+        </field>
+
+        <field
+            name="id_type"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_TYPE_LABEL"
+            datafield="id_type_title"
+            tooltip="id_type_alias"
+        >
+        </field>
+
+        <field
+            name="id_unit"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_UNIT_LABEL"
+            datafield="id_unit_title"
+            tooltip="id_unit_alias"
+        >
+        </field>
+
+        <field
+            name="id_vendor"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_VENDOR_LABEL"
+            datafield="id_vendor_title"
+            tooltip="id_vendor_alias"
+        >
+        </field>
+
+        <field
+            name="id_location"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_LOCATION_LABEL"
+            datafield="id_location_title"
+            tooltip="id_location_alias"
+        >
+        </field>
+
+        <field
+            name="id_project"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_LABEL"
+            datafield="id_project_title"
+            tooltip="id_project_alias"
+        >
+        </field>
+
+        <field
+            name="update_site"
+            type="subform"
+        />
+
+    </fieldset>
+</form>

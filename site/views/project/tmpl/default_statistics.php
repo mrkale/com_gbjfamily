@@ -14,7 +14,11 @@ $tparams = $this->params;
 $pageclass_sfx = htmlspecialchars($tparams->get('pageclass_sfx'));
 ?>
 
-<?php echo JHtml::_('bootstrap.startTabSet', 'tab-statistics', array('toggle' => true, 'active' => 'events')); ?>
+<?php echo JHtml::_('bootstrap.startTabSet', 'tab-statistics', array('toggle' => true, 'active' => 'expenses')); ?>
+
+<?php echo JHtml::_('bootstrap.addTab', 'tab-statistics', 'expenses', JText::_('COM_GBJFAMILY_EXPENSES')); ?>
+<?php echo $this->loadTemplate('statistics_expenses'); ?>
+<?php echo JHtml::_('bootstrap.endTab'); ?>
 
 <?php echo JHtml::_('bootstrap.addTab', 'tab-statistics', 'events' , JText::_('COM_GBJFAMILY_EVENTS')); ?>
 <?php echo $this->loadTemplate('statistics_events'); ?>

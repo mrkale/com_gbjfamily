@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    Joomla.Component
- * @copyright  (c) 2018-2019 Libor Gabaj
+ * @copyright  (c) 2019 Libor Gabaj
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  * @since      3.8
  */
@@ -18,7 +18,7 @@ $layoutBasePath = Helper::getLayoutBase();
 $cparams = JComponentHelper::getParams(Helper::getName());
 $featuredClass = $cparams->get('featured_row_class');
 
-// Agenda parameters
+// Expense parameters
 $tparams = $this->params;
 $pageclass_sfx = htmlspecialchars($tparams->get('pageclass_sfx'));
 $showDesc = $tparams->get('show_itemdescription');
@@ -45,10 +45,11 @@ $showDesc = $tparams->get('show_itemdescription');
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'sequence')); ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'date_on')); ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'title')); ?>
+				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'quantity')); ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'price')); ?>
-				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'id_domain')); ?>
-				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'id_asset')); ?>
-				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'id_project')); ?>
+				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'id_domain, id_project')); ?>
+				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'id_commodity, id_type')); ?>
+				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'id_vendor, id_location')); ?>
 			<?php if ($showDesc) : ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'description')); ?>
 			<?php endif; ?>
@@ -71,11 +72,28 @@ $showDesc = $tparams->get('show_itemdescription');
 				<?php echo JLayoutHelper::render('grid.items_detail', $this, $layoutBasePath, array('fields'=>'date_on')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'title')); ?>
 				<?php
+					$this->item->quantity = number_format($this->item->quantity,
+						JText::_('COM_GBJFAMILY_FORMAT_NUMBER_DECIMALS'),
+						JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_DECIMALS'),
+						JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_THOUSANDS')
+					);
+				?>
+				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'quantity')); ?>
+				<?php
 					$this->item->price = number_format($this->item->price,
 						JText::_('COM_GBJFAMILY_FORMAT_NUMBER_DECIMALS'),
 						JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_DECIMALS'),
 						JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_THOUSANDS')
 					);
+
+					if ($this->item->quantity <> 1 && $this->item->quantity <> 0)
+					{
+						$this->item->price_unit = number_format($this->item->price / $this->item->quantity,
+							JText::_('COM_GBJFAMILY_FORMAT_NUMBER_DECIMALS'),
+							JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_DECIMALS'),
+							JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_THOUSANDS')
+						);
+					}
 
 					if (isset($this->item->price_orig))
 					{
@@ -86,10 +104,10 @@ $showDesc = $tparams->get('show_itemdescription');
 						);
 					}
 				?>
-				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'price, price_orig')); ?>
-				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'id_domain')); ?>
-				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'id_asset')); ?>
-				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'id_project')); ?>
+				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'price, price_unit, price_orig')); ?>
+				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'id_domain, id_project')); ?>
+				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'id_commodity, id_type')); ?>
+				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'id_vendor, id_location')); ?>
 			<?php if ($showDesc) : ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'description')); ?>
 			<?php endif; ?>

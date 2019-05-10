@@ -64,11 +64,51 @@
         </field>
 
         <field
-            name="id_asset"
-            type="Asset"
+            name="id_commodity"
+            type="Commodity"
             onchange="this.form.submit();"
         >
-            <option value="">COM_GBJFAMILY_SELECT_ASSET</option>
+            <option value="">COM_GBJFAMILY_SELECT_COMMODITY</option>
+        </field>
+
+        <field
+            name="id_type"
+            type="Type"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_TYPE</option>
+        </field>
+
+        <field
+            name="id_unit"
+            type="Unit"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_UNIT</option>
+        </field>
+
+        <field
+            name="id_vendor"
+            type="Vendor"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_VENDOR</option>
+        </field>
+
+        <field
+            name="id_location"
+            type="Location"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_LOCATION</option>
+        </field>
+
+        <field
+            name="id_project"
+            type="Project"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_PROJECT</option>
         </field>
 
     </fields>

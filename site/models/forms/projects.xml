@@ -32,6 +32,20 @@
         </field>
 
         <field
+            name="expenses"
+            type="number"
+            label="COM_GBJFAMILY_EXPENSES_STATS_LABEL"
+            default="LIB_GBJ_SELECT_NONE"
+        />
+
+        <field
+            name="expenses_price"
+            type="number"
+            label="LIB_GBJ_FIELD_PRICE_LABEL"
+            defaulted="false"
+        />
+
+        <field
             name="events"
             type="number"
             label="COM_GBJFAMILY_EVENTS_STATS_LABEL"

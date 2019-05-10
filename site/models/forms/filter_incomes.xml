@@ -49,6 +49,14 @@
         </field>
 
         <field
+            name="id_domain"
+            type="Domain"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_DOMAIN</option>
+        </field>
+
+        <field
             name="id_currency"
             type="Currency"
             onchange="this.form.submit();"
@@ -62,14 +70,6 @@
             onchange="this.form.submit();"
         >
             <option value="">COM_GBJFAMILY_SELECT_ASSET</option>
-        </field>
-
-        <field
-            name="id_domain"
-            type="Domain"
-            onchange="this.form.submit();"
-        >
-            <option value="">COM_GBJFAMILY_SELECT_DOMAIN</option>
         </field>
 
         <field
