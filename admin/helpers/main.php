@@ -17,7 +17,7 @@ defined('_JEXEC') or die;
 class Helper extends GbjHelpersCommon
 {
 	// Default view
-	const HELPER_DEFAULT_VIEW = 'events';
+	const HELPER_DEFAULT_VIEW = 'expenses';
 
 	// Codebook table prefix
 	const HELPER_CODEBOOK_TABLE_PREFIX = 'gbjcodes';
@@ -36,5 +36,6 @@ class Helper extends GbjHelpersCommon
 		'assets',
 		'facts',
 		'expenses',
+		'fuels',
 	);
 }

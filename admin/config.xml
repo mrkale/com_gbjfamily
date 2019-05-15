@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--
 @package    Joomla.Component
-@copyright  (c) 2017-2018 Libor Gabaj
+@copyright  (c) 2017-2019 Libor Gabaj
 @license    GNU General Public License version 2 or later; see LICENSE.txt
 @since      3.8
 -->
@@ -70,6 +70,17 @@
             <option value="warning">LIB_GBJ_COMPONENT_OPTION_COLOR_YELLOW</option>
             <option value="danger">LIB_GBJ_COMPONENT_OPTION_COLOR_RED</option>
         </field>
+
+        <field name="consumption_fuellings"
+               type="number"
+               class="inputbox"
+               min="1"
+               max="5"
+               step="1"
+               default="3"
+               label="COM_GBJFAMILY_OPTION_FUEL_CONSUMPTION_RECORDS_LABEL"
+               description="COM_GBJFAMILY_OPTION_FUEL_CONSUMPTION_RECORDS_DESC"
+        />
 
     </fieldset>
 

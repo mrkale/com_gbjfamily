@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2019 Libor Gabaj
+@license    GNU General Public License version 2 or later; see LICENSE.txt
+@since      3.8
+-->
+<form>
+    <fieldset name="gridfields">
+
+        <!-- The first field here is considered as a default search field. -->
+        <!-- Default type for searching is string. -->
+        <field
+            name="date_on"
+            type="date"
+            label="LIB_GBJ_FIELD_DATE_LABEL"
+            width="10%"
+            format="LIB_GBJ_FORMAT_DATE_LONG"
+        />
+
+        <field
+            name="quantity"
+            type="number"
+            label="COM_GBJFAMILY_FIELD_FUEL_QUANTITY_LABEL"
+        />
+
+        <field
+            name="tacho"
+            type="number"
+            label="COM_GBJFAMILY_FIELD_FUEL_TACHO_LABEL"
+        />
+
+        <field
+            name="period"
+            type="number"
+            label="COM_GBJFAMILY_FIELD_FUEL_PERIOD_LABEL"
+        />
+
+        <field
+            name="distance"
+            type="number"
+            label="COM_GBJFAMILY_FIELD_FUEL_DISTANCE_LABEL"
+        />
+
+        <field
+            name="consumption"
+            type="number"
+            label="COM_GBJFAMILY_FIELD_FUEL_CONSUMPTION_LABEL"
+        />
+
+        <field
+            name="id_domain"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
+            width="6%"
+            datafield="id_domain_alias"
+            tooltip="id_domain_title"
+            defaulted="false"
+        >
+        </field>
+
+        <field
+            name="id_vendor"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_VENDOR_LABEL"
+            width="6%"
+            datafield="id_vendor_alias"
+            tooltip="id_vendor_title"
+            defaulted="false"
+        >
+        </field>
+
+        <field
+            name="grid_admin"
+            type="subform"
+        />
+
+    </fieldset>
+</form>
