@@ -23,27 +23,7 @@ class GbjfamilyModelEvents extends GbjSeedModelList
 	 */
 	public function getStatistics()
 	{
-		$statistics['duration']['cnt'] = 0;
-		$statistics['duration']['sum'] = 0;
-		$statistics['duration']['avg'] = 0;
-		$statistics['duration']['max'] = 0;
-		$statistics['duration']['min'] = null;
-
-		foreach ($this->getItems() as $recordObject)
-		{
-			if (!is_null($recordObject->duration))
-			{
-				$statistics['duration']['cnt'] += 1;
-				$statistics['duration']['sum'] += $recordObject->duration;
-				$statistics['duration']['max'] = max($recordObject->duration, $statistics['duration']['max']);
-				$statistics['duration']['min'] = min($recordObject->duration, $statistics['duration']['min'] ?? $statistics['duration']['max']);
-			}
-		}
-
-		if ($statistics['duration']['cnt'] <> 0)
-		{
-			$statistics['duration']['avg'] = $statistics['duration']['sum'] / $statistics['duration']['cnt'];
-		}
+		$statistics['duration'] = $this->calculateStatistics('duration');
 
 		return $statistics;
 	}

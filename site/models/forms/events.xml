@@ -29,8 +29,9 @@
             name="duration"
             type="number"
             label="COM_GBJFAMILY_EVENT_DURATION_LABEL"
-            width="10%"
-            suffix="LIB_GBJ_UNIT_HOURS"
+            format="COM_GBJFAMILY_EVENT_DURATION_FORMAT"
+            class="gbj-right"
+            labelclass="gbj-right"
         />
 
         <field

@@ -30,6 +30,7 @@
             label="COM_GBJFAMILY_FIELD_DATEON_LABEL"
             width="10%"
             format="LIB_GBJ_FORMAT_DATE_LONG"
+            defaulted="false"
         />
 
         <field
@@ -38,6 +39,7 @@
             label="COM_GBJFAMILY_FIELD_DATEOFF_LABEL"
             width="10%"
             format="LIB_GBJ_FORMAT_DATE_LONG"
+            defaulted="false"
         />
 
         <field

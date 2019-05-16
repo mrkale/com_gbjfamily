@@ -70,22 +70,6 @@ $showDesc = $tparams->get('show_itemdescription');
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'sequence')); ?>
 				<?php echo JLayoutHelper::render('grid.items_detail', $this, $layoutBasePath, array('fields'=>'date_on')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'title')); ?>
-				<?php
-					$this->item->price = number_format($this->item->price,
-						JText::_('COM_GBJFAMILY_FORMAT_NUMBER_DECIMALS'),
-						JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_DECIMALS'),
-						JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_THOUSANDS')
-					);
-
-					if (isset($this->item->price_orig))
-					{
-						$this->item->price_orig = number_format($this->item->price_orig,
-							JText::_('COM_GBJFAMILY_FORMAT_NUMBER_DECIMALS'),
-							JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_DECIMALS'),
-							JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_THOUSANDS')
-						);
-					}
-				?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'price, price_orig')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'id_domain')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'id_asset')); ?>

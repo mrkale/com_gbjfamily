@@ -22,31 +22,45 @@
             name="quantity"
             type="number"
             label="COM_GBJFAMILY_FIELD_FUEL_QUANTITY_LABEL"
+            format="COM_GBJFAMILY_FIELD_FUEL_QUANTITY_FORMAT"
+            class="gbj-center"
+            labelclass="gbj-center"
         />
 
         <field
             name="tacho"
             type="number"
             label="COM_GBJFAMILY_FIELD_FUEL_TACHO_LABEL"
-            format="a,b,c"
+            format="COM_GBJFAMILY_FIELD_FUEL_TACHO_FORMAT"
+            class="gbj-right"
+            labelclass="gbj-right"
         />
 
         <field
             name="period"
             type="number"
             label="COM_GBJFAMILY_FIELD_FUEL_PERIOD_LABEL"
+            format="COM_GBJFAMILY_FIELD_FUEL_PERIOD_FORMAT"
+            class="gbj-center"
+            labelclass="gbj-center"
         />
 
         <field
             name="distance"
             type="number"
             label="COM_GBJFAMILY_FIELD_FUEL_DISTANCE_LABEL"
+            format="COM_GBJFAMILY_FIELD_FUEL_DISTANCE_FORMAT"
+            class="gbj-right"
+            labelclass="gbj-right"
         />
 
         <field
             name="consumption"
             type="number"
             label="COM_GBJFAMILY_FIELD_FUEL_CONSUMPTION_LABEL"
+            format="COM_GBJFAMILY_FIELD_FUEL_CONSUMPTION_FORMAT"
+            class="gbj-center"
+            labelclass="gbj-center"
         />
 
         <field

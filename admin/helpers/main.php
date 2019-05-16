@@ -28,14 +28,14 @@ class Helper extends GbjHelpersCommon
 	 * @var array
 	 */
 	protected static $helperViewsInSubmenu = array(
+		'expenses',
 		'events',
 		'vacations',
-		'devices',
 		'projects',
-		'incomes',
 		'assets',
-		'facts',
-		'expenses',
+		'incomes',
+		'devices',
 		'fuels',
+		'facts',
 	);
 }

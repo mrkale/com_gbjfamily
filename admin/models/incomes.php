@@ -23,24 +23,7 @@ class GbjfamilyModelIncomes extends GbjSeedModelList
 	 */
 	public function getStatistics()
 	{
-		$statistics['price']['cnt'] = 0;
-		$statistics['price']['sum'] = 0;
-		$statistics['price']['avg'] = 0;
-		$statistics['price']['max'] = 0;
-		$statistics['price']['min'] = null;
-
-		foreach ($this->getItems() as $recordObject)
-		{
-			$statistics['price']['cnt'] += 1;
-			$statistics['price']['sum'] += $recordObject->price;
-			$statistics['price']['max'] = max($recordObject->price, $statistics['price']['max']);
-			$statistics['price']['min'] = min($recordObject->price, $statistics['price']['min'] ?? $statistics['price']['max']);
-		}
-
-		if ($statistics['price']['cnt'] <> 0)
-		{
-			$statistics['price']['avg'] = $statistics['price']['sum'] / $statistics['price']['cnt'];
-		}
+		$statistics['price'] = $this->calculateStatistics('price');
 
 		return $statistics;
 	}

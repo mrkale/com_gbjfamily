@@ -31,6 +31,7 @@
             type="number"
             label="COM_GBJFAMILY_FIELD_ASSET_VALUE_LABEL"
             defaulted="false"
+            format="LIB_GBJ_FIELD_PRICE_FORMAT"
         />
 
         <field
@@ -40,6 +41,7 @@
             defaulted="false"
             class="pull-right"
             labelclass="pull-right"
+            format="LIB_GBJ_FIELD_PRICE_FORMAT"
         />
 
         <field
@@ -49,6 +51,7 @@
             defaulted="false"
             prefix="id_currency_alias"
             class="pull-right"
+            format="LIB_GBJ_FIELD_PRICE_FORMAT"
         />
 
         <field

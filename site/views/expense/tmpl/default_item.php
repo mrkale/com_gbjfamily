@@ -14,34 +14,9 @@ $tparams = $this->params;
 $pageclass_sfx = htmlspecialchars($tparams->get('pageclass_sfx'));
 $class = strtolower(Helper::getClassPrefix()). '_dl' . $pageclass_sfx;
 
-$this->item->quantity = number_format($this->item->quantity,
-	JText::_('COM_GBJFAMILY_FORMAT_NUMBER_DECIMALS'),
-	JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_DECIMALS'),
-	JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_THOUSANDS')
-);
-
-$this->item->price = number_format($this->item->price,
-	JText::_('COM_GBJFAMILY_FORMAT_NUMBER_DECIMALS'),
-	JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_DECIMALS'),
-	JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_THOUSANDS')
-);
-
 if ($this->item->quantity <> 1 && $this->item->quantity <> 0)
 {
-	$this->item->price_unit = number_format($this->item->price / $this->item->quantity,
-		JText::_('COM_GBJFAMILY_FORMAT_NUMBER_DECIMALS'),
-		JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_DECIMALS'),
-		JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_THOUSANDS')
-	);
-}
-
-if (isset($this->item->price_orig))
-{
-	$this->item->price_orig = number_format($this->item->price_orig,
-		JText::_('COM_GBJFAMILY_FORMAT_NUMBER_DECIMALS'),
-		JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_DECIMALS'),
-		JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_THOUSANDS')
-	);
+	$this->item->price_unit = $this->item->price / $this->item->quantity;
 }
 ?>
 <dl class="<?php echo $class; ?>">

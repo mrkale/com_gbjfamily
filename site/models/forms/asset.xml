@@ -20,6 +20,7 @@
             type="number"
             label="COM_GBJFAMILY_FIELD_ASSET_VALUE_LABEL"
             suffix="LIB_GBJ_UNIT_EUR"
+            format="LIB_GBJ_FIELD_PRICE_FORMAT"
         />
 
         <field
@@ -27,6 +28,7 @@
             type="number"
             label="LIB_GBJ_FIELD_PRICE_LABEL"
             suffix="LIB_GBJ_UNIT_EUR"
+            format="LIB_GBJ_FIELD_PRICE_FORMAT"
         />
 
         <field
@@ -34,6 +36,7 @@
             type="number"
             label="COM_GBJFAMILY_FIELD_INCOME_PRICEORIG_LABEL"
             suffix="id_currency_alias"
+            format="LIB_GBJ_FIELD_PRICE_FORMAT"
         />
 
         <field

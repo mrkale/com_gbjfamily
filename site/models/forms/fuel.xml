@@ -19,30 +19,35 @@
             name="quantity"
             type="number"
             label="COM_GBJFAMILY_FIELD_FUEL_QUANTITY_LABEL"
+            format="COM_GBJFAMILY_FIELD_FUEL_QUANTITY_FORMAT"
         />
 
         <field
             name="tacho"
             type="number"
             label="COM_GBJFAMILY_FIELD_FUEL_TACHO_LABEL"
+            format="COM_GBJFAMILY_FIELD_FUEL_TACHO_FORMAT"
         />
 
         <field
             name="period"
             type="number"
             label="COM_GBJFAMILY_FIELD_FUEL_PERIOD_LABEL"
+            format="COM_GBJFAMILY_FIELD_FUEL_PERIOD_FORMAT"
         />
 
         <field
             name="distance"
             type="number"
             label="COM_GBJFAMILY_FIELD_FUEL_DISTANCE_LABEL"
+            format="COM_GBJFAMILY_FIELD_FUEL_DISTANCE_FORMAT"
         />
 
         <field
             name="consumption"
             type="number"
             label="COM_GBJFAMILY_FIELD_FUEL_CONSUMPTION_LABEL"
+            format="COM_GBJFAMILY_FIELD_FUEL_CONSUMPTION_FORMAT"
         />
 
         <field

@@ -81,37 +81,11 @@ $cparams = JComponentHelper::getParams($componentName);
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'state, featured')); ?>
 				<?php echo JLayoutHelper::render('grid.items_edit', $this, $layoutBasePath, array('fields'=>'date_on')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'title')); ?>
-				<?php
-					$this->item->quantity = number_format($this->item->quantity,
-						JText::_('COM_GBJFAMILY_FORMAT_NUMBER_DECIMALS'),
-						JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_DECIMALS'),
-						JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_THOUSANDS')
-					);
-				?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'quantity')); ?>
 				<?php
-					$this->item->price = number_format($this->item->price,
-						JText::_('COM_GBJFAMILY_FORMAT_NUMBER_DECIMALS'),
-						JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_DECIMALS'),
-						JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_THOUSANDS')
-					);
-
 					if ($this->item->quantity <> 1 && $this->item->quantity <> 0)
 					{
-						$this->item->price_unit = number_format($this->item->price / $this->item->quantity,
-							JText::_('COM_GBJFAMILY_FORMAT_NUMBER_DECIMALS'),
-							JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_DECIMALS'),
-							JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_THOUSANDS')
-						);
-					}
-
-					if (isset($this->item->price_orig))
-					{
-						$this->item->price_orig = number_format($this->item->price_orig,
-							JText::_('COM_GBJFAMILY_FORMAT_NUMBER_DECIMALS'),
-							JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_DECIMALS'),
-							JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_THOUSANDS')
-						);
+						$this->item->price_unit = $this->item->price / $this->item->quantity;
 					}
 				?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'price, price_unit, price_orig')); ?>

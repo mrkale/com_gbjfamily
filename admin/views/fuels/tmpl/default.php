@@ -73,25 +73,8 @@ $cparams = JComponentHelper::getParams($componentName);
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'state, featured')); ?>
 				<?php echo JLayoutHelper::render('grid.items_edit', $this, $layoutBasePath, array('fields'=>'date_on')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'quantity')); ?>
-				<?php
-					$this->item->tacho = number_format($this->item->tacho,
-						0,
-						JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_DECIMALS'),
-						JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_THOUSANDS')
-					);
-				?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'tacho')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'period')); ?>
-				<?php
-					if (!is_null($this->item->distance))
-					{
-						$this->item->distance = number_format($this->item->distance,
-							0,
-							JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_DECIMALS'),
-							JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_THOUSANDS')
-						);
-					}
-				?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'distance')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'consumption')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'id_domain')); ?>

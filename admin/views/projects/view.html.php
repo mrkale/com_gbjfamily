@@ -38,56 +38,41 @@ class GbjfamilyViewProjects extends GbjSeedViewList
 	{
 		$htmlString = parent::htmlStatistics();
 
-		// Expenses
-		foreach ($this->statistics['expenses'] as $key => $value)
-		{
-			$value = number_format($value,
-				JText::_('COM_GBJFAMILY_FORMAT_NUMBER_DECIMALS'),
-				JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_DECIMALS'),
-				JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_THOUSANDS')
-			);
-			$this->statistics['expenses'][$key] = $value;
-		}
-
-		// Events
-		foreach ($this->statistics['events'] as $key => $value)
-		{
-			$value = number_format($value,
-				JText::_('COM_GBJFAMILY_FORMAT_NUMBER_DECIMALS'),
-				JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_DECIMALS'),
-				JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_THOUSANDS')
-			);
-			$this->statistics['events'][$key] = $value;
-		}
-
-		// Incomes
-		foreach ($this->statistics['incomes'] as $key => $value)
-		{
-			$value = number_format($value,
-				JText::_('COM_GBJFAMILY_FORMAT_NUMBER_DECIMALS'),
-				JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_DECIMALS'),
-				JText::_('COM_GBJFAMILY_FORMAT_NUMBER_SEPARATOR_THOUSANDS')
-			);
-			$this->statistics['incomes'][$key] = $value;
-		}
-
 		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE'), JText::_('COM_GBJFAMILY_EXPENSES_STATS_LABEL'));
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_CNT'), $this->statistics['expenses']['cnt']);
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE_UNIT'), JText::_('LIB_GBJ_STAT_SUM'), $this->statistics['expenses']['sum'],
-			JText::_('LIB_GBJ_UNIT_EUR'));
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'), $this->statistics['expenses']['avg']);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_CNT'),
+			$this->statistics['expenses']['cnt']
+		);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE_UNIT'), JText::_('LIB_GBJ_STAT_SUM'),
+			Helper::formatNumber($this->statistics['expenses']['sum'], JText::_('LIB_GBJ_FIELD_PRICE_FORMAT')),
+			JText::_('LIB_GBJ_UNIT_EUR')
+		);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'),
+			Helper::formatNumber($this->statistics['expenses']['avg'], JText::_('LIB_GBJ_FIELD_PRICE_FORMAT'))
+		);
 
 		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE'), JText::_('COM_GBJFAMILY_EVENTS_STATS_LABEL'));
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_CNT'), $this->statistics['events']['cnt']);
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE_UNIT'), JText::_('LIB_GBJ_STAT_SUM'), $this->statistics['events']['sum'],
-			JText::_('LIB_GBJ_UNIT_HOURS'));
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'), $this->statistics['events']['avg']);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_CNT'),
+			$this->statistics['events']['cnt']
+		);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE_UNIT'), JText::_('LIB_GBJ_STAT_SUM'),
+			Helper::formatNumber($this->statistics['events']['sum'], JText::_('COM_GBJFAMILY_EVENT_DURATION_FORMAT')),
+			JText::_('LIB_GBJ_UNIT_HOURS')
+		);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'),
+			Helper::formatNumber($this->statistics['events']['sum'], JText::_('COM_GBJFAMILY_EVENT_DURATION_FORMAT'))
+		);
 
 		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE'), JText::_('COM_GBJFAMILY_INCOMES_STATS_LABEL'));
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_CNT'), $this->statistics['incomes']['cnt']);
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE_UNIT'), JText::_('LIB_GBJ_STAT_SUM'), $this->statistics['incomes']['sum'],
-			JText::_('LIB_GBJ_UNIT_EUR'));
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'), $this->statistics['incomes']['avg']);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_CNT'),
+			$this->statistics['incomes']['cnt']
+		);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE_UNIT'), JText::_('LIB_GBJ_STAT_SUM'),
+			Helper::formatNumber($this->statistics['incomes']['sum'], JText::_('LIB_GBJ_FIELD_PRICE_FORMAT')),
+			JText::_('LIB_GBJ_UNIT_EUR')
+		);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'),
+			Helper::formatNumber($this->statistics['incomes']['avg'], JText::_('LIB_GBJ_FIELD_PRICE_FORMAT'))
+		);
 
 		return $htmlString;
 	}

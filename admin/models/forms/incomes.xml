@@ -33,6 +33,7 @@
             defaulted="false"
             class="pull-right"
             labelclass="pull-right"
+            format="LIB_GBJ_FIELD_PRICE_FORMAT"
         />
 
         <field
@@ -42,6 +43,7 @@
             defaulted="false"
             prefix="id_currency_alias"
             class="pull-right"
+            format="LIB_GBJ_FIELD_PRICE_FORMAT"
         />
 
         <field

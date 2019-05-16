@@ -30,7 +30,7 @@
             type="number"
             label="COM_GBJFAMILY_FIELD_ASSET_VALUE_LABEL"
             class="pull-right"
-            labelclass="label-right"
+            labelclass="gbj-right"
         />
 
         <field
@@ -38,7 +38,7 @@
             type="number"
             label="LIB_GBJ_FIELD_PRICE_LABEL"
             class="pull-right"
-            labelclass="label-right"
+            labelclass="gbj-right"
         />
 
         <field
@@ -74,6 +74,7 @@
             label="COM_GBJFAMILY_FIELD_CODEBOOK_ASSET_LABEL"
             datafield="id_asset_alias"
             tooltip="id_asset_title"
+            defaulted="false"
         >
         </field>
 

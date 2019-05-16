@@ -23,41 +23,10 @@ class GbjfamilyModelFuels extends GbjSeedModelList
 	 */
 	public function getStatistics()
 	{
-		$statistics['quantity'] = $this->getStatisticsQuantity();
-
-		return $statistics;
-	}
-	/**
-	 * Calculates value statistics from filtered records.
-	 *
-	 * @return  array  The list of statistics variables and values.
-	 */
-	public function getStatisticsQuantity()
-	{
-		$statistics['recs'] = 0;
-		$statistics['cnt'] = 0;
-		$statistics['sum'] = 0;
-		$statistics['avg'] = 0;
-		$statistics['max'] = 0;
-		$statistics['min'] = null;
-
-		foreach ($this->getItems() as $recordObject)
-		{
-			$statistics['recs'] += 1;
-
-			if ($recordObject->quantity)
-			{
-				$statistics['cnt'] += 1;
-				$statistics['sum'] += $recordObject->quantity;
-				$statistics['max'] = max($recordObject->quantity, $statistics['max']);
-				$statistics['min'] = min($recordObject->quantity, $statistics['min'] ?? $statistics['max']);
-			}
-		}
-
-		if ($statistics['cnt'])
-		{
-			$statistics['avg'] = $statistics['sum'] / $statistics['cnt'];
-		}
+		$statistics['quantity'] = $this->calculateStatistics('quantity');
+		$statistics['period'] = $this->calculateStatistics('period');
+		$statistics['distance'] = $this->calculateStatistics('distance');
+		$statistics['consumption'] = $this->calculateStatistics('consumption');
 
 		return $statistics;
 	}

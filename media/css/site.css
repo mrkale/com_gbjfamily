@@ -25,8 +25,12 @@
 	background-color: beige;
 }
 
-.gbjfamily_table .label-right {
+.gbjfamily_table .gbj-right {
     text-align: right;
+}
+
+.gbjfamily_table .gbj-center {
+    text-align: center;
 }
 
 .accordion {
