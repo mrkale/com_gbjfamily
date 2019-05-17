@@ -59,6 +59,14 @@
             to be valid XML and be parsed by the installer.
             -->
             <menu
+                link="option=com_gbjfamily&amp;view=expenses"
+                view="expenses"
+                img="class:generic"
+                alt="GbjFamily/Expenses"
+            >
+                COM_GBJFAMILY_SUBMENU_EXPENSES
+            </menu>
+            <menu
                 link="option=com_gbjfamily&amp;view=events"
                 view="events"
                 img="class:generic"
@@ -75,28 +83,12 @@
                 COM_GBJFAMILY_SUBMENU_VACATIONS
             </menu>
             <menu
-                link="option=com_gbjfamily&amp;view=devices"
-                view="devices"
-                img="class:generic"
-                alt="GbjFamily/Devices"
-            >
-                COM_GBJFAMILY_SUBMENU_DEVICES
-            </menu>
-            <menu
                 link="option=com_gbjfamily&amp;view=projects"
                 view="projects"
                 img="class:generic"
                 alt="GbjFamily/Projects"
             >
                 COM_GBJFAMILY_SUBMENU_PROJECTS
-            </menu>
-            <menu
-                link="option=com_gbjfamily&amp;view=incomes"
-                view="incomes"
-                img="class:generic"
-                alt="GbjFamily/Incomes"
-            >
-                COM_GBJFAMILY_SUBMENU_INCOMES
             </menu>
             <menu
                 link="option=com_gbjfamily&amp;view=assets"
@@ -107,20 +99,20 @@
                 COM_GBJFAMILY_SUBMENU_ASSETS
             </menu>
             <menu
-                link="option=com_gbjfamily&amp;view=facts"
-                view="facts"
+                link="option=com_gbjfamily&amp;view=incomes"
+                view="incomes"
                 img="class:generic"
-                alt="GbjFamily/Facts"
+                alt="GbjFamily/Incomes"
             >
-                COM_GBJFAMILY_SUBMENU_FACTS
+                COM_GBJFAMILY_SUBMENU_INCOMES
             </menu>
             <menu
-                link="option=com_gbjfamily&amp;view=expenses"
-                view="expenses"
+                link="option=com_gbjfamily&amp;view=devices"
+                view="devices"
                 img="class:generic"
-                alt="GbjFamily/Expenses"
+                alt="GbjFamily/Devices"
             >
-                COM_GBJFAMILY_SUBMENU_EXPENSES
+                COM_GBJFAMILY_SUBMENU_DEVICES
             </menu>
             <menu
                 link="option=com_gbjfamily&amp;view=fuels"
@@ -129,6 +121,14 @@
                 alt="GbjFamily/Fuels"
             >
                 COM_GBJFAMILY_SUBMENU_FUELS
+            </menu>
+            <menu
+                link="option=com_gbjfamily&amp;view=facts"
+                view="facts"
+                img="class:generic"
+                alt="GbjFamily/Facts"
+            >
+                COM_GBJFAMILY_SUBMENU_FACTS
             </menu>
         </submenu>
 

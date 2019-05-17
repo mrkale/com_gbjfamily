@@ -41,7 +41,7 @@ $cparams = JComponentHelper::getParams($componentName);
 <?php if ($this->total > 0) : ?>
 	<table class="table table-striped" id="recordList">
 		<?php if ($cparams->get('show_filter_stats')) : ?>
-		<caption style="text-align: left"><?php echo JText::_('LIB_GBJ_FILTER_COUNT_LABEL') . $this->pagination->total; ?></caption>
+			<caption style="text-align: left"><?php echo $this->htmlStatistics(); ?></caption>
 		<?php endif; ?>
 		<thead>
 			<tr>

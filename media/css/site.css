@@ -17,8 +17,8 @@
 }
 
 .gbjfamily_table caption {
-	/*text-align: center;*/
-	font-weight: bold;
+    color: rosybrown;
+	background-color: aliceblue;
 }
 
 .gbjfamily_table thead tr {

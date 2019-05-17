@@ -221,137 +221,23 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 	}
 
 	/**
-	 * Calculates statistics from filtered records.
+	 * Calculates statistics from child agenda records.
 	 *
 	 * @return  array  The list of statistics variables and values.
 	 */
 	public function getStatistics()
 	{
-		$statistics['expenses'] = $this->getStatisticsExpenses();
-		$statistics['events'] = $this->getStatisticsEvents();
-		$statistics['incomes'] = $this->getStatisticsIncomes();
-
-		return $statistics;
-	}
-
-	/**
-	 * Calculates statistics from incomes for current record.
-	 *
-	 * @return  array  The list of statistics variables and values.
-	 */
-	public function getStatisticsExpenses()
-	{
-		$statistics = array();
-		$statistics['recs'] = 0;
-		$statistics['cnt'] = 0;
-		$statistics['sum'] = 0;
-		$statistics['avg'] = 0;
-
-		// Calculation fields
-		$fieldExpenses = 'expenses';
-		$fieldPrice = $fieldExpenses . '_price';
-
 		if (JFactory::getApplication()->isClient('administrator'))
 		{
-			$fieldExpenses .= '_total';
-			$fieldPrice .= '_total';
+			$statistics['expenses'] = $this->calculateStatisticsChild('expenses_total', 'expenses_price_total');
+			$statistics['events'] = $this->calculateStatisticsChild('events_total', 'events_duration_total');
+			$statistics['incomes'] = $this->calculateStatisticsChild('incomes_total', 'incomes_price_total');
 		}
-
-		foreach ($this->getItems() as $recordObject)
+		else
 		{
-			if (intval($recordObject->$fieldExpenses))
-			{
-				$statistics['recs'] += 1;
-				$statistics['cnt'] += intval($recordObject->$fieldExpenses);
-				$statistics['sum'] += floatval($recordObject->$fieldPrice);
-			}
-		}
-
-		if ($statistics['recs'] <> 0)
-		{
-			$statistics['avg'] = $statistics['sum'] / $statistics['recs'];
-		}
-
-		return $statistics;
-	}
-
-	/**
-	 * Calculates statistics from events for current record.
-	 *
-	 * @return  array  The list of statistics variables and values.
-	 */
-	public function getStatisticsEvents()
-	{
-		$statistics = array();
-		$statistics['recs'] = 0;
-		$statistics['cnt'] = 0;
-		$statistics['sum'] = 0;
-		$statistics['avg'] = 0;
-
-		// Calculation fields
-		$fieldEvents = 'events';
-		$fieldDuration = $fieldEvents . '_duration';
-
-		if (JFactory::getApplication()->isClient('administrator'))
-		{
-			$fieldEvents .= '_total';
-			$fieldDuration .= '_total';
-		}
-
-		foreach ($this->getItems() as $recordObject)
-		{
-			if (intval($recordObject->$fieldEvents))
-			{
-				$statistics['recs'] += 1;
-				$statistics['cnt'] += intval($recordObject->$fieldEvents);
-				$statistics['sum'] += floatval($recordObject->$fieldDuration);
-			}
-		}
-
-		if ($statistics['recs'] <> 0)
-		{
-			$statistics['avg'] = $statistics['sum'] / $statistics['recs'];
-		}
-
-		return $statistics;
-	}
-
-	/**
-	 * Calculates statistics from incomes for current record.
-	 *
-	 * @return  array  The list of statistics variables and values.
-	 */
-	public function getStatisticsIncomes()
-	{
-		$statistics = array();
-		$statistics['recs'] = 0;
-		$statistics['cnt'] = 0;
-		$statistics['sum'] = 0;
-		$statistics['avg'] = 0;
-
-		// Calculation fields
-		$fieldIncomes = 'incomes';
-		$fieldPrice = $fieldIncomes . '_price';
-
-		if (JFactory::getApplication()->isClient('administrator'))
-		{
-			$fieldIncomes .= '_total';
-			$fieldPrice .= '_total';
-		}
-
-		foreach ($this->getItems() as $recordObject)
-		{
-			if (intval($recordObject->$fieldIncomes))
-			{
-				$statistics['recs'] += 1;
-				$statistics['cnt'] += intval($recordObject->$fieldIncomes);
-				$statistics['sum'] += floatval($recordObject->$fieldPrice);
-			}
-		}
-
-		if ($statistics['recs'] <> 0)
-		{
-			$statistics['avg'] = $statistics['sum'] / $statistics['recs'];
+			$statistics['expenses'] = $this->calculateStatisticsChild('expenses', 'expenses_price');
+			$statistics['events'] = $this->calculateStatisticsChild('events', 'events_duration');
+			$statistics['incomes'] = $this->calculateStatisticsChild('incomes', 'incomes_price');
 		}
 
 		return $statistics;

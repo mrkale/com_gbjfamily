@@ -37,7 +37,7 @@ $showDesc = $tparams->get('show_itemdescription');
 	<div class="table-responsive">
 	<table class="table table-hover gbjfamily_table<?php echo $pageclass_sfx; ?>" id="recordList">
 		<?php if ($tparams->get('show_filter_stats')) : ?>
-		<caption><?php echo JText::_('LIB_GBJ_FILTER_COUNT_LABEL') . $this->pagination->total; ?></caption>
+			<caption style="text-align: left"><?php echo $this->htmlStatistics(); ?></caption>
 		<?php endif; ?>
 		<thead>
 			<tr>
