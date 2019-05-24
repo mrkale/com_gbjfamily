@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2019 Libor Gabaj
+@license    GNU General Public License version 2 or later; see LICENSE.txt
+@since      3.8
+-->
+<form>
+    <fieldset name="gridfields">
+
+        <field
+            name="period"
+            type="number"
+            label="COM_GBJFAMILY_FIELD_CASHFLOW_PERIOD_GRID_LABEL"
+        />
+
+        <field
+            name="price"
+            type="number"
+            label="LIB_GBJ_FIELD_PRICE_LABEL"
+            suffix="LIB_GBJ_UNIT_EUR"
+            format="LIB_GBJ_FIELD_PRICE_FORMAT"
+        />
+
+        <field
+            name="price_month"
+            type="number"
+            label="COM_GBJFAMILY_FIELD_CASHFLOW_PRICEMONTH_LABEL"
+            suffix="LIB_GBJ_UNIT_EUR"
+            format="LIB_GBJ_FIELD_PRICE_FORMAT"
+        />
+
+        <field
+            name="iban"
+            label="COM_GBJFAMILY_FIELD_CASHFLOW_IBAN_LABEL"
+        />
+
+        <field
+            name="varsymb"
+            label="COM_GBJFAMILY_FIELD_CASHFLOW_VARSYMB_LABEL"
+        />
+
+        <field
+            name="specsymb"
+            label="COM_GBJFAMILY_FIELD_CASHFLOW_SPECSYMB_LABEL"
+        />
+
+        <field
+            name="billspan"
+            label="COM_GBJFAMILY_FIELD_CASHFLOW_BILLSPAN_LABEL"
+        />
+
+        <field
+            name="payspan"
+            label="COM_GBJFAMILY_FIELD_CASHFLOW_PAYSPAN_LABEL"
+        />
+
+        <field
+            name="id_domain"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
+            datafield="id_domain_title"
+            tooltip="id_domain_alias"
+        >
+        </field>
+
+        <field
+            name="id_vendor"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_VENDOR_LABEL"
+            datafield="id_vendor_title"
+            tooltip="id_vendor_alias"
+        >
+        </field>
+
+        <field
+            name="id_payform"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_PAYFORM_LABEL"
+            datafield="id_payform_title"
+            tooltip="id_payform_alias"
+        >
+        </field>
+
+        <field
+            name="update_site"
+            type="subform"
+        />
+
+    </fieldset>
+</form>

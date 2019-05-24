@@ -97,6 +97,12 @@
             <option value="quantity DESC">COM_GBJFAMILY_HEADING_FUEL_QUANTITY_DSC</option>
             <option value="tacho ASC">COM_GBJFAMILY_HEADING_FUEL_TACHO_ASC</option>
             <option value="tacho DESC">COM_GBJFAMILY_HEADING_FUEL_TACHO_DSC</option>
+            <option value="period ASC">COM_GBJFAMILY_HEADING_FUEL_PERIOD_ASC</option>
+            <option value="period DESC">COM_GBJFAMILY_HEADING_FUEL_PERIOD_DSC</option>
+            <option value="distance ASC">COM_GBJFAMILY_HEADING_FUEL_DISTANCE_ASC</option>
+            <option value="distance DESC">COM_GBJFAMILY_HEADING_FUEL_DISTANCE_DSC</option>
+            <option value="consumption ASC">COM_GBJFAMILY_HEADING_FUEL_CONSUMPTION_ASC</option>
+            <option value="consumption DESC">COM_GBJFAMILY_HEADING_FUEL_CONSUMPTION_DSC</option>
             <option value="id_domain ASC">COM_GBJFAMILY_HEADING_CODEBOOK_DOMAIN_ASC</option>
             <option value="id_domain DESC">COM_GBJFAMILY_HEADING_CODEBOOK_DOMAIN_DSC</option>
             <option value="id_vendor ASC">COM_GBJFAMILY_HEADING_CODEBOOK_VENDOR_ASC</option>

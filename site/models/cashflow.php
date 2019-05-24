@@ -9,11 +9,13 @@
 // No direct access
 defined('_JEXEC') or die;
 
+require_once JPATH_COMPONENT_ADMINISTRATOR . '/models/cashflows.php';
+
 /**
- * Class for custom field Period
+ * General model methods for cashflow record.
  *
  * @since  3.8
  */
-class JFormFieldPeriod extends GbjSeedFieldList
+class GbjfamilyModelCashflow extends GbjfamilyModelCashflows
 {
 }

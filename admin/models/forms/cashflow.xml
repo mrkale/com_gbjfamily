@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2019 Libor Gabaj
+@license    GNU General Public License version 2 or later; see LICENSE.txt
+@since      3.8
+-->
+<form>
+    <fieldset name="recordfields">
+
+        <field
+            name="title"
+            type="text"
+            class="input-xxlarge input-large-text"
+            label="LIB_GBJ_FIELD_TITLE_LABEL"
+            description="LIB_GBJ_FIELD_TITLE_DESC"
+            required="true"
+        />
+
+        <field
+            name="period"
+            type="list"
+            class="inputbox span4"
+            label="COM_GBJFAMILY_FIELD_CASHFLOW_PERIOD_LABEL"
+            description="COM_GBJFAMILY_FIELD_CASHFLOW_PERIOD_DESC"
+            default="1"
+        >
+            <option value="1">LIB_GBJ_PERIOD_MONTH</option>
+            <option value="3">LIB_GBJ_PERIOD_QUARTER</option>
+            <option value="6">LIB_GBJ_PERIOD_HALFYEAR</option>
+            <option value="9">LIB_GBJ_PERIOD_QUARTER3</option>
+            <option value="12">LIB_GBJ_PERIOD_YEAR</option>
+            <option value="24">LIB_GBJ_PERIOD_YEAR2</option>
+        </field>
+
+        <field
+            name="price"
+            type="text"
+            class="inputbox span2"
+            label="LIB_GBJ_FIELD_PRICE_LABEL"
+            description="LIB_GBJ_FIELD_PRICE_DESC"
+            filter="float"
+        />
+
+        <field
+            name="price_month"
+            type="number"
+            class="inputbox span2"
+            label="COM_GBJFAMILY_FIELD_CASHFLOW_PRICEMONTH_LABEL"
+            description="COM_GBJFAMILY_FIELD_CASHFLOW_PRICEMONTH_DESC"
+            readonly="true"
+        />
+
+        <field
+            name="iban"
+            type="text"
+            label="COM_GBJFAMILY_FIELD_CASHFLOW_IBAN_LABEL"
+            description="COM_GBJFAMILY_FIELD_CASHFLOW_IBAN_DESC"
+        />
+
+        <field
+            name="varsymb"
+            type="text"
+            label="COM_GBJFAMILY_FIELD_CASHFLOW_VARSYMB_LABEL"
+            description="COM_GBJFAMILY_FIELD_CASHFLOW_VARSYMB_DESC"
+        />
+
+        <field
+            name="specsymb"
+            type="text"
+            label="COM_GBJFAMILY_FIELD_CASHFLOW_SPECSYMB_LABEL"
+            description="COM_GBJFAMILY_FIELD_CASHFLOW_SPECSYMB_DESC"
+        />
+
+        <field
+            name="billspan"
+            type="text"
+            label="COM_GBJFAMILY_FIELD_CASHFLOW_BILLSPAN_LABEL"
+            description="COM_GBJFAMILY_FIELD_CASHFLOW_BILLSPAN_DESC"
+        />
+
+        <field
+            name="payspan"
+            type="text"
+            label="COM_GBJFAMILY_FIELD_CASHFLOW_PAYSPAN_LABEL"
+            description="COM_GBJFAMILY_FIELD_CASHFLOW_PAYSPAN_DESC"
+        />
+
+        <field
+            name="id_domain"
+            type="Domain"
+            class="inputbox span4"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
+            description="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_DESC"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="id_vendor"
+            type="Vendor"
+            class="inputbox span4"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_VENDOR_LABEL"
+            description="COM_GBJFAMILY_FIELD_CODEBOOK_VENDOR_DESC"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="id_payform"
+            type="Payform"
+            class="inputbox span4"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_PAYFORM_LABEL"
+            description="COM_GBJFAMILY_FIELD_CODEBOOK_PAYFORM_DESC"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="update_admin"
+            type="subform"
+        />
+
+    </fieldset>
+</form>

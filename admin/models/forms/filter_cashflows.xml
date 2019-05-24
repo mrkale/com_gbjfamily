@@ -38,60 +38,10 @@
         </field>
 
         <field
-            name="year"
-            type="Year"
-            datafield="date_on"
-            multiple="true"
-            class="multipleYears"
-            onchange="this.form.submit();"
-        />
-
-        <field
-            name="month"
-            type="Month"
-            datafield="date_on"
-            multiple="true"
-            class="multipleMonths"
-            onchange="this.form.submit();"
-        />
-
-        <field
             name="id_domain"
             type="Domain"
             multiple="true"
             class="multipleDomains"
-            onchange="this.form.submit();"
-        />
-
-        <field
-            name="id_currency"
-            type="Currency"
-            multiple="true"
-            class="multipleCurrencies"
-            onchange="this.form.submit();"
-        />
-
-        <field
-            name="id_commodity"
-            type="Commodity"
-            multiple="true"
-            class="multipleCommodities"
-            onchange="this.form.submit();"
-        />
-
-        <field
-            name="id_type"
-            type="Type"
-            multiple="true"
-            class="multipleTypes"
-            onchange="this.form.submit();"
-        />
-
-        <field
-            name="id_unit"
-            type="Unit"
-            multiple="true"
-            class="multipleUnits"
             onchange="this.form.submit();"
         />
 
@@ -104,18 +54,10 @@
         />
 
         <field
-            name="id_location"
-            type="Location"
+            name="id_payform"
+            type="Payform"
             multiple="true"
-            class="multipleLocations"
-            onchange="this.form.submit();"
-        />
-
-        <field
-            name="id_project"
-            type="Project"
-            multiple="true"
-            class="multipleProjects"
+            class="multiplePayforms"
             onchange="this.form.submit();"
         />
 
@@ -130,7 +72,7 @@
             statuses="*,0,1,2,-2"
             description="JGLOBAL_SORT_BY"
             onchange="this.form.submit();"
-            default="date_on DESC"
+            default="title ASC"
         >
             <option value="">JGLOBAL_SORT_BY</option>
             <option value="state ASC">JSTATUS_ASC</option>
@@ -141,28 +83,28 @@
             <option value="modified DESC">LIB_GBJ_HEADING_MODIFIED_DSC</option>
             <option value="title ASC">JGLOBAL_TITLE_ASC</option>
             <option value="title DESC">JGLOBAL_TITLE_DESC</option>
-            <option value="date_on ASC">LIB_GBJ_HEADING_DATE_ASC</option>
-            <option value="date_on DESC">LIB_GBJ_HEADING_DATE_DSC</option>
-            <option value="quantity ASC">COM_GBJFAMILY_HEADING_EXPENSE_QUANTITY_ASC</option>
-            <option value="quantity DESC">COM_GBJFAMILY_HEADING_EXPENSE_QUANTITY_DSC</option>
+            <option value="period ASC">COM_GBJFAMILY_HEADING_CASHFLOW_PERIOD_ASC</option>
+            <option value="period DESC">COM_GBJFAMILY_HEADING_CASHFLOW_PERIOD_DSC</option>
             <option value="price ASC">LIB_GBJ_HEADING_PRICE_ASC</option>
             <option value="price DESC">LIB_GBJ_HEADING_PRICE_DSC</option>
+            <option value="price_month ASC">COM_GBJFAMILY_HEADING_CASHFLOW_PRICEMONTH_ASC</option>
+            <option value="price_month DESC">COM_GBJFAMILY_HEADING_CASHFLOW_PRICEMONTH_DSC</option>
+            <option value="iban ASC">COM_GBJFAMILY_HEADING_CASHFLOW_IBAN_ASC</option>
+            <option value="iban DESC">COM_GBJFAMILY_HEADING_CASHFLOW_IBAN_DSC</option>
+            <option value="varsymb ASC">COM_GBJFAMILY_HEADING_CASHFLOW_VARSYMB_ASC</option>
+            <option value="varsymb DESC">COM_GBJFAMILY_HEADING_CASHFLOW_VARSYMB_DSC</option>
+            <option value="specsymb ASC">COM_GBJFAMILY_HEADING_CASHFLOW_SPECSYMB_ASC</option>
+            <option value="specsymb DESC">COM_GBJFAMILY_HEADING_CASHFLOW_SPECSYMB_DSC</option>
+            <option value="billspan ASC">COM_GBJFAMILY_HEADING_CASHFLOW_BILLSPAN_ASC</option>
+            <option value="billspan DESC">COM_GBJFAMILY_HEADING_CASHFLOW_BILLSPAN_DSC</option>
+            <option value="payspan ASC">COM_GBJFAMILY_HEADING_CASHFLOW_PAYSPAN_ASC</option>
+            <option value="payspan DESC">COM_GBJFAMILY_HEADING_CASHFLOW_PAYSPAN_DSC</option>
             <option value="id_domain ASC">COM_GBJFAMILY_HEADING_CODEBOOK_DOMAIN_ASC</option>
             <option value="id_domain DESC">COM_GBJFAMILY_HEADING_CODEBOOK_DOMAIN_DSC</option>
-            <option value="id_currency ASC">COM_GBJFAMILY_HEADING_CODEBOOK_CURRENCY_ASC</option>
-            <option value="id_currency DESC">COM_GBJFAMILY_HEADING_CODEBOOK_CURRENCY_DSC</option>
-            <option value="id_commodity ASC">COM_GBJFAMILY_HEADING_CODEBOOK_COMMODITY_ASC</option>
-            <option value="id_commodity DESC">COM_GBJFAMILY_HEADING_CODEBOOK_COMMODITY_DSC</option>
-            <option value="id_type ASC">COM_GBJFAMILY_HEADING_CODEBOOK_TYPE_ASC</option>
-            <option value="id_type DESC">COM_GBJFAMILY_HEADING_CODEBOOK_TYPE_DSC</option>
-            <option value="id_unit ASC">COM_GBJFAMILY_HEADING_CODEBOOK_UNIT_ASC</option>
-            <option value="id_unit DESC">COM_GBJFAMILY_HEADING_CODEBOOK_UNIT_DSC</option>
             <option value="id_vendor ASC">COM_GBJFAMILY_HEADING_CODEBOOK_VENDOR_ASC</option>
             <option value="id_vendor DESC">COM_GBJFAMILY_HEADING_CODEBOOK_VENDOR_DSC</option>
-            <option value="id_location ASC">COM_GBJFAMILY_HEADING_CODEBOOK_LOCATION_ASC</option>
-            <option value="id_location DESC">COM_GBJFAMILY_HEADING_CODEBOOK_LOCATION_DSC</option>
-            <option value="id_project ASC">COM_GBJFAMILY_HEADING_CODEBOOK_PROJECT_ASC</option>
-            <option value="id_project DESC">COM_GBJFAMILY_HEADING_CODEBOOK_PROJECT_DSC</option>
+            <option value="id_payform ASC">COM_GBJFAMILY_HEADING_CODEBOOK_PAYFORM_ASC</option>
+            <option value="id_payform DESC">COM_GBJFAMILY_HEADING_CODEBOOK_PAYFORM_DSC</option>
         </field>
 
         <field

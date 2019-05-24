@@ -17,3 +17,4 @@ DROP TABLE IF EXISTS `#__gbjfamily_assets`;
 DROP TABLE IF EXISTS `#__gbjfamily_facts`;
 DROP TABLE IF EXISTS `#__gbjfamily_expenses`;
 DROP TABLE IF EXISTS `#__gbjfamily_fuels`;
+DROP TABLE IF EXISTS `#__gbjfamily_cashflows`;

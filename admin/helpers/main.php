@@ -35,6 +35,7 @@ class Helper extends GbjHelpersCommon
 		'assets',
 		'incomes',
 		'devices',
+		'cashflows',
 		'fuels',
 		'facts',
 	);

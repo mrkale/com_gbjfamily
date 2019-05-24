@@ -10,7 +10,6 @@
     <fields name="filter">
         <field
             name="search"
-            type="text"
             label="JSEARCH_FILTER_LABEL"
             description="LIB_GBJ_SEARCH_VALUE_DESC"
             hint="JSEARCH_FILTER"
