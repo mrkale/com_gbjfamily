@@ -23,6 +23,13 @@
         />
 
         <field
+            name="period"
+            type="number"
+            label="LIB_GBJ_FIELD_PERIOD_LABEL"
+            format="LIB_GBJ_FIELD_PERIOD_FORMAT"
+        />
+
+        <field
             name="id_stay"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_STAY_LABEL"
             datafield="id_stay_title"

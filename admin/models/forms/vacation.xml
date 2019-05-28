@@ -46,6 +46,15 @@
         />
 
         <field
+            name="period"
+            type="number"
+            class="inputbox span2"
+            label="LIB_GBJ_FIELD_PERIOD_LABEL"
+            description="LIB_GBJ_FIELD_PERIOD_DESC"
+            readonly="true"
+        />
+
+        <field
             name="id_stay"
             type="Stay"
             class="inputbox span4"

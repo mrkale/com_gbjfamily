@@ -49,6 +49,7 @@ $cparams = JComponentHelper::getParams($componentName);
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'state, featured', 'onlyone'=>true)); ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'date_on')); ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'date_off')); ?>
+				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'period')); ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'title')); ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'id_stay')); ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'id_staff')); ?>
@@ -72,6 +73,7 @@ $cparams = JComponentHelper::getParams($componentName);
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'state, featured')); ?>
 				<?php echo JLayoutHelper::render('grid.items_edit', $this, $layoutBasePath, array('fields'=>'date_on')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'date_off')); ?>
+				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'period')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'title')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'id_stay')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'id_staff')); ?>

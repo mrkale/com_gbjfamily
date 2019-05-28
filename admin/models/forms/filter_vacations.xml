@@ -115,6 +115,8 @@
             <option value="date_on DESC">LIB_GBJ_HEADING_DATEON_DSC</option>
             <option value="date_off ASC">LIB_GBJ_HEADING_DATEOFF_ASC</option>
             <option value="date_off DESC">LIB_GBJ_HEADING_DATEOFF_DSC</option>
+            <option value="period ASC">LIB_GBJ_HEADING_PERIOD_ASC</option>
+            <option value="period DESC">LIB_GBJ_HEADING_PERIOD_DSC</option>
             <option value="id_stay ASC">COM_GBJFAMILY_HEADING_CODEBOOK_STAY_ASC</option>
             <option value="id_stay DESC">COM_GBJFAMILY_HEADING_CODEBOOK_STAY_DSC</option>
             <option value="id_staff ASC">COM_GBJFAMILY_HEADING_CODEBOOK_STAFF_ASC</option>

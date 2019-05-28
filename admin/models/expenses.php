@@ -25,6 +25,7 @@ class GbjfamilyModelExpenses extends GbjSeedModelList
 	{
 		$statistics['price'] = $this->calculateStatistics('price');
 		$statistics['quantity'] = $this->calculateStatistics('quantity');
+		$statistics['period'] = $this->calculateStatistics('period');
 
 		return $statistics;
 	}

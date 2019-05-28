@@ -34,6 +34,15 @@
         />
 
         <field
+            name="period"
+            type="number"
+            label="LIB_GBJ_FIELD_PERIOD_LABEL"
+            format="LIB_GBJ_FIELD_PERIOD_FORMAT"
+            class="gbj-right"
+            labelclass="gbj-right"
+        />
+
+        <field
             name="id_stay"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_STAY_LABEL"
             width="6%"

@@ -21,14 +21,37 @@
             name="date_on"
             type="calendar"
             class="input-xxlarge input-large-text span5"
-            label="LIB_GBJ_FIELD_DATE_LABEL"
-            description="LIB_GBJ_FIELD_DATE_DESC"
+            label="COM_GBJFAMILY_FIELD_EXPENSE_DATEON_LABEL"
+            description="COM_GBJFAMILY_FIELD_EXPENSE_DATEON_DESC"
             format="%d.%m.%Y"
             translateformat="false"
             showtime="false"
             todaybutton="true"
             filter="none"
             required="true"
+        />
+
+        <field
+            name="date_off"
+            type="calendar"
+            class="input-xxlarge input-large-text span5"
+            label="COM_GBJFAMILY_FIELD_EXPENSE_DATEOFF_LABEL"
+            description="COM_GBJFAMILY_FIELD_EXPENSE_DATEOFF_DESC"
+            format="%d.%m.%Y"
+            translateformat="false"
+            showtime="false"
+            todaybutton="true"
+            filter="none"
+            required="false"
+        />
+
+        <field
+            name="period"
+            type="number"
+            class="inputbox span2"
+            label="COM_GBJFAMILY_FIELD_EXPENSE_PERIOD_LABEL"
+            description="COM_GBJFAMILY_FIELD_EXPENSE_PERIOD_DESC"
+            readonly="true"
         />
 
         <field

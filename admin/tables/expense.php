@@ -24,6 +24,7 @@ class GbjfamilyTableExpense extends GbjSeedTable
 	public function check()
 	{
 		$this->checkDate('date_on');
+		$this->checkDate('date_off');
 		$this->checkQuantity('quantity');
 		$this->checkPrice('price');
 		$this->checkPrice('price_orig');

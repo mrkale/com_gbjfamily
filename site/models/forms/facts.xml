@@ -25,18 +25,18 @@
         <field
             name="date_on"
             type="date"
-            label="COM_GBJFAMILY_FIELD_DATEON_LABEL"
-            width="15%"
+            label="COM_GBJFAMILY_FIELD_FACT_DATEON_LABEL"
             format="LIB_GBJ_FORMAT_DATE_LONG"
+            width="15%"
             defaulted="false"
         />
 
         <field
             name="date_off"
             type="date"
-            label="COM_GBJFAMILY_FIELD_DATEOFF_LABEL"
-            width="15%"
+            label="COM_GBJFAMILY_FIELD_FACT_DATEOFF_LABEL"
             format="LIB_GBJ_FORMAT_DATE_LONG"
+            width="15%"
             defaulted="false"
         />
 

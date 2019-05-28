@@ -22,17 +22,17 @@
             name="date_on"
             type="date"
             label="LIB_GBJ_FIELD_DATE_LABEL"
-            width="10%"
             format="LIB_GBJ_FORMAT_DATE_LONG"
+            width="10%"
         />
 
         <field
             name="duration"
             type="number"
             label="COM_GBJFAMILY_EVENT_DURATION_LABEL"
+            format="COM_GBJFAMILY_EVENT_DURATION_FORMAT"
             width="8%"
             defaulted="false"
-            format="COM_GBJFAMILY_EVENT_DURATION_FORMAT"
         />
 
         <field

@@ -8,6 +8,7 @@
 <form>
 
     <fields name="filter">
+
         <field
             name="search"
             label="JSEARCH_FILTER_LABEL"
@@ -16,6 +17,17 @@
             class="js-stools-search-string"
             noresults="JGLOBAL_NO_MATCHING_RESULTS"
         />
+
+        <field
+            name="state"
+            type="list"
+            onchange="this.form.submit();"
+        >
+            <option value="">JOPTION_SELECT_PUBLISHED</option>
+            <option value="*">JALL</option>
+            <option value="1">JPUBLISHED</option>
+            <option value="2">JARCHIVED</option>
+        </field>
 
         <field
             name="featured"
@@ -34,7 +46,7 @@
             datafield="date_on"
             onchange="this.form.submit();"
         >
-            <option value="">COM_GBJFAMILY_SELECT_YEAR</option>
+            <option value="">COM_GBJFAMILY_SELECT_EXPENSE_YEAR</option>
         </field>
 
         <field
@@ -43,7 +55,25 @@
             datafield="date_on"
             onchange="this.form.submit();"
         >
-            <option value="">COM_GBJFAMILY_SELECT_MONTH</option>
+            <option value="">COM_GBJFAMILY_SELECT_EXPENSE_MONTH</option>
+        </field>
+
+        <field
+            name="yearoff"
+            type="Yearoff"
+            datafield="date_off"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_EXPENSE_YEAROFF</option>
+        </field>
+
+        <field
+            name="monthoff"
+            type="Monthoff"
+            datafield="date_on"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_EXPENSE_MONTHOFF</option>
         </field>
 
         <field

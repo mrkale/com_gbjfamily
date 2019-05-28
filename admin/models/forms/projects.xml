@@ -48,9 +48,9 @@
             name="expenses_price"
             type="number"
             label="LIB_GBJ_FIELD_PRICE_LABEL"
-            defaulted="false"
-            variants="#,_total"
             format="LIB_GBJ_FIELD_PRICE_FORMAT"
+            variants="#,_total"
+            defaulted="false"
         />
 
         <field
@@ -66,8 +66,8 @@
             name="events_duration"
             type="number"
             label="COM_GBJFAMILY_EVENT_DURATION_LABEL"
-            defaulted="false"
             variants="#,_total"
+            defaulted="false"
         />
 
         <field
@@ -83,9 +83,9 @@
             name="incomes_price"
             type="number"
             label="LIB_GBJ_FIELD_PRICE_LABEL"
-            defaulted="false"
-            variants="#,_total"
             format="LIB_GBJ_FIELD_PRICE_FORMAT"
+            variants="#,_total"
+            defaulted="false"
         />
 
         <field

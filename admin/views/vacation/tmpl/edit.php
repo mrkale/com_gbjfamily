@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    Joomla.Component
- * @copyright  (c) 2017-2018 Libor Gabaj
+ * @copyright  (c) 2017-2019 Libor Gabaj
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  * @since      3.8
  */
@@ -36,6 +36,7 @@ $tabNameActive = $tabNameDetails;
 		?>
 		<div class="row-fluid form-horizontal-desktop">
 			<div class="span9">
+			<?php echo $this->form->renderField('period'); ?>
 			<?php echo $this->form->renderField('id_stay'); ?>
 			<?php echo $this->form->renderField('id_staff'); ?>
 			<?php echo $this->form->renderField('description'); ?>

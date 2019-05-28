@@ -18,16 +18,16 @@
             name="price"
             type="number"
             label="LIB_GBJ_FIELD_PRICE_LABEL"
-            suffix="LIB_GBJ_UNIT_EUR"
             format="LIB_GBJ_FIELD_PRICE_FORMAT"
+            suffix="LIB_GBJ_UNIT_EUR"
         />
 
         <field
             name="price_month"
             type="number"
             label="COM_GBJFAMILY_FIELD_CASHFLOW_PRICEMONTH_LABEL"
-            suffix="LIB_GBJ_UNIT_EUR"
             format="LIB_GBJ_FIELD_PRICE_FORMAT"
+            suffix="LIB_GBJ_UNIT_EUR"
         />
 
         <field

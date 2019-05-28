@@ -8,7 +8,7 @@
 <extension version="3.8" type="component" method="upgrade">
     <name>COM_GBJFAMILY</name>
     <libraryname>COM_GBJFAMILY</libraryname>
-    <version>2.0.7</version>
+    <version>2.0.9</version>
     <creationDate>June 2017</creationDate>
     <description>COM_GBJFAMILY_XML_DESC</description>
     <author>Libor Gabaj</author>

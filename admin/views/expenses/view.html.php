@@ -28,8 +28,7 @@ class GbjfamilyViewExpenses extends GbjSeedViewList
 		// Price
 		foreach ($this->statistics['price'] as $key => $value)
 		{
-			$value = Helper::formatNumber(
-				$value,
+			$value = Helper::formatNumber($value,
 				JText::_('LIB_GBJ_FIELD_PRICE_FORMAT')
 			);
 			$this->statistics['price'][$key] = $value;
@@ -40,6 +39,15 @@ class GbjfamilyViewExpenses extends GbjSeedViewList
 		{
 			$value = Helper::formatNumber($value);
 			$this->statistics['quantity'][$key] = $value;
+		}
+
+		// Period
+		foreach ($this->statistics['period'] as $key => $value)
+		{
+			$value = Helper::formatNumber($value,
+				$key == 'avg' ? '1' : JText::_('LIB_GBJ_FIELD_PERIOD_FORMAT')
+			);
+			$this->statistics['period'][$key] = $value;
 		}
 
 		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE_UNIT'), JText::_('LIB_GBJ_FIELD_PRICE_LABEL'), JText::_('LIB_GBJ_UNIT_EUR'));
@@ -54,6 +62,13 @@ class GbjfamilyViewExpenses extends GbjSeedViewList
 		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'), $this->statistics['quantity']['avg']);
 		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_RANGE'), JText::_('LIB_GBJ_STAT_RNG'),
 			$this->statistics['quantity']['min'], $this->statistics['quantity']['max']
+		);
+
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE'), JText::_('LIB_GBJ_FIELD_PERIOD_LABEL'));
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_SUM'), $this->statistics['period']['sum']);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'), $this->statistics['period']['avg']);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_RANGE'), JText::_('LIB_GBJ_STAT_RNG'),
+			$this->statistics['period']['min'], $this->statistics['period']['max']
 		);
 
 		return $htmlString;

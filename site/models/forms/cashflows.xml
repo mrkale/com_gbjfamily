@@ -27,18 +27,18 @@
             name="price"
             type="number"
             label="LIB_GBJ_FIELD_PRICE_LABEL"
+            format="LIB_GBJ_FIELD_PRICE_FORMAT"
             class="pull-right"
             labelclass="gbj-right"
-            format="LIB_GBJ_FIELD_PRICE_FORMAT"
         />
 
         <field
             name="price_month"
             type="number"
             label="COM_GBJFAMILY_FIELD_CASHFLOW_PRICEMONTH_LABEL"
+            format="LIB_GBJ_FIELD_PRICE_FORMAT"
             class="pull-right"
             labelclass="gbj-right"
-            format="LIB_GBJ_FIELD_PRICE_FORMAT"
             defaulted="false"
         />
 

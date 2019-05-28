@@ -22,16 +22,23 @@
             name="date_on"
             type="date"
             label="LIB_GBJ_FIELD_DATEON_LABEL"
-            width="10%"
             format="LIB_GBJ_FORMAT_DATE_LONG"
+            width="10%"
         />
 
         <field
             name="date_off"
             type="date"
             label="LIB_GBJ_FIELD_DATEOFF_LABEL"
-            width="10%"
             format="LIB_GBJ_FORMAT_DATE_LONG"
+            width="10%"
+        />
+
+        <field
+            name="period"
+            type="number"
+            label="LIB_GBJ_FIELD_PERIOD_LABEL"
+            format="LIB_GBJ_FIELD_PERIOD_FORMAT"
         />
 
         <field

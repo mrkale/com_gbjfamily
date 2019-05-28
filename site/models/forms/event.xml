@@ -19,8 +19,8 @@
             name="duration"
             type="number"
             label="COM_GBJFAMILY_EVENT_DURATION_LABEL"
-            suffix="LIB_GBJ_UNIT_HOURS"
             format="COM_GBJFAMILY_EVENT_DURATION_FORMAT"
+            suffix="LIB_GBJ_UNIT_HOURS"
         />
 
         <field

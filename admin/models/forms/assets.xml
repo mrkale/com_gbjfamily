@@ -22,36 +22,36 @@
             name="date_on"
             type="date"
             label="LIB_GBJ_FIELD_DATE_LABEL"
-            width="10%"
             format="LIB_GBJ_FORMAT_DATE_LONG"
+            width="10%"
         />
 
         <field
             name="value"
             type="number"
             label="COM_GBJFAMILY_FIELD_ASSET_VALUE_LABEL"
-            defaulted="false"
             format="LIB_GBJ_FIELD_PRICE_FORMAT"
+            defaulted="false"
         />
 
         <field
             name="price"
             type="number"
             label="LIB_GBJ_FIELD_PRICE_LABEL"
-            defaulted="false"
+            format="LIB_GBJ_FIELD_PRICE_FORMAT"
             class="pull-right"
             labelclass="pull-right"
-            format="LIB_GBJ_FIELD_PRICE_FORMAT"
+            defaulted="false"
         />
 
         <field
             name="price_orig"
             type="number"
             label="COM_GBJFAMILY_FIELD_INCOME_PRICEORIG_LABEL"
-            defaulted="false"
+            format="LIB_GBJ_FIELD_PRICE_FORMAT"
             prefix="id_currency_alias"
             class="pull-right"
-            format="LIB_GBJ_FIELD_PRICE_FORMAT"
+            defaulted="false"
         />
 
         <field

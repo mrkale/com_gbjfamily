@@ -21,6 +21,8 @@ if ($this->item->quantity <> 1 && $this->item->quantity <> 0)
 ?>
 <dl class="<?php echo $class; ?>">
 	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'date_on')); ?>
+	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'date_off')); ?>
+	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'period')); ?>
 	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'quantity')); ?>
 	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'price')); ?>
 	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'price_unit')); ?>

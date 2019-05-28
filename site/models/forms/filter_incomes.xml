@@ -19,6 +19,17 @@
         />
 
         <field
+            name="state"
+            type="list"
+            onchange="this.form.submit();"
+        >
+            <option value="">JOPTION_SELECT_PUBLISHED</option>
+            <option value="*">JALL</option>
+            <option value="1">JPUBLISHED</option>
+            <option value="2">JARCHIVED</option>
+        </field>
+
+        <field
             name="featured"
             type="list"
             label="LIB_GBJ_SELECT_FEATURED"
