@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 @package    Joomla.Component
-@copyright  (c) 2018 Libor Gabaj
+@copyright  (c) 2018-2019 Libor Gabaj
 @license    GNU General Public License version 2 or later; see LICENSE.txt
 @since      3.8
 -->
@@ -74,7 +74,7 @@
             <field
                 name="show_itemdescription"
                 type="list"
-                default="1"
+                default="0"
                 label="LIB_GBJ_MENU_ITEMDESCRIPTION_SHOW_LABEL"
                 description="LIB_GBJ_MENU_ITEMDESCRIPTION_SHOW_DESC"
             >

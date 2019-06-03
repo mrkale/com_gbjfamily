@@ -18,6 +18,10 @@ if ($this->item->quantity <> 1 && $this->item->quantity <> 0)
 {
 	$this->item->price_unit = $this->item->price / $this->item->quantity;
 }
+else
+{
+	$this->item->price_unit	= null;
+}
 ?>
 <dl class="<?php echo $class; ?>">
 	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'date_on')); ?>
