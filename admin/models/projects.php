@@ -54,19 +54,26 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 
 		if (is_object($this->statQueryExpenses))
 		{
-			// Add published incomes
+			// Add published expenses
 			$query
 				->select('COALESCE(sx.expenses, 0) AS expenses, sx.expenses_price')
 				->leftJoin('(' . $this->statQueryExpenses . ') sx ON sx.id = a.id AND sx.state = ' . Helper::COMMON_STATE_PUBLISHED);
 
-			// Add total incomes. Allow null value for not existing code table.
+			// Add archived expenses
 			$query
-				->select('tx.expenses AS expenses_total, tx.expenses_price AS expenses_price_total')
+				->select('COALESCE(ax.expenses, 0) AS expenses_arch, ax.expenses_price AS expenses_price_arch')
+				->leftJoin('(' . $this->statQueryExpenses . ') ax ON ax.id = a.id AND ax.state = ' . Helper::COMMON_STATE_ARCHIVED);
+
+			// Add total expenses. Allow null value for not existing code table.
+			$query
+				->select('COALESCE(tx.expenses, 0) AS expenses_total, tx.expenses_price AS expenses_price_total')
 				->leftJoin('(' . $this->statQueryExpenses . ') tx ON tx.id = a.id AND tx.state = ' . Helper::COMMON_STATE_TOTAL);
 		}
 		else
 		{
-			$query->select('null AS expenses, null AS expenses_price, null AS expenses_total, null AS expenses_price_total');
+			$query->select('null AS expenses, null AS expenses_price'
+				. ', null AS expenses_arch, null AS expenses_price_arch'
+				. ', null AS expenses_total, null AS expenses_price_total');
 		}
 
 		// Extend query with statistics of events
@@ -79,14 +86,21 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 				->select('COALESCE(se.events, 0) AS events, se.events_duration')
 				->leftJoin('(' . $this->statQueryEvents . ') se ON se.id = a.id AND se.state = ' . Helper::COMMON_STATE_PUBLISHED);
 
+			// Add archived events
+			$query
+				->select('COALESCE(ae.events, 0) AS events_arch, ae.events_duration AS events_duration_arch')
+				->leftJoin('(' . $this->statQueryEvents . ') ae ON ae.id = a.id AND ae.state = ' . Helper::COMMON_STATE_ARCHIVED);
+
 			// Add total events. Allow null value for not existing code table.
 			$query
-				->select('te.events AS events_total, te.events_duration AS events_duration_total')
+				->select('COALESCE(te.events, 0) AS events_total, te.events_duration AS events_duration_total')
 				->leftJoin('(' . $this->statQueryEvents . ') te ON te.id = a.id AND te.state = ' . Helper::COMMON_STATE_TOTAL);
 		}
 		else
 		{
-			$query->select('null AS events, null AS events_duration, null AS events_total, null AS events_duration_total'
+			$query->select('null AS events, null AS events_duration'
+				. ', null AS events_arch, null AS events_duration_arch'
+				. ', null AS events_total, null AS events_duration_total'
 			);
 		}
 
@@ -100,14 +114,21 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 				->select('COALESCE(si.incomes, 0) AS incomes, si.incomes_price')
 				->leftJoin('(' . $this->statQueryIncomes . ') si ON si.id = a.id AND si.state = ' . Helper::COMMON_STATE_PUBLISHED);
 
+			// Add archived incomes
+			$query
+				->select('COALESCE(ai.incomes, 0) AS incomes_arch, ai.incomes_price AS incomes_price_arch')
+				->leftJoin('(' . $this->statQueryIncomes . ') ai ON ai.id = a.id AND ai.state = ' . Helper::COMMON_STATE_ARCHIVED);
+
 			// Add total incomes. Allow null value for not existing code table.
 			$query
-				->select('ti.incomes AS incomes_total, ti.incomes_price AS incomes_price_total')
+				->select('COALESCE(ti.incomes, 0) AS incomes_total, ti.incomes_price AS incomes_price_total')
 				->leftJoin('(' . $this->statQueryIncomes . ') ti ON ti.id = a.id AND ti.state = ' . Helper::COMMON_STATE_TOTAL);
 		}
 		else
 		{
-			$query->select('null AS incomes, null AS incomes_price, null AS incomes_total, null AS incomes_price_total');
+			$query->select('null AS incomes, null AS incomes_price'
+				. ', null AS incomes_arch, null AS incomes_price_arch'
+				. ', null AS incomes_total, null AS incomes_price_total');
 		}
 
 		return parent::extendQuery($query, $codeFields);

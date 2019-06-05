@@ -40,7 +40,7 @@
             type="number"
             label="COM_GBJFAMILY_EXPENSES_STATS_LABEL"
             default="LIB_GBJ_SELECT_NONE"
-            variants="#,_total"
+            variants="#,_arch,_total"
             width="10%"
         />
 
@@ -49,7 +49,7 @@
             type="number"
             label="LIB_GBJ_FIELD_PRICE_LABEL"
             format="LIB_GBJ_FIELD_PRICE_FORMAT"
-            variants="#,_total"
+            variants="#,_arch,_total"
             defaulted="false"
         />
 
@@ -58,7 +58,7 @@
             type="number"
             label="COM_GBJFAMILY_EVENTS_STATS_LABEL"
             default="LIB_GBJ_SELECT_NONE"
-            variants="#,_total"
+            variants="#,_arch,_total"
             width="10%"
         />
 
@@ -66,7 +66,7 @@
             name="events_duration"
             type="number"
             label="COM_GBJFAMILY_EVENT_DURATION_LABEL"
-            variants="#,_total"
+            variants="#,_arch,_total"
             defaulted="false"
         />
 
@@ -75,7 +75,7 @@
             type="number"
             label="COM_GBJFAMILY_INCOMES_STATS_LABEL"
             default="LIB_GBJ_SELECT_NONE"
-            variants="#,_total"
+            variants="#,_arch,_total"
             width="10%"
         />
 
@@ -84,7 +84,7 @@
             type="number"
             label="LIB_GBJ_FIELD_PRICE_LABEL"
             format="LIB_GBJ_FIELD_PRICE_FORMAT"
-            variants="#,_total"
+            variants="#,_arch,_total"
             defaulted="false"
         />
 
