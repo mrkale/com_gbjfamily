@@ -53,6 +53,16 @@
         </field>
 
         <field
+            name="id_project"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_LABEL"
+            width="10%"
+            datafield="id_project_alias"
+            tooltip="id_project_title"
+            defaulted="false"
+        >
+        </field>
+
+        <field
             name="grid_admin"
             type="subform"
         />

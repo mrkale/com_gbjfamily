@@ -35,7 +35,7 @@
             name="expenses"
             type="number"
             label="COM_GBJFAMILY_EXPENSES_STATS_LABEL"
-            default="LIB_GBJ_SELECT_NONE"
+            defaulted="false"
         />
 
         <field
@@ -49,7 +49,7 @@
             name="events"
             type="number"
             label="COM_GBJFAMILY_EVENTS_STATS_LABEL"
-            default="LIB_GBJ_SELECT_NONE"
+            defaulted="false"
         />
 
         <field
@@ -63,13 +63,20 @@
             name="incomes"
             type="number"
             label="COM_GBJFAMILY_INCOMES_STATS_LABEL"
-            default="LIB_GBJ_SELECT_NONE"
+            defaulted="false"
         />
 
         <field
             name="incomes_price"
             type="number"
             label="LIB_GBJ_FIELD_PRICE_LABEL"
+            defaulted="false"
+        />
+
+        <field
+            name="facts"
+            type="number"
+            label="COM_GBJFAMILY_FACTS_STATS_LABEL"
             defaulted="false"
         />
 

@@ -49,6 +49,7 @@ $showDesc = $tparams->get('show_itemdescription');
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'expenses, expenses_price')); ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'events, events_duration')); ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'incomes, incomes_price')); ?>
+				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'facts')); ?>
 			<?php if ($showDesc) : ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'description')); ?>
 			<?php endif; ?>
@@ -74,6 +75,7 @@ $showDesc = $tparams->get('show_itemdescription');
 				<?php echo JLayoutHelper::render('grid.items_child', $this, $layoutBasePath, array('fields'=>'expenses, expenses_price')); ?>
 				<?php echo JLayoutHelper::render('grid.items_child', $this, $layoutBasePath, array('fields'=>'events, events_duration')); ?>
 				<?php echo JLayoutHelper::render('grid.items_child', $this, $layoutBasePath, array('fields'=>'incomes, incomes_price')); ?>
+				<?php echo JLayoutHelper::render('grid.items_child', $this, $layoutBasePath, array('fields'=>'facts')); ?>
 			<?php if ($showDesc) : ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'description')); ?>
 			<?php endif; ?>

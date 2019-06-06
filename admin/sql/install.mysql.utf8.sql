@@ -206,6 +206,7 @@ CREATE TABLE IF NOT EXISTS `#__gbjfamily_facts` (
   `date_on` date NOT NULL DEFAULT '0000-00-00',
   `date_off` date NOT NULL DEFAULT '0000-00-00',
   `id_domain` int(11) NOT NULL DEFAULT '0',
+  `id_project` int(11) NOT NULL DEFAULT '0',
   `state` tinyint(1) NOT NULL DEFAULT '0',
   `checked_out` int(10) unsigned NOT NULL DEFAULT '0',
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -222,7 +223,6 @@ CREATE TABLE IF NOT EXISTS `#__gbjfamily_facts` (
   `publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`),
-  KEY `idx_date_on` (`date_on`),
   KEY `idx_checkout` (`checked_out`),
   KEY `idx_state` (`state`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;

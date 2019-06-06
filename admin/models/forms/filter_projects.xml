@@ -55,6 +55,17 @@
             <option value="1">LIB_GBJ_SELECT_SOME</option>
         </field>
 
+        <field
+            name="facts"
+            type="list"
+            datamode="binary"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_FACTS_SELECT</option>
+            <option value="0">LIB_GBJ_SELECT_NONE</option>
+            <option value="1">LIB_GBJ_SELECT_SOME</option>
+        </field>
+
     </fields>
 
     <fields name="list">
@@ -93,6 +104,8 @@
             <option value="incomes DESC">COM_GBJFAMILY_HEADING_INCOMES_STATS_DSC</option>
             <option value="incomes_price ASC">COM_GBJFAMILY_HEADING_INCOMES_STATS_SUM_ASC</option>
             <option value="incomes_price DESC">COM_GBJFAMILY_HEADING_INCOMES_STATS_SUM_DSC</option>
+            <option value="facts ASC">COM_GBJFAMILY_HEADING_FACTS_STATS_ASC</option>
+            <option value="facts DESC">COM_GBJFAMILY_HEADING_FACTS_STATS_DSC</option>
         </field>
 
         <field

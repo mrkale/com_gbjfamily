@@ -27,6 +27,7 @@ class GbjfamilyViewProjects extends GbjSeedViewList
 		$this->addButtonEnter('Expenses');
 		$this->addButtonEnter('Events');
 		$this->addButtonEnter('Incomes');
+		$this->addButtonEnter('Facts');
 	}
 
 	/**
@@ -72,6 +73,14 @@ class GbjfamilyViewProjects extends GbjSeedViewList
 		);
 		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'),
 			Helper::formatNumber($this->statistics['incomes']['avg'], JText::_('LIB_GBJ_FIELD_PRICE_FORMAT'))
+		);
+
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE'), JText::_('COM_GBJFAMILY_FACTS_STATS_LABEL'));
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_CNT'),
+			$this->statistics['facts']['cnt']
+		);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'),
+			Helper::formatNumber($this->statistics['facts']['avg'])
 		);
 
 		return $htmlString;

@@ -64,6 +64,16 @@
         </field>
 
         <field
+            name="id_project"
+            type="Project"
+            class="inputbox span4"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_LABEL"
+            description="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_DESC"
+            default="0"
+        >
+        </field>
+
+        <field
             name="update_admin"
             type="subform"
         />

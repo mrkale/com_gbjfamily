@@ -89,6 +89,15 @@
         />
 
         <field
+            name="facts"
+            type="number"
+            label="COM_GBJFAMILY_FACTS_STATS_LABEL"
+            default="LIB_GBJ_SELECT_NONE"
+            variants="#,_arch,_total"
+            width="10%"
+        />
+
+        <field
             name="grid_admin"
             type="subform"
         />

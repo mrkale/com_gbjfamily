@@ -38,6 +38,13 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 	protected $statQueryIncomes;
 
 	/**
+	 * The object with statistics query for facts
+	 *
+	 * @var  object
+	 */
+	protected $statQueryFacts;
+
+	/**
 	 * Extend and amend input query with sub queries, etc.
 	 *
 	 * @param   object  $query       Query to be extended inserted by reference.
@@ -129,6 +136,31 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 			$query->select('null AS incomes, null AS incomes_price'
 				. ', null AS incomes_arch, null AS incomes_price_arch'
 				. ', null AS incomes_total, null AS incomes_price_total');
+		}
+
+		// Extend query with statistics of facts
+		$this->getStatQueryFacts();
+
+		if (is_object($this->statQueryFacts))
+		{
+			// Add published facts
+			$query
+				->select('COALESCE(sf.facts, 0) AS facts')
+				->leftJoin('(' . $this->statQueryFacts . ') sf ON sf.id = a.id AND sf.state = ' . Helper::COMMON_STATE_PUBLISHED);
+
+			// Add archived facts
+			$query
+				->select('COALESCE(af.facts, 0) AS facts_arch')
+				->leftJoin('(' . $this->statQueryFacts . ') af ON af.id = a.id AND af.state = ' . Helper::COMMON_STATE_ARCHIVED);
+
+			// Add total facts
+			$query
+				->select('COALESCE(tf.facts, 0) AS facts_total')
+				->leftJoin('(' . $this->statQueryFacts . ') tf ON tf.id = a.id AND tf.state = ' . Helper::COMMON_STATE_TOTAL);
+		}
+		else
+		{
+			$query->select('null AS facts, null AS facts_arch, null AS facts_total');
 		}
 
 		return parent::extendQuery($query, $codeFields);
@@ -242,6 +274,43 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 	}
 
 	/**
+	 * Retrieve statistics for facts.
+	 *
+	 * @return  object  The query for statistics
+	 */
+	protected function getStatQueryFacts()
+	{
+		if (is_object($this->statQueryFacts))
+		{
+			return $this->statQueryFacts;
+		}
+
+		$db	= $this->getDbo();
+
+		// Compose subquery for statistics of totals
+		$queryTotals = $db->getQuery(true)
+			->select($db->quoteName('id_project', 'id'))
+			->select(Helper::COMMON_STATE_TOTAL . ' AS state')
+			->select('COUNT(*) AS facts'
+			)
+			->from($db->quoteName(Helper::getTableName('facts')))
+			->group($db->quoteName('id_project'));
+
+		// Compose subquery for statistics of states distribution
+		$this->statQueryFacts = $db->getQuery(true)
+			->select($db->quoteName('id_project', 'id'))
+			->select($db->quoteName('state'))
+			->select('COUNT(*) AS facts'
+			)
+			->from($db->quoteName(Helper::getTableName('facts')))
+			->group($db->quoteName('id_project'))
+			->group($db->quoteName('state'))
+			->union($queryTotals);
+
+		return $this->statQueryFacts;
+	}
+
+	/**
 	 * Calculates statistics from child agenda records.
 	 *
 	 * @return  array  The list of statistics variables and values.
@@ -253,12 +322,14 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 			$statistics['expenses'] = $this->calculateStatisticsChild('expenses_total', 'expenses_price_total');
 			$statistics['events'] = $this->calculateStatisticsChild('events_total', 'events_duration_total');
 			$statistics['incomes'] = $this->calculateStatisticsChild('incomes_total', 'incomes_price_total');
+			$statistics['facts'] = $this->calculateStatistics('facts_total');
 		}
 		else
 		{
 			$statistics['expenses'] = $this->calculateStatisticsChild('expenses', 'expenses_price');
 			$statistics['events'] = $this->calculateStatisticsChild('events', 'events_duration');
 			$statistics['incomes'] = $this->calculateStatisticsChild('incomes', 'incomes_price');
+			$statistics['facts'] = $this->calculateStatistics('facts');
 		}
 
 		return $statistics;

@@ -28,6 +28,7 @@ class GbjfamilyModelProject extends GbjfamilyModelProjects
 		$statistics['expenses'] = $this->getStatisticsExpenses();
 		$statistics['events'] = $this->getStatisticsEvents();
 		$statistics['incomes'] = $this->getStatisticsIncomes();
+		$statistics['facts'] = $this->getStatisticsFacts();
 
 		return $statistics;
 	}
@@ -47,7 +48,7 @@ class GbjfamilyModelProject extends GbjfamilyModelProjects
 				. 'SUM(price) as price_sum, AVG(price) as price_avg, MIN(price) AS price_min, MAX(price) AS price_max'
 			)
 			->from($db->quoteName($tableName))
-			->where('state=1')	// Only published expenses
+			->where('state=' . Helper::COMMON_STATE_PUBLISHED)	// Only published expenses
 			->where('id_project=' . $db->quote($this->id)	// Events belonging to the project
 			);
 		$db->setQuery($query);
@@ -95,7 +96,7 @@ class GbjfamilyModelProject extends GbjfamilyModelProjects
 				. 'SUM(duration) as duration_sum, AVG(duration) as duration_avg, MIN(duration) AS duration_min, MAX(duration) AS duration_max'
 			)
 			->from($db->quoteName($tableName))
-			->where('state=1')	// Only published events
+			->where('state=' . Helper::COMMON_STATE_PUBLISHED)	// Only published events
 			->where('id_project=' . $db->quote($this->id)	// Events belonging to the project
 			);
 		$db->setQuery($query);
@@ -143,7 +144,7 @@ class GbjfamilyModelProject extends GbjfamilyModelProjects
 				. 'SUM(price) as price_sum, AVG(price) as price_avg, MIN(price) AS price_min, MAX(price) AS price_max'
 			)
 			->from($db->quoteName($tableName))
-			->where('state=1')	// Only published incomes
+			->where('state=' . Helper::COMMON_STATE_PUBLISHED)	// Only published incomes
 			->where('id_project=' . $db->quote($this->id)	// Events belonging to the project
 			);
 		$db->setQuery($query);
@@ -166,6 +167,37 @@ class GbjfamilyModelProject extends GbjfamilyModelProjects
 				$this->addStatisticsNumber($statistics, $result['price_min'], JText::_('LIB_GBJ_STAT_MIN'), $measure, $unit);
 				$this->addStatisticsNumber($statistics, $result['price_max'], JText::_('LIB_GBJ_STAT_MAX'), $measure, $unit);
 			}
+		}
+		catch (RuntimeException $e)
+		{
+			$statistics = null;
+			JFactory::getApplication()->enqueueMessage($e->getMessage(), 'warning');
+		}
+
+		return $statistics;
+	}
+
+	/**
+	 * Calculates statistics from facts for current record.
+	 *
+	 * @return  array  The list of statistics variables and values.
+	 */
+	public function getStatisticsFacts()
+	{
+		$db	= $this->getDbo();
+		$tableName = Helper::getTableName('facts');
+		$query = $db->getQuery(true)
+			->select('COUNT(*) AS cnt')
+			->from($db->quoteName($tableName))
+			->where('state=' . Helper::COMMON_STATE_PUBLISHED)	// Only published facts
+			->where('id_project=' . $db->quote($this->id)	// Facts belonging to the project
+			);
+		$db->setQuery($query);
+
+		try
+		{
+			$result = $db->loadAssoc();
+			$statistics[JText::_('LIB_GBJ_STAT_CNT')] = $result['cnt'];
 		}
 		catch (RuntimeException $e)
 		{

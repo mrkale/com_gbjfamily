@@ -28,4 +28,8 @@ $pageclass_sfx = htmlspecialchars($tparams->get('pageclass_sfx'));
 <?php echo $this->loadTemplate('statistics_incomes'); ?>
 <?php echo JHtml::_('bootstrap.endTab'); ?>
 
+<?php echo JHtml::_('bootstrap.addTab', 'tab-statistics', 'facts', JText::_('COM_GBJFAMILY_FACTS')); ?>
+<?php echo $this->loadTemplate('statistics_facts'); ?>
+<?php echo JHtml::_('bootstrap.endTab'); ?>
+
 <?php echo JHtml::_('bootstrap.endTabSet'); ?>

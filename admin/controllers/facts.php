@@ -16,4 +16,13 @@ defined('_JEXEC') or die;
  */
 class GbjfamilyControllerFacts extends GbjSeedControllerAdmin
 {
+	/**
+	 * Method to leave the current agenda and return to projects.
+	 *
+	 * @return  void
+	 */
+	public function enterProjects()
+	{
+		$this->enterAgendaParent(__FUNCTION__);
+	}
 }

@@ -37,11 +37,21 @@ class GbjfamilyControllerProjects extends GbjSeedControllerAdmin
 	}
 
 	/**
-	 * Method to enter the events agenda.
+	 * Method to enter the incomes agenda.
 	 *
 	 * @return  void
 	 */
 	public function enterIncomes()
+	{
+		$this->enterAgendaChild(__FUNCTION__);
+	}
+
+	/**
+	 * Method to enter the facts agenda.
+	 *
+	 * @return  void
+	 */
+	public function enterFacts()
 	{
 		$this->enterAgendaChild(__FUNCTION__);
 	}
