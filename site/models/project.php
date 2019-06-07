@@ -112,12 +112,13 @@ class GbjfamilyModelProject extends GbjfamilyModelProjects
 				$this->addStatisticsDate($statistics, $result['dateon_max'], JText::_('LIB_GBJ_FIELD_DATEOFF_LABEL'));
 
 				$measure = JText::_('COM_GBJFAMILY_EVENT_DURATION_LABEL');
+				$format = JText::_('COM_GBJFAMILY_EVENT_DURATION_FORMAT');
 				$unit = JText::_('LIB_GBJ_UNIT_HOURS');
 
-				$this->addStatisticsNumber($statistics, $result['duration_sum'], JText::_('LIB_GBJ_STAT_SUM'), $measure, $unit);
-				$this->addStatisticsNumber($statistics, $result['duration_avg'], JText::_('LIB_GBJ_STAT_AVG'), $measure, $unit);
-				$this->addStatisticsNumber($statistics, $result['duration_min'], JText::_('LIB_GBJ_STAT_MIN'), $measure, $unit);
-				$this->addStatisticsNumber($statistics, $result['duration_max'], JText::_('LIB_GBJ_STAT_MAX'), $measure, $unit);
+				$this->addStatisticsNumber($statistics, $result['duration_sum'], JText::_('LIB_GBJ_STAT_SUM'), $measure, $unit, $format);
+				$this->addStatisticsNumber($statistics, $result['duration_avg'], JText::_('LIB_GBJ_STAT_AVG'), $measure, $unit, $format);
+				$this->addStatisticsNumber($statistics, $result['duration_min'], JText::_('LIB_GBJ_STAT_MIN'), $measure, $unit, $format);
+				$this->addStatisticsNumber($statistics, $result['duration_max'], JText::_('LIB_GBJ_STAT_MAX'), $measure, $unit, $format);
 			}
 		}
 		catch (RuntimeException $e)
