@@ -36,6 +36,7 @@
             type="number"
             label="COM_GBJFAMILY_EXPENSES_STATS_LABEL"
             defaulted="false"
+            variants="#,#_arch"
         />
 
         <field
@@ -50,6 +51,7 @@
             type="number"
             label="COM_GBJFAMILY_EVENTS_STATS_LABEL"
             defaulted="false"
+            variants="#,#_arch"
         />
 
         <field
@@ -64,6 +66,7 @@
             type="number"
             label="COM_GBJFAMILY_INCOMES_STATS_LABEL"
             defaulted="false"
+            variants="#,#_arch"
         />
 
         <field
@@ -78,6 +81,7 @@
             type="number"
             label="COM_GBJFAMILY_FACTS_STATS_LABEL"
             defaulted="false"
+            variants="#,#_arch"
         />
 
         <field
