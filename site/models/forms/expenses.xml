@@ -86,7 +86,6 @@
             label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
             datafield="id_domain_alias"
             tooltip="id_domain_title"
-            defaulted="false"
         >
         </field>
 
@@ -96,7 +95,6 @@
             width="6%"
             datafield="id_currency_alias"
             tooltip="id_currency_title"
-            defaulted="false"
         >
         </field>
 
@@ -106,7 +104,6 @@
             width="10%"
             datafield="id_commodity_alias"
             tooltip="id_commodity_title"
-            defaulted="false"
         >
         </field>
 
@@ -116,7 +113,6 @@
             width="10%"
             datafield="id_type_alias"
             tooltip="id_type_title"
-            defaulted="false"
         >
         </field>
 
@@ -125,7 +121,6 @@
             label="COM_GBJFAMILY_FIELD_CODEBOOK_UNIT_LABEL"
             datafield="id_unit_alias"
             tooltip="id_unit_title"
-            defaulted="false"
         >
         </field>
 
@@ -135,7 +130,6 @@
             width="6%"
             datafield="id_vendor_alias"
             tooltip="id_vendor_title"
-            defaulted="false"
         >
         </field>
 
@@ -145,7 +139,6 @@
             width="6%"
             datafield="id_location_alias"
             tooltip="id_location_title"
-            defaulted="false"
         >
         </field>
 
@@ -154,7 +147,6 @@
             label="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_LABEL"
             datafield="id_project_alias"
             tooltip="id_project_title"
-            defaulted="false"
         >
         </field>
 
