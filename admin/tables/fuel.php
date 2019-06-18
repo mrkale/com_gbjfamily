@@ -23,7 +23,6 @@ class GbjfamilyTableFuel extends GbjSeedTable
 	 */
 	public function check()
 	{
-		$this->checkDate('date_on');
 		$this->checkQuantity('quantity');
 		$this->checkQuantity('tacho');
 

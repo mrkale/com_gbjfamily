@@ -23,7 +23,6 @@ class GbjfamilyTableAsset extends GbjSeedTable
 	 */
 	public function check()
 	{
-		$this->checkDate('date_on');
 		$this->checkPrice('value');
 		$this->checkPrice('price');
 		$this->checkPrice('price_orig');

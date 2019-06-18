@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    Joomla.Component
- * @copyright  (c) 2017-2018 Libor Gabaj
+ * @copyright  (c) 2017-2019 Libor Gabaj
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  * @since      3.8
  */
@@ -23,7 +23,7 @@ class GbjfamilyTableDevice extends GbjSeedTable
 	 */
 	public function check()
 	{
-		$this->checkAlias();
+		$this->checkTitle();
 		$this->checkSerial();
 		$this->checkMac('eth_mac');
 		$this->checkIp4('eth_ip4');

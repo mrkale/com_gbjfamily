@@ -23,9 +23,7 @@ class GbjfamilyTableFact extends GbjSeedTable
 	 */
 	public function check()
 	{
-		$this->checkAlias();
-		$this->checkDate('date_on');
-		$this->checkDate('date_off');
+		$this->checkTitle();
 
 		return parent::check();
 	}
