@@ -32,6 +32,7 @@
             format="COM_GBJFAMILY_EVENT_DURATION_FORMAT"
             class="gbj-right"
             labelclass="gbj-right"
+            defaulted="false"
         />
 
         <field

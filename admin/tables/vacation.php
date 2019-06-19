@@ -29,8 +29,8 @@ class GbjfamilyTableVacation extends GbjSeedTable
 			JText::_('LIB_GBJ_FIELD_DATEON_LABEL'),
 			JText::_('COM_GBJFAMILY_EVENTS')
 		);
+		$this->checkWarning = true;
 		$this->checkDatesEqual();
-		$this->errorMsgs['date_on.date_off'] = null;
 
 		return parent::check();
 	}

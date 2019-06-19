@@ -45,7 +45,7 @@
             type="text"
             class="inputbox span2"
             label="LIB_GBJ_FIELD_PRICE_LABEL"
-            description="LIB_GBJ_FIELD_PRICE_DESC"
+            description="COM_GBJFAMILY_FIELD_ASSET_PRICE_DESC"
             filter="float"
         />
 

@@ -48,15 +48,13 @@ class GbjfamilyTableEvent extends GbjSeedTable
 		// Duration should be positive
 		if ((float) $this->$fieldName <= 0)
 		{
-			$this->checkFlag = false;
-			JFactory::getApplication()->enqueueMessage(JText::_('COM_GBJFAMILY_ERROR_NONPOSITIVE_DURATION'), 'error');
+			$this->raiseError($fieldName, 'COM_GBJFAMILY_ERROR_NONPOSITIVE_DURATION');
 		}
 
 		// Duration should be at most one day
 		if ((float) $this->$fieldName > 24)
 		{
-			$this->checkFlag = false;
-			JFactory::getApplication()->enqueueMessage(JText::_('COM_GBJFAMILY_ERROR_TOOBIG_DURATION'), 'error');
+			$this->raiseError($fieldName, 'COM_GBJFAMILY_ERROR_TOOBIG_DURATION');
 		}
 	}
 }
