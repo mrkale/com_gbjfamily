@@ -317,20 +317,13 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 	 */
 	public function getStatistics()
 	{
-		if (JFactory::getApplication()->isClient('administrator'))
-		{
-			$statistics['expenses'] = $this->calculateStatisticsChild('expenses_total', 'expenses_price_total');
-			$statistics['events'] = $this->calculateStatisticsChild('events_total', 'events_duration_total');
-			$statistics['incomes'] = $this->calculateStatisticsChild('incomes_total', 'incomes_price_total');
-			$statistics['facts'] = $this->calculateStatistics('facts_total');
-		}
-		else
-		{
-			$statistics['expenses'] = $this->calculateStatisticsChild('expenses', 'expenses_price');
-			$statistics['events'] = $this->calculateStatisticsChild('events', 'events_duration');
-			$statistics['incomes'] = $this->calculateStatisticsChild('incomes', 'incomes_price');
-			$statistics['facts'] = $this->calculateStatistics('facts');
-		}
+		$fieldParent = 'id_project';
+		$statistics = array();
+
+		$statistics = array_merge($statistics, $this->getFilterStatisticsChild('expenses', $fieldParent, ['price']));
+		$statistics = array_merge($statistics, $this->getFilterStatisticsChild('events', $fieldParent, ['duration']));
+		$statistics = array_merge($statistics, $this->getFilterStatisticsChild('incomes', $fieldParent, ['price']));
+		$statistics = array_merge($statistics, $this->getFilterStatisticsChild('facts', $fieldParent));
 
 		return $statistics;
 	}

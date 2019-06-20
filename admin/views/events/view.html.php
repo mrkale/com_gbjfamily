@@ -26,19 +26,21 @@ class GbjfamilyViewEvents extends GbjSeedViewList
 		$htmlString = parent::htmlStatistics();
 
 		// Duration
-		foreach ($this->statistics['duration'] as $key => $value)
-		{
-			$value = Helper::formatNumber($value,
-				JText::_('COM_GBJFAMILY_EVENT_DURATION_FORMAT')
-			);
-			$this->statistics['duration'][$key] = $value;
-		}
-
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE'), JText::_('COM_GBJFAMILY_EVENT_DURATION_LABEL'));
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_SUM'), $this->statistics['duration']['sum']);
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'), $this->statistics['duration']['avg']);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE_UNIT'),
+			JText::_('COM_GBJFAMILY_EVENT_DURATION_LABEL'), JText::_('LIB_GBJ_UNIT_HOURS')
+		);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_CNT'),
+			Helper::formatNumber($this->statistics['duration']['cnt'], JText::_('LIB_GBJ_FORMAT_RECORDS'))
+		);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_SUM'),
+			Helper::formatNumber($this->statistics['duration']['sum'], JText::_('COM_GBJFAMILY_EVENT_DURATION_FORMAT'))
+		);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'),
+			Helper::formatNumber($this->statistics['duration']['avg'], JText::_('COM_GBJFAMILY_EVENT_DURATION_FORMAT'))
+		);
 		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_RANGE'), JText::_('LIB_GBJ_STAT_RNG'),
-			$this->statistics['duration']['min'], $this->statistics['duration']['max']
+			Helper::formatNumber($this->statistics['duration']['min'], JText::_('COM_GBJFAMILY_EVENT_DURATION_FORMAT')),
+			Helper::formatNumber($this->statistics['duration']['max'], JText::_('COM_GBJFAMILY_EVENT_DURATION_FORMAT'))
 		);
 
 		return $htmlString;

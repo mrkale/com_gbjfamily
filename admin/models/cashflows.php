@@ -23,9 +23,8 @@ class GbjfamilyModelCashflows extends GbjSeedModelList
 	 */
 	public function getStatistics()
 	{
-		$statistics['price'] = $this->calculateStatistics('price');
-		$statistics['price_month'] = $this->calculateStatistics('price_month', 'price');
+		$fieldList = array('price', 'price_month, price', 'period');
 
-		return $statistics;
+		return $this->getFilterStatistics($fieldList);
 	}
 }

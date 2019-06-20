@@ -49,7 +49,7 @@
             name="period"
             type="number"
             class="inputbox span2"
-            label="COM_GBJFAMILY_FIELD_EXPENSE_PERIOD_LABEL"
+            label="COM_GBJFAMILY_FIELD_EXPENSE_PERIOD_LABEL_UNIT"
             description="COM_GBJFAMILY_FIELD_EXPENSE_PERIOD_DESC"
             readonly="true"
         />

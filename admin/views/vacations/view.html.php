@@ -26,19 +26,18 @@ class GbjfamilyViewVacations extends GbjSeedViewList
 		$htmlString = parent::htmlStatistics();
 
 		// Period
-		foreach ($this->statistics['period'] as $key => $value)
-		{
-			$value = Helper::formatNumber($value,
-				$key == 'avg' ? '1' : JText::_('LIB_GBJ_FIELD_PERIOD_FORMAT')
-			);
-			$this->statistics['period'][$key] = $value;
-		}
-
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE'), JText::_('LIB_GBJ_FIELD_PERIOD_LABEL'));
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_SUM'), $this->statistics['period']['sum']);
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'), $this->statistics['period']['avg']);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE'),
+			JText::_('LIB_GBJ_FIELD_PERIOD_LABEL')
+		);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_SUM'),
+			Helper::formatNumber($this->statistics['period']['sum'], JText::_('LIB_GBJ_FIELD_PERIOD_FORMAT'))
+		);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'),
+			Helper::formatNumber($this->statistics['period']['avg'], JText::_('LIB_GBJ_FIELD_PERIOD_FORMAT_AVG'))
+		);
 		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_RANGE'), JText::_('LIB_GBJ_STAT_RNG'),
-			$this->statistics['period']['min'], $this->statistics['period']['max']
+			Helper::formatNumber($this->statistics['period']['min'], JText::_('LIB_GBJ_FIELD_PERIOD_FORMAT')),
+			Helper::formatNumber($this->statistics['period']['max'], JText::_('LIB_GBJ_FIELD_PERIOD_FORMAT'))
 		);
 
 		return $htmlString;

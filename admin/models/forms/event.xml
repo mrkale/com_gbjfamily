@@ -34,8 +34,8 @@
         <field
             name="duration"
             type="number"
-            class="inputbox span1"
-            label="COM_GBJFAMILY_EVENT_DURATION_LABEL"
+            class="inputbox span2"
+            label="COM_GBJFAMILY_EVENT_DURATION_LABEL_UNIT"
             description="COM_GBJFAMILY_EVENT_DURATION_DESC"
             min="0.25"
             max="24.00"

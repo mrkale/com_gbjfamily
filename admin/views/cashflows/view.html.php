@@ -26,41 +26,45 @@ class GbjfamilyViewCashflows extends GbjSeedViewList
 		$htmlString = parent::htmlStatistics();
 
 		// Price
-		foreach ($this->statistics['price'] as $key => $value)
-		{
-			$value = Helper::formatNumber(
-				$value,
-				JText::_('LIB_GBJ_FIELD_PRICE_FORMAT')
-			);
-			$this->statistics['price'][$key] = $value;
-		}
-
-		// Price
-		foreach ($this->statistics['price_month'] as $key => $value)
-		{
-			$value = Helper::formatNumber(
-				$value,
-				JText::_('LIB_GBJ_FIELD_PRICE_FORMAT')
-			);
-			$this->statistics['price_month'][$key] = $value;
-		}
-
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE_UNIT'), JText::_('LIB_GBJ_FIELD_PRICE_LABEL'),
-			JText::_('LIB_GBJ_UNIT_EUR')
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE_UNIT'),
+			JText::_('LIB_GBJ_FIELD_PRICE_LABEL'), JText::_('LIB_GBJ_UNIT_EUR')
 		);
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_SUM'), $this->statistics['price']['sum']);
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'), $this->statistics['price']['avg']);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_SUM'),
+			Helper::formatNumber($this->statistics['price']['sum'], JText::_('LIB_GBJ_FIELD_PRICE_FORMAT'))
+		);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'),
+			Helper::formatNumber($this->statistics['price']['avg'], JText::_('LIB_GBJ_FIELD_PRICE_FORMAT'))
+		);
 		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_RANGE'), JText::_('LIB_GBJ_STAT_RNG'),
-			$this->statistics['price']['min'], $this->statistics['price']['max']
+			Helper::formatNumber($this->statistics['price']['min'], JText::_('LIB_GBJ_FIELD_PRICE_FORMAT')),
+			Helper::formatNumber($this->statistics['price']['max'], JText::_('LIB_GBJ_FIELD_PRICE_FORMAT'))
 		);
 
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE_UNIT'), JText::_('COM_GBJFAMILY_FIELD_CASHFLOW_PRICEMONTH_LABEL'),
-			JText::_('LIB_GBJ_UNIT_EUR')
+		// Price monthly
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE_UNIT'),
+			JText::_('COM_GBJFAMILY_FIELD_CASHFLOW_PRICEMONTH_LABEL'), JText::_('LIB_GBJ_UNIT_EUR')
 		);
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_SUM'), $this->statistics['price_month']['sum']);
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'), $this->statistics['price_month']['avg']);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_SUM'),
+			Helper::formatNumber($this->statistics['price_month']['sum'], JText::_('LIB_GBJ_FIELD_PRICE_FORMAT'))
+		);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'),
+			Helper::formatNumber($this->statistics['price_month']['avg'], JText::_('LIB_GBJ_FIELD_PRICE_FORMAT'))
+		);
 		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_RANGE'), JText::_('LIB_GBJ_STAT_RNG'),
-			$this->statistics['price_month']['min'], $this->statistics['price_month']['max']
+			Helper::formatNumber($this->statistics['price_month']['min'], JText::_('LIB_GBJ_FIELD_PRICE_FORMAT')),
+			Helper::formatNumber($this->statistics['price_month']['max'], JText::_('LIB_GBJ_FIELD_PRICE_FORMAT'))
+		);
+
+		// Period
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE'),
+			JText::_('COM_GBJFAMILY_FIELD_CASHFLOW_PERIOD_GRID_LABEL')
+		);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'),
+			Helper::formatNumber($this->statistics['period']['avg'], JText::_('LIB_GBJ_FIELD_PERIOD_FORMAT_AVG'))
+		);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_RANGE'), JText::_('LIB_GBJ_STAT_RNG'),
+			Helper::formatNumber($this->statistics['period']['min'], JText::_('LIB_GBJ_FIELD_PERIOD_FORMAT')),
+			Helper::formatNumber($this->statistics['period']['max'], JText::_('LIB_GBJ_FIELD_PERIOD_FORMAT'))
 		);
 
 		return $htmlString;

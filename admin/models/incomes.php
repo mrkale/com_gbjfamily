@@ -23,8 +23,8 @@ class GbjfamilyModelIncomes extends GbjSeedModelList
 	 */
 	public function getStatistics()
 	{
-		$statistics['price'] = $this->calculateStatistics('price');
+		$fieldList = array('price');
 
-		return $statistics;
+		return $this->getFilterStatistics($fieldList);
 	}
 }

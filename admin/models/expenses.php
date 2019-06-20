@@ -16,6 +16,7 @@ defined('_JEXEC') or die;
  */
 class GbjfamilyModelExpenses extends GbjSeedModelList
 {
+
 	/**
 	 * Calculates statistics from filtered records.
 	 *
@@ -23,10 +24,8 @@ class GbjfamilyModelExpenses extends GbjSeedModelList
 	 */
 	public function getStatistics()
 	{
-		$statistics['price'] = $this->calculateStatistics('price');
-		$statistics['quantity'] = $this->calculateStatistics('quantity');
-		$statistics['period'] = $this->calculateStatistics('period');
+		$fieldList = array('price', 'quantity', 'period');
 
-		return $statistics;
+		return $this->getFilterStatistics($fieldList);
 	}
 }

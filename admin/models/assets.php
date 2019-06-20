@@ -23,9 +23,8 @@ class GbjfamilyModelAssets extends GbjSeedModelList
 	 */
 	public function getStatistics()
 	{
-		$statistics['price'] = $this->calculateStatistics('price');
-		$statistics['value'] = $this->calculateStatistics('value');
+		$fieldList = array('price', 'value');
 
-		return $statistics;
+		return $this->getFilterStatistics($fieldList);
 	}
 }

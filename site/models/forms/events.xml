@@ -30,6 +30,7 @@
             type="number"
             label="COM_GBJFAMILY_EVENT_DURATION_LABEL"
             format="COM_GBJFAMILY_EVENT_DURATION_FORMAT"
+            suffix="LIB_GBJ_UNIT_HOURS"
             class="gbj-right"
             labelclass="gbj-right"
             defaulted="false"

@@ -26,39 +26,33 @@ class GbjfamilyViewAssets extends GbjSeedViewList
 		$htmlString = parent::htmlStatistics();
 
 		// Value
-		foreach ($this->statistics['value'] as $key => $value)
-		{
-			$value = Helper::formatNumber(
-				$value,
-				JText::_('LIB_GBJ_FIELD_PRICE_FORMAT')
-			);
-			$this->statistics['value'][$key] = $value;
-		}
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE_UNIT'),
+			JText::_('COM_GBJFAMILY_FIELD_ASSET_VALUE_LABEL'), JText::_('LIB_GBJ_UNIT_EUR')
+		);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_SUM'),
+			Helper::formatNumber($this->statistics['value']['sum'], JText::_('LIB_GBJ_FIELD_PRICE_FORMAT'))
+		);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'),
+			Helper::formatNumber($this->statistics['value']['avg'], JText::_('LIB_GBJ_FIELD_PRICE_FORMAT'))
+		);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_RANGE'), JText::_('LIB_GBJ_STAT_RNG'),
+			Helper::formatNumber($this->statistics['value']['min'], JText::_('LIB_GBJ_FIELD_PRICE_FORMAT')),
+			Helper::formatNumber($this->statistics['value']['max'], JText::_('LIB_GBJ_FIELD_PRICE_FORMAT'))
+		);
 
 		// Price
-		foreach ($this->statistics['price'] as $key => $value)
-		{
-			$value = Helper::formatNumber(
-				$value,
-				JText::_('LIB_GBJ_FIELD_PRICE_FORMAT')
-			);
-			$this->statistics['price'][$key] = $value;
-		}
-
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE_UNIT'), JText::_('COM_GBJFAMILY_FIELD_ASSET_VALUE_LABEL'),
-			JText::_('LIB_GBJ_UNIT_EUR')
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE_UNIT'),
+			JText::_('LIB_GBJ_FIELD_PRICE_LABEL'), JText::_('LIB_GBJ_UNIT_EUR')
 		);
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_SUM'), $this->statistics['value']['sum']);
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'), $this->statistics['value']['avg']);
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_RANGE'), JText::_('LIB_GBJ_STAT_RNG'),
-			$this->statistics['value']['min'], $this->statistics['value']['max']
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_SUM'),
+			Helper::formatNumber($this->statistics['price']['sum'], JText::_('LIB_GBJ_FIELD_PRICE_FORMAT'))
 		);
-
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE_UNIT'), JText::_('LIB_GBJ_FIELD_PRICE_LABEL'), JText::_('LIB_GBJ_UNIT_EUR'));
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_SUM'), $this->statistics['price']['sum']);
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'), $this->statistics['price']['avg']);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'),
+			Helper::formatNumber($this->statistics['price']['avg'], JText::_('LIB_GBJ_FIELD_PRICE_FORMAT'))
+		);
 		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_RANGE'), JText::_('LIB_GBJ_STAT_RNG'),
-			$this->statistics['price']['min'], $this->statistics['price']['max']
+			Helper::formatNumber($this->statistics['price']['min'], JText::_('LIB_GBJ_FIELD_PRICE_FORMAT')),
+			Helper::formatNumber($this->statistics['price']['max'], JText::_('LIB_GBJ_FIELD_PRICE_FORMAT'))
 		);
 
 		return $htmlString;
