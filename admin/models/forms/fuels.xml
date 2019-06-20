@@ -15,7 +15,6 @@
             type="date"
             label="LIB_GBJ_FIELD_DATE_LABEL"
             format="LIB_GBJ_FORMAT_DATE_LONG"
-            width="10%"
         />
 
         <field
@@ -56,7 +55,6 @@
         <field
             name="id_domain"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
-            width="6%"
             datafield="id_domain_alias"
             tooltip="id_domain_title"
             defaulted="false"
@@ -66,7 +64,6 @@
         <field
             name="id_vendor"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_VENDOR_LABEL"
-            width="6%"
             datafield="id_vendor_alias"
             tooltip="id_vendor_title"
             defaulted="false"

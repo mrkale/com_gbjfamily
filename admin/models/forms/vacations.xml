@@ -23,7 +23,6 @@
             type="date"
             label="LIB_GBJ_FIELD_DATEON_LABEL"
             format="LIB_GBJ_FORMAT_DATE_LONG"
-            width="10%"
         />
 
         <field
@@ -31,7 +30,6 @@
             type="date"
             label="LIB_GBJ_FIELD_DATEOFF_LABEL"
             format="LIB_GBJ_FORMAT_DATE_LONG"
-            width="10%"
         />
 
         <field
@@ -39,12 +37,11 @@
             type="number"
             label="LIB_GBJ_FIELD_PERIOD_LABEL"
             format="LIB_GBJ_FIELD_PERIOD_FORMAT"
-        />
+/>
 
         <field
             name="id_stay"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_STAY_LABEL"
-            width="6%"
             datafield="id_stay_alias"
             tooltip="id_stay_title"
             defaulted="false"
@@ -54,7 +51,6 @@
         <field
             name="id_staff"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_STAFF_LABEL"
-            width="6%"
             datafield="id_staff_alias"
             tooltip="id_staff_title"
             defaulted="false"

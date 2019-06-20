@@ -23,7 +23,6 @@
             type="date"
             label="COM_GBJFAMILY_FIELD_EXPENSE_DATEON_LABEL"
             format="LIB_GBJ_FORMAT_DATE_LONG"
-            width="10%"
         />
 
         <field
@@ -31,7 +30,6 @@
             type="date"
             label="COM_GBJFAMILY_FIELD_EXPENSE_DATEOFF_LABEL"
             format="LIB_GBJ_FORMAT_DATE_LONG"
-            width="10%"
             defaulted="false"
         />
 
@@ -48,7 +46,6 @@
             name="quantity"
             type="number"
             label="COM_GBJFAMILY_FIELD_EXPENSE_QUANTITY_LABEL"
-            width="10%"
             suffix="id_unit_alias"
         />
 
@@ -87,7 +84,6 @@
         <field
             name="id_domain"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
-            width="6%"
             datafield="id_domain_alias"
             tooltip="id_domain_title"
             defaulted="false"
@@ -97,7 +93,6 @@
         <field
             name="id_currency"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_CURRENCY_LABEL"
-            width="6%"
             datafield="id_currency_alias"
             tooltip="id_currency_title"
             defaulted="false"
@@ -107,7 +102,6 @@
         <field
             name="id_commodity"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_COMMODITY_LABEL"
-            width="10%"
             datafield="id_commodity_alias"
             tooltip="id_commodity_title"
             defaulted="false"
@@ -117,7 +111,6 @@
         <field
             name="id_type"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_TYPE_LABEL"
-            width="10%"
             datafield="id_type_alias"
             tooltip="id_type_title"
             defaulted="false"
@@ -136,7 +129,6 @@
         <field
             name="id_vendor"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_VENDOR_LABEL"
-            width="6%"
             datafield="id_vendor_alias"
             tooltip="id_vendor_title"
             defaulted="false"
@@ -146,7 +138,6 @@
         <field
             name="id_location"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_LOCATION_LABEL"
-            width="6%"
             datafield="id_location_alias"
             tooltip="id_location_title"
             defaulted="false"
@@ -156,7 +147,6 @@
         <field
             name="id_project"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_LABEL"
-            width="10%"
             datafield="id_project_alias"
             tooltip="id_project_title"
             defaulted="false"

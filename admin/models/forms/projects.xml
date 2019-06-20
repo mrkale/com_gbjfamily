@@ -22,13 +22,11 @@
             name="alias"
             type="string"
             label="LIB_GBJ_FIELD_ALIAS_LABEL"
-            width="10%"
         />
 
         <field
             name="id_domain"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
-            width="6%"
             datafield="id_domain_alias"
             tooltip="id_domain_title"
             defaulted="false"
@@ -41,7 +39,6 @@
             label="COM_GBJFAMILY_EXPENSES_STATS_LABEL"
             default="LIB_GBJ_SELECT_NONE"
             variants="#,_arch,_total"
-            width="10%"
         />
 
         <field
@@ -59,7 +56,6 @@
             label="COM_GBJFAMILY_EVENTS_STATS_LABEL"
             default="LIB_GBJ_SELECT_NONE"
             variants="#,_arch,_total"
-            width="10%"
         />
 
         <field
@@ -76,7 +72,6 @@
             label="COM_GBJFAMILY_INCOMES_STATS_LABEL"
             default="LIB_GBJ_SELECT_NONE"
             variants="#,_arch,_total"
-            width="10%"
         />
 
         <field
@@ -94,7 +89,6 @@
             label="COM_GBJFAMILY_FACTS_STATS_LABEL"
             default="LIB_GBJ_SELECT_NONE"
             variants="#,_arch,_total"
-            width="10%"
         />
 
         <field

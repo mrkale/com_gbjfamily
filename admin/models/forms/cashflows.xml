@@ -77,7 +77,6 @@
         <field
             name="id_domain"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
-            width="6%"
             datafield="id_domain_alias"
             tooltip="id_domain_title"
             defaulted="false"
@@ -87,7 +86,6 @@
         <field
             name="id_vendor"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_VENDOR_LABEL"
-            width="6%"
             datafield="id_vendor_alias"
             tooltip="id_vendor_title"
             defaulted="false"
@@ -97,7 +95,6 @@
         <field
             name="id_payform"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_PAYFORM_LABEL"
-            width="6%"
             datafield="id_payform_alias"
             tooltip="id_payform_title"
             defaulted="false"

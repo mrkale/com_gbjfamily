@@ -23,7 +23,6 @@
             type="date"
             label="LIB_GBJ_FIELD_DATE_LABEL"
             format="LIB_GBJ_FORMAT_DATE_LONG"
-            width="10%"
         />
 
         <field
@@ -57,7 +56,6 @@
         <field
             name="id_domain"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
-            width="6%"
             datafield="id_domain_alias"
             tooltip="id_domain_title"
             defaulted="false"
@@ -67,7 +65,6 @@
         <field
             name="id_currency"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_CURRENCY_LABEL"
-            width="6%"
             datafield="id_currency_alias"
             tooltip="id_currency_title"
             defaulted="false"
@@ -77,7 +74,6 @@
         <field
             name="id_asset"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_ASSET_LABEL"
-            width="6%"
             datafield="id_asset_alias"
             tooltip="id_asset_title"
             defaulted="false"

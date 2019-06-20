@@ -23,7 +23,6 @@
             type="date"
             label="LIB_GBJ_FIELD_DATE_LABEL"
             format="LIB_GBJ_FORMAT_DATE_LONG"
-            width="10%"
         />
 
         <field
@@ -32,14 +31,12 @@
             label="COM_GBJFAMILY_EVENT_DURATION_LABEL"
             format="COM_GBJFAMILY_EVENT_DURATION_FORMAT"
             suffix="LIB_GBJ_UNIT_HOURS"
-            width="8%"
             defaulted="false"
         />
 
         <field
             name="id_domain"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
-            width="6%"
             datafield="id_domain_alias"
             tooltip="id_domain_title"
             defaulted="false"
@@ -49,7 +46,6 @@
         <field
             name="id_activity"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_ACTIVITY_LABEL"
-            width="6%"
             datafield="id_activity_alias"
             tooltip="id_activity_title"
             defaulted="false"
@@ -59,7 +55,6 @@
         <field
             name="id_stage"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_STAGE_LABEL"
-            width="6%"
             datafield="id_stage_alias"
             tooltip="id_stage_title"
             defaulted="false"
@@ -69,7 +64,6 @@
         <field
             name="id_project"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_LABEL"
-            width="10%"
             datafield="id_project_alias"
             tooltip="id_project_title"
             defaulted="false"
