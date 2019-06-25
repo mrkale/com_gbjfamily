@@ -27,17 +27,17 @@ class GbjfamilyViewIncomes extends GbjSeedViewList
 
 		// Price
 		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE_UNIT'),
-			JText::_('LIB_GBJ_FIELD_PRICE_LABEL'), JText::_('LIB_GBJ_UNIT_EUR')
+			JText::_('LIB_GBJ_FIELD_AMOUNT_LABEL'), JText::_('LIB_GBJ_UNIT_EUR')
 		);
 		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_SUM'),
-			Helper::formatNumber($this->statistics['price']['sum'], JText::_('LIB_GBJ_FIELD_PRICE_FORMAT'))
+			Helper::formatNumber($this->statistics['price']['sum'], JText::_('LIB_GBJ_FIELD_AMOUNT_FORMAT'))
 		);
 		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'),
-			Helper::formatNumber($this->statistics['price']['avg'], JText::_('LIB_GBJ_FIELD_PRICE_FORMAT'))
+			Helper::formatNumber($this->statistics['price']['avg'], JText::_('LIB_GBJ_FIELD_AMOUNT_FORMAT'))
 		);
 		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_RANGE'), JText::_('LIB_GBJ_STAT_RNG'),
-			Helper::formatNumber($this->statistics['price']['min'], JText::_('LIB_GBJ_FIELD_PRICE_FORMAT')),
-			Helper::formatNumber($this->statistics['price']['max'], JText::_('LIB_GBJ_FIELD_PRICE_FORMAT'))
+			Helper::formatNumber($this->statistics['price']['min'], JText::_('LIB_GBJ_FIELD_AMOUNT_FORMAT')),
+			Helper::formatNumber($this->statistics['price']['max'], JText::_('LIB_GBJ_FIELD_AMOUNT_FORMAT'))
 		);
 
 		return $htmlString;

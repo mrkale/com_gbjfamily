@@ -74,6 +74,15 @@
         />
 
         <field
+            name="price_unit"
+            type="text"
+            class="inputbox span2"
+            label="COM_GBJFAMILY_FIELD_EXPENSE_PRICEUNIT_LABEL"
+            description="COM_GBJFAMILY_FIELD_EXPENSE_PRICEUNIT_DESC"
+            readonly="true"
+        />
+
+        <field
             name="price_orig"
             type="text"
             class="inputbox span2"

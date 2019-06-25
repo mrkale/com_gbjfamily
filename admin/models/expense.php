@@ -141,5 +141,14 @@ class GbjfamilyModelExpense extends GbjSeedModelAdmin
 
 		// Calculate additional data
 		$table->period = Helper::calculatePeriodDays($table->date_on, $table->date_off);
+
+		if ($table->quantity == 1 || $table->quantity == 0)
+		{
+			$table->price_unit = null;
+		}
+		else
+		{
+			$table->price_unit = $table->price / $table->quantity;
+		}
 	}
 }

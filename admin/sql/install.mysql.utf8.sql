@@ -236,6 +236,7 @@ CREATE TABLE IF NOT EXISTS `#__gbjfamily_expenses` (
   `period` int(11) NULL,
   `quantity` decimal(10,3) NOT NULL DEFAULT '1',
   `price` decimal(10,2) NOT NULL DEFAULT '0.00',
+  `price_unit` decimal(10,4) NULL,
   `price_orig` decimal(10,2) NULL,
   `id_commodity` int(11) NOT NULL DEFAULT '0',
   `id_type` int(11) NOT NULL DEFAULT '0',

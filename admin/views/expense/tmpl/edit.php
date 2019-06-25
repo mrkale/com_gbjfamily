@@ -40,6 +40,7 @@ $tabNameActive = $tabNameDetails;
 			<?php echo $this->form->renderField('quantity'); ?>
 			<?php echo $this->form->renderField('id_unit'); ?>
 			<?php echo $this->form->renderField('price'); ?>
+			<?php echo $this->form->renderField('price_unit'); ?>
 			<?php echo $this->form->renderField('price_orig'); ?>
 			<?php echo $this->form->renderField('id_currency'); ?>
 			<?php echo $this->form->renderField('id_domain'); ?>

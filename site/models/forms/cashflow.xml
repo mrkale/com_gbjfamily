@@ -17,8 +17,8 @@
         <field
             name="price"
             type="number"
-            label="LIB_GBJ_FIELD_PRICE_LABEL"
-            format="LIB_GBJ_FIELD_PRICE_FORMAT"
+            label="LIB_GBJ_FIELD_AMOUNT_LABEL"
+            format="LIB_GBJ_FIELD_AMOUNT_FORMAT"
             suffix="LIB_GBJ_UNIT_EUR"
         />
 
@@ -26,7 +26,7 @@
             name="price_month"
             type="number"
             label="COM_GBJFAMILY_FIELD_CASHFLOW_PRICEMONTH_LABEL"
-            format="LIB_GBJ_FIELD_PRICE_FORMAT"
+            format="LIB_GBJ_FIELD_AMOUNT_FORMAT"
             suffix="LIB_GBJ_UNIT_EUR"
         />
 

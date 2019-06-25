@@ -40,6 +40,24 @@ class GbjfamilyViewExpenses extends GbjSeedViewList
 			Helper::formatNumber($this->statistics['price']['max'], JText::_('LIB_GBJ_FIELD_PRICE_FORMAT'))
 		);
 
+		// Unit price
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE_UNIT'),
+			JText::_('COM_GBJFAMILY_FIELD_EXPENSE_PRICEUNIT_LABEL'), JText::_('LIB_GBJ_UNIT_EUR')
+		);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_CNT'),
+			Helper::formatNumber($this->statistics['price_unit']['cnt'], JText::_('LIB_GBJ_FORMAT_RECORDS'))
+		);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_SUM'),
+			Helper::formatNumber($this->statistics['price_unit']['sum'], JText::_('COM_GBJFAMILY_FIELD_EXPENSE_PRICEUNIT_FORMAT'))
+		);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'),
+			Helper::formatNumber($this->statistics['price_unit']['avg'], JText::_('COM_GBJFAMILY_FIELD_EXPENSE_PRICEUNIT_FORMAT'))
+		);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_RANGE'), JText::_('LIB_GBJ_STAT_RNG'),
+			Helper::formatNumber($this->statistics['price_unit']['min'], JText::_('COM_GBJFAMILY_FIELD_EXPENSE_PRICEUNIT_FORMAT')),
+			Helper::formatNumber($this->statistics['price_unit']['max'], JText::_('COM_GBJFAMILY_FIELD_EXPENSE_PRICEUNIT_FORMAT'))
+		);
+
 		// Quantity
 		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE'),
 			JText::_('COM_GBJFAMILY_FIELD_EXPENSE_QUANTITY_LABEL')

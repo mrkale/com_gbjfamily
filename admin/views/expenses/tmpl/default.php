@@ -81,12 +81,6 @@ $cparams = JComponentHelper::getParams($componentName);
 				<?php echo JLayoutHelper::render('grid.items_edit', $this, $layoutBasePath, array('fields'=>'date_on, date_off, period')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'title')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'quantity')); ?>
-				<?php
-					if ($this->item->quantity <> 1 && $this->item->quantity <> 0)
-					{
-						$this->item->price_unit = $this->item->price / $this->item->quantity;
-					}
-				?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'price, price_unit, price_orig')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'id_domain, id_project')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'id_commodity, id_type')); ?>

@@ -62,8 +62,8 @@
             <option value="title DESC">JGLOBAL_TITLE_DESC</option>
             <option value="period ASC">COM_GBJFAMILY_HEADING_CASHFLOW_PERIOD_ASC</option>
             <option value="period DESC">COM_GBJFAMILY_HEADING_CASHFLOW_PERIOD_DSC</option>
-            <option value="price ASC">LIB_GBJ_HEADING_PRICE_ASC</option>
-            <option value="price DESC">LIB_GBJ_HEADING_PRICE_DSC</option>
+            <option value="price ASC">LIB_GBJ_HEADING_AMOUNT_ASC</option>
+            <option value="price DESC">LIB_GBJ_HEADING_AMOUNT_DSC</option>
             <option value="price_month ASC">COM_GBJFAMILY_HEADING_CASHFLOW_PRICEMONTH_ASC</option>
             <option value="price_month DESC">COM_GBJFAMILY_HEADING_CASHFLOW_PRICEMONTH_DSC</option>
             <option value="iban ASC">COM_GBJFAMILY_HEADING_CASHFLOW_IBAN_ASC</option>

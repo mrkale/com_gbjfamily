@@ -27,7 +27,8 @@
         <field
             name="price"
             type="number"
-            label="LIB_GBJ_FIELD_PRICE_LABEL"
+            label="LIB_GBJ_FIELD_AMOUNT_LABEL"
+            format="LIB_GBJ_FIELD_AMOUNT_FORMAT"
             class="pull-right"
             labelclass="gbj-right"
         />
@@ -36,6 +37,7 @@
             name="price_orig"
             type="number"
             label="COM_GBJFAMILY_FIELD_INCOME_PRICEORIG_LABEL"
+            format="LIB_GBJ_FIELD_AMOUNT_FORMAT"
             prefix="id_currency_alias"
             class="pull-right"
             labelclass="gbj-right"

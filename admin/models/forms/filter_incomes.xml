@@ -89,8 +89,8 @@
             <option value="title DESC">JGLOBAL_TITLE_DESC</option>
             <option value="date_on ASC">LIB_GBJ_HEADING_DATE_ASC</option>
             <option value="date_on DESC">LIB_GBJ_HEADING_DATE_DSC</option>
-            <option value="price ASC">LIB_GBJ_HEADING_PRICE_ASC</option>
-            <option value="price DESC">LIB_GBJ_HEADING_PRICE_DSC</option>
+            <option value="price ASC">LIB_GBJ_HEADING_AMOUNT_ASC</option>
+            <option value="price DESC">LIB_GBJ_HEADING_AMOUNT_DSC</option>
             <option value="id_domain ASC">COM_GBJFAMILY_HEADING_CODEBOOK_DOMAIN_ASC</option>
             <option value="id_domain DESC">COM_GBJFAMILY_HEADING_CODEBOOK_DOMAIN_DSC</option>
             <option value="id_asset ASC">COM_GBJFAMILY_HEADING_CODEBOOK_ASSET_ASC</option>
