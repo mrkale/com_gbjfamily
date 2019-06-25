@@ -63,7 +63,7 @@ class GbjfamilyModelProject extends GbjfamilyModelProjects
 				$this->addStatisticsDate($statistics, $result['dateon_min'], JText::_('LIB_GBJ_FIELD_DATEON_LABEL'));
 				$this->addStatisticsDate($statistics, $result['dateon_max'], JText::_('LIB_GBJ_FIELD_DATEOFF_LABEL'));
 
-				$measure = JText::_('LIB_GBJ_FIELD_PRICE_LABEL');
+				$measure = JText::_('LIB_GBJ_FIELD_AMOUNT_LABEL');
 				$unit = JText::_('LIB_GBJ_UNIT_EUR');
 
 				$this->addStatisticsNumber($statistics, $result['price_sum'], JText::_('LIB_GBJ_STAT_SUM'), $measure, $unit);
@@ -160,7 +160,7 @@ class GbjfamilyModelProject extends GbjfamilyModelProjects
 				$this->addStatisticsDate($statistics, $result['dateon_min'], JText::_('LIB_GBJ_FIELD_DATEON_LABEL'));
 				$this->addStatisticsDate($statistics, $result['dateon_max'], JText::_('LIB_GBJ_FIELD_DATEOFF_LABEL'));
 
-				$measure = JText::_('LIB_GBJ_FIELD_PRICE_LABEL');
+				$measure = JText::_('LIB_GBJ_FIELD_AMOUNT_LABEL');
 				$unit = JText::_('LIB_GBJ_UNIT_EUR');
 
 				$this->addStatisticsNumber($statistics, $result['price_sum'], JText::_('LIB_GBJ_STAT_SUM'), $measure, $unit);

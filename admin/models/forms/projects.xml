@@ -44,8 +44,8 @@
         <field
             name="expenses_price"
             type="number"
-            label="LIB_GBJ_FIELD_PRICE_LABEL"
-            format="LIB_GBJ_FIELD_PRICE_FORMAT"
+            label="LIB_GBJ_FIELD_AMOUNT_LABEL"
+            format="LIB_GBJ_FIELD_AMOUNT_FORMAT"
             variants="#,_arch,_total"
             defaulted="false"
         />

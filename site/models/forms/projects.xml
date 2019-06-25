@@ -42,7 +42,7 @@
         <field
             name="expenses_price"
             type="number"
-            label="LIB_GBJ_FIELD_PRICE_LABEL"
+            label="LIB_GBJ_FIELD_AMOUNT_LABEL"
             defaulted="false"
         />
 
