@@ -75,6 +75,9 @@ $cparams = JComponentHelper::getParams($componentName);
 	<?php endif; ?>
 		<tbody>
 		<?php foreach ($this->items as $this->item->sequence => $this->item): ?>
+			<?php
+				$this->item->quantity = (float)$this->item->quantity;
+			?>
 			<tr class="row<?php echo $this->item->sequence % 2; ?>">
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'sequence')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'state, featured')); ?>

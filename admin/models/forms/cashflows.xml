@@ -39,6 +39,7 @@
             type="number"
             label="COM_GBJFAMILY_FIELD_CASHFLOW_PRICEMONTH_LABEL"
             format="LIB_GBJ_FIELD_PRICE_FORMAT"
+            prefix="LIB_GBJ_UNIT_MONTH"
             class="pull-right"
             labelclass="pull-right"
             defaulted="false"
