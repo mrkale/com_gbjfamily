@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2019 Libor Gabaj
+@license    GNU General Public License version 2 or later; see LICENSE.txt
+@since      3.8
+-->
+<form>
+    <fieldset name="recordfields">
+
+        <field
+            name="title"
+            type="text"
+            class="input-xxlarge input-large-text"
+            label="LIB_GBJ_FIELD_TITLE_LABEL"
+            description="LIB_GBJ_FIELD_TITLE_DESC"
+            required="true"
+        />
+
+        <field
+            name="alias"
+            type="text"
+            class="inputbox"
+            label="COM_GBJFAMILY_FIELD_FACT_ALIAS_LABEL"
+            description="COM_GBJFAMILY_FIELD_FACT_ALIAS_DESC"
+            required="true"
+            size="30"
+        />
+
+        <field
+            name="date_on"
+            type="calendar"
+            class="input-box span5"
+            label="COM_GBJFAMILY_FIELD_FACT_DATEON_LABEL"
+            description="COM_GBJFAMILY_FIELD_FACT_DATEON_DESC"
+            format="%d.%m.%Y"
+            translateformat="false"
+            showtime="false"
+            todaybutton="true"
+            filter="none"
+        />
+
+        <field
+            name="date_off"
+            type="calendar"
+            class="input-box span5"
+            label="COM_GBJFAMILY_FIELD_FACT_DATEOFF_LABEL"
+            description="COM_GBJFAMILY_FIELD_FACT_DATEOFF_DESC"
+            format="%d.%m.%Y"
+            translateformat="false"
+            showtime="false"
+            todaybutton="true"
+            filter="none"
+        />
+
+        <field
+            name="id_domain"
+            type="Domain"
+            class="inputbox span4"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
+            description="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_DESC"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="id_project"
+            type="Project"
+            class="inputbox span4"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_LABEL"
+            description="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_DESC"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="update_admin"
+            type="subform"
+        />
+
+    </fieldset>
+</form>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2018-2019 Libor Gabaj
+@license    GNU General Public License version 2 or later; see LICENSE.txt
+@since      3.8
+-->
+<form>
+
+    <fields name="filter">
+
+        <field
+            name="site"
+            type="subform"
+        />
+
+        <field
+            name="id_domain"
+            type="Domain"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_DOMAIN</option>
+        </field>
+
+        <field
+            name="expenses"
+            type="list"
+            datamode="binary"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_EXPENSES_SELECT</option>
+            <option value="0">LIB_GBJ_SELECT_NONE</option>
+            <option value="1">LIB_GBJ_SELECT_SOME</option>
+        </field>
+
+        <field
+            name="events"
+            type="list"
+            datamode="binary"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_EVENTS_SELECT</option>
+            <option value="0">LIB_GBJ_SELECT_NONE</option>
+            <option value="1">LIB_GBJ_SELECT_SOME</option>
+        </field>
+
+        <field
+            name="incomes"
+            type="list"
+            datamode="binary"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_INCOMES_SELECT</option>
+            <option value="0">LIB_GBJ_SELECT_NONE</option>
+            <option value="1">LIB_GBJ_SELECT_SOME</option>
+        </field>
+
+    </fields>
+
+    <fields name="list">
+
+        <field
+            name="fullordering"
+            type="hidden"
+            default="title ASC"
+        />
+
+        <field
+            name="limit"
+            type="limitbox"
+            class="input-mini"
+            default="20"
+            label="JFIELD_PLG_SEARCH_SEARCHLIMIT_LABEL"
+            description="JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC"
+            onchange="this.form.submit();"
+        />
+
+    </fields>
+
+</form>

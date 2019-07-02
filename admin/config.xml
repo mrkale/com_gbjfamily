@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--
 @package    Joomla.Component
-@copyright  (c) 2017 Libor Gabaj. All rights reserved.
-@license    GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
-@since      3.7
+@copyright  (c) 2017-2019 Libor Gabaj
+@license    GNU General Public License version 2 or later; see LICENSE.txt
+@since      3.8
 -->
 <config>
     <fieldset name="component"
@@ -60,31 +60,27 @@
             name="featured_row_class"
             type="list"
             default="success"
-            label="LIB_GBJ_COMPONENT_OPTION_FEATURED_CLASS_LABEL"
-            description="LIB_GBJ_COMPONENT_OPTION_FEATURED_CLASS_DESC"
+            label="LIB_GBJ_COMPONENT_OPTION_FEATURED_COLOR_LABEL"
+            description="LIB_GBJ_COMPONENT_OPTION_FEATURED_COLOR_DESC"
         >
-            <option value="null">none</option>
-            <option value="active">active</option>
-            <option value="success">success</option>
-            <option value="info">info</option>
-            <option value="warning">warning</option>
-            <option value="danger">danger</option>
+            <option value="null">LIB_GBJ_COMPONENT_OPTION_COLOR_WHITE</option>
+            <option value="active">LIB_GBJ_COMPONENT_OPTION_COLOR_GRAY</option>
+            <option value="success">LIB_GBJ_COMPONENT_OPTION_COLOR_GREEN</option>
+            <option value="info">LIB_GBJ_COMPONENT_OPTION_COLOR_BLUE</option>
+            <option value="warning">LIB_GBJ_COMPONENT_OPTION_COLOR_YELLOW</option>
+            <option value="danger">LIB_GBJ_COMPONENT_OPTION_COLOR_RED</option>
         </field>
 
-        <field
-            name="future_row_class"
-            type="list"
-            default="danger"
-            label="LIB_GBJ_COMPONENT_OPTION_FUTURE_CLASS_LABEL"
-            description="LIB_GBJ_COMPONENT_OPTION_FUTURE_CLASS_DESC"
-        >
-            <option value="null">none</option>
-            <option value="active">active</option>
-            <option value="success">success</option>
-            <option value="info">info</option>
-            <option value="warning">warning</option>
-            <option value="danger">danger</option>
-        </field>
+        <field name="consumption_fuellings"
+               type="number"
+               class="inputbox"
+               min="1"
+               max="5"
+               step="1"
+               default="3"
+               label="COM_GBJFAMILY_OPTION_FUEL_CONSUMPTION_RECORDS_LABEL"
+               description="COM_GBJFAMILY_OPTION_FUEL_CONSUMPTION_RECORDS_DESC"
+        />
 
     </fieldset>
 

@@ -1,6 +1,6 @@
 /*
 @package    Joomla.Component
-@copyright  (c) 2017 Libor Gabaj. All rights reserved.
+@copyright  (c) 2017-2019 Libor Gabaj. All rights reserved.
 @license    GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
 @since      3.7
 */
@@ -12,13 +12,25 @@
 	padding-right: 20px;
 }
 
+.gbjfamily div h4 {
+	color: blue;
+}
+
 .gbjfamily_table caption {
-	/*text-align: center;*/
-	font-weight: bold;
+    color: rosybrown;
+	background-color: aliceblue;
 }
 
 .gbjfamily_table thead tr {
 	background-color: beige;
+}
+
+.gbjfamily_table .gbj-right {
+    text-align: right;
+}
+
+.gbjfamily_table .gbj-center {
+    text-align: center;
 }
 
 .accordion {

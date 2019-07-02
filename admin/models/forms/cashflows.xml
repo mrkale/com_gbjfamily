@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2019 Libor Gabaj
+@license    GNU General Public License version 2 or later; see LICENSE.txt
+@since      3.8
+-->
+<form>
+    <fieldset name="gridfields">
+
+        <!-- The first field here is considered as a default search field. -->
+        <!-- Default type for searching is string. -->
+        <field
+            name="title"
+            type="string"
+            label="LIB_GBJ_FIELD_TITLE_LABEL"
+            labelclass="title"
+            class="has-context"
+        />
+
+        <field
+            name="period"
+            type="number"
+            label="COM_GBJFAMILY_FIELD_CASHFLOW_PERIOD_GRID_LABEL"
+        />
+
+        <field
+            name="price"
+            type="number"
+            label="LIB_GBJ_FIELD_AMOUNT_LABEL"
+            format="LIB_GBJ_FIELD_AMOUNT_FORMAT"
+            class="pull-right"
+            labelclass="pull-right"
+            defaulted="false"
+        />
+
+        <field
+            name="price_month"
+            type="number"
+            label="COM_GBJFAMILY_FIELD_CASHFLOW_PRICEMONTH_LABEL"
+            format="LIB_GBJ_FIELD_PRICE_FORMAT"
+            prefix="LIB_GBJ_UNIT_MONTH"
+            class="pull-right"
+            labelclass="pull-right"
+            defaulted="false"
+        />
+
+        <field
+            name="iban"
+            type="string"
+            label="COM_GBJFAMILY_FIELD_CASHFLOW_IBAN_LABEL"
+        />
+
+        <field
+            name="varsymb"
+            type="string"
+            label="COM_GBJFAMILY_FIELD_CASHFLOW_VARSYMB_LABEL"
+        />
+
+        <field
+            name="specsymb"
+            type="string"
+            label="COM_GBJFAMILY_FIELD_CASHFLOW_SPECSYMB_LABEL"
+        />
+
+        <field
+            name="billspan"
+            type="string"
+            label="COM_GBJFAMILY_FIELD_CASHFLOW_BILLSPAN_LABEL"
+        />
+
+        <field
+            name="payspan"
+            type="string"
+            label="COM_GBJFAMILY_FIELD_CASHFLOW_PAYSPAN_LABEL"
+        />
+
+        <field
+            name="id_domain"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
+            datafield="id_domain_alias"
+            tooltip="id_domain_title"
+            defaulted="false"
+        >
+        </field>
+
+        <field
+            name="id_vendor"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_VENDOR_LABEL"
+            datafield="id_vendor_alias"
+            tooltip="id_vendor_title"
+            defaulted="false"
+        >
+        </field>
+
+        <field
+            name="id_payform"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_PAYFORM_LABEL"
+            datafield="id_payform_alias"
+            tooltip="id_payform_title"
+            defaulted="false"
+        >
+        </field>
+
+        <field
+            name="grid_admin"
+            type="subform"
+        />
+
+    </fieldset>
+</form>

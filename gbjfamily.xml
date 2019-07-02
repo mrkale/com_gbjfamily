@@ -1,21 +1,21 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--
 @package     Joomla.Component
-@copyright   (c) 2017 Libor Gabaj. All rights reserved.
-@license     GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
-@since       3.7
+@copyright   (c) 2017-2019 Libor Gabaj
+@license     GNU General Public License version 2 or later; see LICENSE.txt
+@since       3.8
 -->
-<extension version="3.7" type="component" method="upgrade">
+<extension version="3.8" type="component" method="upgrade">
     <name>COM_GBJFAMILY</name>
     <libraryname>COM_GBJFAMILY</libraryname>
     <version>2.0.0</version>
-    <creationDate>June 2017</creationDate>
+    <creationDate>June 2019</creationDate>
     <description>COM_GBJFAMILY_XML_DESC</description>
     <author>Libor Gabaj</author>
     <authorEmail>libor.gabaj@gmail.com</authorEmail>
     <authorUrl>n/a</authorUrl>
     <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-    <copyright>(c) 2017, Libor Gabaj. All rights reserved.</copyright>
+    <copyright>(c) 2017-2019 Libor Gabaj</copyright>
 
     <scriptfile>script.php</scriptfile>
 
@@ -31,14 +31,13 @@
         </sql>
     </uninstall>
 
-    <update folder="admin">
+    <update>
         <schemas>
-            <schemapath type="mysql">sql/update</schemapath>
+            <schemapath type="mysql">sql/updates/mysql</schemapath>
         </schemas>
     </update>
 
     <files folder="site">
-        <filename>index.html</filename>
         <filename>gbjfamily.php</filename>
         <filename>controller.php</filename>
         <folder>controllers</folder>
@@ -48,7 +47,6 @@
     </files>
 
     <media destination="com_gbjfamily" folder="media">
-        <filename>index.html</filename>
         <folder>css</folder>
     </media>
 
@@ -60,6 +58,14 @@
             Note that all & must be escaped to &amp; for the file
             to be valid XML and be parsed by the installer.
             -->
+            <menu
+                link="option=com_gbjfamily&amp;view=expenses"
+                view="expenses"
+                img="class:generic"
+                alt="GbjFamily/Expenses"
+            >
+                COM_GBJFAMILY_SUBMENU_EXPENSES
+            </menu>
             <menu
                 link="option=com_gbjfamily&amp;view=events"
                 view="events"
@@ -77,17 +83,64 @@
                 COM_GBJFAMILY_SUBMENU_VACATIONS
             </menu>
             <menu
+                link="option=com_gbjfamily&amp;view=projects"
+                view="projects"
+                img="class:generic"
+                alt="GbjFamily/Projects"
+            >
+                COM_GBJFAMILY_SUBMENU_PROJECTS
+            </menu>
+            <menu
+                link="option=com_gbjfamily&amp;view=assets"
+                view="assets"
+                img="class:generic"
+                alt="GbjFamily/Assets"
+            >
+                COM_GBJFAMILY_SUBMENU_ASSETS
+            </menu>
+            <menu
+                link="option=com_gbjfamily&amp;view=incomes"
+                view="incomes"
+                img="class:generic"
+                alt="GbjFamily/Incomes"
+            >
+                COM_GBJFAMILY_SUBMENU_INCOMES
+            </menu>
+            <menu
                 link="option=com_gbjfamily&amp;view=devices"
                 view="devices"
                 img="class:generic"
-                alt="GbjFamily/Devicess"
+                alt="GbjFamily/Devices"
             >
                 COM_GBJFAMILY_SUBMENU_DEVICES
+            </menu>
+            <menu
+                link="option=com_gbjfamily&amp;view=cashflows"
+                view="cashflows"
+                img="class:generic"
+                alt="GbjFamily/Cashflows"
+            >
+                COM_GBJFAMILY_SUBMENU_CASHFLOWS
+            </menu>
+            <menu
+                link="option=com_gbjfamily&amp;view=fuels"
+                view="fuels"
+                img="class:generic"
+                alt="GbjFamily/Fuels"
+            >
+                COM_GBJFAMILY_SUBMENU_FUELS
+            </menu>
+            <menu
+                link="option=com_gbjfamily&amp;view=facts"
+                view="facts"
+                img="class:generic"
+                alt="GbjFamily/Facts"
+            >
+                COM_GBJFAMILY_SUBMENU_FACTS
             </menu>
         </submenu>
 
         <files folder="admin">
-            <filename>index.html</filename>
             <filename>gbjfamily.php</filename>
             <filename>controller.php</filename>
             <filename>config.xml</filename>

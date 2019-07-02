@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2019 Libor Gabaj
+@license    GNU General Public License version 2 or later; see LICENSE.txt
+@since      3.8
+-->
+<form>
+
+    <fields name="filter">
+
+        <field
+            name="site"
+            type="subform"
+        />
+
+        <field
+            name="year"
+            type="Year"
+            datafield="date_on"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_EXPENSE_YEAR</option>
+        </field>
+
+        <field
+            name="month"
+            type="Month"
+            datafield="date_on"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_EXPENSE_MONTH</option>
+        </field>
+
+        <field
+            name="yearoff"
+            type="Yearoff"
+            datafield="date_off"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_EXPENSE_YEAROFF</option>
+        </field>
+
+        <field
+            name="monthoff"
+            type="Monthoff"
+            datafield="date_on"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_EXPENSE_MONTHOFF</option>
+        </field>
+
+        <field
+            name="id_domain"
+            type="Domain"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_DOMAIN</option>
+        </field>
+
+        <field
+            name="id_currency"
+            type="Currency"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_CURRENCY</option>
+        </field>
+
+        <field
+            name="id_commodity"
+            type="Commodity"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_COMMODITY</option>
+        </field>
+
+        <field
+            name="id_type"
+            type="Type"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_TYPE</option>
+        </field>
+
+        <field
+            name="id_unit"
+            type="Unit"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_UNIT</option>
+        </field>
+
+        <field
+            name="id_vendor"
+            type="Vendor"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_VENDOR</option>
+        </field>
+
+        <field
+            name="id_location"
+            type="Location"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_LOCATION</option>
+        </field>
+
+        <field
+            name="id_project"
+            type="Project"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_PROJECT</option>
+        </field>
+
+    </fields>
+
+    <fields name="list">
+
+        <field
+            name="fullordering"
+            type="hidden"
+            default="date_on DESC"
+        />
+
+        <field
+            name="limit"
+            type="limitbox"
+            class="input-mini"
+            default="20"
+            label="JFIELD_PLG_SEARCH_SEARCHLIMIT_LABEL"
+            description="JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC"
+            onchange="this.form.submit();"
+        />
+
+    </fields>
+
+</form>

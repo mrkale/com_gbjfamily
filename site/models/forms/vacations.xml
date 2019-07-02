@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--
 @package    Joomla.Component
-@copyright  (c) 2017 Libor Gabaj. All rights reserved.
-@license    GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
-@since      3.7
+@copyright  (c) 2017-2018 Libor Gabaj
+@license    GNU General Public License version 2 or later; see LICENSE.txt
+@since      3.8
 -->
 <form>
     <fieldset name="gridfields">
@@ -12,7 +12,7 @@
         <!-- Defaul type for searching is string. -->
         <field
             name="title"
-            label="COM_GBJFAMILY_FIELD_VACATION_TITLE_LABEL"
+            label="LIB_GBJ_FIELD_TITLE_LABEL"
             labelclass="title"
             class="title"
         />
@@ -20,32 +20,39 @@
         <field
             name="date_on"
             type="date"
-            label="COM_GBJFAMILY_FIELD_VACATION_DATEON_LABEL"
-            width="15%"
+            label="LIB_GBJ_FIELD_DATEON_LABEL"
             format="LIB_GBJ_FORMAT_DATE_LONG"
         />
 
         <field
             name="date_off"
             type="date"
-            label="COM_GBJFAMILY_FIELD_VACATION_DATEOFF_LABEL"
-            width="15%"
+            label="LIB_GBJ_FIELD_DATEOFF_LABEL"
             format="LIB_GBJ_FORMAT_DATE_LONG"
         />
 
         <field
-            name="id_stay_alias"
+            name="period"
+            type="number"
+            label="LIB_GBJ_FIELD_PERIOD_LABEL"
+            format="LIB_GBJ_FIELD_PERIOD_FORMAT"
+            class="gbj-center"
+            labelclass="gbj-center"
+        />
+
+        <field
+            name="id_stay"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_STAY_LABEL"
-            width="6%"
+            datafield="id_stay_alias"
             tooltip="id_stay_title"
             defaulted="false"
         >
         </field>
 
         <field
-            name="id_staff_alias"
+            name="id_staff"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_STAFF_LABEL"
-            width="6%"
+            datafield="id_staff_alias"
             tooltip="id_staff_title"
             defaulted="false"
         >

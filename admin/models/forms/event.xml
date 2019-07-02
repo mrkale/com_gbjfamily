@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--
 @package    Joomla.Component
-@copyright  (c) 2017 Libor Gabaj. All rights reserved.
-@license    GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
-@since      3.7
+@copyright  (c) 2017 Libor Gabaj
+@license    GNU General Public License version 2 or later; see LICENSE.txt
+@since      3.8
 -->
 <form>
     <fieldset name="recordfields">
@@ -12,8 +12,8 @@
             name="title"
             type="text"
             class="input-xxlarge input-large-text"
-            label="COM_GBJFAMILY_FIELD_EVENT_TITLE_LABEL"
-            description="COM_GBJFAMILY_FIELD_EVENT_TITLE_DESC"
+            label="LIB_GBJ_FIELD_TITLE_LABEL"
+            description="LIB_GBJ_FIELD_TITLE_DESC"
             required="true"
         />
 
@@ -21,8 +21,8 @@
             name="date_on"
             type="calendar"
             class="input-xxlarge input-large-text span5"
-            label="COM_GBJFAMILY_FIELD_EVENT_DATEON_LABEL"
-            description="COM_GBJFAMILY_FIELD_EVENT_DATEON_DESC"
+            label="LIB_GBJ_FIELD_DATE_LABEL"
+            description="LIB_GBJ_FIELD_DATE_DESC"
             format="%d.%m.%Y"
             translateformat="false"
             showtime="false"
@@ -34,9 +34,9 @@
         <field
             name="duration"
             type="number"
-            class="inputbox span1"
-            label="COM_GBJFAMILY_FIELD_EVENT_DURATION_LABEL"
-            description="COM_GBJFAMILY_FIELD_EVENT_DURATION_DESC"
+            class="inputbox span2"
+            label="COM_GBJFAMILY_EVENT_DURATION_LABEL_UNIT"
+            description="COM_GBJFAMILY_EVENT_DURATION_DESC"
             min="0.25"
             max="24.00"
             step="0.25"
@@ -69,6 +69,16 @@
             class="inputbox span4"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_STAGE_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_STAGE_DESC"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="id_project"
+            type="Project"
+            class="inputbox span4"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_LABEL"
+            description="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_DESC"
             default="0"
         >
         </field>

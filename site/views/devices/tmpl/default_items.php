@@ -1,9 +1,9 @@
 <?php
 /**
  * @package    Joomla.Component
- * @copyright  (c) 2017 Libor Gabaj. All rights reserved.
- * @license    GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
- * @since      3.7
+ * @copyright  (c) 2017-2019 Libor Gabaj
+ * @license    GNU General Public License version 2 or later; see LICENSE.txt
+ * @since      3.8
  */
 
 // No direct access
@@ -37,19 +37,17 @@ $showDesc = $tparams->get('show_itemdescription');
 	<div class="table-responsive">
 	<table class="table table-hover gbjfamily_table<?php echo $pageclass_sfx; ?>" id="recordList">
 		<?php if ($tparams->get('show_filter_stats')) : ?>
-		<caption><?php echo JText::_('LIB_GBJ_FILTER_COUNT_LABEL') . $this->pagination->total; ?></caption>
+			<caption style="text-align: left"><?php echo $this->htmlStatistics(); ?></caption>
 		<?php endif; ?>
 		<thead>
 			<tr>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'sequence')); ?>
-				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'title')); ?>
-				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'alias')); ?>
+				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'title, id_location')); ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'brandname, serial')); ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'eth_mac, eth_ip4, eth_ifc')); ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'wifi_mac, wifi_ip4, wifi_ifc')); ?>
-				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'id_device_alias')); ?>
-				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'id_vendor_alias')); ?>
-				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'id_location_alias')); ?>
+				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'id_network, id_port, alias')); ?>
+				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'id_device, id_vendor')); ?>
 			<?php if ($showDesc) : ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'description')); ?>
 			<?php endif; ?>
@@ -66,16 +64,15 @@ $showDesc = $tparams->get('show_itemdescription');
 		</tfoot>
 		<tbody>
 		<?php foreach ($this->items as $this->item->sequence => $this->item) : ?>
+			<?php $this->item->sequence += $this->pagination->limitstart; ?>
 			<tr <?php echo ($this->item->featured ? $this->htmlAttribute('class', $featuredClass) : ''); ?>>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'sequence')); ?>
-				<?php echo JLayoutHelper::render('grid.items_detail', $this, $layoutBasePath, array('fields'=>'title')); ?>
-				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'alias')); ?>
+				<?php echo JLayoutHelper::render('grid.items_detail', $this, $layoutBasePath, array('fields'=>'title, id_location')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'brandname, serial')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'eth_mac, eth_ip4, eth_ifc')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'wifi_mac, wifi_ip4, wifi_ifc')); ?>
-				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'id_device_alias')); ?>
-				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'id_vendor_alias')); ?>
-				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'id_location_alias')); ?>
+				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'id_network, id_port, alias')); ?>
+				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'id_device, id_vendor')); ?>
 			<?php if ($showDesc) : ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'description')); ?>
 			<?php endif; ?>

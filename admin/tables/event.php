@@ -1,18 +1,18 @@
 <?php
 /**
  * @package    Joomla.Component
- * @copyright  (c) 2017 Libor Gabaj. All rights reserved.
- * @license    GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
- * @since      3.7
+ * @copyright  (c) 2017-2019 Libor Gabaj
+ * @license    GNU General Public License version 2 or later; see LICENSE.txt
+ * @since      3.8
  */
 
 // No direct access
 defined('_JEXEC') or die;
 
 /**
- * Table definition for event
+ * Table definition for agenda
  *
- * @since  3.7
+ * @since  3.8
  */
 class GbjfamilyTableEvent extends GbjSeedTable
 {
@@ -23,7 +23,6 @@ class GbjfamilyTableEvent extends GbjSeedTable
 	 */
 	public function check()
 	{
-		$this->checkDate('date_on');
 		$this->checkDuration();
 
 		return parent::check();
@@ -46,18 +45,16 @@ class GbjfamilyTableEvent extends GbjSeedTable
 			return;
 		}
 
-		// Duration is positive
+		// Duration should be positive
 		if ((float) $this->$fieldName <= 0)
 		{
-			$this->checkFlag = false;
-			JFactory::getApplication()->enqueueMessage(JText::_('COM_GBJFAMILY_ERROR_NONPOSITIVE_DURATION'), 'error');
+			$this->raiseError($fieldName, 'COM_GBJFAMILY_ERROR_NONPOSITIVE_DURATION');
 		}
 
-		// Duration is at most one day
+		// Duration should be at most one day
 		if ((float) $this->$fieldName > 24)
 		{
-			$this->checkFlag = false;
-			JFactory::getApplication()->enqueueMessage(JText::_('COM_GBJFAMILY_ERROR_TOOBIG_DURATION'), 'error');
+			$this->raiseError($fieldName, 'COM_GBJFAMILY_ERROR_TOOBIG_DURATION');
 		}
 	}
 }

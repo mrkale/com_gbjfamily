@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--
 @package    Joomla.Component
-@copyright  (c) 2017 Libor Gabaj. All rights reserved.
-@license    GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
-@since      3.7
+@copyright  (c) 2017-2019 Libor Gabaj
+@license    GNU General Public License version 2 or later; see LICENSE.txt
+@since      3.8
 -->
 <form>
     <fieldset name="gridfields">
@@ -63,41 +63,44 @@
         />
 
         <field
-            name="id_device_alias"
+            name="id_network"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_NETWORK_LABEL"
+            datafield="id_network_alias"
+            tooltip="id_network_title"
+        >
+        </field>
+
+        <field
+            name="id_port"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_PORT_LABEL"
+            datafield="id_port_alias"
+            tooltip="id_port_title"
+        >
+        </field>
+
+        <field
+            name="id_device"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_DEVICE_LABEL"
-            width="6%"
+            datafield="id_device_alias"
             tooltip="id_device_title"
-            defaulted="false"
         >
         </field>
 
         <field
-            name="id_vendor_alias"
+            name="id_vendor"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_VENDOR_LABEL"
-            width="6%"
+            datafield="id_vendor_alias"
             tooltip="id_vendor_title"
-            defaulted="false"
         >
         </field>
 
         <field
-            name="id_location_alias"
+            name="id_location"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_LOCATION_LABEL"
-            width="6%"
+            datafield="id_location_alias"
             tooltip="id_location_title"
-            defaulted="false"
         >
         </field>
-
-        <field
-            name="modified"
-            type="date"
-            label="JGLOBAL_MODIFIED_DATE"
-            labelclass="hidden-phone"
-            class="hidden-phone"
-            width="10%"
-            format="LIB_GBJ_FORMAT_TIMESTAMP"
-        />
 
         <field
             name="grid_site"

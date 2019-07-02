@@ -1,81 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 @package    Joomla.Component
-@copyright  (c) 2017 Libor Gabaj. All rights reserved.
-@license    GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
-@since      3.7
+@copyright  (c) 2017-2019 Libor Gabaj
+@license    GNU General Public License version 2 or later; see LICENSE.txt
+@since      3.8
 -->
 <form>
 
     <fields name="filter">
 
         <field
-            name="search"
-            type="text"
-            label="JSEARCH_FILTER_LABEL"
-            description="LIB_GBJ_SEARCH_VALUE_DESC"
-            hint="JSEARCH_FILTER"
-            class="js-stools-search-string"
-            noresults="JGLOBAL_NO_MATCHING_RESULTS"
+            name="admin"
+            type="subform"
         />
 
         <field
-            name="state"
-            type="status"
-            onchange="this.form.submit();"
-        >
-            <option value="">JOPTION_SELECT_PUBLISHED</option>
-        </field>
-
-        <field
-            name="featured"
-            type="list"
-            onchange="this.form.submit();"
-        >
-            <option value="">LIB_GBJ_SELECT_FEATURED</option>
-            <option value="1">LIB_GBJ_FEATURED</option>
-            <option value="0">LIB_GBJ_UNFEATURED</option>
-        </field>
-
-        <field
-            name="id_network_alias"
+            name="id_network"
             type="Network"
+            multiple="true"
+            class="multipleNetworks"
             onchange="this.form.submit();"
-        >
-            <option value="">COM_GBJFAMILY_SELECT_NETWORK</option>
-        </field>
+        />
 
         <field
-            name="id_port_alias"
+            name="id_port"
             type="Port"
+            multiple="true"
+            class="multiplePorts"
             onchange="this.form.submit();"
-        >
-            <option value="">COM_GBJFAMILY_SELECT_PORT</option>
-        </field>
+        />
 
         <field
-            name="id_device_alias"
+            name="id_device"
             type="Device"
+            multiple="true"
+            class="multipleDevices"
             onchange="this.form.submit();"
-        >
-            <option value="">COM_GBJFAMILY_SELECT_DEVICE</option>
-        </field>
+        />
 
         <field
-            name="id_vendor_alias"
+            name="id_vendor"
             type="Vendor"
+            multiple="true"
+            class="multipleVendors"
             onchange="this.form.submit();"
-        >
-            <option value="">COM_GBJFAMILY_SELECT_VENDOR</option>
-        </field>
+        />
 
         <field
-            name="id_location_alias"
+            name="id_location"
             type="Location"
+            multiple="true"
+            class="multipleLocations"
             onchange="this.form.submit();"
-        >
-            <option value="">COM_GBJFAMILY_SELECT_LOCATION</option>
-        </field>
+        />
 
     </fields>
 
@@ -95,40 +72,40 @@
             <option value="state DESC">JSTATUS_DESC</option>
             <option value="featured ASC">JFEATURED_ASC</option>
             <option value="featured DESC">JFEATURED_DESC</option>
-            <option value="modified ASC">COM_GBJFAMILY_HEADING_MODIFIED_ASC</option>
-            <option value="modified DESC">COM_GBJFAMILY_HEADING_MODIFIED_DESC</option>
+            <option value="modified ASC">LIB_GBJ_HEADING_MODIFIED_ASC</option>
+            <option value="modified DESC">LIB_GBJ_HEADING_MODIFIED_DSC</option>
             <option value="title ASC">COM_GBJFAMILY_HEADING_DEVICE_TITLE_ASC</option>
-            <option value="title DESC">COM_GBJFAMILY_HEADING_DEVICE_TITLE_DESC</option>
+            <option value="title DESC">COM_GBJFAMILY_HEADING_DEVICE_TITLE_DSC</option>
             <option value="alias ASC">COM_GBJFAMILY_HEADING_DEVICE_ALIAS_ASC</option>
-            <option value="alias DESC">COM_GBJFAMILY_HEADING_DEVICE_ALIAS_DESC</option>
+            <option value="alias DESC">COM_GBJFAMILY_HEADING_DEVICE_ALIAS_DSC</option>
             <option value="brandname ASC">COM_GBJFAMILY_HEADING_DEVICE_BRANDNAME_ASC</option>
-            <option value="brandname DESC">COM_GBJFAMILY_HEADING_DEVICE_BRANDNAME_DESC</option>
+            <option value="brandname DESC">COM_GBJFAMILY_HEADING_DEVICE_BRANDNAME_DSC</option>
             <option value="serial ASC">COM_GBJFAMILY_HEADING_DEVICE_SERIAL_ASC</option>
-            <option value="serial DESC">COM_GBJFAMILY_HEADING_DEVICE_SERIAL_DESC</option>
+            <option value="serial DESC">COM_GBJFAMILY_HEADING_DEVICE_SERIAL_DSC</option>
             <option value="type ASC">COM_GBJFAMILY_HEADING_DEVICE_TYPE_ASC</option>
-            <option value="type DESC">COM_GBJFAMILY_HEADING_DEVICE_TYPE_DESC</option>
+            <option value="type DESC">COM_GBJFAMILY_HEADING_DEVICE_TYPE_DSC</option>
             <option value="eth_mac ASC">COM_GBJFAMILY_HEADING_DEVICE_ETHMAC_ASC</option>
-            <option value="eth_mac DESC">COM_GBJFAMILY_HEADING_DEVICE_ETHMAC_DESC</option>
+            <option value="eth_mac DESC">COM_GBJFAMILY_HEADING_DEVICE_ETHMAC_DSC</option>
             <option value="eth_ip4 ASC">COM_GBJFAMILY_HEADING_DEVICE_ETHIP4_ASC</option>
-            <option value="eth_ip4 DESC">COM_GBJFAMILY_HEADING_DEVICE_ETHIP4_DESC</option>
+            <option value="eth_ip4 DESC">COM_GBJFAMILY_HEADING_DEVICE_ETHIP4_DSC</option>
             <option value="eth_ifc ASC">COM_GBJFAMILY_HEADING_DEVICE_ETHIFC_ASC</option>
-            <option value="eth_ifc DESC">COM_GBJFAMILY_HEADING_DEVICE_ETHIFC_DESC</option>
+            <option value="eth_ifc DESC">COM_GBJFAMILY_HEADING_DEVICE_ETHIFC_DSC</option>
             <option value="wifi_mac ASC">COM_GBJFAMILY_HEADING_DEVICE_WIFIMAC_ASC</option>
-            <option value="wifi_mac DESC">COM_GBJFAMILY_HEADING_DEVICE_WIFIMAC_DESC</option>
+            <option value="wifi_mac DESC">COM_GBJFAMILY_HEADING_DEVICE_WIFIMAC_DSC</option>
             <option value="wifi_ip4 ASC">COM_GBJFAMILY_HEADING_DEVICE_WIFIIP4_ASC</option>
-            <option value="wifi_ip4 DESC">COM_GBJFAMILY_HEADING_DEVICE_WIFIIP4_DESC</option>
+            <option value="wifi_ip4 DESC">COM_GBJFAMILY_HEADING_DEVICE_WIFIIP4_DSC</option>
             <option value="wifi_ifc ASC">COM_GBJFAMILY_HEADING_DEVICE_WIFIIFC_ASC</option>
-            <option value="wifi_ifc DESC">COM_GBJFAMILY_HEADING_DEVICE_WIFIIFC_DESC</option>
-            <option value="id_network_alias ASC">COM_GBJFAMILY_HEADING_CODEBOOK_NETWORK_ASC</option>
-            <option value="id_network_alias DESC">COM_GBJFAMILY_HEADING_CODEBOOK_NETWORK_DESC</option>
-            <option value="id_port_alias ASC">COM_GBJFAMILY_HEADING_CODEBOOK_PORT_ASC</option>
-            <option value="id_port_alias DESC">COM_GBJFAMILY_HEADING_CODEBOOK_PORT_DESC</option>
-            <option value="id_device_alias ASC">COM_GBJFAMILY_HEADING_CODEBOOK_DEVICE_ASC</option>
-            <option value="id_device_alias DESC">COM_GBJFAMILY_HEADING_CODEBOOK_DEVICE_DESC</option>
-            <option value="id_vendor_alias ASC">COM_GBJFAMILY_HEADING_CODEBOOK_VENDOR_ASC</option>
-            <option value="id_vendor_alias DESC">COM_GBJFAMILY_HEADING_CODEBOOK_VENDOR_DESC</option>
-            <option value="id_location_alias ASC">COM_GBJFAMILY_HEADING_CODEBOOK_LOCATION_ASC</option>
-            <option value="id_location_alias DESC">COM_GBJFAMILY_HEADING_CODEBOOK_LOCATION_DESC</option>
+            <option value="wifi_ifc DESC">COM_GBJFAMILY_HEADING_DEVICE_WIFIIFC_DSC</option>
+            <option value="id_network ASC">COM_GBJFAMILY_HEADING_CODEBOOK_NETWORK_ASC</option>
+            <option value="id_network DESC">COM_GBJFAMILY_HEADING_CODEBOOK_NETWORK_DSC</option>
+            <option value="id_port ASC">COM_GBJFAMILY_HEADING_CODEBOOK_PORT_ASC</option>
+            <option value="id_port DESC">COM_GBJFAMILY_HEADING_CODEBOOK_PORT_DSC</option>
+            <option value="id_device ASC">COM_GBJFAMILY_HEADING_CODEBOOK_DEVICE_ASC</option>
+            <option value="id_device DESC">COM_GBJFAMILY_HEADING_CODEBOOK_DEVICE_DSC</option>
+            <option value="id_vendor ASC">COM_GBJFAMILY_HEADING_CODEBOOK_VENDOR_ASC</option>
+            <option value="id_vendor DESC">COM_GBJFAMILY_HEADING_CODEBOOK_VENDOR_DSC</option>
+            <option value="id_location ASC">COM_GBJFAMILY_HEADING_CODEBOOK_LOCATION_ASC</option>
+            <option value="id_location DESC">COM_GBJFAMILY_HEADING_CODEBOOK_LOCATION_DSC</option>
         </field>
 
         <field

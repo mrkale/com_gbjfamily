@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2018-2019 Libor Gabaj
+@license    GNU General Public License version 2 or later; see LICENSE.txt
+@since      3.8
+-->
+<form>
+
+    <fields name="filter">
+
+        <field
+            name="admin"
+            type="subform"
+        />
+
+        <field
+            name="id_domain"
+            type="Domain"
+            multiple="true"
+            class="multipleDomains"
+            onchange="this.form.submit();"
+        />
+
+        <field
+            name="expenses"
+            type="list"
+            datamode="binary"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_EXPENSES_SELECT</option>
+            <option value="0">LIB_GBJ_SELECT_NONE</option>
+            <option value="1">LIB_GBJ_SELECT_SOME</option>
+        </field>
+
+        <field
+            name="events"
+            type="list"
+            datamode="binary"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_EVENTS_SELECT</option>
+            <option value="0">LIB_GBJ_SELECT_NONE</option>
+            <option value="1">LIB_GBJ_SELECT_SOME</option>
+        </field>
+
+        <field
+            name="incomes"
+            type="list"
+            datamode="binary"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_INCOMES_SELECT</option>
+            <option value="0">LIB_GBJ_SELECT_NONE</option>
+            <option value="1">LIB_GBJ_SELECT_SOME</option>
+        </field>
+
+        <field
+            name="facts"
+            type="list"
+            datamode="binary"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_FACTS_SELECT</option>
+            <option value="0">LIB_GBJ_SELECT_NONE</option>
+            <option value="1">LIB_GBJ_SELECT_SOME</option>
+        </field>
+
+    </fields>
+
+    <fields name="list">
+
+        <field
+            name="fullordering"
+            type="list"
+            label="JGLOBAL_SORT_BY"
+            statuses="*,0,1,2,-2"
+            description="JGLOBAL_SORT_BY"
+            onchange="this.form.submit();"
+            default="title ASC"
+        >
+            <option value="">JGLOBAL_SORT_BY</option>
+            <option value="state ASC">JSTATUS_ASC</option>
+            <option value="state DESC">JSTATUS_DESC</option>
+            <option value="featured ASC">JFEATURED_ASC</option>
+            <option value="featured DESC">JFEATURED_DESC</option>
+            <option value="modified ASC">LIB_GBJ_HEADING_MODIFIED_ASC</option>
+            <option value="modified DESC">LIB_GBJ_HEADING_MODIFIED_DSC</option>
+            <option value="title ASC">LIB_GBJ_HEADING_TITLE_ASC</option>
+            <option value="title DESC">LIB_GBJ_HEADING_TITLE_DSC</option>
+            <option value="alias ASC">LIB_GBJ_HEADING_ALIAS_ASC</option>
+            <option value="alias DESC">LIB_GBJ_HEADING_ALIAS_DSC</option>
+            <option value="id_domain ASC">COM_GBJFAMILY_HEADING_CODEBOOK_DOMAIN_ASC</option>
+            <option value="id_domain DESC">COM_GBJFAMILY_HEADING_CODEBOOK_DOMAIN_DSC</option>
+            <option value="expenses ASC">COM_GBJFAMILY_HEADING_EXPENSES_STATS_ASC</option>
+            <option value="expenses DESC">COM_GBJFAMILY_HEADING_EXPENSES_STATS_DSC</option>
+            <option value="expenses_price ASC">COM_GBJFAMILY_HEADING_EXPENSES_STATS_SUM_ASC</option>
+            <option value="expenses_price DESC">COM_GBJFAMILY_HEADING_EXPENSES_STATS_SUM_DSC</option>
+            <option value="events ASC">COM_GBJFAMILY_HEADING_EVENTS_STATS_ASC</option>
+            <option value="events DESC">COM_GBJFAMILY_HEADING_EVENTS_STATS_DSC</option>
+            <option value="events_duration ASC">COM_GBJFAMILY_HEADING_EVENT_DURATION_ASC</option>
+            <option value="events_duration DESC">COM_GBJFAMILY_HEADING_EVENT_DURATION_DSC</option>
+            <option value="incomes ASC">COM_GBJFAMILY_HEADING_INCOMES_STATS_ASC</option>
+            <option value="incomes DESC">COM_GBJFAMILY_HEADING_INCOMES_STATS_DSC</option>
+            <option value="incomes_price ASC">COM_GBJFAMILY_HEADING_INCOMES_STATS_SUM_ASC</option>
+            <option value="incomes_price DESC">COM_GBJFAMILY_HEADING_INCOMES_STATS_SUM_DSC</option>
+            <option value="facts ASC">COM_GBJFAMILY_HEADING_FACTS_STATS_ASC</option>
+            <option value="facts DESC">COM_GBJFAMILY_HEADING_FACTS_STATS_DSC</option>
+        </field>
+
+        <field
+            name="limit"
+            type="limitbox"
+            class="input-mini"
+            default="20"
+            label="JFIELD_PLG_SEARCH_SEARCHLIMIT_LABEL"
+            description="JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC"
+            onchange="this.form.submit();"
+        />
+
+    </fields>
+
+</form>

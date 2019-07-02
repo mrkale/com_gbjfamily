@@ -1,8 +1,8 @@
 /**
  * @package    Joomla.Component
- * @copyright  (c) 2017 Libor Gabaj. All rights reserved.
- * @license    GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
- * @since      3.7
+ * @copyright  (c) 2017-2019 Libor Gabaj
+ * @license    GNU General Public License version 2 or later; see LICENSE.txt
+ * @since      3.8
  */
 
 /**
@@ -11,3 +11,10 @@
 DROP TABLE IF EXISTS `#__gbjfamily_events`;
 DROP TABLE IF EXISTS `#__gbjfamily_devices`;
 DROP TABLE IF EXISTS `#__gbjfamily_vacations`;
+DROP TABLE IF EXISTS `#__gbjfamily_projects`;
+DROP TABLE IF EXISTS `#__gbjfamily_incomes`;
+DROP TABLE IF EXISTS `#__gbjfamily_assets`;
+DROP TABLE IF EXISTS `#__gbjfamily_facts`;
+DROP TABLE IF EXISTS `#__gbjfamily_expenses`;
+DROP TABLE IF EXISTS `#__gbjfamily_fuels`;
+DROP TABLE IF EXISTS `#__gbjfamily_cashflows`;

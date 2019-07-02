@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 @package    Joomla.Component
-@copyright  (c) 2017 Libor Gabaj. All rights reserved.
-@license    GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
-@since      3.7
+@copyright  (c) 2017-2019 Libor Gabaj
+@license    GNU General Public License version 2 or later; see LICENSE.txt
+@since      3.8
 -->
 
 <metadata>
     <layout title="COM_GBJFAMILY_EVENTS_VIEW_DEFAULT_TITLE" option="COM_GBJFAMILY_EVENTS_VIEW_DEFAULT_OPTION">
         <message>
-			<![CDATA[COM_GBJFAMILY_EVENTS_VIEW_DEFAULT_DESC]]>
+            <![CDATA[COM_GBJFAMILY_EVENTS_VIEW_DEFAULT_DESC]]>
         </message>
     </layout>
+
+    <fields name="request">
+        <fieldset name="request">
+            <field
+                name="parentdel"
+                type="hidden"
+                default="event"
+            />
+        </fieldset>
+    </fields>
 
     <!-- Add fields to the parameters object for the layout. -->
     <fields name="params">
@@ -64,7 +74,7 @@
             <field
                 name="show_itemdescription"
                 type="list"
-                default="1"
+                default="0"
                 label="LIB_GBJ_MENU_ITEMDESCRIPTION_SHOW_LABEL"
                 description="LIB_GBJ_MENU_ITEMDESCRIPTION_SHOW_DESC"
             >
@@ -84,25 +94,12 @@
                 <option value="1">JSHOW</option>
             </field>
 
-
             <field
                 name="show_filter_stats"
                 type="list"
                 default="1"
                 label="LIB_GBJ_MENU_FILTER_STATS_LABEL"
                 description="LIB_GBJ_MENU_FILTER_STATS_DESC"
-            >
-                <option value="0">JHIDE</option>
-                <option value="1">JSHOW</option>
-            </field>
-
-
-            <field
-                name="show_agenda_stats"
-                type="list"
-                default="1"
-                label="LIB_GBJ_MENU_AGENDA_STATS_LABEL"
-                description="LIB_GBJ_MENU_AGENDA_STATS_DESC"
             >
                 <option value="0">JHIDE</option>
                 <option value="1">JSHOW</option>

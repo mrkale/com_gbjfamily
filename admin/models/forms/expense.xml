@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2019 Libor Gabaj
+@license    GNU General Public License version 2 or later; see LICENSE.txt
+@since      3.8
+-->
+<form>
+    <fieldset name="recordfields">
+
+        <field
+            name="title"
+            type="text"
+            class="input-xxlarge input-large-text"
+            label="LIB_GBJ_FIELD_TITLE_LABEL"
+            description="LIB_GBJ_FIELD_TITLE_DESC"
+            required="true"
+        />
+
+        <field
+            name="date_on"
+            type="calendar"
+            class="input-xxlarge input-large-text span5"
+            label="COM_GBJFAMILY_FIELD_EXPENSE_DATEON_LABEL"
+            description="COM_GBJFAMILY_FIELD_EXPENSE_DATEON_DESC"
+            format="%d.%m.%Y"
+            translateformat="false"
+            showtime="false"
+            todaybutton="true"
+            filter="none"
+            required="true"
+        />
+
+        <field
+            name="date_off"
+            type="calendar"
+            class="input-xxlarge input-large-text span5"
+            label="COM_GBJFAMILY_FIELD_EXPENSE_DATEOFF_LABEL"
+            description="COM_GBJFAMILY_FIELD_EXPENSE_DATEOFF_DESC"
+            format="%d.%m.%Y"
+            translateformat="false"
+            showtime="false"
+            todaybutton="true"
+            filter="none"
+            required="false"
+        />
+
+        <field
+            name="period"
+            type="number"
+            class="inputbox span2"
+            label="COM_GBJFAMILY_FIELD_EXPENSE_PERIOD_LABEL_UNIT"
+            description="COM_GBJFAMILY_FIELD_EXPENSE_PERIOD_DESC"
+            readonly="true"
+        />
+
+        <field
+            name="quantity"
+            type="text"
+            class="inputbox span2"
+            label="COM_GBJFAMILY_FIELD_EXPENSE_QUANTITY_LABEL"
+            description="COM_GBJFAMILY_FIELD_EXPENSE_QUANTITY_DESC"
+            filter="float"
+            default="1"
+        />
+
+        <field
+            name="price"
+            type="text"
+            class="inputbox span2"
+            label="LIB_GBJ_FIELD_PRICE_LABEL"
+            description="LIB_GBJ_FIELD_PRICE_DESC"
+            filter="float"
+        />
+
+        <field
+            name="price_unit"
+            type="text"
+            class="inputbox span2"
+            label="COM_GBJFAMILY_FIELD_EXPENSE_PRICEUNIT_LABEL"
+            description="COM_GBJFAMILY_FIELD_EXPENSE_PRICEUNIT_DESC"
+            readonly="true"
+        />
+
+        <field
+            name="price_orig"
+            type="text"
+            class="inputbox span2"
+            label="COM_GBJFAMILY_FIELD_EXPENSE_PRICEORIG_LABEL"
+            description="COM_GBJFAMILY_FIELD_EXPENSE_PRICEORIG_DESC"
+            filter="float"
+            hint="JNONE"
+        />
+
+        <field
+            name="id_domain"
+            type="Domain"
+            class="inputbox span4"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
+            description="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_DESC"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="id_currency"
+            type="Currency"
+            class="inputbox span4"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_CURRENCY_LABEL"
+            description="COM_GBJFAMILY_FIELD_CODEBOOK_CURRENCY_DESC"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="id_commodity"
+            type="Commodity"
+            class="inputbox span4"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_COMMODITY_LABEL"
+            description="COM_GBJFAMILY_FIELD_CODEBOOK_COMMODITY_DESC"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="id_type"
+            type="Type"
+            class="inputbox span4"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_TYPE_LABEL"
+            description="COM_GBJFAMILY_FIELD_CODEBOOK_TYPE_DESC"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="id_unit"
+            type="Unit"
+            class="inputbox span4"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_UNIT_LABEL"
+            description="COM_GBJFAMILY_FIELD_CODEBOOK_UNIT_DESC"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="id_vendor"
+            type="Vendor"
+            class="inputbox span4"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_VENDOR_LABEL"
+            description="COM_GBJFAMILY_FIELD_CODEBOOK_VENDOR_DESC"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="id_location"
+            type="Location"
+            class="inputbox span4"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_LOCATION_LABEL"
+            description="COM_GBJFAMILY_FIELD_CODEBOOK_LOCATION_DESC"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="id_project"
+            type="Project"
+            class="inputbox span4"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_LABEL"
+            description="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_DESC"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="update_admin"
+            type="subform"
+        />
+
+    </fieldset>
+</form>

@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2018-2019 Libor Gabaj
+@license    GNU General Public License version 2 or later; see LICENSE.txt
+@since      3.8
+-->
+<form>
+    <fieldset name="gridfields">
+
+        <!-- The first field here is considered as a default search field. -->
+        <!-- Defaul type for searching is string. -->
+        <field
+            name="title"
+            label="LIB_GBJ_FIELD_TITLE_LABEL"
+            labelclass="title"
+            class="title"
+        />
+
+        <field
+            name="alias"
+            label="LIB_GBJ_FIELD_ALIAS_LABEL"
+        />
+
+        <field
+            name="id_domain"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
+            datafield="id_domain_alias"
+            tooltip="id_domain_title"
+            defaulted="false"
+        >
+        </field>
+
+        <field
+            name="expenses"
+            type="number"
+            label="COM_GBJFAMILY_EXPENSES_STATS_LABEL"
+            defaulted="false"
+            variants="#,#_arch"
+        />
+
+        <field
+            name="expenses_price"
+            type="number"
+            label="LIB_GBJ_FIELD_AMOUNT_LABEL"
+            defaulted="false"
+        />
+
+        <field
+            name="events"
+            type="number"
+            label="COM_GBJFAMILY_EVENTS_STATS_LABEL"
+            defaulted="false"
+            variants="#,#_arch"
+        />
+
+        <field
+            name="events_duration"
+            type="number"
+            label="COM_GBJFAMILY_EVENT_DURATION_LABEL"
+            defaulted="false"
+        />
+
+        <field
+            name="incomes"
+            type="number"
+            label="COM_GBJFAMILY_INCOMES_STATS_LABEL"
+            defaulted="false"
+            variants="#,#_arch"
+        />
+
+        <field
+            name="incomes_price"
+            type="number"
+            label="LIB_GBJ_FIELD_AMOUNT_LABEL"
+            defaulted="false"
+        />
+
+        <field
+            name="facts"
+            type="number"
+            label="COM_GBJFAMILY_FACTS_STATS_LABEL"
+            defaulted="false"
+            variants="#,#_arch"
+        />
+
+        <field
+            name="grid_site"
+            type="subform"
+        />
+
+    </fieldset>
+</form>

@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2019 Libor Gabaj
+@license    GNU General Public License version 2 or later; see LICENSE.txt
+@since      3.8
+-->
+<form>
+    <fieldset name="recordfields">
+
+        <field
+            name="date_on"
+            type="calendar"
+            class="input-xxlarge input-large-text span5"
+            label="LIB_GBJ_FIELD_DATE_LABEL"
+            description="LIB_GBJ_FIELD_DATE_DESC"
+            format="%d.%m.%Y"
+            translateformat="false"
+            showtime="false"
+            todaybutton="true"
+            filter="none"
+            required="true"
+        />
+
+        <field
+            name="quantity"
+            type="text"
+            class="inputbox span2"
+            label="COM_GBJFAMILY_FIELD_FUEL_QUANTITY_LABEL"
+            description="COM_GBJFAMILY_FIELD_FUEL_QUANTITY_DESC"
+            filter="float"
+            default="40"
+        />
+
+        <field
+            name="tacho"
+            type="text"
+            class="inputbox span2"
+            label="COM_GBJFAMILY_FIELD_FUEL_TACHO_LABEL"
+            description="COM_GBJFAMILY_FIELD_FUEL_TACHO_DESC"
+            filter="int"
+        />
+
+        <field
+            name="period"
+            type="number"
+            class="inputbox span2"
+            label="COM_GBJFAMILY_FIELD_FUEL_PERIOD_LABEL"
+            description="COM_GBJFAMILY_FIELD_FUEL_PERIOD_DESC"
+            readonly="true"
+        />
+
+        <field
+            name="distance"
+            type="number"
+            class="inputbox span2"
+            label="COM_GBJFAMILY_FIELD_FUEL_DISTANCE_LABEL"
+            description="COM_GBJFAMILY_FIELD_FUEL_DISTANCE_DESC"
+            readonly="true"
+        />
+
+        <field
+            name="consumption"
+            type="number"
+            class="inputbox span2"
+            label="COM_GBJFAMILY_FIELD_FUEL_CONSUMPTION_LABEL"
+            description="COM_GBJFAMILY_FIELD_FUEL_CONSUMPTION_DESC"
+            readonly="true"
+        />
+
+        <field
+            name="id_domain"
+            type="Domain"
+            class="inputbox span4"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
+            description="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_DESC"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="id_vendor"
+            type="Vendor"
+            class="inputbox span4"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_VENDOR_LABEL"
+            description="COM_GBJFAMILY_FIELD_CODEBOOK_VENDOR_DESC"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="update_admin"
+            type="subform"
+        />
+
+    </fieldset>
+</form>

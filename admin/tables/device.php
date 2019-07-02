@@ -1,18 +1,18 @@
 <?php
 /**
  * @package    Joomla.Component
- * @copyright  (c) 2017 Libor Gabaj. All rights reserved.
- * @license    GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
- * @since      3.7
+ * @copyright  (c) 2017-2019 Libor Gabaj
+ * @license    GNU General Public License version 2 or later; see LICENSE.txt
+ * @since      3.8
  */
 
 // No direct access
 defined('_JEXEC') or die;
 
 /**
- * Table definition for event
+ * Table definition for agenda
  *
- * @since  3.7
+ * @since  3.8
  */
 class GbjfamilyTableDevice extends GbjSeedTable
 {
@@ -23,7 +23,7 @@ class GbjfamilyTableDevice extends GbjSeedTable
 	 */
 	public function check()
 	{
-		$this->checkAlias();
+		$this->checkTitle();
 		$this->checkSerial();
 		$this->checkMac('eth_mac');
 		$this->checkIp4('eth_ip4');
@@ -42,7 +42,7 @@ class GbjfamilyTableDevice extends GbjSeedTable
 	 */
 	protected function checkAlias($fieldName = 'alias')
 	{
-		if (empty($this->${fieldName}))
+		if (empty($this->$fieldName))
 		{
 			return;
 		}
@@ -51,10 +51,10 @@ class GbjfamilyTableDevice extends GbjSeedTable
 		$table = clone $this;
 
 		// Uniqueness
-		if ($table->load(array($fieldName => $this->${fieldName}))
+		if ($table->load(array($fieldName => $this->$fieldName))
 			&& (isset($primaryKeyName)
-			&& ($table->{$primaryKeyName} != $this->{$primaryKeyName}
-			|| $this->{$primaryKeyName} == 0)))
+			&& ($table->$primaryKeyName != $this->$primaryKeyName
+			|| $this->$primaryKeyName == 0)))
 		{
 			JFactory::getApplication()->enqueueMessage(JText::_('COM_GBJFAMILY_ERROR_UNIQUE_HOSTNAME'), 'warning');
 		}
@@ -69,7 +69,7 @@ class GbjfamilyTableDevice extends GbjSeedTable
 	 */
 	protected function checkSerial($fieldName = 'serial')
 	{
-		if (empty($this->${fieldName}))
+		if (empty($this->$fieldName))
 		{
 			return;
 		}
@@ -78,10 +78,10 @@ class GbjfamilyTableDevice extends GbjSeedTable
 		$table = clone $this;
 
 		// Uniqueness
-		if ($table->load(array($fieldName => $this->${fieldName}))
+		if ($table->load(array($fieldName => $this->$fieldName))
 			&& (isset($primaryKeyName)
-			&& ($table->{$primaryKeyName} != $this->{$primaryKeyName}
-			|| $this->{$primaryKeyName} == 0)))
+			&& ($table->$primaryKeyName != $this->$primaryKeyName
+			|| $this->$primaryKeyName == 0)))
 		{
 			$this->checkFlag = false;
 			JFactory::getApplication()->enqueueMessage(JText::_('COM_GBJFAMILY_ERROR_UNIQUE_SERIAL'), 'error');
@@ -97,7 +97,7 @@ class GbjfamilyTableDevice extends GbjSeedTable
 	 */
 	protected function checkIp4($fieldName)
 	{
-		if (empty($this->${fieldName}))
+		if (empty($this->$fieldName))
 		{
 			return;
 		}
@@ -123,22 +123,22 @@ class GbjfamilyTableDevice extends GbjSeedTable
 		// Unique withing row
 		if (!$boolResult)
 		{
-			$boolResult = $this->${fieldName} === $this->${$fieldComplement};
+			$boolResult = $this->$fieldName === $this->$fieldComplement;
 		}
 
 		// Unique withing column
 		if (!$boolResult)
 		{
-			$boolResult = $table->load(array($fieldName => $this->${fieldName}))
+			$boolResult = $table->load(array($fieldName => $this->$fieldName))
 				&& (isset($primaryKeyName)
-					&& ($table->{$primaryKeyName} != $this->{$primaryKeyName}
-					|| $this->{$primaryKeyName} == 0));
+					&& ($table->$primaryKeyName != $this->$primaryKeyName
+					|| $this->$primaryKeyName == 0));
 		}
 
 		// Unique withing counterpart column
 		if (!$boolResult)
 		{
-			$boolResult = $table->load(array($fieldComplement => $this->${fieldName}));
+			$boolResult = $table->load(array($fieldComplement => $this->$fieldName));
 		}
 
 		if ($boolResult)
@@ -148,7 +148,7 @@ class GbjfamilyTableDevice extends GbjSeedTable
 		}
 
 		// Valid
-		if (filter_var($this->${fieldName}, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4) !== $this->${fieldName})
+		if (filter_var($this->$fieldName, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4) !== $this->$fieldName)
 		{
 			$this->checkFlag = false;
 			$errorMsg = JText::sprintf('COM_GBJFAMILY_ERROR_ADDRESS_WRONG', JText::_($errorConst));
@@ -156,7 +156,7 @@ class GbjfamilyTableDevice extends GbjSeedTable
 		}
 
 		// Private
-		if (filter_var($this->${fieldName}, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE) === $this->${fieldName})
+		if (filter_var($this->$fieldName, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE) === $this->$fieldName)
 		{
 			$this->checkFlag = false;
 			$errorMsg = JText::sprintf('COM_GBJFAMILY_ERROR_ADDRESS_PUBLIC', JText::_($errorConst));
@@ -173,7 +173,7 @@ class GbjfamilyTableDevice extends GbjSeedTable
 	 */
 	protected function checkMac($fieldName)
 	{
-		if (empty($this->${fieldName}))
+		if (empty($this->$fieldName))
 		{
 			return;
 		}
@@ -199,22 +199,22 @@ class GbjfamilyTableDevice extends GbjSeedTable
 		// Unique withing row
 		if (!$boolResult)
 		{
-			$boolResult = $this->${fieldName} === $this->${$fieldComplement};
+			$boolResult = $this->$fieldName === $this->$fieldComplement;
 		}
 
 		// Unique withing column
 		if (!$boolResult)
 		{
-			$boolResult = $table->load(array($fieldName => $this->${fieldName}))
+			$boolResult = $table->load(array($fieldName => $this->$fieldName))
 				&& (isset($primaryKeyName)
-					&& ($table->{$primaryKeyName} != $this->{$primaryKeyName}
-					|| $this->{$primaryKeyName} == 0));
+					&& ($table->$primaryKeyName != $this->$primaryKeyName
+					|| $this->$primaryKeyName == 0));
 		}
 
 		// Unique withing counterpart column
 		if (!$boolResult)
 		{
-			$boolResult = $table->load(array($fieldComplement => $this->${fieldName}));
+			$boolResult = $table->load(array($fieldComplement => $this->$fieldName));
 		}
 
 		if ($boolResult)
@@ -224,7 +224,7 @@ class GbjfamilyTableDevice extends GbjSeedTable
 		}
 
 		// Valid
-		if (filter_var($this->${fieldName}, FILTER_VALIDATE_MAC) !== $this->${fieldName})
+		if (filter_var($this->$fieldName, FILTER_VALIDATE_MAC) !== $this->$fieldName)
 		{
 			$this->checkFlag = false;
 			$errorMsg = JText::sprintf('COM_GBJFAMILY_ERROR_ADDRESS_WRONG', JText::_($errorConst));

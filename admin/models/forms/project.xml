@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2018 Libor Gabaj
+@license    GNU General Public License version 2 or later; see LICENSE.txt
+@since      3.8
+-->
+<form>
+    <fieldset name="recordfields">
+
+        <field
+            name="title"
+            type="text"
+            class="input-xxlarge input-large-text"
+            label="LIB_GBJ_FIELD_TITLE_LABEL"
+            description="LIB_GBJ_FIELD_TITLE_DESC"
+            required="true"
+        />
+
+        <field
+            name="alias"
+            type="text"
+            class="inputbox"
+            label="LIB_GBJ_FIELD_ALIAS_LABEL"
+            description="LIB_GBJ_FIELD_ALIAS_DESC"
+            size="30"
+        />
+
+        <field
+            name="id_domain"
+            type="Domain"
+            class="inputbox span4"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
+            description="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_DESC"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="update_admin"
+            type="subform"
+        />
+
+    </fieldset>
+</form>

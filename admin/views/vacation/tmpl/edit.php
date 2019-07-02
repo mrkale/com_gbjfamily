@@ -1,9 +1,9 @@
 <?php
 /**
  * @package    Joomla.Component
- * @copyright  (c) 2017 Libor Gabaj. All rights reserved.
- * @license    GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
- * @since      3.7
+ * @copyright  (c) 2017-2019 Libor Gabaj
+ * @license    GNU General Public License version 2 or later; see LICENSE.txt
+ * @since      3.8
  */
 
 // No direct access
@@ -31,11 +31,12 @@ $tabNameActive = $tabNameDetails;
 		<?php echo JHtml::_('bootstrap.startTabSet', $tabSetName, array('active' => $tabNameActive)); ?>
 
 		<?php echo JHtml::_('bootstrap.addTab', $tabSetName, $tabNameDetails,
-			empty($this->item->id) ? JText::_('COM_GBJFAMILY_RECORD_VACATION_NEW') : JText::sprintf('COM_GBJFAMILY_RECORD_VACATION_EDIT', $this->item->id)
+			empty($this->item->id) ? JText::_('LIB_GBJ_NEW_RECORD') : JText::sprintf('LIB_GBJ_OLD_RECORD', $this->item->id)
 			);
 		?>
 		<div class="row-fluid form-horizontal-desktop">
 			<div class="span9">
+			<?php echo $this->form->renderField('period'); ?>
 			<?php echo $this->form->renderField('id_stay'); ?>
 			<?php echo $this->form->renderField('id_staff'); ?>
 			<?php echo $this->form->renderField('description'); ?>

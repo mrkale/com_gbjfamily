@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2018-2019 Libor Gabaj
+@license    GNU General Public License version 2 or later; see LICENSE.txt
+@since      3.8
+-->
+<form>
+    <fieldset name="gridfields">
+
+        <!-- The first field here is considered as a default search field. -->
+        <!-- Default type for searching is string. -->
+        <field
+            name="title"
+            type="string"
+            label="LIB_GBJ_FIELD_TITLE_LABEL"
+            labelclass="title"
+            class="has-context"
+        />
+
+        <field
+            name="alias"
+            type="string"
+            label="LIB_GBJ_FIELD_ALIAS_LABEL"
+        />
+
+        <field
+            name="id_domain"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
+            datafield="id_domain_alias"
+            tooltip="id_domain_title"
+            defaulted="false"
+        >
+        </field>
+
+        <field
+            name="expenses"
+            type="number"
+            label="COM_GBJFAMILY_EXPENSES_STATS_LABEL"
+            default="LIB_GBJ_SELECT_NONE"
+            variants="#,_arch,_total"
+        />
+
+        <field
+            name="expenses_price"
+            type="number"
+            label="LIB_GBJ_FIELD_AMOUNT_LABEL"
+            format="LIB_GBJ_FIELD_AMOUNT_FORMAT"
+            variants="#,_arch,_total"
+            defaulted="false"
+        />
+
+        <field
+            name="events"
+            type="number"
+            label="COM_GBJFAMILY_EVENTS_STATS_LABEL"
+            default="LIB_GBJ_SELECT_NONE"
+            variants="#,_arch,_total"
+        />
+
+        <field
+            name="events_duration"
+            type="number"
+            label="COM_GBJFAMILY_EVENT_DURATION_LABEL"
+            variants="#,_arch,_total"
+            defaulted="false"
+        />
+
+        <field
+            name="incomes"
+            type="number"
+            label="COM_GBJFAMILY_INCOMES_STATS_LABEL"
+            default="LIB_GBJ_SELECT_NONE"
+            variants="#,_arch,_total"
+        />
+
+        <field
+            name="incomes_price"
+            type="number"
+            label="LIB_GBJ_FIELD_AMOUNT_LABEL"
+            format="LIB_GBJ_FIELD_AMOUNT_FORMAT"
+            variants="#,_arch,_total"
+            defaulted="false"
+        />
+
+        <field
+            name="facts"
+            type="number"
+            label="COM_GBJFAMILY_FACTS_STATS_LABEL"
+            default="LIB_GBJ_SELECT_NONE"
+            variants="#,_arch,_total"
+        />
+
+        <field
+            name="grid_admin"
+            type="subform"
+        />
+
+    </fieldset>
+</form>

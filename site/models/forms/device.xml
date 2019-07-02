@@ -1,17 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--
 @package    Joomla.Component
-@copyright  (c) 2017 Libor Gabaj. All rights reserved.
-@license    GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
-@since      3.7
+@copyright  (c) 2017-2018 Libor Gabaj
+@license    GNU General Public License version 2 or later; see LICENSE.txt
+@since      3.8
 -->
 <form>
     <fieldset name="gridfields">
-
-        <field
-            name="title"
-            description="COM_GBJFAMILY_FIELD_DEVICE_TITLE_DESC"
-        />
 
         <field
             name="alias"
@@ -59,22 +54,25 @@
         />
 
         <field
-            name="id_device_title"
+            name="id_device"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_DEVICE_LABEL"
+            datafield="id_device_title"
             tooltip="id_device_alias"
         >
         </field>
 
         <field
-            name="id_vendor_title"
+            name="id_vendor"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_VENDOR_LABEL"
+            datafield="id_vendor_title"
             tooltip="id_vendor_alias"
         >
         </field>
 
         <field
-            name="id_location_title"
+            name="id_location"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_LOCATION_LABEL"
+            datafield="id_location_title"
             tooltip="id_location_alias"
         >
         </field>

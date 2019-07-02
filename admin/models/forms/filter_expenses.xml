@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+@package    Joomla.Component
+@copyright  (c) 2019 Libor Gabaj
+@license    GNU General Public License version 2 or later; see LICENSE.txt
+@since      3.8
+-->
+<form>
+
+    <fields name="filter">
+
+        <field
+            name="admin"
+            type="subform"
+        />
+
+        <field
+            name="year"
+            type="Year"
+            datafield="date_on"
+            multiple="true"
+            class="multipleYears"
+            onchange="this.form.submit();"
+        />
+
+        <field
+            name="month"
+            type="Month"
+            datafield="date_on"
+            multiple="true"
+            class="multipleMonths"
+            onchange="this.form.submit();"
+        />
+
+        <field
+            name="yearoff"
+            type="Yearoff"
+            datafield="date_off"
+            multiple="true"
+            class="multipleYearoffs"
+            onchange="this.form.submit();"
+        />
+
+        <field
+            name="monthoff"
+            type="Monthoff"
+            datafield="date_off"
+            multiple="true"
+            class="multipleMonthoffs"
+            onchange="this.form.submit();"
+        />
+
+        <field
+            name="id_domain"
+            type="Domain"
+            multiple="true"
+            class="multipleDomains"
+            onchange="this.form.submit();"
+        />
+
+        <field
+            name="id_currency"
+            type="Currency"
+            multiple="true"
+            class="multipleCurrencies"
+            onchange="this.form.submit();"
+        />
+
+        <field
+            name="id_commodity"
+            type="Commodity"
+            multiple="true"
+            class="multipleCommodities"
+            onchange="this.form.submit();"
+        />
+
+        <field
+            name="id_type"
+            type="Type"
+            multiple="true"
+            class="multipleTypes"
+            onchange="this.form.submit();"
+        />
+
+        <field
+            name="id_unit"
+            type="Unit"
+            multiple="true"
+            class="multipleUnits"
+            onchange="this.form.submit();"
+        />
+
+        <field
+            name="id_vendor"
+            type="Vendor"
+            multiple="true"
+            class="multipleVendors"
+            onchange="this.form.submit();"
+        />
+
+        <field
+            name="id_location"
+            type="Location"
+            multiple="true"
+            class="multipleLocations"
+            onchange="this.form.submit();"
+        />
+
+        <field
+            name="id_project"
+            type="Project"
+            multiple="true"
+            class="multipleProjects"
+            onchange="this.form.submit();"
+        />
+
+    </fields>
+
+    <fields name="list">
+
+        <field
+            name="fullordering"
+            type="list"
+            label="JGLOBAL_SORT_BY"
+            statuses="*,0,1,2,-2"
+            description="JGLOBAL_SORT_BY"
+            onchange="this.form.submit();"
+            default="date_on DESC"
+        >
+            <option value="">JGLOBAL_SORT_BY</option>
+            <option value="state ASC">JSTATUS_ASC</option>
+            <option value="state DESC">JSTATUS_DESC</option>
+            <option value="featured ASC">JFEATURED_ASC</option>
+            <option value="featured DESC">JFEATURED_DESC</option>
+            <option value="modified ASC">LIB_GBJ_HEADING_MODIFIED_ASC</option>
+            <option value="modified DESC">LIB_GBJ_HEADING_MODIFIED_DSC</option>
+            <option value="title ASC">JGLOBAL_TITLE_ASC</option>
+            <option value="title DESC">JGLOBAL_TITLE_DESC</option>
+            <option value="date_on ASC">COM_GBJFAMILY_HEADING_EXPENSE_DATEON_ASC</option>
+            <option value="date_on DESC">COM_GBJFAMILY_HEADING_EXPENSE_DATEON_DSC</option>
+            <option value="date_off ASC">COM_GBJFAMILY_HEADING_EXPENSE_DATEOFF_ASC</option>
+            <option value="date_off DESC">COM_GBJFAMILY_HEADING_EXPENSE_DATEOFF_DSC</option>
+            <option value="period ASC">COM_GBJFAMILY_HEADING_EXPENSE_PERIOD_ASC</option>
+            <option value="period DESC">COM_GBJFAMILY_HEADING_EXPENSE_PERIOD_DSC</option>
+            <option value="quantity ASC">COM_GBJFAMILY_HEADING_EXPENSE_QUANTITY_ASC</option>
+            <option value="quantity DESC">COM_GBJFAMILY_HEADING_EXPENSE_QUANTITY_DSC</option>
+            <option value="price ASC">LIB_GBJ_HEADING_PRICE_ASC</option>
+            <option value="price DESC">LIB_GBJ_HEADING_PRICE_DSC</option>
+            <option value="price_unit ASC">COM_GBJFAMILY_HEADING_EXPENSE_PRICEUNIT_ASC</option>
+            <option value="price_unit DESC">COM_GBJFAMILY_HEADING_EXPENSE_PRICEUNIT_DSC</option>
+            <option value="id_domain ASC">COM_GBJFAMILY_HEADING_CODEBOOK_DOMAIN_ASC</option>
+            <option value="id_domain DESC">COM_GBJFAMILY_HEADING_CODEBOOK_DOMAIN_DSC</option>
+            <option value="id_currency ASC">COM_GBJFAMILY_HEADING_CODEBOOK_CURRENCY_ASC</option>
+            <option value="id_currency DESC">COM_GBJFAMILY_HEADING_CODEBOOK_CURRENCY_DSC</option>
+            <option value="id_commodity ASC">COM_GBJFAMILY_HEADING_CODEBOOK_COMMODITY_ASC</option>
+            <option value="id_commodity DESC">COM_GBJFAMILY_HEADING_CODEBOOK_COMMODITY_DSC</option>
+            <option value="id_type ASC">COM_GBJFAMILY_HEADING_CODEBOOK_TYPE_ASC</option>
+            <option value="id_type DESC">COM_GBJFAMILY_HEADING_CODEBOOK_TYPE_DSC</option>
+            <option value="id_unit ASC">COM_GBJFAMILY_HEADING_CODEBOOK_UNIT_ASC</option>
+            <option value="id_unit DESC">COM_GBJFAMILY_HEADING_CODEBOOK_UNIT_DSC</option>
+            <option value="id_vendor ASC">COM_GBJFAMILY_HEADING_CODEBOOK_VENDOR_ASC</option>
+            <option value="id_vendor DESC">COM_GBJFAMILY_HEADING_CODEBOOK_VENDOR_DSC</option>
+            <option value="id_location ASC">COM_GBJFAMILY_HEADING_CODEBOOK_LOCATION_ASC</option>
+            <option value="id_location DESC">COM_GBJFAMILY_HEADING_CODEBOOK_LOCATION_DSC</option>
+            <option value="id_project ASC">COM_GBJFAMILY_HEADING_CODEBOOK_PROJECT_ASC</option>
+            <option value="id_project DESC">COM_GBJFAMILY_HEADING_CODEBOOK_PROJECT_DSC</option>
+        </field>
+
+        <field
+            name="limit"
+            type="limitbox"
+            class="input-mini"
+            default="20"
+            label="JFIELD_PLG_SEARCH_SEARCHLIMIT_LABEL"
+            description="JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC"
+            onchange="this.form.submit();"
+        />
+
+    </fields>
+
+</form>
