@@ -56,7 +56,7 @@
 
         <field
             name="id_stay"
-            type="Stay"
+            type="stay"
             class="inputbox span4"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_STAY_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_STAY_DESC"
@@ -66,7 +66,7 @@
 
         <field
             name="id_staff"
-            type="Staff"
+            type="staff"
             class="inputbox span4"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_STAFF_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_STAFF_DESC"

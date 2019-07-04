@@ -16,7 +16,7 @@
 
         <field
             name="id_domain"
-            type="Domain"
+            type="domain"
             onchange="this.form.submit();"
         >
             <option value="">COM_GBJFAMILY_SELECT_DOMAIN</option>

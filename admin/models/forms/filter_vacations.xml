@@ -16,7 +16,7 @@
 
         <field
             name="year"
-            type="Year"
+            type="year"
             datafield="date_on"
             multiple="true"
             class="multipleYears"
@@ -25,7 +25,7 @@
 
         <field
             name="month"
-            type="Month"
+            type="month"
             datafield="date_on"
             multiple="true"
             class="multipleMonths"
@@ -34,7 +34,7 @@
 
         <field
             name="yearoff"
-            type="Yearoff"
+            type="yearoff"
             datafield="date_off"
             multiple="true"
             class="multipleYearoffs"
@@ -43,7 +43,7 @@
 
         <field
             name="monthoff"
-            type="Monthoff"
+            type="monthoff"
             datafield="date_off"
             multiple="true"
             class="multipleMonthoffs"
@@ -52,7 +52,7 @@
 
         <field
             name="id_stay"
-            type="Stay"
+            type="stay"
             multiple="true"
             class="multipleStays"
             onchange="this.form.submit();"
@@ -60,7 +60,7 @@
 
         <field
             name="id_staff"
-            type="Staff"
+            type="staff"
             multiple="true"
             class="multipleStaffs"
             onchange="this.form.submit();"

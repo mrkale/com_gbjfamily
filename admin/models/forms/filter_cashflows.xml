@@ -16,7 +16,7 @@
 
         <field
             name="id_domain"
-            type="Domain"
+            type="domain"
             multiple="true"
             class="multipleDomains"
             onchange="this.form.submit();"
@@ -24,7 +24,7 @@
 
         <field
             name="id_vendor"
-            type="Vendor"
+            type="vendor"
             multiple="true"
             class="multipleVendors"
             onchange="this.form.submit();"
@@ -32,7 +32,7 @@
 
         <field
             name="id_payform"
-            type="Payform"
+            type="payform"
             multiple="true"
             class="multiplePayforms"
             onchange="this.form.submit();"

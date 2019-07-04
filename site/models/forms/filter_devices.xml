@@ -16,7 +16,7 @@
 
         <field
             name="id_device"
-            type="Device"
+            type="device"
             onchange="this.form.submit();"
         >
             <option value="">COM_GBJFAMILY_SELECT_DEVICE</option>
@@ -24,7 +24,7 @@
 
         <field
             name="id_vendor"
-            type="Vendor"
+            type="vendor"
             onchange="this.form.submit();"
         >
             <option value="">COM_GBJFAMILY_SELECT_VENDOR</option>
@@ -32,7 +32,7 @@
 
         <field
             name="id_location"
-            type="Location"
+            type="location"
             onchange="this.form.submit();"
         >
             <option value="">COM_GBJFAMILY_SELECT_LOCATION</option>

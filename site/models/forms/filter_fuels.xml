@@ -16,7 +16,7 @@
 
         <field
             name="year"
-            type="Year"
+            type="year"
             datafield="date_on"
             onchange="this.form.submit();"
         >
@@ -25,7 +25,7 @@
 
         <field
             name="month"
-            type="Month"
+            type="month"
             datafield="date_on"
             onchange="this.form.submit();"
         >
@@ -34,7 +34,7 @@
 
         <field
             name="id_domain"
-            type="Domain"
+            type="domain"
             onchange="this.form.submit();"
         >
             <option value="">COM_GBJFAMILY_SELECT_DOMAIN</option>
@@ -42,7 +42,7 @@
 
         <field
             name="id_vendor"
-            type="Vendor"
+            type="vendor"
             onchange="this.form.submit();"
         >
             <option value="">COM_GBJFAMILY_SELECT_VENDOR</option>
