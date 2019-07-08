@@ -16,7 +16,7 @@
 
         <field
             name="id_domain"
-            type="Domain"
+            type="domain"
             multiple="true"
             class="multipleDomains"
             onchange="this.form.submit();"

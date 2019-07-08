@@ -16,7 +16,7 @@
 
         <field
             name="year"
-            type="Year"
+            type="year"
             datafield="date_on"
             multiple="true"
             class="multipleYears"
@@ -25,7 +25,7 @@
 
         <field
             name="month"
-            type="Month"
+            type="month"
             datafield="date_on"
             multiple="true"
             class="multipleMonths"
@@ -34,7 +34,7 @@
 
         <field
             name="yearoff"
-            type="Yearoff"
+            type="yearoff"
             datafield="date_off"
             multiple="true"
             class="multipleYearoffs"
@@ -43,7 +43,7 @@
 
         <field
             name="monthoff"
-            type="Monthoff"
+            type="monthoff"
             datafield="date_off"
             multiple="true"
             class="multipleMonthoffs"
@@ -52,7 +52,7 @@
 
         <field
             name="id_domain"
-            type="Domain"
+            type="domain"
             multiple="true"
             class="multipleDomains"
             onchange="this.form.submit();"
@@ -60,7 +60,7 @@
 
         <field
             name="id_currency"
-            type="Currency"
+            type="currency"
             multiple="true"
             class="multipleCurrencies"
             onchange="this.form.submit();"
@@ -68,7 +68,7 @@
 
         <field
             name="id_commodity"
-            type="Commodity"
+            type="commodity"
             multiple="true"
             class="multipleCommodities"
             onchange="this.form.submit();"
@@ -76,7 +76,7 @@
 
         <field
             name="id_type"
-            type="Type"
+            type="type"
             multiple="true"
             class="multipleTypes"
             onchange="this.form.submit();"
@@ -84,7 +84,7 @@
 
         <field
             name="id_unit"
-            type="Unit"
+            type="unit"
             multiple="true"
             class="multipleUnits"
             onchange="this.form.submit();"
@@ -92,7 +92,7 @@
 
         <field
             name="id_vendor"
-            type="Vendor"
+            type="vendor"
             multiple="true"
             class="multipleVendors"
             onchange="this.form.submit();"
@@ -100,7 +100,7 @@
 
         <field
             name="id_location"
-            type="Location"
+            type="location"
             multiple="true"
             class="multipleLocations"
             onchange="this.form.submit();"
@@ -108,7 +108,7 @@
 
         <field
             name="id_project"
-            type="Project"
+            type="project"
             multiple="true"
             class="multipleProjects"
             onchange="this.form.submit();"

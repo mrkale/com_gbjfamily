@@ -16,7 +16,7 @@
 
         <field
             name="year"
-            type="Year"
+            type="year"
             datafield="date_on"
             multiple="true"
             class="multipleYears"
@@ -25,7 +25,7 @@
 
         <field
             name="month"
-            type="Month"
+            type="month"
             datafield="date_on"
             multiple="true"
             class="multipleMonths"
@@ -34,7 +34,7 @@
 
         <field
             name="id_domain"
-            type="Domain"
+            type="domain"
             multiple="true"
             class="multipleDomains"
             onchange="this.form.submit();"
@@ -42,7 +42,7 @@
 
         <field
             name="id_currency"
-            type="Currency"
+            type="currency"
             multiple="true"
             class="multipleCurrencies"
             onchange="this.form.submit();"
@@ -50,7 +50,7 @@
 
         <field
             name="id_asset"
-            type="Asset"
+            type="asset"
             multiple="true"
             class="multipleAssets"
             onchange="this.form.submit();"
@@ -58,7 +58,7 @@
 
         <field
             name="id_project"
-            type="Project"
+            type="project"
             multiple="true"
             class="multipleProjects"
             onchange="this.form.submit();"

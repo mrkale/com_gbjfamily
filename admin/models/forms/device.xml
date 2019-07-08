@@ -93,7 +93,7 @@
 
         <field
             name="id_network"
-            type="Network"
+            type="network"
             class="inputbox span4"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_NETWORK_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_NETWORK_DESC"
@@ -103,7 +103,7 @@
 
         <field
             name="id_port"
-            type="Port"
+            type="port"
             class="inputbox span4"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_PORT_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_PORT_DESC"
@@ -113,7 +113,7 @@
 
         <field
             name="id_device"
-            type="Device"
+            type="device"
             class="inputbox span4"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_DEVICE_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_DEVICE_DESC"
@@ -123,7 +123,7 @@
 
         <field
             name="id_vendor"
-            type="Vendor"
+            type="vendor"
             class="inputbox span4"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_VENDOR_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_VENDOR_DESC"
@@ -133,7 +133,7 @@
 
         <field
             name="id_location"
-            type="Location"
+            type="location"
             class="inputbox span4"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_LOCATION_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_LOCATION_DESC"

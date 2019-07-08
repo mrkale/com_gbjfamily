@@ -39,6 +39,20 @@ class GbjfamilyModelFact extends GbjSeedModelAdmin
 	 *
 	 * @return  boolean Flag about table existence
 	 */
+	protected function batchInfo($value, $pks, $contexts)
+	{
+		return $this->processBatch(__METHOD__, $value, $pks, $contexts);
+	}
+
+	/**
+	 * Batch setting project to a list of items
+	 *
+	 * @param   string  $value     The id of the new value
+	 * @param   array   $pks       An array of row IDs
+	 * @param   array   $contexts  An array of item contexts
+	 *
+	 * @return  boolean Flag about table existence
+	 */
 	protected function batchProject($value, $pks, $contexts)
 	{
 		return $this->processBatch(__METHOD__, $value, $pks, $contexts);

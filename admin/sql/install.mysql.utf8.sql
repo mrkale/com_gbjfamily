@@ -207,6 +207,7 @@ CREATE TABLE IF NOT EXISTS `#__gbjfamily_facts` (
   `date_off` date NOT NULL DEFAULT '0000-00-00',
   `id_domain` int(11) NOT NULL DEFAULT '0',
   `id_project` int(11) NOT NULL DEFAULT '0',
+  `id_info` int(11) NOT NULL DEFAULT '0',
   `state` tinyint(1) NOT NULL DEFAULT '0',
   `checked_out` int(10) unsigned NOT NULL DEFAULT '0',
   `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',

@@ -28,7 +28,7 @@
 
         <field
             name="id_domain"
-            type="Domain"
+            type="domain"
             class="inputbox span4"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_DESC"

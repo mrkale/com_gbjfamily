@@ -52,7 +52,7 @@
 
         <field
             name="id_domain"
-            type="Domain"
+            type="domain"
             class="inputbox span4"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_DESC"
@@ -62,7 +62,7 @@
 
         <field
             name="id_currency"
-            type="Currency"
+            type="currency"
             class="inputbox span4"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_CURRENCY_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_CURRENCY_DESC"
@@ -72,7 +72,7 @@
 
         <field
             name="id_asset"
-            type="Asset"
+            type="asset"
             class="inputbox span4"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_ASSET_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_ASSET_DESC"
@@ -82,7 +82,7 @@
 
         <field
             name="id_project"
-            type="Project"
+            type="project"
             class="inputbox span4"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_DESC"
