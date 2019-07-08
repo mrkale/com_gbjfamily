@@ -123,7 +123,6 @@ class GbjfamilyModelFuel extends GbjSeedModelAdmin
 			{
 				$table->consumption = $quantity * 100 / $distance;
 			}
-
 		}
 	}
 }
