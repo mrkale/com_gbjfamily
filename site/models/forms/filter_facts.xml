@@ -16,7 +16,7 @@
 
         <field
             name="year"
-            type="Year"
+            type="year"
             datafield="date_on"
             onchange="this.form.submit();"
         >
@@ -25,7 +25,7 @@
 
         <field
             name="month"
-            type="Month"
+            type="month"
             datafield="date_on"
             onchange="this.form.submit();"
         >
@@ -34,7 +34,7 @@
 
         <field
             name="yearoff"
-            type="Yearoff"
+            type="yearoff"
             datafield="date_off"
             onchange="this.form.submit();"
         >
@@ -43,7 +43,7 @@
 
         <field
             name="monthoff"
-            type="Monthoff"
+            type="monthoff"
             datafield="date_on"
             onchange="this.form.submit();"
         >
@@ -52,10 +52,26 @@
 
         <field
             name="id_domain"
-            type="Domain"
+            type="domain"
             onchange="this.form.submit();"
         >
             <option value="">COM_GBJFAMILY_SELECT_DOMAIN</option>
+        </field>
+
+        <field
+            name="id_info"
+            type="info"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_INFO</option>
+        </field>
+
+        <field
+            name="id_project"
+            type="project"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_PROJECT</option>
         </field>
 
     </fields>

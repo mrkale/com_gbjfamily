@@ -16,7 +16,7 @@
 
         <field
             name="id_network"
-            type="Network"
+            type="network"
             multiple="true"
             class="multipleNetworks"
             onchange="this.form.submit();"
@@ -24,7 +24,7 @@
 
         <field
             name="id_port"
-            type="Port"
+            type="port"
             multiple="true"
             class="multiplePorts"
             onchange="this.form.submit();"
@@ -32,7 +32,7 @@
 
         <field
             name="id_device"
-            type="Device"
+            type="device"
             multiple="true"
             class="multipleDevices"
             onchange="this.form.submit();"
@@ -40,7 +40,7 @@
 
         <field
             name="id_vendor"
-            type="Vendor"
+            type="vendor"
             multiple="true"
             class="multipleVendors"
             onchange="this.form.submit();"
@@ -48,7 +48,7 @@
 
         <field
             name="id_location"
-            type="Location"
+            type="location"
             multiple="true"
             class="multipleLocations"
             onchange="this.form.submit();"

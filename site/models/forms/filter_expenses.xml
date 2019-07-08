@@ -16,7 +16,7 @@
 
         <field
             name="year"
-            type="Year"
+            type="year"
             datafield="date_on"
             onchange="this.form.submit();"
         >
@@ -25,7 +25,7 @@
 
         <field
             name="month"
-            type="Month"
+            type="month"
             datafield="date_on"
             onchange="this.form.submit();"
         >
@@ -34,7 +34,7 @@
 
         <field
             name="yearoff"
-            type="Yearoff"
+            type="yearoff"
             datafield="date_off"
             onchange="this.form.submit();"
         >
@@ -43,7 +43,7 @@
 
         <field
             name="monthoff"
-            type="Monthoff"
+            type="monthoff"
             datafield="date_on"
             onchange="this.form.submit();"
         >
@@ -52,7 +52,7 @@
 
         <field
             name="id_domain"
-            type="Domain"
+            type="domain"
             onchange="this.form.submit();"
         >
             <option value="">COM_GBJFAMILY_SELECT_DOMAIN</option>
@@ -60,7 +60,7 @@
 
         <field
             name="id_currency"
-            type="Currency"
+            type="currency"
             onchange="this.form.submit();"
         >
             <option value="">COM_GBJFAMILY_SELECT_CURRENCY</option>
@@ -68,7 +68,7 @@
 
         <field
             name="id_commodity"
-            type="Commodity"
+            type="commodity"
             onchange="this.form.submit();"
         >
             <option value="">COM_GBJFAMILY_SELECT_COMMODITY</option>
@@ -76,7 +76,7 @@
 
         <field
             name="id_type"
-            type="Type"
+            type="type"
             onchange="this.form.submit();"
         >
             <option value="">COM_GBJFAMILY_SELECT_TYPE</option>
@@ -84,7 +84,7 @@
 
         <field
             name="id_unit"
-            type="Unit"
+            type="unit"
             onchange="this.form.submit();"
         >
             <option value="">COM_GBJFAMILY_SELECT_UNIT</option>
@@ -92,7 +92,7 @@
 
         <field
             name="id_vendor"
-            type="Vendor"
+            type="vendor"
             onchange="this.form.submit();"
         >
             <option value="">COM_GBJFAMILY_SELECT_VENDOR</option>
@@ -100,7 +100,7 @@
 
         <field
             name="id_location"
-            type="Location"
+            type="location"
             onchange="this.form.submit();"
         >
             <option value="">COM_GBJFAMILY_SELECT_LOCATION</option>
@@ -108,7 +108,7 @@
 
         <field
             name="id_project"
-            type="Project"
+            type="project"
             onchange="this.form.submit();"
         >
             <option value="">COM_GBJFAMILY_SELECT_PROJECT</option>

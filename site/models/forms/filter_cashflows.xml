@@ -16,7 +16,7 @@
 
         <field
             name="id_domain"
-            type="Domain"
+            type="domain"
             onchange="this.form.submit();"
         >
             <option value="">COM_GBJFAMILY_SELECT_DOMAIN</option>
@@ -24,7 +24,7 @@
 
         <field
             name="id_vendor"
-            type="Vendor"
+            type="vendor"
             onchange="this.form.submit();"
         >
             <option value="">COM_GBJFAMILY_SELECT_VENDOR</option>
@@ -32,7 +32,7 @@
 
         <field
             name="id_payform"
-            type="Payform"
+            type="payform"
             onchange="this.form.submit();"
         >
             <option value="">COM_GBJFAMILY_SELECT_PAYFORM</option>

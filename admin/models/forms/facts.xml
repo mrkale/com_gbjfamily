@@ -50,6 +50,15 @@
         </field>
 
         <field
+            name="id_info"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_INFO_LABEL"
+            datafield="id_info_alias"
+            tooltip="id_info_title"
+            defaulted="false"
+        >
+        </field>
+
+        <field
             name="id_project"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_LABEL"
             datafield="id_project_alias"

@@ -45,7 +45,7 @@
 
         <field
             name="id_domain"
-            type="Domain"
+            type="domain"
             class="inputbox span4"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_DESC"
@@ -55,7 +55,7 @@
 
         <field
             name="id_activity"
-            type="Activity"
+            type="activity"
             class="inputbox span4"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_ACTIVITY_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_ACTIVITY_DESC"
@@ -65,7 +65,7 @@
 
         <field
             name="id_stage"
-            type="Stage"
+            type="stage"
             class="inputbox span4"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_STAGE_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_STAGE_DESC"
@@ -75,7 +75,7 @@
 
         <field
             name="id_project"
-            type="Project"
+            type="project"
             class="inputbox span4"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_DESC"
