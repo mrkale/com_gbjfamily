@@ -17,6 +17,7 @@ $class = strtolower(Helper::getClassPrefix()). '_dl' . $pageclass_sfx;
 <dl class="<?php echo $class; ?>">
 	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'date_on')); ?>
 	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'duration')); ?>
+	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'turn')); ?>
 	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'id_activity')); ?>
 	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'id_stage')); ?>
 	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'id_domain')); ?>

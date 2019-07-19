@@ -37,6 +37,7 @@ $tabNameActive = $tabNameDetails;
 		<div class="row-fluid form-horizontal-desktop">
 			<div class="span9">
 			<?php echo $this->form->renderField('duration'); ?>
+			<?php echo $this->form->renderField('turn'); ?>
 			<?php echo $this->form->renderField('id_domain'); ?>
 			<?php echo $this->form->renderField('id_activity'); ?>
 			<?php echo $this->form->renderField('id_stage'); ?>

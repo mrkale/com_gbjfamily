@@ -35,6 +35,15 @@
         />
 
         <field
+            name="turn"
+            type="number"
+            label="COM_GBJFAMILY_EVENT_TURN_LABEL"
+            class="center"
+            labelclass="center"
+            defaulted="false"
+        />
+
+        <field
             name="id_domain"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
             datafield="id_domain_alias"

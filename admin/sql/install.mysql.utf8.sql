@@ -14,6 +14,7 @@ CREATE TABLE IF NOT EXISTS `#__gbjfamily_events` (
   `description` text,
   `date_on` date NOT NULL DEFAULT '0000-00-00',
   `duration` decimal(4,2) NULL,
+  `turn` int(2) NULL,
   `id_domain` int(11) NOT NULL DEFAULT '0',
   `id_activity` int(11) NOT NULL DEFAULT '0',
   `id_stage` int(11) NOT NULL DEFAULT '0',

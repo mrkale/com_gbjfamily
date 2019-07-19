@@ -31,6 +31,11 @@ class GbjfamilyModelEvent extends GbjSeedModelAdmin
 		{
 			$table->duration = null;
 		}
+
+		if ((float) $table->turn <= 0)
+		{
+			$table->turn = null;
+		}
 	}
 
 	/**
