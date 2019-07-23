@@ -49,7 +49,7 @@
             name="price_unit"
             type="number"
             label="COM_GBJFAMILY_FIELD_EXPENSE_PRICEUNIT_LABEL"
-            format="LIB_GBJ_FIELD_PRICE_FORMAT"
+            format="COM_GBJFAMILY_FIELD_EXPENSE_PRICEUNIT_FORMAT"
             suffix="LIB_GBJ_UNIT_EUR"
         />
 
