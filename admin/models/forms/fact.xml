@@ -25,6 +25,8 @@
             description="COM_GBJFAMILY_FIELD_FACT_ALIAS_DESC"
             required="true"
             size="30"
+            default=""
+            hint="LIB_GBJ_HINT_INPUT_VALUE"
         />
 
         <field
