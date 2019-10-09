@@ -33,17 +33,20 @@ class GbjfamilyViewProjects extends GbjSeedViewList
 	/**
 	 * Create HTML string for displaying statistics.
 	 *
+	 * @param   array $periodStat  Array with date statistics.
+	 *
 	 * @return  string  HTML display string.
 	 */
-	public function htmlStatistics()
+	public function htmlStatistics($periodStat = array())
 	{
-		$htmlString = parent::htmlStatistics();
+		$htmlString = parent::htmlStatistics($periodStat);
 
 		// Expenses
 		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE'), JText::_('COM_GBJFAMILY_EXPENSES_STATS_LABEL'));
 		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_TOT'),
 			Helper::formatNumber($this->statistics['expenses']['#'], JText::_('LIB_GBJ_FORMAT_RECORDS'))
 		);
+
 		// Price
 		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_FIELD_UNIT'),
 			JText::_('LIB_GBJ_FIELD_AMOUNT_LABEL'), JText::_('LIB_GBJ_UNIT_EUR')

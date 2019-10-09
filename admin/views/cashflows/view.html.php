@@ -19,11 +19,13 @@ class GbjfamilyViewCashflows extends GbjSeedViewList
 	/**
 	 * Create HTML string for displaying statistics.
 	 *
+	 * @param   array $periodStat  Array with date statistics.
+	 *
 	 * @return  string  HTML display string.
 	 */
-	public function htmlStatistics()
+	public function htmlStatistics($periodStat = array())
 	{
-		$htmlString = parent::htmlStatistics();
+		$htmlString = parent::htmlStatistics($periodStat);
 
 		// Price
 		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE_UNIT'),
