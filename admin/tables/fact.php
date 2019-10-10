@@ -16,15 +16,4 @@ defined('_JEXEC') or die;
  */
 class GbjfamilyTableFact extends GbjSeedTable
 {
-	/**
-	 * Method to perform sanity checks on the JTable instance properties to ensure they are safe to store in the database
-	 *
-	 * @return  boolean  True if the instance is sane and able to be stored in the database.
-	 */
-	public function check()
-	{
-		$this->checkTitle();
-
-		return parent::check();
-	}
 }
