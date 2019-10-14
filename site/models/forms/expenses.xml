@@ -33,9 +33,28 @@
         />
 
         <field
+            name="date_out"
+            type="date"
+            label="COM_GBJFAMILY_FIELD_EXPENSE_DATEOUT_LABEL"
+            format="LIB_GBJ_FORMAT_DATE_LONG"
+            defaulted="false"
+        />
+
+        <field
             name="period"
             type="number"
             label="COM_GBJFAMILY_FIELD_EXPENSE_PERIOD_LABEL"
+            format="LIB_GBJ_FIELD_PERIOD_FORMAT"
+            suffix="LIB_GBJ_UNIT_DAYS"
+            class="gbj-right"
+            labelclass="gbj-right"
+            defaulted="false"
+        />
+
+        <field
+            name="lifespan"
+            type="number"
+            label="COM_GBJFAMILY_FIELD_EXPENSE_LIFESPAN_LABEL"
             format="LIB_GBJ_FIELD_PERIOD_FORMAT"
             suffix="LIB_GBJ_UNIT_DAYS"
             class="gbj-right"

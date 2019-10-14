@@ -46,11 +46,34 @@
         />
 
         <field
+            name="date_out"
+            type="calendar"
+            class="input-xxlarge input-large-text span5"
+            label="COM_GBJFAMILY_FIELD_EXPENSE_DATEOUT_LABEL"
+            description="COM_GBJFAMILY_FIELD_EXPENSE_DATEOUT_DESC"
+            format="%d.%m.%Y"
+            translateformat="false"
+            showtime="false"
+            todaybutton="true"
+            filter="none"
+            required="false"
+        />
+
+        <field
             name="period"
             type="number"
             class="inputbox span2"
             label="COM_GBJFAMILY_FIELD_EXPENSE_PERIOD_LABEL_UNIT"
             description="COM_GBJFAMILY_FIELD_EXPENSE_PERIOD_DESC"
+            readonly="true"
+        />
+
+        <field
+            name="lifespan"
+            type="number"
+            class="inputbox span2"
+            label="COM_GBJFAMILY_FIELD_EXPENSE_LIFESPAN_LABEL_UNIT"
+            description="COM_GBJFAMILY_FIELD_EXPENSE_LIFESPAN_DESC"
             readonly="true"
         />
 

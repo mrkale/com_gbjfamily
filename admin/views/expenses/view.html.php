@@ -94,6 +94,24 @@ class GbjfamilyViewExpenses extends GbjSeedViewList
 			Helper::formatNumber($this->statistics['period']['max'], JText::_('LIB_GBJ_FIELD_PERIOD_FORMAT'))
 		);
 
+		// Lifespan
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE_UNIT'),
+			JText::_('COM_GBJFAMILY_FIELD_EXPENSE_LIFESPAN_LABEL'), JText::_('LIB_GBJ_UNIT_DAYS')
+		);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_CNT'),
+			Helper::formatNumber($this->statistics['lifespan']['cnt'], JText::_('LIB_GBJ_FIELD_PERIOD_FORMAT'))
+		);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_SUM'),
+			Helper::formatNumber($this->statistics['lifespan']['sum'], JText::_('LIB_GBJ_FIELD_PERIOD_FORMAT'))
+		);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'),
+			Helper::formatNumber($this->statistics['lifespan']['avg'], JText::_('LIB_GBJ_FIELD_PERIOD_FORMAT_AVG'))
+		);
+		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_RANGE'), JText::_('LIB_GBJ_STAT_RNG'),
+			Helper::formatNumber($this->statistics['lifespan']['min'], JText::_('LIB_GBJ_FIELD_PERIOD_FORMAT')),
+			Helper::formatNumber($this->statistics['lifespan']['max'], JText::_('LIB_GBJ_FIELD_PERIOD_FORMAT'))
+		);
+
 		return $htmlString;
 	}
 }

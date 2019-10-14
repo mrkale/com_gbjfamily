@@ -27,6 +27,20 @@ class GbjfamilyTableExpense extends GbjSeedTable
 		$this->checkPrice('price');
 		$this->checkPrice('price_orig');
 
+		$this->errorMsgs['date_on.date_out'] = JText::sprintf('LIB_GBJ_ERROR_DATES_LESS',
+			JText::_('COM_GBJFAMILY_FIELD_EXPENSE_DATEOUT_LABEL'),
+			JText::_('COM_GBJFAMILY_FIELD_EXPENSE_DATEON_LABEL'));
+		$this->checkDatesReverse('date_on', 'date_out');
+
+		$this->errorMsgs['date_off.date_out'] = JText::sprintf('LIB_GBJ_ERROR_DATES_LESS',
+			JText::_('COM_GBJFAMILY_FIELD_EXPENSE_DATEOUT_LABEL'),
+			JText::_('COM_GBJFAMILY_FIELD_EXPENSE_DATEOFF_LABEL'));
+		$this->checkDatesReverse('date_off', 'date_out');
+
+		$this->errorMsgs['date_on.date_off'] = JText::sprintf('LIB_GBJ_ERROR_DATES_LESS',
+			JText::_('COM_GBJFAMILY_FIELD_EXPENSE_DATEOFF_LABEL'),
+			JText::_('COM_GBJFAMILY_FIELD_EXPENSE_DATEON_LABEL'));
+
 		return parent::check();
 	}
 }

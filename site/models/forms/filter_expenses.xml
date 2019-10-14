@@ -44,10 +44,28 @@
         <field
             name="monthoff"
             type="monthoff"
-            datafield="date_on"
+            datafield="date_off"
             onchange="this.form.submit();"
         >
             <option value="">COM_GBJFAMILY_SELECT_EXPENSE_MONTHOFF</option>
+        </field>
+
+        <field
+            name="yearout"
+            type="yearout"
+            datafield="date_out"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_EXPENSE_YEAROUT</option>
+        </field>
+
+        <field
+            name="monthout"
+            type="monthout"
+            datafield="date_out"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_EXPENSE_MONTHOUT</option>
         </field>
 
         <field

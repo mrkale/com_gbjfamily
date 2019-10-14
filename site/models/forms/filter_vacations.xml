@@ -44,7 +44,7 @@
         <field
             name="monthoff"
             type="monthoff"
-            datafield="date_on"
+            datafield="date_off"
             onchange="this.form.submit();"
         >
             <option value="">COM_GBJFAMILY_SELECT_MONTHOFF</option>
