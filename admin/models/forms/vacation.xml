@@ -57,7 +57,7 @@
         <field
             name="id_stay"
             type="stay"
-            class="inputbox span4"
+            class="inputbox span6"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_STAY_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_STAY_DESC"
             default="0"
@@ -67,7 +67,7 @@
         <field
             name="id_staff"
             type="staff"
-            class="inputbox span4"
+            class="inputbox span6"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_STAFF_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_STAFF_DESC"
             default="0"

@@ -63,12 +63,69 @@
             label="LIB_GBJ_COMPONENT_OPTION_FEATURED_COLOR_LABEL"
             description="LIB_GBJ_COMPONENT_OPTION_FEATURED_COLOR_DESC"
         >
-            <option value="null">LIB_GBJ_COMPONENT_OPTION_COLOR_WHITE</option>
+            <option value="null">LIB_GBJ_COMPONENT_OPTION_COLOR_NONE</option>
             <option value="active">LIB_GBJ_COMPONENT_OPTION_COLOR_GRAY</option>
             <option value="success">LIB_GBJ_COMPONENT_OPTION_COLOR_GREEN</option>
             <option value="info">LIB_GBJ_COMPONENT_OPTION_COLOR_BLUE</option>
             <option value="warning">LIB_GBJ_COMPONENT_OPTION_COLOR_YELLOW</option>
             <option value="danger">LIB_GBJ_COMPONENT_OPTION_COLOR_RED</option>
+        </field>
+
+        <field
+            name="detail_record_tab_color_edit"
+            type="list"
+            default="red"
+            label="LIB_GBJ_COMPONENT_OPTION_DETAILTAB_COLOR_EDIT_LABEL"
+            description="LIB_GBJ_COMPONENT_OPTION_DETAILTAB_COLOR_EDIT_DESC"
+        >
+            <option value="null">LIB_GBJ_COMPONENT_OPTION_COLOR_NONE</option>
+            <option value="red">LIB_GBJ_COMPONENT_OPTION_COLOR_RED</option>
+            <option value="green">LIB_GBJ_COMPONENT_OPTION_COLOR_GREEN</option>
+            <option value="blue">LIB_GBJ_COMPONENT_OPTION_COLOR_BLUE</option>
+            <option value="yellow">LIB_GBJ_COMPONENT_OPTION_COLOR_YELLOW</option>
+            <option value="gray">LIB_GBJ_COMPONENT_OPTION_COLOR_GRAY</option>
+        </field>
+
+        <field
+            name="detail_record_tab_color_copy"
+            type="list"
+            default="green"
+            label="LIB_GBJ_COMPONENT_OPTION_DETAILTAB_COLOR_COPY_LABEL"
+            description="LIB_GBJ_COMPONENT_OPTION_DETAILTAB_COLOR_COPY_DESC"
+        >
+            <option value="null">LIB_GBJ_COMPONENT_OPTION_COLOR_NONE</option>
+            <option value="red">LIB_GBJ_COMPONENT_OPTION_COLOR_RED</option>
+            <option value="green">LIB_GBJ_COMPONENT_OPTION_COLOR_GREEN</option>
+            <option value="blue">LIB_GBJ_COMPONENT_OPTION_COLOR_BLUE</option>
+            <option value="yellow">LIB_GBJ_COMPONENT_OPTION_COLOR_YELLOW</option>
+            <option value="gray">LIB_GBJ_COMPONENT_OPTION_COLOR_GRAY</option>
+        </field>
+
+        <field
+            name="detail_record_tab_color_new"
+            type="list"
+            default="blue"
+            label="LIB_GBJ_COMPONENT_OPTION_DETAILTAB_COLOR_NEW_LABEL"
+            description="LIB_GBJ_COMPONENT_OPTION_DETAILTAB_COLOR_NEW_DESC"
+        >
+            <option value="null">LIB_GBJ_COMPONENT_OPTION_COLOR_NONE</option>
+            <option value="red">LIB_GBJ_COMPONENT_OPTION_COLOR_RED</option>
+            <option value="green">LIB_GBJ_COMPONENT_OPTION_COLOR_GREEN</option>
+            <option value="blue">LIB_GBJ_COMPONENT_OPTION_COLOR_BLUE</option>
+            <option value="yellow">LIB_GBJ_COMPONENT_OPTION_COLOR_YELLOW</option>
+            <option value="gray">LIB_GBJ_COMPONENT_OPTION_COLOR_GRAY</option>
+        </field>
+
+        <field
+            name="detail_record_tab_bold"
+            type="radio"
+            default="1"
+            label="LIB_GBJ_COMPONENT_OPTION_DETAILTAB_BOLD_LABEL"
+            description="LIB_GBJ_COMPONENT_OPTION_DETAILTAB_BOLD_DESC"
+            class="btn-group btn-group-yesno"
+        >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
         </field>
 
         <field name="consumption_fuellings"
