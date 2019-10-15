@@ -70,6 +70,9 @@ $showDesc = $tparams->get('show_itemdescription');
 			<?php
 				$this->item->sequence += $this->pagination->limitstart;
 				$this->item->quantity = (float)$this->item->quantity;
+				$this->item->lifeperiod = Helper::formatPeriodDates(
+					Helper::getProperDate($this->item->date_off, $this->item->date_on),
+					$this->item->date_out);
 			?>
 			<tr <?php echo ($this->item->featured ? $this->htmlAttribute('class', $featuredClass) : ''); ?>>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'sequence')); ?>

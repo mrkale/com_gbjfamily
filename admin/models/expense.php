@@ -141,9 +141,9 @@ class GbjfamilyModelExpense extends GbjSeedModelAdmin
 
 		// Calculate additional data
 		$table->period = Helper::calculatePeriodDays($table->date_on, $table->date_off);
-
-		$dateStart = Helper::isEmptyDate($table->date_off) ? $table->date_on : $table->date_off;
-		$table->lifespan = Helper::calculatePeriodDays($dateStart, $table->date_out);
+		$table->lifespan = Helper::calculatePeriodDays(
+			Helper::getProperDate($table->date_off, $table->date_on),
+			$table->date_out);
 
 		if ($table->quantity == 1 || $table->quantity == 0)
 		{

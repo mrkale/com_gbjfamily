@@ -13,6 +13,10 @@ $layoutBasePath = Helper::getLayoutBase();
 $tparams = $this->params;
 $pageclass_sfx = htmlspecialchars($tparams->get('pageclass_sfx'));
 $class = strtolower(Helper::getClassPrefix()). '_dl' . $pageclass_sfx;
+
+$this->item->lifeperiod = Helper::formatPeriodDates(
+	Helper::getProperDate($this->item->date_off, $this->item->date_on),
+	$this->item->date_out);
 ?>
 <dl class="<?php echo $class; ?>">
 	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'date_on')); ?>

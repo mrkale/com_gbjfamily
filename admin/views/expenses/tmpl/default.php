@@ -80,6 +80,9 @@ $cparams = JComponentHelper::getParams($componentName);
 		<?php foreach ($this->items as $this->item->sequence => $this->item): ?>
 			<?php
 				$this->item->quantity = (float)$this->item->quantity;
+				$this->item->lifeperiod = Helper::formatPeriodDates(
+					Helper::getProperDate($this->item->date_off, $this->item->date_on),
+					$this->item->date_out);
 			?>
 			<tr class="row<?php echo $this->item->sequence % 2; ?>">
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'sequence')); ?>

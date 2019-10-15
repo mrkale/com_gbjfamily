@@ -56,7 +56,7 @@
             type="number"
             label="COM_GBJFAMILY_FIELD_EXPENSE_LIFESPAN_LABEL"
             format="LIB_GBJ_FIELD_PERIOD_FORMAT"
-            suffix="LIB_GBJ_UNIT_DAYS"
+            suffix="LIB_GBJ_UNIT_DAYS;lifeperiod"
             class="gbj-right"
             labelclass="gbj-right"
             defaulted="false"

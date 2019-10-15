@@ -42,7 +42,13 @@
             type="number"
             label="COM_GBJFAMILY_FIELD_EXPENSE_LIFESPAN_LABEL"
             format="LIB_GBJ_FIELD_PERIOD_FORMAT"
-            suffix="LIB_GBJ_UNIT_DAYS"
+            suffix="LIB_GBJ_UNIT_DAYS;lifeperiod"
+        />
+
+        <field
+            name="lifeperiod"
+            type="string"
+            label="COM_GBJFAMILY_FIELD_EXPENSE_LIFESPAN_LABEL"
         />
 
         <field
