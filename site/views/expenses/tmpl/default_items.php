@@ -70,8 +70,8 @@ $showDesc = $tparams->get('show_itemdescription');
 			<?php
 				$this->item->sequence += $this->pagination->limitstart;
 				$this->item->quantity = (float)$this->item->quantity;
-				$this->item->period = Helper::formatIntegerUnit($this->item->period, 'LIB_GBJ_FORMAT_DAYS');
-				$this->item->lifespan = Helper::formatIntegerUnit($this->item->lifespan, 'LIB_GBJ_FORMAT_DAYS');
+				$this->item->period = Helper::formatNumberUnit($this->item->period, 'LIB_GBJ_FORMAT_DAYS');
+				$this->item->lifespan = Helper::formatNumberUnit($this->item->lifespan, 'LIB_GBJ_FORMAT_DAYS');
 				$this->item->lifeperiod = Helper::formatPeriodDates(
 					Helper::getProperDate($this->item->date_off, $this->item->date_on),
 					$this->item->date_out);
