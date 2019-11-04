@@ -30,19 +30,24 @@ class GbjfamilyViewVacations extends GbjSeedViewList
 		$htmlString = parent::htmlStatistics($periodStat);
 
 		// Period
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE'),
-			JText::_('LIB_GBJ_FIELD_PERIOD_LABEL')
-		);
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_SUM'),
-			Helper::formatNumber($this->statistics['period']['sum'], JText::_('LIB_GBJ_FIELD_PERIOD_FORMAT'))
-		);
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'),
-			Helper::formatNumber($this->statistics['period']['avg'], JText::_('LIB_GBJ_FIELD_PERIOD_FORMAT_AVG'))
-		);
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_RANGE'), JText::_('LIB_GBJ_STAT_RNG'),
-			Helper::formatNumber($this->statistics['period']['min'], JText::_('LIB_GBJ_FIELD_PERIOD_FORMAT')),
-			Helper::formatNumber($this->statistics['period']['max'], JText::_('LIB_GBJ_FIELD_PERIOD_FORMAT'))
-		);
+		$statistic = 'period';
+
+		if ($this->statistics[$statistic]['sum'])
+		{
+			$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE'),
+				JText::_('LIB_GBJ_FIELD_PERIOD_LABEL')
+			);
+			$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_SUM'),
+				Helper::formatNumber($this->statistics[$statistic]['sum'], JText::_('LIB_GBJ_FIELD_PERIOD_FORMAT'))
+			);
+			$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'),
+				Helper::formatNumber($this->statistics[$statistic]['avg'], JText::_('LIB_GBJ_FIELD_PERIOD_FORMAT_AVG'))
+			);
+			$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_RANGE'), JText::_('LIB_GBJ_STAT_RNG'),
+				Helper::formatNumber($this->statistics[$statistic]['min'], JText::_('LIB_GBJ_FIELD_PERIOD_FORMAT')),
+				Helper::formatNumber($this->statistics[$statistic]['max'], JText::_('LIB_GBJ_FIELD_PERIOD_FORMAT'))
+			);
+		}
 
 		return $htmlString;
 	}
