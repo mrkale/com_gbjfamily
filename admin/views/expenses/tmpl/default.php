@@ -81,9 +81,9 @@ $cparams = JComponentHelper::getParams($componentName);
 				$this->item->quantity = (float)$this->item->quantity;
 				$this->item->period = Helper::formatNumberUnit($this->item->period, 'LIB_GBJ_FORMAT_DAYS');
 				$this->item->lifespan = Helper::formatNumberUnit($this->item->lifespan, 'LIB_GBJ_FORMAT_DAYS');
-				$this->item->lifeperiod = Helper::formatPeriodDates(
+				$this->item->lifeperiod = JText::sprintf('LIB_GBJ_FORMAT_PERIOD_DATE', Helper::formatPeriodDates(
 					Helper::getProperDate($this->item->date_off, $this->item->date_on),
-					$this->item->date_out);
+					$this->item->date_out));
 			?>
 			<tr class="row<?php echo $this->item->sequence % 2; ?>">
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'sequence')); ?>
