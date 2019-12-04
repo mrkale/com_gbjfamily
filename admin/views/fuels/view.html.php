@@ -19,68 +19,91 @@ class GbjfamilyViewFuels extends GbjSeedViewList
 	/**
 	 * Create HTML string for displaying statistics.
 	 *
+	 * @param   array $periodStat  Array with date statistics.
+	 *
 	 * @return  string  HTML display string.
 	 */
-	public function htmlStatistics()
+	public function htmlStatistics($periodStat = array())
 	{
-		$htmlString = parent::htmlStatistics();
+		$periodStat = array_merge($periodStat, $this->statistics['date_on']);
+		$htmlString = parent::htmlStatistics($periodStat);
 
 		// Quantity
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE'),
-			JText::_('COM_GBJFAMILY_FIELD_FUEL_QUANTITY_LABEL')
-		);
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_SUM'),
-			Helper::formatNumber($this->statistics['quantity']['sum'], JText::_('COM_GBJFAMILY_FIELD_FUEL_QUANTITY_FORMAT'))
-		);
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'),
-			Helper::formatNumber($this->statistics['quantity']['avg'], JText::_('COM_GBJFAMILY_FIELD_FUEL_QUANTITY_FORMAT'))
-		);
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_RANGE'), JText::_('LIB_GBJ_STAT_RNG'),
-			Helper::formatNumber($this->statistics['quantity']['min'], JText::_('COM_GBJFAMILY_FIELD_FUEL_QUANTITY_FORMAT')),
-			Helper::formatNumber($this->statistics['quantity']['max'], JText::_('COM_GBJFAMILY_FIELD_FUEL_QUANTITY_FORMAT'))
-		);
+		$statistic = 'quantity';
+
+		if ($this->statistics[$statistic]['sum'])
+		{
+			$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE'),
+				JText::_('COM_GBJFAMILY_FIELD_FUEL_QUANTITY_LABEL')
+			);
+			$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_SUM'),
+				Helper::formatNumber($this->statistics[$statistic]['sum'], JText::_('COM_GBJFAMILY_FIELD_FUEL_QUANTITY_FORMAT'))
+			);
+			$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'),
+				Helper::formatNumber($this->statistics[$statistic]['avg'], JText::_('COM_GBJFAMILY_FIELD_FUEL_QUANTITY_FORMAT'))
+			);
+			$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_RANGE'), JText::_('LIB_GBJ_STAT_RNG'),
+				Helper::formatNumber($this->statistics[$statistic]['min'], JText::_('COM_GBJFAMILY_FIELD_FUEL_QUANTITY_FORMAT')),
+				Helper::formatNumber($this->statistics[$statistic]['max'], JText::_('COM_GBJFAMILY_FIELD_FUEL_QUANTITY_FORMAT'))
+			);
+		}
 
 		// Period
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE'),
-			JText::_('COM_GBJFAMILY_FIELD_FUEL_PERIOD_LABEL')
-		);
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_SUM'),
-			Helper::formatNumber($this->statistics['period']['sum'], JText::_('COM_GBJFAMILY_FIELD_FUEL_PERIOD_FORMAT'))
-		);
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'),
-			Helper::formatNumber($this->statistics['period']['avg'], JText::_('COM_GBJFAMILY_FIELD_FUEL_PERIOD_FORMAT'))
-		);
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_RANGE'), JText::_('LIB_GBJ_STAT_RNG'),
-			Helper::formatNumber($this->statistics['period']['min'], JText::_('COM_GBJFAMILY_FIELD_FUEL_PERIOD_FORMAT')),
-			Helper::formatNumber($this->statistics['period']['max'], JText::_('COM_GBJFAMILY_FIELD_FUEL_PERIOD_FORMAT'))
-		);
+		$statistic = 'period';
+
+		if ($this->statistics[$statistic]['sum'])
+		{
+			$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE'),
+				JText::_('COM_GBJFAMILY_FIELD_FUEL_PERIOD_LABEL')
+			);
+			$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_SUM'),
+				Helper::formatNumber($this->statistics[$statistic]['sum'], JText::_('COM_GBJFAMILY_FIELD_FUEL_PERIOD_FORMAT'))
+			);
+			$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'),
+				Helper::formatNumber($this->statistics[$statistic]['avg'], JText::_('COM_GBJFAMILY_FIELD_FUEL_PERIOD_FORMAT'))
+			);
+			$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_RANGE'), JText::_('LIB_GBJ_STAT_RNG'),
+				Helper::formatNumber($this->statistics[$statistic]['min'], JText::_('COM_GBJFAMILY_FIELD_FUEL_PERIOD_FORMAT')),
+				Helper::formatNumber($this->statistics[$statistic]['max'], JText::_('COM_GBJFAMILY_FIELD_FUEL_PERIOD_FORMAT'))
+			);
+		}
 
 		// Distance
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE'),
-			JText::_('COM_GBJFAMILY_FIELD_FUEL_DISTANCE_LABEL')
-		);
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_SUM'),
-			Helper::formatNumber($this->statistics['distance']['sum'], JText::_('COM_GBJFAMILY_FIELD_FUEL_DISTANCE_FORMAT'))
-		);
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'),
-			Helper::formatNumber($this->statistics['distance']['avg'], JText::_('COM_GBJFAMILY_FIELD_FUEL_DISTANCE_FORMAT'))
-		);
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_RANGE'), JText::_('LIB_GBJ_STAT_RNG'),
-			Helper::formatNumber($this->statistics['distance']['min'], JText::_('COM_GBJFAMILY_FIELD_FUEL_DISTANCE_FORMAT')),
-			Helper::formatNumber($this->statistics['distance']['max'], JText::_('COM_GBJFAMILY_FIELD_FUEL_DISTANCE_FORMAT'))
-		);
+		$statistic = 'distance';
+
+		if ($this->statistics[$statistic]['sum'])
+		{
+			$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE'),
+				JText::_('COM_GBJFAMILY_FIELD_FUEL_DISTANCE_LABEL')
+			);
+			$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_SUM'),
+				Helper::formatNumber($this->statistics[$statistic]['sum'], JText::_('COM_GBJFAMILY_FIELD_FUEL_DISTANCE_FORMAT'))
+			);
+			$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'),
+				Helper::formatNumber($this->statistics[$statistic]['avg'], JText::_('COM_GBJFAMILY_FIELD_FUEL_DISTANCE_FORMAT'))
+			);
+			$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_RANGE'), JText::_('LIB_GBJ_STAT_RNG'),
+				Helper::formatNumber($this->statistics[$statistic]['min'], JText::_('COM_GBJFAMILY_FIELD_FUEL_DISTANCE_FORMAT')),
+				Helper::formatNumber($this->statistics[$statistic]['max'], JText::_('COM_GBJFAMILY_FIELD_FUEL_DISTANCE_FORMAT'))
+			);
+		}
 
 		// Consumption
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE'),
-			JText::_('COM_GBJFAMILY_FIELD_FUEL_CONSUMPTION_LABEL')
-		);
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'),
-			Helper::formatNumber($this->statistics['consumption']['avg'], JText::_('COM_GBJFAMILY_FIELD_FUEL_CONSUMPTION_FORMAT'))
-		);
-		$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_RANGE'), JText::_('LIB_GBJ_STAT_RNG'),
-			Helper::formatNumber($this->statistics['consumption']['min'], JText::_('COM_GBJFAMILY_FIELD_FUEL_CONSUMPTION_FORMAT')),
-			Helper::formatNumber($this->statistics['consumption']['max'], JText::_('COM_GBJFAMILY_FIELD_FUEL_CONSUMPTION_FORMAT'))
-		);
+		$statistic = 'consumption';
+
+		if ($this->statistics[$statistic]['sum'])
+		{
+			$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_MEASURE'),
+				JText::_('COM_GBJFAMILY_FIELD_FUEL_CONSUMPTION_LABEL')
+			);
+			$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_VARIABLE'), JText::_('LIB_GBJ_STAT_AVG'),
+				Helper::formatNumber($this->statistics[$statistic]['avg'], JText::_('COM_GBJFAMILY_FIELD_FUEL_CONSUMPTION_FORMAT'))
+			);
+			$htmlString .= JText::sprintf(JText::_('LIB_GBJ_STAT_RANGE'), JText::_('LIB_GBJ_STAT_RNG'),
+				Helper::formatNumber($this->statistics[$statistic]['min'], JText::_('COM_GBJFAMILY_FIELD_FUEL_CONSUMPTION_FORMAT')),
+				Helper::formatNumber($this->statistics[$statistic]['max'], JText::_('COM_GBJFAMILY_FIELD_FUEL_CONSUMPTION_FORMAT'))
+			);
+		}
 
 		return $htmlString;
 	}

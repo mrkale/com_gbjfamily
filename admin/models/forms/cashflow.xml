@@ -20,7 +20,7 @@
         <field
             name="period"
             type="list"
-            class="inputbox span4"
+            class="inputbox span6"
             label="COM_GBJFAMILY_FIELD_CASHFLOW_PERIOD_LABEL"
             description="COM_GBJFAMILY_FIELD_CASHFLOW_PERIOD_DESC"
             default="1"
@@ -89,7 +89,7 @@
         <field
             name="id_domain"
             type="domain"
-            class="inputbox span4"
+            class="inputbox span6"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_DESC"
             default="0"
@@ -99,7 +99,7 @@
         <field
             name="id_vendor"
             type="vendor"
-            class="inputbox span4"
+            class="inputbox span6"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_VENDOR_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_VENDOR_DESC"
             default="0"
@@ -109,7 +109,7 @@
         <field
             name="id_payform"
             type="payform"
-            class="inputbox span4"
+            class="inputbox span6"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_PAYFORM_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_PAYFORM_DESC"
             default="0"

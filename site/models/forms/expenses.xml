@@ -33,11 +33,29 @@
         />
 
         <field
+            name="date_out"
+            type="date"
+            label="COM_GBJFAMILY_FIELD_EXPENSE_DATEOUT_LABEL"
+            format="LIB_GBJ_FORMAT_DATE_LONG"
+            defaulted="false"
+        />
+
+        <field
             name="period"
-            type="number"
+            type="string"
             label="COM_GBJFAMILY_FIELD_EXPENSE_PERIOD_LABEL"
             format="LIB_GBJ_FIELD_PERIOD_FORMAT"
-            suffix="LIB_GBJ_UNIT_DAYS"
+            class="gbj-right"
+            labelclass="gbj-right"
+            defaulted="false"
+        />
+
+        <field
+            name="lifespan"
+            type="string"
+            label="COM_GBJFAMILY_FIELD_EXPENSE_LIFESPAN_LABEL"
+            format="LIB_GBJ_FIELD_PERIOD_FORMAT"
+            suffix="lifeperiod"
             class="gbj-right"
             labelclass="gbj-right"
             defaulted="false"
@@ -55,7 +73,7 @@
             type="number"
             label="LIB_GBJ_FIELD_PRICE_LABEL"
             format="LIB_GBJ_FIELD_PRICE_FORMAT"
-            class="pull-right"
+            class="gbj-right"
             labelclass="gbj-right"
         />
 
@@ -65,7 +83,7 @@
             label="COM_GBJFAMILY_FIELD_EXPENSE_PRICEUNIT_LABEL"
             format="LIB_GBJ_FIELD_PRICE_FORMAT"
             prefix="LIB_GBJ_UNIT_PRICE"
-            class="pull-right"
+            class="gbj-right"
             labelclass="gbj-right"
             defaulted="false"
         />
@@ -76,7 +94,7 @@
             label="COM_GBJFAMILY_FIELD_EXPENSE_PRICEORIG_LABEL"
             format="LIB_GBJ_FIELD_PRICE_FORMAT"
             prefix="id_currency_alias"
-            class="pull-right"
+            class="gbj-right"
             labelclass="gbj-right"
             defaulted="false"
         />

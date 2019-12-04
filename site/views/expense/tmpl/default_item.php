@@ -13,11 +13,19 @@ $layoutBasePath = Helper::getLayoutBase();
 $tparams = $this->params;
 $pageclass_sfx = htmlspecialchars($tparams->get('pageclass_sfx'));
 $class = strtolower(Helper::getClassPrefix()). '_dl' . $pageclass_sfx;
+
+$this->item->period = Helper::formatNumberUnit($this->item->period, 'LIB_GBJ_FORMAT_DAYS');
+$this->item->lifespan = Helper::formatNumberUnit($this->item->lifespan, 'LIB_GBJ_FORMAT_DAYS');
+$this->item->lifeperiod = Helper::formatPeriodDates(
+	Helper::getProperDate($this->item->date_off, $this->item->date_on),
+	$this->item->date_out);
 ?>
 <dl class="<?php echo $class; ?>">
 	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'date_on')); ?>
 	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'date_off')); ?>
+	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'date_out')); ?>
 	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'period')); ?>
+	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'lifespan')); ?>
 	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'quantity')); ?>
 	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'price')); ?>
 	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'price_unit')); ?>

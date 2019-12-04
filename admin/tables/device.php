@@ -23,6 +23,9 @@ class GbjfamilyTableDevice extends GbjSeedTable
 	 */
 	public function check()
 	{
+		$this->errorMsgs['title'] = JText::_('COM_GBJFAMILY_ERROR_UNIQUE_ROLE');
+		$this->errorMsgs['alias'] = JText::_('COM_GBJFAMILY_ERROR_UNIQUE_HOSTNAME');
+
 		$this->checkTitle();
 		$this->checkSerial();
 		$this->checkMac('eth_mac');
@@ -30,34 +33,9 @@ class GbjfamilyTableDevice extends GbjSeedTable
 		$this->checkMac('wifi_mac');
 		$this->checkIp4('wifi_ip4');
 
+		$this->checkWarning = true;
+
 		return parent::check();
-	}
-
-	/**
-	 * Check the validity of the alias field.
-	 *
-	 * @param   string $fieldName  The name of a field to be checked.
-	 *
-	 * @return void
-	 */
-	protected function checkAlias($fieldName = 'alias')
-	{
-		if (empty($this->$fieldName))
-		{
-			return;
-		}
-
-		$primaryKeyName = $this->getKeyName();
-		$table = clone $this;
-
-		// Uniqueness
-		if ($table->load(array($fieldName => $this->$fieldName))
-			&& (isset($primaryKeyName)
-			&& ($table->$primaryKeyName != $this->$primaryKeyName
-			|| $this->$primaryKeyName == 0)))
-		{
-			JFactory::getApplication()->enqueueMessage(JText::_('COM_GBJFAMILY_ERROR_UNIQUE_HOSTNAME'), 'warning');
-		}
 	}
 
 	/**
@@ -75,13 +53,12 @@ class GbjfamilyTableDevice extends GbjSeedTable
 		}
 
 		$primaryKeyName = $this->getKeyName();
-		$table = clone $this;
 
 		// Uniqueness
-		if ($table->load(array($fieldName => $this->$fieldName))
-			&& (isset($primaryKeyName)
-			&& ($table->$primaryKeyName != $this->$primaryKeyName
-			|| $this->$primaryKeyName == 0)))
+		if ($this->isDuplicateRecord(
+			array($fieldName => $this->$fieldName),
+			array($primaryKeyName => $this->$primaryKeyName)
+		))
 		{
 			$this->checkFlag = false;
 			JFactory::getApplication()->enqueueMessage(JText::_('COM_GBJFAMILY_ERROR_UNIQUE_SERIAL'), 'error');
@@ -103,7 +80,6 @@ class GbjfamilyTableDevice extends GbjSeedTable
 		}
 
 		$primaryKeyName = $this->getKeyName();
-		$table = clone $this;
 		$boolResult = false;
 
 		$ifcs = array('eth', 'wifi');
@@ -129,16 +105,19 @@ class GbjfamilyTableDevice extends GbjSeedTable
 		// Unique withing column
 		if (!$boolResult)
 		{
-			$boolResult = $table->load(array($fieldName => $this->$fieldName))
-				&& (isset($primaryKeyName)
-					&& ($table->$primaryKeyName != $this->$primaryKeyName
-					|| $this->$primaryKeyName == 0));
+			$boolResult = $this->isDuplicateRecord(
+					array($fieldName => $this->$fieldName),
+					array($primaryKeyName => $this->$primaryKeyName)
+				);
 		}
 
 		// Unique withing counterpart column
 		if (!$boolResult)
 		{
-			$boolResult = $table->load(array($fieldComplement => $this->$fieldName));
+			$boolResult = $this->isDuplicateRecord(
+					array($fieldComplement => $this->$fieldName),
+					array($primaryKeyName => $this->$primaryKeyName)
+				);
 		}
 
 		if ($boolResult)
@@ -179,7 +158,6 @@ class GbjfamilyTableDevice extends GbjSeedTable
 		}
 
 		$primaryKeyName = $this->getKeyName();
-		$table = clone $this;
 		$boolResult = false;
 
 		$ifcs = array('eth', 'wifi');
@@ -205,16 +183,19 @@ class GbjfamilyTableDevice extends GbjSeedTable
 		// Unique withing column
 		if (!$boolResult)
 		{
-			$boolResult = $table->load(array($fieldName => $this->$fieldName))
-				&& (isset($primaryKeyName)
-					&& ($table->$primaryKeyName != $this->$primaryKeyName
-					|| $this->$primaryKeyName == 0));
+			$boolResult = $this->isDuplicateRecord(
+					array($fieldComplement => $this->$fieldName),
+					array($primaryKeyName => $this->$primaryKeyName)
+				);
 		}
 
 		// Unique withing counterpart column
 		if (!$boolResult)
 		{
-			$boolResult = $table->load(array($fieldComplement => $this->$fieldName));
+			$boolResult = $this->isDuplicateRecord(
+					array($fieldComplement => $this->$fieldName),
+					array($primaryKeyName => $this->$primaryKeyName)
+				);
 		}
 
 		if ($boolResult)

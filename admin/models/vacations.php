@@ -23,7 +23,7 @@ class GbjfamilyModelVacations extends GbjSeedModelList
 	 */
 	public function getStatistics()
 	{
-		$fieldList = array('period');
+		$fieldList = array('date_on', 'date_off', 'period');
 
 		return $this->getFilterStatistics($fieldList);
 	}

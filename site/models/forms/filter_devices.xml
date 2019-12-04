@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 @package    Joomla.Component
-@copyright  (c) 2017 Libor Gabaj
+@copyright  (c) 2017 - 2019 Libor Gabaj
 @license    GNU General Public License version 2 or later; see LICENSE.txt
 @since      3.8
 -->
@@ -13,6 +13,23 @@
             name="site"
             type="subform"
         />
+
+        <field
+            name="id_network"
+            type="network"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_NETWORK</option>
+        </field>
+        />
+
+        <field
+            name="id_port"
+            type="port"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_PORT</option>
+        </field>
 
         <field
             name="id_device"

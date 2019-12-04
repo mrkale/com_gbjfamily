@@ -23,7 +23,7 @@ class GbjfamilyModelFuels extends GbjSeedModelList
 	 */
 	public function getStatistics()
 	{
-		$fieldList = array('consumption', 'distance', 'quantity', 'period');
+		$fieldList = array('date_on', 'consumption', 'distance', 'quantity', 'period');
 
 		return $this->getFilterStatistics($fieldList);
 	}

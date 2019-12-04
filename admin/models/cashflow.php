@@ -69,6 +69,10 @@ class GbjfamilyModelCashflow extends GbjSeedModelAdmin
 	{
 		parent::prepareTable($table);
 
+		// Sanitize
+		$table->iban = str_replace(' ', '', $table->iban);
+		$table->iban = str_replace('-', '', $table->iban);
+
 		// Calculate additional data
 		$table->price_month = null;
 

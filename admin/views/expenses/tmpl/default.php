@@ -14,7 +14,9 @@ JHtml::_('behavior.multiselect');
 JHtml::_('formbehavior.chosen', '.multipleYears', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_EXPENSE_YEAR')));
 JHtml::_('formbehavior.chosen', '.multipleMonths', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_EXPENSE_MONTH')));
 JHtml::_('formbehavior.chosen', '.multipleYearoffs', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_EXPENSE_YEAROFF')));
+JHtml::_('formbehavior.chosen', '.multipleYearouts', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_EXPENSE_YEAROUT')));
 JHtml::_('formbehavior.chosen', '.multipleMonthoffs', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_EXPENSE_MONTHOFF')));
+JHtml::_('formbehavior.chosen', '.multipleMonthouts', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_EXPENSE_MONTHOUT')));
 JHtml::_('formbehavior.chosen', '.multipleDomains', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_DOMAIN')));
 JHtml::_('formbehavior.chosen', '.multipleCurrencies', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_CURRENCY')));
 JHtml::_('formbehavior.chosen', '.multipleUnits', null, array('placeholder_text_multiple' => JText::_('COM_GBJFAMILY_SELECT_UNIT')));
@@ -54,12 +56,12 @@ $cparams = JComponentHelper::getParams($componentName);
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'sequence')); ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'state, featured', 'onlyone'=>true)); ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'date_on, date_off, period')); ?>
+				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'date_out, lifespan')); ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'title')); ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'quantity')); ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'price, price_unit, price_orig')); ?>
-				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'id_domain, id_project')); ?>
-				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'id_commodity, id_type')); ?>
-				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'id_vendor, id_location')); ?>
+				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'id_domain, id_location, id_project')); ?>
+				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'id_commodity, id_type, id_vendor')); ?>
 				<?php echo JLayoutHelper::render('grid.headers', $this, $layoutBasePath, array('fields'=>'modified')); ?>
 			</tr>
 		</thead>
@@ -77,17 +79,22 @@ $cparams = JComponentHelper::getParams($componentName);
 		<?php foreach ($this->items as $this->item->sequence => $this->item): ?>
 			<?php
 				$this->item->quantity = (float)$this->item->quantity;
+				$this->item->period = Helper::formatNumberUnit($this->item->period, 'LIB_GBJ_FORMAT_DAYS');
+				$this->item->lifespan = Helper::formatNumberUnit($this->item->lifespan, 'LIB_GBJ_FORMAT_DAYS');
+				$this->item->lifeperiod = JText::sprintf('LIB_GBJ_FORMAT_PERIOD_DATE', Helper::formatPeriodDates(
+					Helper::getProperDate($this->item->date_off, $this->item->date_on),
+					$this->item->date_out));
 			?>
 			<tr class="row<?php echo $this->item->sequence % 2; ?>">
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'sequence')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'state, featured')); ?>
 				<?php echo JLayoutHelper::render('grid.items_edit', $this, $layoutBasePath, array('fields'=>'date_on, date_off, period')); ?>
+				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'date_out, lifespan')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'title')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'quantity')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'price, price_unit, price_orig')); ?>
-				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'id_domain, id_project')); ?>
-				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'id_commodity, id_type')); ?>
-				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'id_vendor, id_location')); ?>
+				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'id_domain, id_location, id_project')); ?>
+				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'id_commodity, id_type, id_vendor')); ?>
 				<?php echo JLayoutHelper::render('grid.items', $this, $layoutBasePath, array('fields'=>'modified')); ?>
 			</tr>
 		<?php endforeach; ?>

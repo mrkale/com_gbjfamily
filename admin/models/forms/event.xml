@@ -44,9 +44,21 @@
         />
 
         <field
+            name="turn"
+            type="number"
+            class="inputbox span2"
+            label="COM_GBJFAMILY_EVENT_TURN_LABEL"
+            description="COM_GBJFAMILY_EVENT_TURN_DESC"
+            min="0"
+            max="99"
+            step="1"
+            hint="JNONE"
+        />
+
+        <field
             name="id_domain"
             type="domain"
-            class="inputbox span4"
+            class="inputbox span6"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_DESC"
             default="0"
@@ -56,7 +68,7 @@
         <field
             name="id_activity"
             type="activity"
-            class="inputbox span4"
+            class="inputbox span6"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_ACTIVITY_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_ACTIVITY_DESC"
             default="0"
@@ -66,7 +78,7 @@
         <field
             name="id_stage"
             type="stage"
-            class="inputbox span4"
+            class="inputbox span6"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_STAGE_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_STAGE_DESC"
             default="0"
@@ -76,7 +88,7 @@
         <field
             name="id_project"
             type="project"
-            class="inputbox span4"
+            class="inputbox span6"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_DESC"
             default="0"

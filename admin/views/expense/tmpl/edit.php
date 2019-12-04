@@ -26,17 +26,15 @@ $tabNameActive = $tabNameDetails;
 	)
 );?>"
 	method="post" name="adminForm" id="adminForm" class="form-validate">
-	<?php echo JLayoutHelper::render('record.title_dates', $this, Helper::getLayoutBase()); ?>
+	<?php echo JLayoutHelper::render('record.title_dates3', $this, Helper::getLayoutBase()); ?>
 	<div class="form-horizontal">
 		<?php echo JHtml::_('bootstrap.startTabSet', $tabSetName, array('active' => $tabNameActive)); ?>
 
-		<?php echo JHtml::_('bootstrap.addTab', $tabSetName, $tabNameDetails,
-			empty($this->item->id) ? JText::_('LIB_GBJ_NEW_RECORD') : JText::sprintf('LIB_GBJ_OLD_RECORD', $this->item->id)
-			);
-		?>
+		<?php echo JHtml::_('bootstrap.addTab', $tabSetName, $tabNameDetails, $this->getTabRecord()); ?>
 		<div class="row-fluid form-horizontal-desktop">
 			<div class="span9">
 			<?php echo $this->form->renderField('period'); ?>
+			<?php echo $this->form->renderField('lifespan'); ?>
 			<?php echo $this->form->renderField('quantity'); ?>
 			<?php echo $this->form->renderField('id_unit'); ?>
 			<?php echo $this->form->renderField('price'); ?>

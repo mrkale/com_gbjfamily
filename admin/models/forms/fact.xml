@@ -25,6 +25,8 @@
             description="COM_GBJFAMILY_FIELD_FACT_ALIAS_DESC"
             required="true"
             size="30"
+            default=""
+            hint="LIB_GBJ_HINT_INPUT_VALUE"
         />
 
         <field
@@ -56,7 +58,7 @@
         <field
             name="id_domain"
             type="domain"
-            class="inputbox span4"
+            class="inputbox span6"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_DESC"
             default="0"
@@ -66,9 +68,19 @@
         <field
             name="id_project"
             type="project"
-            class="inputbox span4"
+            class="inputbox span6"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_DESC"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="id_info"
+            type="info"
+            class="inputbox span6"
+            label="COM_GBJFAMILY_FIELD_CODEBOOK_INFO_LABEL"
+            description="COM_GBJFAMILY_FIELD_CODEBOOK_INFO_DESC"
             default="0"
         >
         </field>

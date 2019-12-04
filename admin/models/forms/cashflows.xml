@@ -29,8 +29,7 @@
             type="number"
             label="LIB_GBJ_FIELD_AMOUNT_LABEL"
             format="LIB_GBJ_FIELD_AMOUNT_FORMAT"
-            class="pull-right"
-            labelclass="pull-right"
+            style="text-align:right"
             defaulted="false"
         />
 
@@ -40,9 +39,6 @@
             label="COM_GBJFAMILY_FIELD_CASHFLOW_PRICEMONTH_LABEL"
             format="LIB_GBJ_FIELD_PRICE_FORMAT"
             prefix="LIB_GBJ_UNIT_MONTH"
-            class="pull-right"
-            labelclass="pull-right"
-            defaulted="false"
         />
 
         <field

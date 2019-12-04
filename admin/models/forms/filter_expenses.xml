@@ -51,6 +51,24 @@
         />
 
         <field
+            name="yearout"
+            type="yearout"
+            datafield="date_out"
+            multiple="true"
+            class="multipleYearouts"
+            onchange="this.form.submit();"
+        />
+
+        <field
+            name="monthout"
+            type="monthout"
+            datafield="date_out"
+            multiple="true"
+            class="multipleMonthouts"
+            onchange="this.form.submit();"
+        />
+
+        <field
             name="id_domain"
             type="domain"
             multiple="true"
@@ -140,8 +158,12 @@
             <option value="date_on DESC">COM_GBJFAMILY_HEADING_EXPENSE_DATEON_DSC</option>
             <option value="date_off ASC">COM_GBJFAMILY_HEADING_EXPENSE_DATEOFF_ASC</option>
             <option value="date_off DESC">COM_GBJFAMILY_HEADING_EXPENSE_DATEOFF_DSC</option>
+            <option value="date_out ASC">COM_GBJFAMILY_HEADING_EXPENSE_DATEOUT_ASC</option>
+            <option value="date_out DESC">COM_GBJFAMILY_HEADING_EXPENSE_DATEOUT_DSC</option>
             <option value="period ASC">COM_GBJFAMILY_HEADING_EXPENSE_PERIOD_ASC</option>
             <option value="period DESC">COM_GBJFAMILY_HEADING_EXPENSE_PERIOD_DSC</option>
+            <option value="lifespan ASC">COM_GBJFAMILY_HEADING_EXPENSE_LIFESPAN_ASC</option>
+            <option value="lifespan DESC">COM_GBJFAMILY_HEADING_EXPENSE_LIFESPAN_DSC</option>
             <option value="quantity ASC">COM_GBJFAMILY_HEADING_EXPENSE_QUANTITY_ASC</option>
             <option value="quantity DESC">COM_GBJFAMILY_HEADING_EXPENSE_QUANTITY_DSC</option>
             <option value="price ASC">LIB_GBJ_HEADING_PRICE_ASC</option>

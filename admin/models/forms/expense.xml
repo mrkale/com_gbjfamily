@@ -46,11 +46,34 @@
         />
 
         <field
+            name="date_out"
+            type="calendar"
+            class="input-xxlarge input-large-text span5"
+            label="COM_GBJFAMILY_FIELD_EXPENSE_DATEOUT_LABEL"
+            description="COM_GBJFAMILY_FIELD_EXPENSE_DATEOUT_DESC"
+            format="%d.%m.%Y"
+            translateformat="false"
+            showtime="false"
+            todaybutton="true"
+            filter="none"
+            required="false"
+        />
+
+        <field
             name="period"
             type="number"
             class="inputbox span2"
             label="COM_GBJFAMILY_FIELD_EXPENSE_PERIOD_LABEL_UNIT"
             description="COM_GBJFAMILY_FIELD_EXPENSE_PERIOD_DESC"
+            readonly="true"
+        />
+
+        <field
+            name="lifespan"
+            type="number"
+            class="inputbox span2"
+            label="COM_GBJFAMILY_FIELD_EXPENSE_LIFESPAN_LABEL_UNIT"
+            description="COM_GBJFAMILY_FIELD_EXPENSE_LIFESPAN_DESC"
             readonly="true"
         />
 
@@ -95,7 +118,7 @@
         <field
             name="id_domain"
             type="domain"
-            class="inputbox span4"
+            class="inputbox span6"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_DESC"
             default="0"
@@ -105,7 +128,7 @@
         <field
             name="id_currency"
             type="currency"
-            class="inputbox span4"
+            class="inputbox span6"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_CURRENCY_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_CURRENCY_DESC"
             default="0"
@@ -115,7 +138,7 @@
         <field
             name="id_commodity"
             type="commodity"
-            class="inputbox span4"
+            class="inputbox span6"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_COMMODITY_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_COMMODITY_DESC"
             default="0"
@@ -125,7 +148,7 @@
         <field
             name="id_type"
             type="type"
-            class="inputbox span4"
+            class="inputbox span6"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_TYPE_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_TYPE_DESC"
             default="0"
@@ -135,7 +158,7 @@
         <field
             name="id_unit"
             type="unit"
-            class="inputbox span4"
+            class="inputbox span6"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_UNIT_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_UNIT_DESC"
             default="0"
@@ -145,7 +168,7 @@
         <field
             name="id_vendor"
             type="vendor"
-            class="inputbox span4"
+            class="inputbox span6"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_VENDOR_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_VENDOR_DESC"
             default="0"
@@ -155,7 +178,7 @@
         <field
             name="id_location"
             type="location"
-            class="inputbox span4"
+            class="inputbox span6"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_LOCATION_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_LOCATION_DESC"
             default="0"
@@ -165,7 +188,7 @@
         <field
             name="id_project"
             type="project"
-            class="inputbox span4"
+            class="inputbox span6"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_DESC"
             default="0"

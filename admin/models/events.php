@@ -23,7 +23,7 @@ class GbjfamilyModelEvents extends GbjSeedModelList
 	 */
 	public function getStatistics()
 	{
-		$fieldList = array('duration');
+		$fieldList = array('date_on', 'duration');
 
 		return $this->getFilterStatistics($fieldList);
 	}

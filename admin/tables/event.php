@@ -24,6 +24,7 @@ class GbjfamilyTableEvent extends GbjSeedTable
 	public function check()
 	{
 		$this->checkDuration();
+		$this->checkQuantity('turn');
 
 		return parent::check();
 	}

@@ -23,7 +23,7 @@ class GbjfamilyModelAssets extends GbjSeedModelList
 	 */
 	public function getStatistics()
 	{
-		$fieldList = array('price', 'value');
+		$fieldList = array('date_on', 'price', 'value');
 
 		return $this->getFilterStatistics($fieldList);
 	}

@@ -98,6 +98,7 @@ class GbjfamilyModelDevice extends GbjSeedModelAdmin
 		parent::prepareTable($table);
 
 		$ifcs = array('eth', 'wifi');
+
 		foreach ($ifcs as $ifc)
 		{
 			// MAC normalization

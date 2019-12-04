@@ -24,7 +24,7 @@ class GbjfamilyModelExpenses extends GbjSeedModelList
 	 */
 	public function getStatistics()
 	{
-		$fieldList = array('price', 'price_unit', 'quantity', 'period');
+		$fieldList = array('date_on', 'price', 'price_unit', 'quantity', 'period', 'lifespan');
 
 		return $this->getFilterStatistics($fieldList);
 	}

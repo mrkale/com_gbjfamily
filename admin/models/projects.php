@@ -80,7 +80,8 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 		{
 			$query->select('null AS expenses, null AS expenses_price'
 				. ', null AS expenses_arch, null AS expenses_price_arch'
-				. ', null AS expenses_total, null AS expenses_price_total');
+				. ', null AS expenses_total, null AS expenses_price_total'
+			);
 		}
 
 		// Extend query with statistics of events
@@ -135,7 +136,8 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 		{
 			$query->select('null AS incomes, null AS incomes_price'
 				. ', null AS incomes_arch, null AS incomes_price_arch'
-				. ', null AS incomes_total, null AS incomes_price_total');
+				. ', null AS incomes_total, null AS incomes_price_total'
+			);
 		}
 
 		// Extend query with statistics of facts
@@ -320,10 +322,18 @@ class GbjfamilyModelProjects extends GbjSeedModelList
 		$fieldParent = 'id_project';
 		$statistics = array();
 
-		$statistics = array_merge($statistics, $this->getFilterStatisticsChild('expenses', $fieldParent, ['price']));
-		$statistics = array_merge($statistics, $this->getFilterStatisticsChild('events', $fieldParent, ['duration']));
-		$statistics = array_merge($statistics, $this->getFilterStatisticsChild('incomes', $fieldParent, ['price']));
-		$statistics = array_merge($statistics, $this->getFilterStatisticsChild('facts', $fieldParent));
+		$statistics = array_merge($statistics,
+			$this->getFilterStatisticsChild('expenses', $fieldParent, array('price'))
+		);
+		$statistics = array_merge($statistics,
+			$this->getFilterStatisticsChild('events', $fieldParent, array('duration'))
+		);
+		$statistics = array_merge($statistics,
+			$this->getFilterStatisticsChild('incomes', $fieldParent, array('price'))
+		);
+		$statistics = array_merge($statistics,
+			$this->getFilterStatisticsChild('facts', $fieldParent)
+		);
 
 		return $statistics;
 	}

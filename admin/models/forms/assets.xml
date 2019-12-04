@@ -38,8 +38,7 @@
             type="number"
             label="LIB_GBJ_FIELD_PRICE_LABEL"
             format="LIB_GBJ_FIELD_PRICE_FORMAT"
-            class="pull-right"
-            labelclass="pull-right"
+            style="text-align:right"
             defaulted="false"
         />
 
@@ -49,7 +48,6 @@
             label="COM_GBJFAMILY_FIELD_INCOME_PRICEORIG_LABEL"
             format="LIB_GBJ_FIELD_PRICE_FORMAT"
             prefix="id_currency_alias"
-            class="pull-right"
             defaulted="false"
         />
 

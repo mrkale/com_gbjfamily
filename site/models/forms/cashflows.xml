@@ -21,6 +21,8 @@
             name="period"
             type="number"
             label="COM_GBJFAMILY_FIELD_CASHFLOW_PERIOD_GRID_LABEL"
+            class="gbj-center"
+            labelclass="gbj-center"
         />
 
         <field
@@ -28,7 +30,7 @@
             type="number"
             label="LIB_GBJ_FIELD_AMOUNT_LABEL"
             format="LIB_GBJ_FIELD_AMOUNT_FORMAT"
-            class="pull-right"
+            class="gbj-right"
             labelclass="gbj-right"
         />
 
@@ -38,7 +40,7 @@
             label="COM_GBJFAMILY_FIELD_CASHFLOW_PRICEMONTH_LABEL"
             format="LIB_GBJ_FIELD_AMOUNT_FORMAT"
             prefix="LIB_GBJ_UNIT_MONTH"
-            class="pull-right"
+            class="gbj-right"
             labelclass="gbj-right"
             defaulted="false"
         />
