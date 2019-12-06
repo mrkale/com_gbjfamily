@@ -37,7 +37,7 @@
             type="number"
             label="LIB_GBJ_FIELD_PERIOD_LABEL"
             format="LIB_GBJ_FIELD_PERIOD_FORMAT"
-/>
+        />
 
         <field
             name="id_stay"

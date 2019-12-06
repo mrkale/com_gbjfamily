@@ -33,6 +33,14 @@
         />
 
         <field
+            name="period"
+            type="number"
+            format="LIB_GBJ_FIELD_PERIOD_FORMAT"
+            label="COM_GBJFAMILY_FIELD_FACT_PERIOD_LABEL"
+            suffix="periodfmt"
+        />
+
+        <field
             name="id_domain"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
             datafield="id_domain_title"

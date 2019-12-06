@@ -16,4 +16,15 @@ defined('_JEXEC') or die;
  */
 class GbjfamilyModelFacts extends GbjSeedModelList
 {
+	/**
+	 * Calculates statistics from filtered records.
+	 *
+	 * @return  array  The list of statistics variables and values.
+	 */
+	public function getStatistics()
+	{
+		$fieldList = array('date_on', 'date_off', 'period');
+
+		return $this->getFilterStatistics($fieldList);
+	}
 }

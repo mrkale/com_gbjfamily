@@ -35,6 +35,7 @@ $tabNameActive = $tabNameDetails;
 			<div class="span9">
 			<?php echo $this->form->renderField('date_on'); ?>
 			<?php echo $this->form->renderField('date_off'); ?>
+			<?php echo $this->form->renderField('period'); ?>
 			<?php echo $this->form->renderField('id_domain'); ?>
 			<?php echo $this->form->renderField('id_info'); ?>
 			<?php echo JLayoutHelper::render('record.field_parent', $this, Helper::getLayoutBase(), array('field'=>'id_project')); ?>

@@ -102,6 +102,8 @@
             <option value="date_on DESC">COM_GBJFAMILY_HEADING_FACT_DATEON_DSC</option>
             <option value="date_off ASC">COM_GBJFAMILY_HEADING_FACT_DATEOFF_ASC</option>
             <option value="date_off DESC">COM_GBJFAMILY_HEADING_FACT_DATEOFF_DSC</option>
+            <option value="period ASC">COM_GBJFAMILY_HEADING_FACT_PERIOD_ASC</option>
+            <option value="period DESC">COM_GBJFAMILY_HEADING_FACT_PERIOD_DSC</option>
             <option value="id_domain ASC">COM_GBJFAMILY_HEADING_CODEBOOK_DOMAIN_ASC</option>
             <option value="id_domain DESC">COM_GBJFAMILY_HEADING_CODEBOOK_DOMAIN_DSC</option>
             <option value="id_info ASC">COM_GBJFAMILY_HEADING_CODEBOOK_INFO_ASC</option>

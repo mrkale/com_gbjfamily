@@ -57,6 +57,10 @@ class GbjfamilyModelVacation extends GbjSeedModelAdmin
 
 		// Calculate additional data including the very first day
 		$table->period = Helper::calculatePeriodDays($table->date_on, $table->date_off);
-		$table->period++;
+
+		if (!is_null($table->period))
+		{
+			$table->period++;
+		}
 	}
 }

@@ -57,5 +57,25 @@ class GbjfamilyModelFact extends GbjSeedModelAdmin
 	{
 		return $this->processBatch(__METHOD__, $value, $pks, $contexts);
 	}
+
+	/**
+	 * Method to prepare and sanitize the table data prior to saving.
+	 *
+	 * @param   JTable  $table  A reference to a JTable object.
+	 *
+	 * @return  void
+	 */
+	protected function prepareTable($table)
+	{
+		parent::prepareTable($table);
+
+		// Calculate additional data including the very first day
+		$table->period = Helper::calculatePeriodDays($table->date_on, $table->date_off);
+
+		if (!is_null($table->period))
+		{
+			$table->period++;
+		}
+	}
 }
 
