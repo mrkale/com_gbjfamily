@@ -40,6 +40,8 @@ class GbjfamilyTableExpense extends GbjSeedTable
 		$this->errorMsgs['date_on.date_off'] = JText::sprintf('LIB_GBJ_ERROR_DATES_LESS',
 			JText::_('COM_GBJFAMILY_FIELD_EXPENSE_DATEOFF_LABEL'),
 			JText::_('COM_GBJFAMILY_FIELD_EXPENSE_DATEON_LABEL'));
+		$this->checkWarning = true;
+		$this->checkDatesReverse('date_on', 'date_off');
 
 		return parent::check();
 	}
