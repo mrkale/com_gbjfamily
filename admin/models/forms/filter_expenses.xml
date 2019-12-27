@@ -77,14 +77,6 @@
         />
 
         <field
-            name="id_currency"
-            type="currency"
-            multiple="true"
-            class="multipleCurrencies"
-            onchange="this.form.submit();"
-        />
-
-        <field
             name="id_commodity"
             type="commodity"
             multiple="true"
@@ -101,6 +93,14 @@
         />
 
         <field
+            name="id_vendor"
+            type="vendor"
+            multiple="true"
+            class="multipleVendors"
+            onchange="this.form.submit();"
+        />
+
+        <field
             name="id_unit"
             type="unit"
             multiple="true"
@@ -109,10 +109,10 @@
         />
 
         <field
-            name="id_vendor"
-            type="vendor"
+            name="id_currency"
+            type="currency"
             multiple="true"
-            class="multipleVendors"
+            class="multipleCurrencies"
             onchange="this.form.submit();"
         />
 

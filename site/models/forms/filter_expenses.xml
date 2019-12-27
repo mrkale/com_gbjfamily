@@ -77,14 +77,6 @@
         </field>
 
         <field
-            name="id_currency"
-            type="currency"
-            onchange="this.form.submit();"
-        >
-            <option value="">COM_GBJFAMILY_SELECT_CURRENCY</option>
-        </field>
-
-        <field
             name="id_commodity"
             type="commodity"
             onchange="this.form.submit();"
@@ -101,6 +93,14 @@
         </field>
 
         <field
+            name="id_vendor"
+            type="vendor"
+            onchange="this.form.submit();"
+        >
+            <option value="">COM_GBJFAMILY_SELECT_VENDOR</option>
+        </field>
+
+        <field
             name="id_unit"
             type="unit"
             onchange="this.form.submit();"
@@ -109,11 +109,11 @@
         </field>
 
         <field
-            name="id_vendor"
-            type="vendor"
+            name="id_currency"
+            type="currency"
             onchange="this.form.submit();"
         >
-            <option value="">COM_GBJFAMILY_SELECT_VENDOR</option>
+            <option value="">COM_GBJFAMILY_SELECT_CURRENCY</option>
         </field>
 
         <field
