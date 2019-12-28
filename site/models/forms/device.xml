@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--
 @package    Joomla.Component
-@copyright  (c) 2017-2018 Libor Gabaj
+@copyright  (c) 2017-2019 Libor Gabaj
 @license    GNU General Public License version 2 or later; see LICENSE.txt
 @since      3.8
 -->
@@ -34,11 +34,6 @@
         />
 
         <field
-            name="eth_ifc"
-            label="COM_GBJFAMILY_FIELD_DEVICE_ETHIFC_LABEL"
-        />
-
-        <field
             name="wifi_mac"
             label="COM_GBJFAMILY_FIELD_DEVICE_WIFIMAC_LABEL"
         />
@@ -46,11 +41,6 @@
         <field
             name="wifi_ip4"
             label="COM_GBJFAMILY_FIELD_DEVICE_WIFIIP4_LABEL"
-        />
-
-        <field
-            name="wifi_ifc"
-            label="COM_GBJFAMILY_FIELD_DEVICE_WIFIIFC_LABEL"
         />
 
         <field

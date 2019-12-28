@@ -37,12 +37,6 @@
         />
 
         <field
-            name="type"
-            type="string"
-            label="COM_GBJFAMILY_FIELD_DEVICE_TYPE_LABEL"
-        />
-
-        <field
             name="eth_mac"
             type="string"
             label="COM_GBJFAMILY_FIELD_DEVICE_ETHMAC_LABEL"
@@ -52,12 +46,6 @@
             name="eth_ip4"
             type="string"
             label="COM_GBJFAMILY_FIELD_DEVICE_ETHIP4_LABEL"
-        />
-
-        <field
-            name="eth_ifc"
-            type="string"
-            label="COM_GBJFAMILY_FIELD_DEVICE_ETHIFC_LABEL"
         />
 
         <field
@@ -73,24 +61,10 @@
         />
 
         <field
-            name="wifi_ifc"
-            type="string"
-            label="COM_GBJFAMILY_FIELD_DEVICE_WIFIIFC_LABEL"
-        />
-
-        <field
             name="id_network"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_NETWORK_LABEL"
             datafield="id_network_alias"
             tooltip="id_network_title"
-        >
-        </field>
-
-        <field
-            name="id_port"
-            label="COM_GBJFAMILY_FIELD_CODEBOOK_PORT_LABEL"
-            datafield="id_port_alias"
-            tooltip="id_port_title"
         >
         </field>
 

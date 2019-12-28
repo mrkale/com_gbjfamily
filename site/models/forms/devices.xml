@@ -43,11 +43,6 @@
         />
 
         <field
-            name="eth_ifc"
-            label="COM_GBJFAMILY_FIELD_DEVICE_ETHIFC_LABEL"
-        />
-
-        <field
             name="wifi_mac"
             label="COM_GBJFAMILY_FIELD_DEVICE_WIFIMAC_LABEL"
         />
@@ -58,23 +53,10 @@
         />
 
         <field
-            name="wifi_ifc"
-            label="COM_GBJFAMILY_FIELD_DEVICE_WIFIIFC_LABEL"
-        />
-
-        <field
             name="id_network"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_NETWORK_LABEL"
             datafield="id_network_alias"
             tooltip="id_network_title"
-        >
-        </field>
-
-        <field
-            name="id_port"
-            label="COM_GBJFAMILY_FIELD_CODEBOOK_PORT_LABEL"
-            datafield="id_port_alias"
-            tooltip="id_port_title"
         >
         </field>
 

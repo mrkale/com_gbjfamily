@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--
 @package    Joomla.Component
-@copyright  (c) 2017 Libor Gabaj
+@copyright  (c) 2017-2019 Libor Gabaj
 @license    GNU General Public License version 2 or later; see LICENSE.txt
 @since      3.8
 -->
@@ -24,6 +24,7 @@
             label="COM_GBJFAMILY_FIELD_DEVICE_ALIAS_LABEL"
             description="COM_GBJFAMILY_FIELD_DEVICE_ALIAS_DESC"
             size="30"
+            defaulted="false"
         />
 
         <field
@@ -33,6 +34,7 @@
             description="COM_GBJFAMILY_FIELD_DEVICE_BRANDNAME_DESC"
             size="30"
             required="true"
+            default="n.a."
         />
 
         <field
@@ -40,13 +42,6 @@
             type="text"
             label="COM_GBJFAMILY_FIELD_DEVICE_SERIAL_LABEL"
             description="COM_GBJFAMILY_FIELD_DEVICE_SERIAL_DESC"
-        />
-
-        <field
-            name="type"
-            type="text"
-            label="COM_GBJFAMILY_FIELD_DEVICE_TYPE_LABEL"
-            description="COM_GBJFAMILY_FIELD_DEVICE_TYPE_DESC"
         />
 
         <field
@@ -64,13 +59,6 @@
         />
 
         <field
-            name="eth_ifc"
-            type="text"
-            label="COM_GBJFAMILY_FIELD_DEVICE_ETHIFC_LABEL"
-            description="COM_GBJFAMILY_FIELD_DEVICE_ETHIFC_DESC"
-        />
-
-        <field
             name="wifi_mac"
             type="text"
             label="COM_GBJFAMILY_FIELD_DEVICE_WIFIMAC_LABEL"
@@ -85,28 +73,11 @@
         />
 
         <field
-            name="wifi_ifc"
-            type="text"
-            label="COM_GBJFAMILY_FIELD_DEVICE_WIFIIFC_LABEL"
-            description="COM_GBJFAMILY_FIELD_DEVICE_WIFIIFC_DESC"
-        />
-
-        <field
             name="id_network"
             type="network"
             class="inputbox span6"
             label="COM_GBJFAMILY_FIELD_CODEBOOK_NETWORK_LABEL"
             description="COM_GBJFAMILY_FIELD_CODEBOOK_NETWORK_DESC"
-            default="0"
-        >
-        </field>
-
-        <field
-            name="id_port"
-            type="port"
-            class="inputbox span6"
-            label="COM_GBJFAMILY_FIELD_CODEBOOK_PORT_LABEL"
-            description="COM_GBJFAMILY_FIELD_CODEBOOK_PORT_DESC"
             default="0"
         >
         </field>

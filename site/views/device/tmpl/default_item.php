@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    Joomla.Component
- * @copyright  (c) 2017-2018 Libor Gabaj
+ * @copyright  (c) 2017-2019 Libor Gabaj
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  * @since      3.8
  */
@@ -20,10 +20,8 @@ $class = strtolower(Helper::getClassPrefix()). '_dl' . $pageclass_sfx;
 	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'serial')); ?>
 	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'eth_mac')); ?>
 	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'eth_ip4')); ?>
-	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'eth_ifc')); ?>
 	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'wifi_mac')); ?>
 	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'wifi_ip4')); ?>
-	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'wifi_ifc')); ?>
 	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'id_device')); ?>
 	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'id_vendor')); ?>
 	<?php echo JLayoutHelper::render('record.field', $this, $layoutBasePath, array('field'=>'id_location')); ?>

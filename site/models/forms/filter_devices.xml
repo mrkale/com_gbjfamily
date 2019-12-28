@@ -24,14 +24,6 @@
         />
 
         <field
-            name="id_port"
-            type="port"
-            onchange="this.form.submit();"
-        >
-            <option value="">COM_GBJFAMILY_SELECT_PORT</option>
-        </field>
-
-        <field
             name="id_device"
             type="device"
             onchange="this.form.submit();"

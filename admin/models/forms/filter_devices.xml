@@ -23,14 +23,6 @@
         />
 
         <field
-            name="id_port"
-            type="port"
-            multiple="true"
-            class="multiplePorts"
-            onchange="this.form.submit();"
-        />
-
-        <field
             name="id_device"
             type="device"
             multiple="true"
@@ -82,24 +74,16 @@
             <option value="brandname DESC">COM_GBJFAMILY_HEADING_DEVICE_BRANDNAME_DSC</option>
             <option value="serial ASC">COM_GBJFAMILY_HEADING_DEVICE_SERIAL_ASC</option>
             <option value="serial DESC">COM_GBJFAMILY_HEADING_DEVICE_SERIAL_DSC</option>
-            <option value="type ASC">COM_GBJFAMILY_HEADING_DEVICE_TYPE_ASC</option>
-            <option value="type DESC">COM_GBJFAMILY_HEADING_DEVICE_TYPE_DSC</option>
             <option value="eth_mac ASC">COM_GBJFAMILY_HEADING_DEVICE_ETHMAC_ASC</option>
             <option value="eth_mac DESC">COM_GBJFAMILY_HEADING_DEVICE_ETHMAC_DSC</option>
             <option value="eth_ip4 ASC">COM_GBJFAMILY_HEADING_DEVICE_ETHIP4_ASC</option>
             <option value="eth_ip4 DESC">COM_GBJFAMILY_HEADING_DEVICE_ETHIP4_DSC</option>
-            <option value="eth_ifc ASC">COM_GBJFAMILY_HEADING_DEVICE_ETHIFC_ASC</option>
-            <option value="eth_ifc DESC">COM_GBJFAMILY_HEADING_DEVICE_ETHIFC_DSC</option>
             <option value="wifi_mac ASC">COM_GBJFAMILY_HEADING_DEVICE_WIFIMAC_ASC</option>
             <option value="wifi_mac DESC">COM_GBJFAMILY_HEADING_DEVICE_WIFIMAC_DSC</option>
             <option value="wifi_ip4 ASC">COM_GBJFAMILY_HEADING_DEVICE_WIFIIP4_ASC</option>
             <option value="wifi_ip4 DESC">COM_GBJFAMILY_HEADING_DEVICE_WIFIIP4_DSC</option>
-            <option value="wifi_ifc ASC">COM_GBJFAMILY_HEADING_DEVICE_WIFIIFC_ASC</option>
-            <option value="wifi_ifc DESC">COM_GBJFAMILY_HEADING_DEVICE_WIFIIFC_DSC</option>
             <option value="id_network ASC">COM_GBJFAMILY_HEADING_CODEBOOK_NETWORK_ASC</option>
             <option value="id_network DESC">COM_GBJFAMILY_HEADING_CODEBOOK_NETWORK_DSC</option>
-            <option value="id_port ASC">COM_GBJFAMILY_HEADING_CODEBOOK_PORT_ASC</option>
-            <option value="id_port DESC">COM_GBJFAMILY_HEADING_CODEBOOK_PORT_DSC</option>
             <option value="id_device ASC">COM_GBJFAMILY_HEADING_CODEBOOK_DEVICE_ASC</option>
             <option value="id_device DESC">COM_GBJFAMILY_HEADING_CODEBOOK_DEVICE_DSC</option>
             <option value="id_vendor ASC">COM_GBJFAMILY_HEADING_CODEBOOK_VENDOR_ASC</option>

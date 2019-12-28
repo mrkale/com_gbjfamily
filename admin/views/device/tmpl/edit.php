@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    Joomla.Component
- * @copyright  (c) 2017-2018 Libor Gabaj
+ * @copyright  (c) 2017-2019 Libor Gabaj
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  * @since      3.8
  */
@@ -36,16 +36,11 @@ $tabNameActive = $tabNameDetails;
 			<div class="span9">
 			<?php echo $this->form->renderField('brandname'); ?>
 			<?php echo $this->form->renderField('serial'); ?>
-			<?php //echo $this->form->renderField('alias'); ?>
-			<?php echo $this->form->renderField('type'); ?>
 			<?php echo $this->form->renderField('eth_mac'); ?>
 			<?php echo $this->form->renderField('eth_ip4'); ?>
-			<?php echo $this->form->renderField('eth_ifc'); ?>
 			<?php echo $this->form->renderField('wifi_mac'); ?>
 			<?php echo $this->form->renderField('wifi_ip4'); ?>
-			<?php echo $this->form->renderField('wifi_ifc'); ?>
 			<?php echo $this->form->renderField('id_network'); ?>
-			<?php echo $this->form->renderField('id_port'); ?>
 			<?php echo $this->form->renderField('id_device'); ?>
 			<?php echo $this->form->renderField('id_vendor'); ?>
 			<?php echo $this->form->renderField('id_location'); ?>

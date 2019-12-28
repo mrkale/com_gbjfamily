@@ -24,7 +24,6 @@ class GbjfamilyTableDevice extends GbjSeedTable
 	public function check()
 	{
 		$this->errorMsgs['title'] = JText::_('COM_GBJFAMILY_ERROR_UNIQUE_ROLE');
-		$this->errorMsgs['alias'] = JText::_('COM_GBJFAMILY_ERROR_UNIQUE_HOSTNAME');
 
 		$this->checkTitle();
 		$this->checkSerial();
@@ -36,6 +35,35 @@ class GbjfamilyTableDevice extends GbjSeedTable
 		$this->checkWarning = true;
 
 		return parent::check();
+	}
+
+	/**
+	 * Check the validity of the alias field.
+	 *
+	 * @param   string $fieldName  The name of a field to be checked.
+	 *
+	 * @return void
+	 */
+	protected function checkAlias($fieldName = 'alias')
+	{
+		// Field is not used
+		if (!isset($this->$fieldName) || empty($this->$fieldName))
+		{
+			return;
+		}
+
+		$primaryKeyName = $this->getKeyName();
+		$fieldNetwork = 'id_network';
+
+		if ($this->isDuplicateRecord(
+			array($fieldName => $this->$fieldName,
+				  $fieldNetwork => $this->$fieldNetwork),
+			array($primaryKeyName => $this->$primaryKeyName)
+		))
+		{
+			$errorMsg = JText::_('COM_GBJFAMILY_ERROR_UNIQUE_HOSTNAME');
+			JFactory::getApplication()->enqueueMessage($errorMsg, 'warning');
+		}
 	}
 
 	/**
@@ -61,7 +89,8 @@ class GbjfamilyTableDevice extends GbjSeedTable
 		))
 		{
 			$this->checkFlag = false;
-			JFactory::getApplication()->enqueueMessage(JText::_('COM_GBJFAMILY_ERROR_UNIQUE_SERIAL'), 'error');
+			$errorMsg = JText::_('COM_GBJFAMILY_ERROR_UNIQUE_SERIAL');
+			JFactory::getApplication()->enqueueMessage($errorMsg, 'error');
 		}
 	}
 
@@ -81,7 +110,7 @@ class GbjfamilyTableDevice extends GbjSeedTable
 
 		$primaryKeyName = $this->getKeyName();
 		$boolResult = false;
-
+		$fieldNetwork = 'id_network';
 		$ifcs = array('eth', 'wifi');
 
 		foreach ($ifcs as $i => $ifc)
@@ -102,20 +131,22 @@ class GbjfamilyTableDevice extends GbjSeedTable
 			$boolResult = $this->$fieldName === $this->$fieldComplement;
 		}
 
-		// Unique withing column
+		// Unique withing column and network
 		if (!$boolResult)
 		{
 			$boolResult = $this->isDuplicateRecord(
-					array($fieldName => $this->$fieldName),
+					array($fieldName => $this->$fieldName,
+						  $fieldNetwork => $this->$fieldNetwork),
 					array($primaryKeyName => $this->$primaryKeyName)
 				);
 		}
 
-		// Unique withing counterpart column
+		// Unique withing counterpart column and network
 		if (!$boolResult)
 		{
 			$boolResult = $this->isDuplicateRecord(
-					array($fieldComplement => $this->$fieldName),
+					array($fieldComplement => $this->$fieldName,
+						  $fieldNetwork => $this->$fieldNetwork),
 					array($primaryKeyName => $this->$primaryKeyName)
 				);
 		}
