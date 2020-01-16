@@ -135,20 +135,20 @@ class GbjfamilyTableDevice extends GbjSeedTable
 		if (!$boolResult)
 		{
 			$boolResult = $this->isDuplicateRecord(
-					array($fieldName => $this->$fieldName,
-						  $fieldNetwork => $this->$fieldNetwork),
-					array($primaryKeyName => $this->$primaryKeyName)
-				);
+				array($fieldName => $this->$fieldName,
+						$fieldNetwork => $this->$fieldNetwork),
+				array($primaryKeyName => $this->$primaryKeyName)
+			);
 		}
 
 		// Unique withing counterpart column and network
 		if (!$boolResult)
 		{
 			$boolResult = $this->isDuplicateRecord(
-					array($fieldComplement => $this->$fieldName,
-						  $fieldNetwork => $this->$fieldNetwork),
-					array($primaryKeyName => $this->$primaryKeyName)
-				);
+				array($fieldComplement => $this->$fieldName,
+						$fieldNetwork => $this->$fieldNetwork),
+				array($primaryKeyName => $this->$primaryKeyName)
+			);
 		}
 
 		if ($boolResult)
@@ -215,18 +215,18 @@ class GbjfamilyTableDevice extends GbjSeedTable
 		if (!$boolResult)
 		{
 			$boolResult = $this->isDuplicateRecord(
-					array($fieldComplement => $this->$fieldName),
-					array($primaryKeyName => $this->$primaryKeyName)
-				);
+				array($fieldComplement => $this->$fieldName),
+				array($primaryKeyName => $this->$primaryKeyName)
+			);
 		}
 
 		// Unique withing counterpart column
 		if (!$boolResult)
 		{
 			$boolResult = $this->isDuplicateRecord(
-					array($fieldComplement => $this->$fieldName),
-					array($primaryKeyName => $this->$primaryKeyName)
-				);
+				array($fieldComplement => $this->$fieldName),
+				array($primaryKeyName => $this->$primaryKeyName)
+			);
 		}
 
 		if ($boolResult)
