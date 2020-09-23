@@ -1,68 +1,30 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--
 @package    Joomla.Component
-@copyright  (c) 2017-2019 Libor Gabaj
+@copyright  (c) 2017-2020 Libor Gabaj
 @license    GNU General Public License version 2 or later; see LICENSE.txt
 @since      3.8
 -->
 <config>
-    <fieldset name="component"
-              label="COM_GBJFAMILY_COMPONENT_LABEL"
-              description="COM_GBJFAMILY_COMPONENT_DESC"
-    >
+    <fieldset name="component" label="COM_GBJFAMILY_COMPONENT_LABEL" description="COM_GBJFAMILY_COMPONENT_DESC">
 
-        <field name="target"
-               type="list"
-               default="0"
-               label="LIB_GBJ_COMPONENT_OPTION_TARGET_LABEL"
-               description="LIB_GBJ_COMPONENT_OPTION_TARGET_DESC"
-        >
+        <field name="target" type="list" default="0" label="LIB_GBJ_COMPONENT_OPTION_TARGET_LABEL" description="LIB_GBJ_COMPONENT_OPTION_TARGET_DESC">
             <option value="0">JBROWSERTARGET_PARENT</option>
             <option value="1">JBROWSERTARGET_NEW</option>
             <option value="2">JBROWSERTARGET_POPUP</option>
             <option value="3">JBROWSERTARGET_MODAL</option>
         </field>
 
-        <field name="target_width"
-               type="number"
-               class="inputbox"
-               min="100"
-               max="1920"
-               step="10"
-               default="640"
-               label="LIB_GBJ_COMPONENT_OPTION_TARGET_WIDTH_LABEL"
-               description="LIB_GBJ_COMPONENT_OPTION_TARGET_WIDTH_DESC"
-        />
+        <field name="target_width" type="number" class="inputbox" min="100" max="1920" step="10" default="640" label="LIB_GBJ_COMPONENT_OPTION_TARGET_WIDTH_LABEL" description="LIB_GBJ_COMPONENT_OPTION_TARGET_WIDTH_DESC" />
 
-        <field name="target_height"
-               type="number"
-               class="inputbox"
-               min="100"
-               max="1080"
-               step="10"
-               default="480"
-               label="LIB_GBJ_COMPONENT_OPTION_TARGET_HEIGHT_LABEL"
-               description="LIB_GBJ_COMPONENT_OPTION_TARGET_HEIGHT_DESC"
-        />
+        <field name="target_height" type="number" class="inputbox" min="100" max="1080" step="10" default="480" label="LIB_GBJ_COMPONENT_OPTION_TARGET_HEIGHT_LABEL" description="LIB_GBJ_COMPONENT_OPTION_TARGET_HEIGHT_DESC" />
 
-        <field
-            name="show_filter_stats"
-            type="list"
-            default="1"
-            label="LIB_GBJ_COMPONENT_OPTION_FILTER_STATS_LABEL"
-            description="LIB_GBJ_COMPONENT_OPTION_FILTER_STATS_DESC"
-        >
+        <field name="show_filter_stats" type="list" default="1" label="LIB_GBJ_COMPONENT_OPTION_FILTER_STATS_LABEL" description="LIB_GBJ_COMPONENT_OPTION_FILTER_STATS_DESC">
             <option value="0">JHIDE</option>
             <option value="1">JSHOW</option>
         </field>
 
-        <field
-            name="featured_row_class"
-            type="list"
-            default="success"
-            label="LIB_GBJ_COMPONENT_OPTION_FEATURED_COLOR_LABEL"
-            description="LIB_GBJ_COMPONENT_OPTION_FEATURED_COLOR_DESC"
-        >
+        <field name="featured_row_class" type="list" default="success" label="LIB_GBJ_COMPONENT_OPTION_FEATURED_COLOR_LABEL" description="LIB_GBJ_COMPONENT_OPTION_FEATURED_COLOR_DESC">
             <option value="null">LIB_GBJ_COMPONENT_OPTION_COLOR_NONE</option>
             <option value="active">LIB_GBJ_COMPONENT_OPTION_COLOR_GRAY</option>
             <option value="success">LIB_GBJ_COMPONENT_OPTION_COLOR_GREEN</option>
@@ -71,13 +33,7 @@
             <option value="danger">LIB_GBJ_COMPONENT_OPTION_COLOR_RED</option>
         </field>
 
-        <field
-            name="detail_record_tab_color_edit"
-            type="list"
-            default="red"
-            label="LIB_GBJ_COMPONENT_OPTION_DETAILTAB_COLOR_EDIT_LABEL"
-            description="LIB_GBJ_COMPONENT_OPTION_DETAILTAB_COLOR_EDIT_DESC"
-        >
+        <field name="detail_record_tab_color_edit" type="list" default="red" label="LIB_GBJ_COMPONENT_OPTION_DETAILTAB_COLOR_EDIT_LABEL" description="LIB_GBJ_COMPONENT_OPTION_DETAILTAB_COLOR_EDIT_DESC">
             <option value="null">LIB_GBJ_COMPONENT_OPTION_COLOR_NONE</option>
             <option value="red">LIB_GBJ_COMPONENT_OPTION_COLOR_RED</option>
             <option value="green">LIB_GBJ_COMPONENT_OPTION_COLOR_GREEN</option>
@@ -86,13 +42,7 @@
             <option value="gray">LIB_GBJ_COMPONENT_OPTION_COLOR_GRAY</option>
         </field>
 
-        <field
-            name="detail_record_tab_color_copy"
-            type="list"
-            default="green"
-            label="LIB_GBJ_COMPONENT_OPTION_DETAILTAB_COLOR_COPY_LABEL"
-            description="LIB_GBJ_COMPONENT_OPTION_DETAILTAB_COLOR_COPY_DESC"
-        >
+        <field name="detail_record_tab_color_copy" type="list" default="green" label="LIB_GBJ_COMPONENT_OPTION_DETAILTAB_COLOR_COPY_LABEL" description="LIB_GBJ_COMPONENT_OPTION_DETAILTAB_COLOR_COPY_DESC">
             <option value="null">LIB_GBJ_COMPONENT_OPTION_COLOR_NONE</option>
             <option value="red">LIB_GBJ_COMPONENT_OPTION_COLOR_RED</option>
             <option value="green">LIB_GBJ_COMPONENT_OPTION_COLOR_GREEN</option>
@@ -101,13 +51,7 @@
             <option value="gray">LIB_GBJ_COMPONENT_OPTION_COLOR_GRAY</option>
         </field>
 
-        <field
-            name="detail_record_tab_color_new"
-            type="list"
-            default="blue"
-            label="LIB_GBJ_COMPONENT_OPTION_DETAILTAB_COLOR_NEW_LABEL"
-            description="LIB_GBJ_COMPONENT_OPTION_DETAILTAB_COLOR_NEW_DESC"
-        >
+        <field name="detail_record_tab_color_new" type="list" default="blue" label="LIB_GBJ_COMPONENT_OPTION_DETAILTAB_COLOR_NEW_LABEL" description="LIB_GBJ_COMPONENT_OPTION_DETAILTAB_COLOR_NEW_DESC">
             <option value="null">LIB_GBJ_COMPONENT_OPTION_COLOR_NONE</option>
             <option value="red">LIB_GBJ_COMPONENT_OPTION_COLOR_RED</option>
             <option value="green">LIB_GBJ_COMPONENT_OPTION_COLOR_GREEN</option>
@@ -116,42 +60,22 @@
             <option value="gray">LIB_GBJ_COMPONENT_OPTION_COLOR_GRAY</option>
         </field>
 
-        <field
-            name="detail_record_tab_bold"
-            type="radio"
-            default="1"
-            label="LIB_GBJ_COMPONENT_OPTION_DETAILTAB_BOLD_LABEL"
-            description="LIB_GBJ_COMPONENT_OPTION_DETAILTAB_BOLD_DESC"
-            class="btn-group btn-group-yesno"
-        >
+        <field name="detail_record_tab_bold" type="radio" default="1" label="LIB_GBJ_COMPONENT_OPTION_DETAILTAB_BOLD_LABEL" description="LIB_GBJ_COMPONENT_OPTION_DETAILTAB_BOLD_DESC" class="btn-group btn-group-yesno">
             <option value="1">JYES</option>
             <option value="0">JNO</option>
         </field>
 
-        <field name="consumption_fuellings"
-               type="number"
-               class="inputbox"
-               min="1"
-               max="5"
-               step="1"
-               default="3"
-               label="COM_GBJFAMILY_OPTION_FUEL_CONSUMPTION_RECORDS_LABEL"
-               description="COM_GBJFAMILY_OPTION_FUEL_CONSUMPTION_RECORDS_DESC"
-        />
+        <field name="date_clone" type="radio" default="1" label="COM_GBJFAMILY_OPTION_DATE_CLONE_LABEL" description="COM_GBJFAMILY_OPTION_DATE_CLONE_DESC" class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+
+        <field name="consumption_fuellings" type="number" class="inputbox" min="1" max="5" step="1" default="3" label="COM_GBJFAMILY_OPTION_FUEL_CONSUMPTION_RECORDS_LABEL" description="COM_GBJFAMILY_OPTION_FUEL_CONSUMPTION_RECORDS_DESC" />
 
     </fieldset>
 
-    <fieldset name="permissions"
-              description="JCONFIG_PERMISSIONS_DESC"
-              label="JCONFIG_PERMISSIONS_LABEL"
-    >
-
-        <field name="rules"
-               type="rules"
-               component="com_gbjfamily"
-               filter="rules"
-               validate="rules"
-               label="JCONFIG_PERMISSIONS_LABEL"
-               section="component" />
+    <fieldset name="permissions" description="JCONFIG_PERMISSIONS_DESC" label="JCONFIG_PERMISSIONS_LABEL">
+        <field name="rules" type="rules" component="com_gbjfamily" filter="rules" validate="rules" label="JCONFIG_PERMISSIONS_LABEL" section="component" />
     </fieldset>
+
 </config>

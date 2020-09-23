@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    Joomla.Component
- * @copyright  (c) 2019 Libor Gabaj
+ * @copyright  (c) 2019-2020 Libor Gabaj
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  * @since      3.8
  */
@@ -143,7 +143,8 @@ class GbjfamilyModelExpense extends GbjSeedModelAdmin
 		$table->period = Helper::calculatePeriodDays($table->date_on, $table->date_off);
 		$table->lifespan = Helper::calculatePeriodDays(
 			Helper::getProperDate($table->date_off, $table->date_on),
-			$table->date_out);
+			$table->date_out
+		);
 
 		if ($table->quantity == 1 || $table->quantity == 0)
 		{
