@@ -60,6 +60,8 @@
             <option value="gray">LIB_GBJ_COMPONENT_OPTION_COLOR_GRAY</option>
         </field>
 
+        <field name="consumption_fuellings" type="number" class="inputbox" min="1" max="5" step="1" default="3" label="COM_GBJFAMILY_OPTION_FUEL_CONSUMPTION_RECORDS_LABEL" description="COM_GBJFAMILY_OPTION_FUEL_CONSUMPTION_RECORDS_DESC" />
+
         <field name="detail_record_tab_bold" type="radio" default="1" label="LIB_GBJ_COMPONENT_OPTION_DETAILTAB_BOLD_LABEL" description="LIB_GBJ_COMPONENT_OPTION_DETAILTAB_BOLD_DESC" class="btn-group btn-group-yesno">
             <option value="1">JYES</option>
             <option value="0">JNO</option>
@@ -70,7 +72,10 @@
             <option value="0">JNO</option>
         </field>
 
-        <field name="consumption_fuellings" type="number" class="inputbox" min="1" max="5" step="1" default="3" label="COM_GBJFAMILY_OPTION_FUEL_CONSUMPTION_RECORDS_LABEL" description="COM_GBJFAMILY_OPTION_FUEL_CONSUMPTION_RECORDS_DESC" />
+					<field name="export_convert" type="radio" default="1" label="COM_GBJFAMILY_OPTION_EXPORT_CONVERT_LABEL" description="COM_GBJFAMILY_OPTION_EXPORT_CONVERT_DESC" class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
 
     </fieldset>
 
