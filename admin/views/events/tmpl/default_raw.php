@@ -9,11 +9,4 @@
 // No direct access
 defined('_JEXEC') or die;
 
-/**
- * View for exporting agenda records
- *
- * @since  3.8
- */
-class GbjfamilyViewFacts extends GbjSeedViewRaw
-{
-}
+$this->loadHelper('default_raw');

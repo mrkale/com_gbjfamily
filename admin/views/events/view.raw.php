@@ -14,6 +14,6 @@ defined('_JEXEC') or die;
  *
  * @since  3.8
  */
-class GbjfamilyViewFacts extends GbjSeedViewRaw
+class GbjfamilyViewEvents extends GbjSeedViewRaw
 {
 }

@@ -72,9 +72,14 @@
             <option value="0">JNO</option>
         </field>
 
-					<field name="export_convert" type="radio" default="1" label="COM_GBJFAMILY_OPTION_EXPORT_CONVERT_LABEL" description="COM_GBJFAMILY_OPTION_EXPORT_CONVERT_DESC" class="btn-group btn-group-yesno">
-            <option value="1">JYES</option>
-            <option value="0">JNO</option>
+				<field name="export_convert" type="radio" default="1" label="LIB_GBJ_COMPONENT_OPTION_EXPORT_CONVERT_DESC" description="LIB_GBJ_COMPONENT_OPTION_EXPORT_CONVERT_DESC" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+        </field>
+
+				<field name="export_longcodes" type="radio" default="1" label="LIB_GBJ_COMPONENT_OPTION_EXPORT_LONGCODES_LABEL" description="LIB_GBJ_COMPONENT_OPTION_EXPORT_LONGCODES_DESC" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
         </field>
 
     </fieldset>
