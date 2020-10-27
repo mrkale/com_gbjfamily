@@ -1,0 +1,19 @@
+/*
+@package    Joomla.Component
+@copyright  (c) 2020 Libor Gabaj. All rights reserved.
+@license    GNU General Public License version 2 or later. See LICENSE.txt, LICENSE.php.
+@since      3.9
+*/
+
+.button-save-copy {
+	/* border: 1px solid blue !important; */
+	/* border: 1px solid rgba(0,0,0,0.2) !important; */
+	color: #fff !important;
+	background-color:#2f96b4 !important;
+}
+.button-save-copy:hover,
+.button-save-copy:focus {
+	background-color: #2D6CA2 !important;
+	color: #fff !important;
+	text-decoration: none !important;
+}
