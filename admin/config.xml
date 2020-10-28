@@ -72,7 +72,7 @@
             <option value="0">JNO</option>
         </field>
 
-				<field name="export_convert" type="radio" default="1" label="LIB_GBJ_COMPONENT_OPTION_EXPORT_CONVERT_DESC" description="LIB_GBJ_COMPONENT_OPTION_EXPORT_CONVERT_DESC" class="btn-group btn-group-yesno">
+				<field name="export_convert" type="radio" default="1" label="LIB_GBJ_COMPONENT_OPTION_EXPORT_CONVERT_LABEL" description="LIB_GBJ_COMPONENT_OPTION_EXPORT_CONVERT_DESC" class="btn-group btn-group-yesno">
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
         </field>
