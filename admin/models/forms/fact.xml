@@ -1,103 +1,32 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--
 @package    Joomla.Component
-@copyright  (c) 2019 Libor Gabaj
+@copyright  (c) 2019-2020 Libor Gabaj
 @license    GNU General Public License version 2 or later; see LICENSE.txt
 @since      3.8
 -->
 <form>
-    <fieldset name="recordfields">
+	<fieldset name="recordfields">
 
-        <field
-            name="title"
-            type="text"
-            class="input-xxlarge input-large-text"
-            label="LIB_GBJ_FIELD_TITLE_LABEL"
-            description="LIB_GBJ_FIELD_TITLE_DESC"
-            required="true"
-        />
+		<field name="title" type="text" class="input-xxlarge input-large-text" label="LIB_GBJ_FIELD_TITLE_LABEL" description="LIB_GBJ_FIELD_TITLE_DESC" required="true" />
 
-        <field
-            name="alias"
-            type="text"
-            class="inputbox"
-            label="COM_GBJFAMILY_FIELD_FACT_ALIAS_LABEL"
-            description="COM_GBJFAMILY_FIELD_FACT_ALIAS_DESC"
-            required="true"
-            size="30"
-            default=""
-            hint="LIB_GBJ_HINT_INPUT_VALUE"
-        />
+		<field name="alias" type="text" class="input-box" label="COM_GBJFAMILY_FIELD_FACT_ALIAS_LABEL" description="COM_GBJFAMILY_FIELD_FACT_ALIAS_DESC" required="true" size="30" default="" hint="LIB_GBJ_HINT_INPUT_VALUE" />
 
-        <field
-            name="date_on"
-            type="calendar"
-            class="input-box span5"
-            label="COM_GBJFAMILY_FIELD_FACT_DATEON_LABEL"
-            description="COM_GBJFAMILY_FIELD_FACT_DATEON_DESC"
-            format="%d.%m.%Y"
-            translateformat="false"
-            showtime="false"
-            todaybutton="true"
-            filter="none"
-        />
+		<field name="date_on" type="calendar" class="input-box span5" label="COM_GBJFAMILY_FIELD_FACT_DATEON_LABEL" description="COM_GBJFAMILY_FIELD_FACT_DATEON_DESC" format="%d.%m.%Y" translateformat="false" showtime="false" todaybutton="true" filter="none" />
 
-        <field
-            name="date_off"
-            type="calendar"
-            class="input-box span5"
-            label="COM_GBJFAMILY_FIELD_FACT_DATEOFF_LABEL"
-            description="COM_GBJFAMILY_FIELD_FACT_DATEOFF_DESC"
-            format="%d.%m.%Y"
-            translateformat="false"
-            showtime="false"
-            todaybutton="true"
-            filter="none"
-        />
+		<field name="date_off" type="calendar" class="input-box span5" label="COM_GBJFAMILY_FIELD_FACT_DATEOFF_LABEL" description="COM_GBJFAMILY_FIELD_FACT_DATEOFF_DESC" format="%d.%m.%Y" translateformat="false" showtime="false" todaybutton="true" filter="none" />
 
-        <field
-            name="period"
-            type="number"
-            class="inputbox span2"
-            label="LIB_GBJ_FIELD_PERIOD_LABEL"
-            description="LIB_GBJ_FIELD_PERIOD_DESC"
-            readonly="true"
-        />
+		<field name="period" type="number" class="inputbox span2" label="LIB_GBJ_FIELD_PERIOD_LABEL" description="LIB_GBJ_FIELD_PERIOD_DESC" readonly="true" />
 
-        <field
-            name="id_domain"
-            type="domain"
-            class="inputbox span6"
-            label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL"
-            description="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_DESC"
-            default="0"
-        >
-        </field>
+		<field name="id_unit" type="unit" class="inputbox span6" label="COM_GBJFAMILY_FIELD_CODEBOOK_UNIT_LABEL" description="COM_GBJFAMILY_FIELD_CODEBOOK_UNIT_DESC" default="0"></field>
 
-        <field
-            name="id_project"
-            type="project"
-            class="inputbox span6"
-            label="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_LABEL"
-            description="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_DESC"
-            default="0"
-        >
-        </field>
+		<field name="id_domain" type="domain" class="inputbox span6" label="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_LABEL" description="COM_GBJFAMILY_FIELD_CODEBOOK_DOMAIN_DESC" default="0"></field>
 
-        <field
-            name="id_info"
-            type="info"
-            class="inputbox span6"
-            label="COM_GBJFAMILY_FIELD_CODEBOOK_INFO_LABEL"
-            description="COM_GBJFAMILY_FIELD_CODEBOOK_INFO_DESC"
-            default="0"
-        >
-        </field>
+		<field name="id_project" type="project" class="inputbox span6" label="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_LABEL" description="COM_GBJFAMILY_FIELD_CODEBOOK_PROJECT_DESC" default="0"></field>
 
-        <field
-            name="update_admin"
-            type="subform"
-        />
+		<field name="id_info" type="info" class="inputbox span6" label="COM_GBJFAMILY_FIELD_CODEBOOK_INFO_LABEL" description="COM_GBJFAMILY_FIELD_CODEBOOK_INFO_DESC" default="0"></field>
 
-    </fieldset>
+		<field name="update_admin" type="subform" />
+
+	</fieldset>
 </form>

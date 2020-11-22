@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    Joomla.Component
- * @copyright  (c) 2019 Libor Gabaj
+ * @copyright  (c) 2019-2020 Libor Gabaj
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  * @since      3.8
  */
@@ -33,12 +33,13 @@ $tabNameActive = $tabNameDetails;
 		<?php echo JHtml::_('bootstrap.addTab', $tabSetName, $tabNameDetails, $this->getTabRecord()); ?>
 		<div class="row-fluid form-horizontal-desktop">
 			<div class="span9">
+			<?php echo $this->form->renderField('id_unit'); ?>
 			<?php echo $this->form->renderField('date_on'); ?>
 			<?php echo $this->form->renderField('date_off'); ?>
 			<?php echo $this->form->renderField('period'); ?>
 			<?php echo $this->form->renderField('id_domain'); ?>
 			<?php echo $this->form->renderField('id_info'); ?>
-			<?php echo JLayoutHelper::render('record.field_parent', $this, Helper::getLayoutBase(), array('field'=>'id_project')); ?>
+			<?php echo JLayoutHelper::render('record.field_parent', $this, Helper::getLayoutBase(), array('field' => 'id_project')); ?>
 			<?php echo $this->form->renderField('description'); ?>
 			</div>
 			<div class="span3">

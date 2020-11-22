@@ -7,8 +7,8 @@
 -->
 <extension version="3.8" type="component" method="upgrade">
     <name>COM_GBJFAMILY</name>
-    <version>2.1.0</version>
-    <creationDate>October 2020</creationDate>
+    <version>2.2.0</version>
+    <creationDate>November 2020</creationDate>
     <description>COM_GBJFAMILY_XML_DESC</description>
     <author>Libor Gabaj</author>
     <authorEmail>libor.gabaj@gmail.com</authorEmail>
