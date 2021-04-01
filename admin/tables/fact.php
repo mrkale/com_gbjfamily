@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    Joomla.Component
- * @copyright  (c) 2019 Libor Gabaj
+ * @copyright  (c) 2019-2021 Libor Gabaj
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  * @since      3.8
  */
@@ -17,14 +17,33 @@ defined('_JEXEC') or die;
 class GbjfamilyTableFact extends GbjSeedTable
 {
 	/**
-	 * Method to perform sanity checks on the JTable instance properties to ensure they are safe to store in the database
+	 * Check the validity of the alias field.
 	 *
-	 * @return  boolean  True if the instance is sane and able to be stored in the database.
+	 * @param   string $fieldName  The name of a field to be checked.
+	 *
+	 * @return void
 	 */
-	public function check()
+	protected function checkAlias($fieldName = 'alias')
 	{
-		$this->errorMsgs['alias'] = JText::_('COM_GBJFAMILY_ERROR_UNIQUE_FACT');
+		// Field is not used
+		if (!isset($this->$fieldName) || empty($this->$fieldName))
+		{
+			return;
+		}
 
-		return parent::check();
+		$primaryKeyName = $this->getKeyName();
+		$fieldTitle = 'title';
+		$fieldDomain = 'id_domain';
+
+		if ($this->isDuplicateRecord(
+			array($fieldName => $this->$fieldName,
+				  $fieldTitle => $this->$fieldTitle,
+				  $fieldDomain => $this->$fieldDomain),
+			array($primaryKeyName => $this->$primaryKeyName)
+		))
+		{
+			$errorMsg = JText::_('COM_GBJFAMILY_ERROR_UNIQUE_FACT');
+			JFactory::getApplication()->enqueueMessage($errorMsg, 'error');
+		}
 	}
 }
