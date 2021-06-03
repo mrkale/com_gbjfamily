@@ -16,34 +16,20 @@ defined('_JEXEC') or die;
  */
 class GbjfamilyTableFact extends GbjSeedTable
 {
+
 	/**
-	 * Check the validity of the alias field.
+	 * Object constructor to set table and key fields.
 	 *
-	 * @param   string $fieldName  The name of a field to be checked.
+	 * @param   JDatabaseDriver  $db     JDatabaseDriver object.
+	 * @param   string           $table  Name of the table to model.
+	 * @param   mixed            $key    Name of the primary key field in the table or array of field names that compose the primary key.
 	 *
-	 * @return void
+	 * @since   11.1
 	 */
-	protected function checkAlias($fieldName = 'alias')
+	public function __construct($db, $table = null, $key = null)
 	{
-		// Field is not used
-		if (!isset($this->$fieldName) || empty($this->$fieldName))
-		{
-			return;
-		}
+		$this->checkIgnores = array('Alias');
 
-		$primaryKeyName = $this->getKeyName();
-		$fieldTitle = 'title';
-		$fieldDomain = 'id_domain';
-
-		if ($this->isDuplicateRecord(
-			array($fieldName => $this->$fieldName,
-				  $fieldTitle => $this->$fieldTitle,
-				  $fieldDomain => $this->$fieldDomain),
-			array($primaryKeyName => $this->$primaryKeyName)
-		))
-		{
-			$errorMsg = JText::_('COM_GBJFAMILY_ERROR_UNIQUE_FACT');
-			JFactory::getApplication()->enqueueMessage($errorMsg, 'error');
-		}
+		return parent::__construct($db, $table, $key);
 	}
 }

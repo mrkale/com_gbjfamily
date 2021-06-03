@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--
 @package     Joomla.Component
-@copyright   (c) 2017-2020 Libor Gabaj
+@copyright   (c) 2017-2021 Libor Gabaj
 @license     GNU General Public License version 2 or later; see LICENSE.txt
 @since       3.8
 -->
 <extension version="3.8" type="component" method="upgrade">
     <name>COM_GBJFAMILY</name>
-    <version>2.3.0</version>
-    <creationDate>April 2021</creationDate>
+    <version>2.4.0</version>
+    <creationDate>June 2021</creationDate>
     <description>COM_GBJFAMILY_XML_DESC</description>
     <author>Libor Gabaj</author>
     <authorEmail>libor.gabaj@gmail.com</authorEmail>

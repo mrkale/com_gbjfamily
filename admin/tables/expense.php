@@ -45,6 +45,7 @@ class GbjfamilyTableExpense extends GbjSeedTable
 		);
 		$this->checkWarning = true;
 		$this->checkDatesReverse('date_on', 'date_off');
+		$this->checkWarning = false;
 
 		return parent::check();
 	}
